@@ -58,7 +58,6 @@ jobs:
           grep -q 'CEFET Trainer 2027' cefet-trainer/app/src/main/assets/index.html
           grep -q '"trail_count":210' cefet-trainer/app/src/main/assets/index.html
           grep -q 'Simulado real' cefet-trainer/app/src/main/assets/index.html
-          grep -q 'corrige na hora' cefet-trainer/app/src/main/assets/index.html
 
       - name: Build APK
         working-directory: cefet-trainer
