@@ -33,7 +33,8 @@ jobs:
             cefet-clean/chunk02 \
             cefet-clean/chunk03 \
             cefet-clean/chunk04a0 \
-            cefet-clean/chunk04a1 \
+            cefet-clean/chunk04a1p0 \
+            cefet-clean/chunk04a1p1 \
             cefet-clean/chunk04b \
             cefet-clean/chunk05a \
             cefet-clean/chunk05b \
