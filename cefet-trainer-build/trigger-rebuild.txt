@@ -1,0 +1,1 @@
+CEFET Trainer 2027 v0.14.0 rebuild after verified Base64 reconstruction.
