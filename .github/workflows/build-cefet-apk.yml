@@ -24,30 +24,35 @@ jobs:
         with:
           gradle-version: '8.7'
 
-      - name: Restore Android project
+      - name: Restore verified clean Android project
         shell: bash
         run: |
           cat \
-            cefet-trainer-build/project.p00a \
-            cefet-trainer-build/project.p00b \
-            cefet-trainer-build/project.part01 \
-            cefet-trainer-build/project.part02_03 \
-            cefet-trainer-build/project.r00good \
-            cefet-trainer-build/project.s00 \
-            cefet-trainer-build/project.s01 \
-            cefet-trainer-build/project.s02 \
-            cefet-trainer-build/project.s03 \
-            cefet-trainer-build/project.s04 \
-            cefet-trainer-build/project.s05 > project.b64
-          test "$(wc -c < project.b64)" -eq 83088
-          base64 -d project.b64 > cefet_project.tar.gz
-          gzip -t cefet_project.tar.gz
+            cefet-clean/chunk00 \
+            cefet-clean/chunk01 \
+            cefet-clean/chunk02 \
+            cefet-clean/chunk03 \
+            cefet-clean/chunk04a0 \
+            cefet-clean/chunk04a1 \
+            cefet-clean/chunk04b \
+            cefet-clean/chunk05a \
+            cefet-clean/chunk05b \
+            cefet-clean/chunk06a \
+            cefet-clean/chunk06b \
+            cefet-clean/chunk07 \
+            cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          echo '852a994ca79e906786b13ff85d955f8d40ee2ea893bca9041dee2b6f0ce623d7  clean.b64' | sha256sum -c -
+          base64 -d clean.b64 > clean.tar.gz
+          test "$(wc -c < clean.tar.gz)" -eq 55827
+          echo '48f24d6b1150c282e37e1bf51b0a0b09b2882c95ce053687d014a698b6aa4997  clean.tar.gz' | sha256sum -c -
+          gzip -t clean.tar.gz
           mkdir -p cefet-trainer
-          tar -xzf cefet_project.tar.gz -C cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
           test -f cefet-trainer/app/src/main/assets/index.html
           test -f cefet-trainer/app/src/main/java/br/com/cefettrainer/app/MainActivity.java
 
-      - name: Verify study bank
+      - name: Verify CEFET study bank
         shell: bash
         run: |
           grep -q 'CEFET Trainer 2027' cefet-trainer/app/src/main/assets/index.html
@@ -55,16 +60,19 @@ jobs:
           grep -q 'Simulado real' cefet-trainer/app/src/main/assets/index.html
           grep -q 'corrige na hora' cefet-trainer/app/src/main/assets/index.html
 
-      - name: Build debug APK
+      - name: Build APK
         working-directory: cefet-trainer
         run: gradle --no-daemon clean assembleDebug
 
-      - name: Rename APK
+      - name: Validate and rename APK
         shell: bash
         run: |
           test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
           cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Trainer_2027_v0.14.0.apk
           unzip -t CEFET_Trainer_2027_v0.14.0.apk >/dev/null
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -1)"
+          test -n "$APKSIGNER"
+          "$APKSIGNER" verify --verbose CEFET_Trainer_2027_v0.14.0.apk
           sha256sum CEFET_Trainer_2027_v0.14.0.apk
 
       - name: Upload APK
