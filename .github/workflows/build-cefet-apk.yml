@@ -1,0 +1,70 @@
+name: Build CEFET Trainer APK
+
+on:
+  push:
+    branches:
+      - build/cefet-trainer-014
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore Android project
+        shell: bash
+        run: |
+          cat \
+            cefet-trainer-build/project.part00 \
+            cefet-trainer-build/project.part01 \
+            cefet-trainer-build/project.part02_03 \
+            cefet-trainer-build/project.r00 \
+            cefet-trainer-build/project.s00 \
+            cefet-trainer-build/project.s01 \
+            cefet-trainer-build/project.s02 \
+            cefet-trainer-build/project.s03 \
+            cefet-trainer-build/project.s04 \
+            cefet-trainer-build/project.s05 > project.b64
+          base64 -d project.b64 > cefet_project.tar.gz
+          mkdir -p cefet-trainer
+          tar -xzf cefet_project.tar.gz -C cefet-trainer
+          test -f cefet-trainer/app/src/main/assets/index.html
+          test -f cefet-trainer/app/src/main/java/br/com/cefettrainer/app/MainActivity.java
+
+      - name: Verify study bank
+        shell: bash
+        run: |
+          grep -q 'CEFET Trainer 2027' cefet-trainer/app/src/main/assets/index.html
+          grep -q '"trail_count":210' cefet-trainer/app/src/main/assets/index.html
+          grep -q 'Simulado real' cefet-trainer/app/src/main/assets/index.html
+
+      - name: Build debug APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Rename APK
+        shell: bash
+        run: |
+          test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
+          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Trainer_2027_v0.14.0.apk
+          sha256sum CEFET_Trainer_2027_v0.14.0.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Trainer_2027_v0.14.0
+          path: CEFET_Trainer_2027_v0.14.0.apk
+          if-no-files-found: error
