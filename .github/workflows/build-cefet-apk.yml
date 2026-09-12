@@ -1,10 +1,119 @@
 name: Build CEFET Trainer APK
 
 on:
+  push:
+    branches:
+      - build/cefet-trainer-014
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "staging v0.15 patch"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore verified v0.14 source
+        shell: bash
+        run: |
+          cat \
+            cefet-clean/chunk00 \
+            cefet-clean/chunk01 \
+            cefet-clean/chunk02 \
+            cefet-clean/chunk03 \
+            cefet-clean/chunk04a0 \
+            cefet-clean/chunk04a1p0 \
+            cefet-clean/chunk04a1p1 \
+            cefet-clean/chunk04b \
+            cefet-clean/chunk05a \
+            cefet-clean/chunk05b \
+            cefet-clean/chunk06a \
+            cefet-clean/chunk06b \
+            cefet-clean/chunk07 \
+            cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          echo '852a994ca79e906786b13ff85d955f8d40ee2ea893bca9041dee2b6f0ce623d7  clean.b64' | sha256sum -c -
+          base64 -d clean.b64 > clean.tar.gz
+          echo '48f24d6b1150c282e37e1bf51b0a0b09b2882c95ce053687d014a698b6aa4997  clean.tar.gz' | sha256sum -c -
+          mkdir -p cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
+
+      - name: Apply verified v0.15 learning engine
+        shell: bash
+        run: |
+          cat \
+            cefet-v15-patch/p00 \
+            cefet-v15-patch/p01 \
+            cefet-v15-patch/p02 \
+            cefet-v15-patch/p03 \
+            cefet-v15-patch/p04 \
+            cefet-v15-patch/p05 \
+            cefet-v15-patch/p06 \
+            cefet-v15-patch/p07a \
+            cefet-v15-patch/p07b > patch.b64
+          test "$(wc -c < patch.b64)" -eq 13364
+          echo '3957b3135c0ac4317e2ba0aeddaf6c4d6fb562ad195f7195b2a4d6c5e7f17d5f  patch.b64' | sha256sum -c -
+          base64 -d patch.b64 > patch.tar.gz
+          test "$(wc -c < patch.tar.gz)" -eq 10023
+          echo '80c199f45f1da17b65302366114dbd5e78b253d83cd87ac8634fef30eaee78bd  patch.tar.gz' | sha256sum -c -
+          gzip -t patch.tar.gz
+          tar -xzf patch.tar.gz -C cefet-trainer
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          s=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in s
+          assert '</head>' in s and '</body>' in s
+          s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v15.css"></head>',1)
+          s=s.replace('</body>','<script src="upgrade-v15.js"></script></body>',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+          sed -i "s/versionCode 140/versionCode 150/" cefet-trainer/app/build.gradle
+          sed -i "s/versionName '0.14.0'/versionName '0.15.0'/" cefet-trainer/app/build.gradle
+
+      - name: Verify v0.15 study engine
+        shell: bash
+        run: |
+          test -f cefet-trainer/app/src/main/assets/upgrade-v15.js
+          test -f cefet-trainer/app/src/main/assets/upgrade-v15.css
+          node --check cefet-trainer/app/src/main/assets/upgrade-v15.js
+          grep -q 'Prender o celular e estudar' cefet-trainer/app/src/main/assets/upgrade-v15.js
+          grep -q 'Exemplo 5' cefet-trainer/app/src/main/assets/upgrade-v15.js
+          grep -q 'beginFocusLock' cefet-trainer/app/src/main/java/br/com/cefettrainer/app/MainActivity.java
+          grep -q '"trail_count":210' cefet-trainer/app/src/main/assets/index.html
+          grep -q "versionName '0.15.0'" cefet-trainer/app/build.gradle
+
+      - name: Build APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Validate and rename APK
+        shell: bash
+        run: |
+          test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
+          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Trainer_2027_v0.15.0.apk
+          unzip -t CEFET_Trainer_2027_v0.15.0.apk >/dev/null
+          unzip -p CEFET_Trainer_2027_v0.15.0.apk assets/upgrade-v15.js | grep -q 'Prender o celular e estudar'
+          unzip -p CEFET_Trainer_2027_v0.15.0.apk assets/index.html | grep -q '"trail_count":210'
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -1)"
+          test -n "$APKSIGNER"
+          "$APKSIGNER" verify --verbose CEFET_Trainer_2027_v0.15.0.apk
+          sha256sum CEFET_Trainer_2027_v0.15.0.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Trainer_2027_v0.15.0
+          path: CEFET_Trainer_2027_v0.15.0.apk
+          if-no-files-found: error
