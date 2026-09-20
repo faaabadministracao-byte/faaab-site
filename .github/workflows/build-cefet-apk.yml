@@ -49,7 +49,7 @@ jobs:
           mkdir -p cefet-trainer
           tar -xzf clean.tar.gz -C cefet-trainer
 
-      - name: Apply verified v0.15 learning engine
+      - name: Apply verified v0.15 focus bridge
         shell: bash
         run: |
           cat \
@@ -65,55 +65,147 @@ jobs:
           test "$(wc -c < patch.b64)" -eq 13364
           echo '3957b3135c0ac4317e2ba0aeddaf6c4d6fb562ad195f7195b2a4d6c5e7f17d5f  patch.b64' | sha256sum -c -
           base64 -d patch.b64 > patch.tar.gz
-          test "$(wc -c < patch.tar.gz)" -eq 10023
           echo '80c199f45f1da17b65302366114dbd5e78b253d83cd87ac8634fef30eaee78bd  patch.tar.gz' | sha256sum -c -
-          gzip -t patch.tar.gz
           tar -xzf patch.tar.gz -C cefet-trainer
           python3 - <<'PY'
           from pathlib import Path
           p=Path('cefet-trainer/app/src/main/assets/index.html')
           s=p.read_text(encoding='utf-8')
           assert '"trail_count":210' in s
-          assert '</head>' in s and '</body>' in s
-          s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v15.css"></head>',1)
-          s=s.replace('</body>','<script src="upgrade-v15.js"></script></body>',1)
+          if 'upgrade-v15.css' not in s:
+              s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v15.css"></head>',1)
+          if 'upgrade-v15.js' not in s:
+              s=s.replace('</body>','<script src="upgrade-v15.js"></script></body>',1)
           p.write_text(s,encoding='utf-8')
           PY
-          sed -i "s/versionCode 140/versionCode 150/" cefet-trainer/app/build.gradle
-          sed -i "s/versionName '0.14.0'/versionName '0.15.0'/" cefet-trainer/app/build.gradle
 
-      - name: Verify v0.15 study engine
+      - name: Restore and verify v0.16 realistic exam pack
         shell: bash
         run: |
-          test -f cefet-trainer/app/src/main/assets/upgrade-v15.js
-          test -f cefet-trainer/app/src/main/assets/upgrade-v15.css
-          node --check cefet-trainer/app/src/main/assets/upgrade-v15.js
-          grep -q 'Prender o celular e estudar' cefet-trainer/app/src/main/assets/upgrade-v15.js
-          grep -q 'Exemplo 5' cefet-trainer/app/src/main/assets/upgrade-v15.js
-          grep -q 'beginFocusLock' cefet-trainer/app/src/main/java/br/com/cefettrainer/app/MainActivity.java
-          grep -q '"trail_count":210' cefet-trainer/app/src/main/assets/index.html
-          grep -q "versionName '0.15.0'" cefet-trainer/app/build.gradle
+          cat \
+            cefet-v16-patch/c00 \
+            cefet-v16-patch/c01 \
+            cefet-v16-patch/c02 \
+            cefet-v16-patch/c03 \
+            cefet-v16-patch/c04 \
+            cefet-v16-patch/c05 \
+            cefet-v16-patch/c06 \
+            cefet-v16-patch/c07 \
+            cefet-v16-patch/c08 \
+            cefet-v16-patch/c09 \
+            cefet-v16-patch/c10 \
+            cefet-v16-patch/c11 \
+            cefet-v16-patch/c12 \
+            cefet-v16-patch/c13 \
+            cefet-v16-patch/c14 \
+            cefet-v16-patch/c15 \
+            cefet-v16-patch/c16 \
+            cefet-v16-patch/c17 \
+            cefet-v16-patch/c18 \
+            cefet-v16-patch/c19 \
+            cefet-v16-patch/c20 > v16.b64
+          test "$(wc -c < v16.b64)" -eq 32072
+          echo '369b022aae1bad32f73f4885f918ec288c36d58cd06061b63d2837f9741c5882  v16.b64' | sha256sum -c -
+          base64 -d v16.b64 > v16.tar.gz
+          test "$(wc -c < v16.tar.gz)" -eq 24054
+          echo 'b13d81415f0f7934487a8aa959d9592bc9aa91588881eeefab458187dd883cd2  v16.tar.gz' | sha256sum -c -
+          rm -rf /tmp/v16
+          mkdir -p /tmp/v16
+          tar -xzf v16.tar.gz -C /tmp/v16
+          cp /tmp/v16/upgrade-v16.js cefet-trainer/app/src/main/assets/
+          cp /tmp/v16/upgrade-v16.css cefet-trainer/app/src/main/assets/
+          cp /tmp/v16/cefet-dev.keystore cefet-trainer/app/cefet-dev.keystore
+          echo 'a2e47b3a09ce4d0f7b3450197c30bbd70c662bac360e48d8660832ffd5459099  cefet-trainer/app/src/main/assets/upgrade-v16.js' | sha256sum -c -
+          echo '597dac54ee5b80a351f2076ec3478cd7e2627955d2ee51a474efc471729bd54c  cefet-trainer/app/src/main/assets/upgrade-v16.css' | sha256sum -c -
+          echo '51f8e142fee92e3f7f6b422a42836d68c303589e3cba1ecd0ffd7dad77583acc  cefet-trainer/app/cefet-dev.keystore' | sha256sum -c -
+
+      - name: Apply v0.16 app identity and assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          s=p.read_text(encoding='utf-8')
+          if 'upgrade-v16.css' not in s:
+              s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v16.css"></head>',1)
+          if 'upgrade-v16.js' not in s:
+              s=s.replace('</body>','<script src="upgrade-v16.js"></script></body>',1)
+          p.write_text(s,encoding='utf-8')
+
+          g=Path('cefet-trainer/app/build.gradle')
+          t=g.read_text(encoding='utf-8')
+          t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.realista'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 160', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.16.0'", t)
+          g.write_text(t,encoding='utf-8')
+
+          m=Path('cefet-trainer/app/src/main/AndroidManifest.xml')
+          u=m.read_text(encoding='utf-8')
+          u=u.replace('CEFET Trainer 2027','CEFET Realista 2027').replace('CEFET Trainer','CEFET Realista 2027')
+          m.write_text(u,encoding='utf-8')
+          PY
+
+      - name: Validate realistic question bank
+        shell: bash
+        run: |
+          node --check cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'Simulado A' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'Simulado B' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'Mapa de bolso' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'Cidade em modo avião' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'Texto original criado para este simulado' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q 'br.com.cefettrainer.realista' cefet-trainer/app/build.gradle
+          grep -q "versionName '0.16.0'" cefet-trainer/app/build.gradle
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          s=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js').read_text(encoding='utf-8')
+          a=s.index('const B=')+len('const B=')
+          b=s.index(';\nconst oldDB=',a)
+          bank=json.loads(s[a:b])
+          assert len(bank['exams']) == 2
+          for exam in bank['exams']:
+              qs=exam['questions']
+              assert len(qs) == 30
+              assert [q['subject'] for q in qs[:10]] == ['Português']*10
+              assert [q['subject'] for q in qs[10:20]] == ['Matemática']*10
+              assert [q['subject'] for q in qs[20:25]] == ['Ciências da Natureza']*5
+              assert [q['subject'] for q in qs[25:30]] == ['Ciências Humanas']*5
+              assert all(len(q['options'])==4 and q['answer'] in q['options'] and q['explain'] for q in qs)
+          assert len({q['prompt'] for e in bank['exams'] for q in e['questions']}) == 60
+          q4=[q for e in bank['exams'] if e['id']=='B' for q in e['questions'] if q['n']==4][0]
+          assert q4.get('stim')
+          print('Validated 60 original questions in two 30-question simulations')
+          PY
 
       - name: Build APK
         working-directory: cefet-trainer
         run: gradle --no-daemon clean assembleDebug
 
-      - name: Validate and rename APK
+      - name: Sign with stable sideload key
         shell: bash
         run: |
           test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
-          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Trainer_2027_v0.15.0.apk
-          unzip -t CEFET_Trainer_2027_v0.15.0.apk >/dev/null
-          unzip -p CEFET_Trainer_2027_v0.15.0.apk assets/upgrade-v15.js | grep -q 'Prender o celular e estudar'
-          unzip -p CEFET_Trainer_2027_v0.15.0.apk assets/index.html | grep -q '"trail_count":210'
           APKSIGNER="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -1)"
           test -n "$APKSIGNER"
-          "$APKSIGNER" verify --verbose CEFET_Trainer_2027_v0.15.0.apk
-          sha256sum CEFET_Trainer_2027_v0.15.0.apk
+          "$APKSIGNER" sign \
+            --ks cefet-trainer/app/cefet-dev.keystore \
+            --ks-key-alias cefettrainer \
+            --ks-pass pass:cefet2027 \
+            --key-pass pass:cefet2027 \
+            --out CEFET_Realista_2027_v0.16.0.apk \
+            cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
+          "$APKSIGNER" verify --verbose --print-certs CEFET_Realista_2027_v0.16.0.apk | tee signer.txt
+          grep -q 'CN=CEFET Trainer Dev' signer.txt
+          unzip -t CEFET_Realista_2027_v0.16.0.apk >/dev/null
+          unzip -p CEFET_Realista_2027_v0.16.0.apk assets/upgrade-v16.js | grep -q 'Simulado A'
+          unzip -p CEFET_Realista_2027_v0.16.0.apk assets/upgrade-v16.js | grep -q 'Cidade em modo avião'
+          sha256sum CEFET_Realista_2027_v0.16.0.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: CEFET_Trainer_2027_v0.15.0
-          path: CEFET_Trainer_2027_v0.15.0.apk
+          name: CEFET_Realista_2027_v0.16.0
+          path: CEFET_Realista_2027_v0.16.0.apk
           if-no-files-found: error
