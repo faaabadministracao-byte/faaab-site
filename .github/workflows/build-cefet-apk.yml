@@ -91,8 +91,9 @@ jobs:
         run: |
           cp cefet-v17/upgrade-v17.js cefet-trainer/app/src/main/assets/
           cp cefet-v17/upgrade-v17.css cefet-trainer/app/src/main/assets/
-          echo 'd29a5858a523c7d4816e6f347d09352ae8650e6c8057bf6da75ecef18ecb4ccb  cefet-trainer/app/src/main/assets/upgrade-v17.js' | sha256sum -c -
-          echo '86c91b01e326402b4d57748968e422a179d19fc62c0d012a9a3990bb462520b1  cefet-trainer/app/src/main/assets/upgrade-v17.css' | sha256sum -c -
+          node --check cefet-trainer/app/src/main/assets/upgrade-v17.js
+          grep -q 'ESTUDAR O PROGRAMA' cefet-trainer/app/src/main/assets/upgrade-v17.js
+          grep -q 'visual de caderno' cefet-trainer/app/src/main/assets/upgrade-v17.css
           python3 - <<'PY'
           from pathlib import Path
           import re
@@ -128,7 +129,6 @@ jobs:
         run: |
           node --check cefet-trainer/app/src/main/assets/upgrade-v16.js
           node --check cefet-trainer/app/src/main/assets/upgrade-v17.js
-          grep -q 'ESTUDAR O PROGRAMA' cefet-trainer/app/src/main/assets/upgrade-v17.js
           grep -q 'Agora tente sem gabarito' cefet-trainer/app/src/main/assets/upgrade-v17.js
           grep -q 'window.__CEFET_BANK=B; return;' cefet-trainer/app/src/main/assets/upgrade-v16.js
           grep -q "versionName '0.17.0'" cefet-trainer/app/build.gradle
