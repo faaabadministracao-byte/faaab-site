@@ -24,7 +24,7 @@ jobs:
         with:
           gradle-version: '8.7'
 
-      - name: Restore verified v0.14 source
+      - name: Restore verified base project
         shell: bash
         run: |
           cat \
@@ -49,37 +49,7 @@ jobs:
           mkdir -p cefet-trainer
           tar -xzf clean.tar.gz -C cefet-trainer
 
-      - name: Apply verified v0.15 focus bridge
-        shell: bash
-        run: |
-          cat \
-            cefet-v15-patch/p00 \
-            cefet-v15-patch/p01 \
-            cefet-v15-patch/p02 \
-            cefet-v15-patch/p03 \
-            cefet-v15-patch/p04 \
-            cefet-v15-patch/p05 \
-            cefet-v15-patch/p06 \
-            cefet-v15-patch/p07a \
-            cefet-v15-patch/p07b > patch.b64
-          test "$(wc -c < patch.b64)" -eq 13364
-          echo '3957b3135c0ac4317e2ba0aeddaf6c4d6fb562ad195f7195b2a4d6c5e7f17d5f  patch.b64' | sha256sum -c -
-          base64 -d patch.b64 > patch.tar.gz
-          echo '80c199f45f1da17b65302366114dbd5e78b253d83cd87ac8634fef30eaee78bd  patch.tar.gz' | sha256sum -c -
-          tar -xzf patch.tar.gz -C cefet-trainer
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('cefet-trainer/app/src/main/assets/index.html')
-          s=p.read_text(encoding='utf-8')
-          assert '"trail_count":210' in s
-          if 'upgrade-v15.css' not in s:
-              s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v15.css"></head>',1)
-          if 'upgrade-v15.js' not in s:
-              s=s.replace('</body>','<script src="upgrade-v15.js"></script></body>',1)
-          p.write_text(s,encoding='utf-8')
-          PY
-
-      - name: Restore and verify v0.16 realistic exam pack
+      - name: Restore verified realistic exam bank and signing key
         shell: bash
         run: |
           cat \
@@ -107,83 +77,102 @@ jobs:
           test "$(wc -c < v16.b64)" -eq 32072
           echo '369b022aae1bad32f73f4885f918ec288c36d58cd06061b63d2837f9741c5882  v16.b64' | sha256sum -c -
           base64 -d v16.b64 > v16.tar.gz
-          test "$(wc -c < v16.tar.gz)" -eq 24054
           echo 'b13d81415f0f7934487a8aa959d9592bc9aa91588881eeefab458187dd883cd2  v16.tar.gz' | sha256sum -c -
           rm -rf /tmp/v16
           mkdir -p /tmp/v16
           tar -xzf v16.tar.gz -C /tmp/v16
           cp /tmp/v16/upgrade-v16.js cefet-trainer/app/src/main/assets/
-          cp /tmp/v16/upgrade-v16.css cefet-trainer/app/src/main/assets/
           cp /tmp/v16/cefet-dev.keystore cefet-trainer/app/cefet-dev.keystore
           echo 'a2e47b3a09ce4d0f7b3450197c30bbd70c662bac360e48d8660832ffd5459099  cefet-trainer/app/src/main/assets/upgrade-v16.js' | sha256sum -c -
-          echo '597dac54ee5b80a351f2076ec3478cd7e2627955d2ee51a474efc471729bd54c  cefet-trainer/app/src/main/assets/upgrade-v16.css' | sha256sum -c -
           echo '51f8e142fee92e3f7f6b422a42836d68c303589e3cba1ecd0ffd7dad77583acc  cefet-trainer/app/cefet-dev.keystore' | sha256sum -c -
 
-      - name: Apply v0.16 app identity and assets
+      - name: Install v0.17 single interface engine
         shell: bash
         run: |
+          cp cefet-v17/upgrade-v17.js cefet-trainer/app/src/main/assets/
+          cp cefet-v17/upgrade-v17.css cefet-trainer/app/src/main/assets/
+          echo 'd29a5858a523c7d4816e6f347d09352ae8650e6c8057bf6da75ecef18ecb4ccb  cefet-trainer/app/src/main/assets/upgrade-v17.js' | sha256sum -c -
+          echo '86c91b01e326402b4d57748968e422a179d19fc62c0d012a9a3990bb462520b1  cefet-trainer/app/src/main/assets/upgrade-v17.css' | sha256sum -c -
           python3 - <<'PY'
           from pathlib import Path
           import re
+          a=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js')
+          s=a.read_text(encoding='utf-8')
+          old="const oldDB=JSON.parse(document.getElementById('db').textContent);"
+          assert old in s
+          s=s.replace(old,"window.__CEFET_BANK=B; return;",1)
+          a.write_text(s,encoding='utf-8')
+
           p=Path('cefet-trainer/app/src/main/assets/index.html')
-          s=p.read_text(encoding='utf-8')
-          if 'upgrade-v16.css' not in s:
-              s=s.replace('</head>','<link rel="stylesheet" href="upgrade-v16.css"></head>',1)
-          if 'upgrade-v16.js' not in s:
-              s=s.replace('</body>','<script src="upgrade-v16.js"></script></body>',1)
-          p.write_text(s,encoding='utf-8')
+          h=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in h
+          h=h.replace('</head>','<link rel="stylesheet" href="upgrade-v17.css"></head>',1)
+          h=h.replace('</body>','<script src="upgrade-v16.js"></script><script src="upgrade-v17.js"></script></body>',1)
+          p.write_text(h,encoding='utf-8')
 
           g=Path('cefet-trainer/app/build.gradle')
           t=g.read_text(encoding='utf-8')
           t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.realista'", t)
-          t=re.sub(r'versionCode\s+\d+', 'versionCode 160', t)
-          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.16.0'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 170', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.17.0'", t)
           g.write_text(t,encoding='utf-8')
 
           m=Path('cefet-trainer/app/src/main/AndroidManifest.xml')
           u=m.read_text(encoding='utf-8')
-          u=u.replace('CEFET Trainer 2027','CEFET Realista 2027').replace('CEFET Trainer','CEFET Realista 2027')
+          u=u.replace('CEFET Trainer 2027','CEFET Caderno 2027').replace('CEFET Trainer','CEFET Caderno 2027')
           m.write_text(u,encoding='utf-8')
           PY
 
-      - name: Validate realistic question bank
+      - name: Audit curriculum and simulations
         shell: bash
         run: |
           node --check cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'Simulado A' cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'Simulado B' cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'Mapa de bolso' cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'Cidade em modo avião' cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'Texto original criado para este simulado' cefet-trainer/app/src/main/assets/upgrade-v16.js
-          grep -q 'br.com.cefettrainer.realista' cefet-trainer/app/build.gradle
-          grep -q "versionName '0.16.0'" cefet-trainer/app/build.gradle
+          node --check cefet-trainer/app/src/main/assets/upgrade-v17.js
+          grep -q 'ESTUDAR O PROGRAMA' cefet-trainer/app/src/main/assets/upgrade-v17.js
+          grep -q 'Agora tente sem gabarito' cefet-trainer/app/src/main/assets/upgrade-v17.js
+          grep -q 'window.__CEFET_BANK=B; return;' cefet-trainer/app/src/main/assets/upgrade-v16.js
+          grep -q "versionName '0.17.0'" cefet-trainer/app/build.gradle
           python3 - <<'PY'
           from pathlib import Path
-          import json
+          import re,json
+          h=Path('cefet-trainer/app/src/main/assets/index.html').read_text(encoding='utf-8')
+          m=re.search(r'<script id="db" type="application/json">(.*?)</script>',h,re.S)
+          assert m
+          db=json.loads(m.group(1))
+          trails=list(db['trails'].values())
+          assert len(trails)==210
+          expected={'Português':45,'Matemática':50,'Física':20,'Química':18,'Biologia':22,'História':30,'Geografia':25}
+          got={s:sum(t['subject']==s for t in trails) for s in expected}
+          assert got==expected,(got,expected)
+          for t in trails:
+              cp=next(x for x in t['steps'] if x['kind']=='checkpoint')
+              assert len(cp['options'])==4
+              assert cp['answer'] in cp['options']
+              assert cp.get('explanation')
+              assert next(x for x in t['steps'] if x['kind']=='goal').get('content')
+              assert next(x for x in t['steps'] if x['kind']=='understand').get('content')
           s=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js').read_text(encoding='utf-8')
           a=s.index('const B=')+len('const B=')
-          b=s.index(';\nconst oldDB=',a)
+          b=s.index(';\nwindow.__CEFET_BANK=B; return;',a)
           bank=json.loads(s[a:b])
-          assert len(bank['exams']) == 2
+          assert len(bank['exams'])==2
           for exam in bank['exams']:
               qs=exam['questions']
-              assert len(qs) == 30
-              assert [q['subject'] for q in qs[:10]] == ['Português']*10
-              assert [q['subject'] for q in qs[10:20]] == ['Matemática']*10
-              assert [q['subject'] for q in qs[20:25]] == ['Ciências da Natureza']*5
-              assert [q['subject'] for q in qs[25:30]] == ['Ciências Humanas']*5
+              assert len(qs)==30
+              assert [q['subject'] for q in qs[:10]]==['Português']*10
+              assert [q['subject'] for q in qs[10:20]]==['Matemática']*10
+              assert [q['subject'] for q in qs[20:25]]==['Ciências da Natureza']*5
+              assert [q['subject'] for q in qs[25:30]]==['Ciências Humanas']*5
               assert all(len(q['options'])==4 and q['answer'] in q['options'] and q['explain'] for q in qs)
-          assert len({q['prompt'] for e in bank['exams'] for q in e['questions']}) == 60
-          q4=[q for e in bank['exams'] if e['id']=='B' for q in e['questions'] if q['n']==4][0]
-          assert q4.get('stim')
-          print('Validated 60 original questions in two 30-question simulations')
+          assert len({q['prompt'] for e in bank['exams'] for q in e['questions']})==60
+          print('Curriculum audit OK:',got,'| simulations: 60 questions')
           PY
 
       - name: Build APK
         working-directory: cefet-trainer
         run: gradle --no-daemon clean assembleDebug
 
-      - name: Sign with stable sideload key
+      - name: Sign and validate APK
         shell: bash
         run: |
           test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
@@ -194,18 +183,18 @@ jobs:
             --ks-key-alias cefettrainer \
             --ks-pass pass:cefet2027 \
             --key-pass pass:cefet2027 \
-            --out CEFET_Realista_2027_v0.16.0.apk \
+            --out CEFET_Caderno_2027_v0.17.0.apk \
             cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
-          "$APKSIGNER" verify --verbose --print-certs CEFET_Realista_2027_v0.16.0.apk | tee signer.txt
+          "$APKSIGNER" verify --verbose --print-certs CEFET_Caderno_2027_v0.17.0.apk | tee signer.txt
           grep -q 'CN=CEFET Trainer Dev' signer.txt
-          unzip -t CEFET_Realista_2027_v0.16.0.apk >/dev/null
-          unzip -p CEFET_Realista_2027_v0.16.0.apk assets/upgrade-v16.js | grep -q 'Simulado A'
-          unzip -p CEFET_Realista_2027_v0.16.0.apk assets/upgrade-v16.js | grep -q 'Cidade em modo avião'
-          sha256sum CEFET_Realista_2027_v0.16.0.apk
+          unzip -t CEFET_Caderno_2027_v0.17.0.apk >/dev/null
+          unzip -p CEFET_Caderno_2027_v0.17.0.apk assets/upgrade-v17.js | grep -q 'ESTUDAR O PROGRAMA'
+          unzip -p CEFET_Caderno_2027_v0.17.0.apk assets/index.html | grep -q '"trail_count":210'
+          sha256sum CEFET_Caderno_2027_v0.17.0.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: CEFET_Realista_2027_v0.16.0
-          path: CEFET_Realista_2027_v0.16.0.apk
+          name: CEFET_Caderno_2027_v0.17.0
+          path: CEFET_Caderno_2027_v0.17.0.apk
           if-no-files-found: error
