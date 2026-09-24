@@ -308,10 +308,40 @@ public class MainActivity extends Activity {
             try {
                 YoutubeDL.getInstance().init(getApplicationContext());
                 FFmpeg.getInstance().init(getApplicationContext());
+
+                final String before = YoutubeDL.getInstance().versionName(getApplicationContext());
+                runOnUiThread(() -> status.setText("Atualizando yt-dlp... versão atual: " + (before == null ? "desconhecida" : before)));
+
+                String updateNote = "";
+                try {
+                    YoutubeDL.UpdateStatus updateStatus =
+                            YoutubeDL.getInstance().updateYoutubeDL(
+                                    getApplicationContext(),
+                                    YoutubeDL.UpdateChannel._NIGHTLY
+                            );
+                    String after = YoutubeDL.getInstance().versionName(getApplicationContext());
+                    updateNote = "yt-dlp atualizado: " + (after == null ? "versão mais recente" : after);
+                    if (updateStatus == YoutubeDL.UpdateStatus.ALREADY_UP_TO_DATE) {
+                        updateNote = "yt-dlp já estava atualizado: " + (after == null ? "versão atual" : after);
+                    }
+                } catch (Exception nightlyError) {
+                    try {
+                        YoutubeDL.getInstance().updateYoutubeDL(
+                                getApplicationContext(),
+                                YoutubeDL.UpdateChannel._STABLE
+                        );
+                        String after = YoutubeDL.getInstance().versionName(getApplicationContext());
+                        updateNote = "yt-dlp atualizado pela versão estável: " + (after == null ? "mais recente" : after);
+                    } catch (Exception stableError) {
+                        updateNote = "Não foi possível atualizar o yt-dlp agora; usando a versão embutida.";
+                    }
+                }
+
+                final String finalUpdateNote = updateNote;
                 engineReady = true;
                 runOnUiThread(() -> {
                     setBusyUi(false, "Pronto. Você pode usar a lista abaixo ou colar outro link.");
-                    info.setText("Os botões “Baixar MP3” usam o vídeo indicado ou uma busca automática no YouTube quando ainda não há vídeo fixo.");
+                    info.setText(finalUpdateNote + "\nOs botões “Baixar MP3” usam o vídeo indicado ou uma busca automática no YouTube quando ainda não há vídeo fixo.");
                 });
             } catch (Exception e) {
                 runOnUiThread(() -> {
@@ -346,7 +376,9 @@ public class MainActivity extends Activity {
 
         new Thread(() -> {
             try {
-                String title = YoutubeDL.getInstance().getInfo(url).getTitle();
+                YoutubeDLRequest infoRequest = new YoutubeDLRequest(url);
+                infoRequest.addOption("--no-warnings");
+                String title = YoutubeDL.getInstance().getInfo(infoRequest).getTitle();
                 if (title == null || title.trim().isEmpty()) title = "Mídia encontrada";
                 final String finalTitle = title;
                 runOnUiThread(() -> {
@@ -398,6 +430,7 @@ public class MainActivity extends Activity {
             try {
                 YoutubeDLRequest request = new YoutubeDLRequest(source);
                 request.addOption("--no-playlist");
+                request.addOption("--no-warnings");
                 request.addOption("--no-mtime");
                 request.addOption("--windows-filenames");
                 request.addOption("-o", dir.getAbsolutePath() + "/%(title).120s.%(ext)s");
