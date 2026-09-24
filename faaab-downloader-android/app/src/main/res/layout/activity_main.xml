@@ -68,13 +68,23 @@
                 android:text="Baixar MP4" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/allBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:enabled="false"
+            android:text="Baixar todas as músicas em MP3" />
+
         <ProgressBar
             android:id="@+id/progress"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
             android:layout_marginTop="18dp"
-            android:indeterminate="true" />
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
 
         <TextView
             android:id="@+id/status"
@@ -104,7 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Toque em YouTube para conferir a faixa ou em Baixar MP3 para salvar direto em Downloads/FAAAB."
+            android:text="Toque em YouTube para conferir a faixa, Baixar MP3 para uma música, ou use Baixar todas as músicas em MP3. A barra acima mostra o andamento geral."
             android:textSize="14sp" />
 
         <LinearLayout
