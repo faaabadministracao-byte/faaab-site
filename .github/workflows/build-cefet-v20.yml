@@ -1,0 +1,214 @@
+name: Build CEFET Caderno v0.20
+
+on:
+  push:
+    branches:
+      - build/cefet-trainer-014
+  workflow_dispatch:
+
+jobs:
+  build-v20:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore verified base app
+        shell: bash
+        run: |
+          cat \
+            cefet-clean/chunk00 \
+            cefet-clean/chunk01 \
+            cefet-clean/chunk02 \
+            cefet-clean/chunk03 \
+            cefet-clean/chunk04a0 \
+            cefet-clean/chunk04a1p0 \
+            cefet-clean/chunk04a1p1 \
+            cefet-clean/chunk04b \
+            cefet-clean/chunk05a \
+            cefet-clean/chunk05b \
+            cefet-clean/chunk06a \
+            cefet-clean/chunk06b \
+            cefet-clean/chunk07 \
+            cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          echo '852a994ca79e906786b13ff85d955f8d40ee2ea893bca9041dee2b6f0ce623d7  clean.b64' | sha256sum -c -
+          base64 -d clean.b64 > clean.tar.gz
+          echo '48f24d6b1150c282e37e1bf51b0a0b09b2882c95ce053687d014a698b6aa4997  clean.tar.gz' | sha256sum -c -
+          mkdir -p cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
+
+      - name: Restore exam bank and signing key
+        shell: bash
+        run: |
+          cat \
+            cefet-v16-patch/c00 \
+            cefet-v16-patch/c01 \
+            cefet-v16-patch/c02 \
+            cefet-v16-patch/c03 \
+            cefet-v16-patch/c04 \
+            cefet-v16-patch/c05 \
+            cefet-v16-patch/c06 \
+            cefet-v16-patch/c07 \
+            cefet-v16-patch/c08 \
+            cefet-v16-patch/c09 \
+            cefet-v16-patch/c10 \
+            cefet-v16-patch/c11 \
+            cefet-v16-patch/c12 \
+            cefet-v16-patch/c13 \
+            cefet-v16-patch/c14 \
+            cefet-v16-patch/c15 \
+            cefet-v16-patch/c16 \
+            cefet-v16-patch/c17 \
+            cefet-v16-patch/c18 \
+            cefet-v16-patch/c19 \
+            cefet-v16-patch/c20 > v16.b64
+          test "$(wc -c < v16.b64)" -eq 32072
+          echo '369b022aae1bad32f73f4885f918ec288c36d58cd06061b63d2837f9741c5882  v16.b64' | sha256sum -c -
+          base64 -d v16.b64 > v16.tar.gz
+          echo 'b13d81415f0f7934487a8aa959d9592bc9aa91588881eeefab458187dd883cd2  v16.tar.gz' | sha256sum -c -
+          mkdir -p /tmp/v16
+          tar -xzf v16.tar.gz -C /tmp/v16
+          cp /tmp/v16/upgrade-v16.js cefet-trainer/app/src/main/assets/
+          cp /tmp/v16/cefet-dev.keystore cefet-trainer/app/cefet-dev.keystore
+
+      - name: Restore v0.20 adaptive engine
+        shell: bash
+        run: |
+          cp cefet-v20/v20.b64 v20.b64
+          test "$(wc -c < v20.b64)" -eq 17824
+          echo '72fac56779bea34c23f0270c2ff37a4b04cf4c29da1d2592bf83e5f0124db49a  v20.b64' | sha256sum -c -
+          base64 -d v20.b64 > v20.tar.gz
+          test "$(wc -c < v20.tar.gz)" -eq 13368
+          echo '0254b899a8cf116ea0baff3e285bf55f172a01d83ad7aafe0c6421e871f94cae  v20.tar.gz' | sha256sum -c -
+          mkdir -p /tmp/v20
+          tar -xzf v20.tar.gz -C /tmp/v20
+          cp /tmp/v20/upgrade-v20.js cefet-trainer/app/src/main/assets/
+          cp /tmp/v20/upgrade-v20.css cefet-trainer/app/src/main/assets/
+          echo 'a84668cf42a92dc1fab103c7ac74bd7f3eb112b3a5467cbd79319f0d013e916c  cefet-trainer/app/src/main/assets/upgrade-v20.js' | sha256sum -c -
+          echo '7acdef8f0afef1280f12d9a181248d06067e1af0440647afa858ab3e112690b2  cefet-trainer/app/src/main/assets/upgrade-v20.css' | sha256sum -c -
+          node --check cefet-trainer/app/src/main/assets/upgrade-v20.js
+
+      - name: Assemble v0.20 app
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          a=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js')
+          s=a.read_text(encoding='utf-8')
+          marker="const oldDB=JSON.parse(document.getElementById('db').textContent);"
+          assert marker in s
+          s=s.replace(marker,"window.__CEFET_BANK=B; return;",1)
+          a.write_text(s,encoding='utf-8')
+
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          h=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in h
+          h=h.replace('</head>','<link rel="stylesheet" href="upgrade-v20.css"></head>',1)
+          h=h.replace('</body>','<script src="upgrade-v16.js"></script><script src="upgrade-v20.js"></script></body>',1)
+          p.write_text(h,encoding='utf-8')
+
+          g=Path('cefet-trainer/app/build.gradle')
+          t=g.read_text(encoding='utf-8')
+          t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.caderno20'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 200', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.20.0'", t)
+          g.write_text(t,encoding='utf-8')
+
+          m=Path('cefet-trainer/app/src/main/AndroidManifest.xml')
+          u=m.read_text(encoding='utf-8')
+          u=u.replace('CEFET Trainer 2027','CEFET Caderno 2027').replace('CEFET Trainer','CEFET Caderno 2027')
+          m.write_text(u,encoding='utf-8')
+          PY
+
+      - name: Audit adaptive study and CEFET structure
+        shell: bash
+        run: |
+          grep -q 'SESSÃO INTELIGENTE · 6 PASSOS' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          grep -q 'Pausa curta de movimento' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          grep -q 'Consegui explicar sem olhar' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          grep -q 'Desafio avançado opcional' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          grep -q 'oldAnchor' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          grep -q 'window.scrollBy' cefet-trainer/app/src/main/assets/upgrade-v20.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,json,collections
+
+          h=Path('cefet-trainer/app/src/main/assets/index.html').read_text(encoding='utf-8')
+          m=re.search(r'<script id="db" type="application/json">(.*?)</script>',h,re.S)
+          assert m
+          db=json.loads(m.group(1))
+          trails=list(db['trails'].values())
+          assert len(trails)==210
+          expected={'Português':45,'Matemática':50,'Física':20,'Química':18,'Biologia':22,'História':30,'Geografia':25}
+          got={k:sum(t['subject']==k for t in trails) for k in expected}
+          assert got==expected,(got,expected)
+          assert db['trails']['M07']['title']=='Radiciação e racionalização'
+          for t in trails:
+              kinds={x['kind'] for x in t['steps']}
+              assert {'goal','remember','understand','checkpoint','repair','cefet'} <= kinds
+              cp=next(x for x in t['steps'] if x['kind']=='checkpoint')
+              assert len(cp['options'])==4 and cp['answer'] in cp['options'] and cp.get('explanation')
+
+          s=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js').read_text(encoding='utf-8')
+          a=s.index('const B=')+len('const B=')
+          b=s.index(';\nwindow.__CEFET_BANK=B; return;',a)
+          bank=json.loads(s[a:b])
+          assert len(bank['exams'])==2
+          for exam in bank['exams']:
+              qs=exam['questions']
+              assert len(qs)==30
+              assert [q['subject'] for q in qs[:10]]==['Português']*10
+              assert [q['subject'] for q in qs[10:20]]==['Matemática']*10
+              assert [q['subject'] for q in qs[20:25]]==['Ciências da Natureza']*5
+              assert [q['subject'] for q in qs[25:30]]==['Ciências Humanas']*5
+              stims=[q.get('stim') for q in qs[:10] if q.get('stim')]
+              groups=collections.Counter(stims)
+              assert any(v>=3 for v in groups.values())
+              assert all(len(q['options'])==4 and q['answer'] in q['options'] and q['explain'] for q in qs)
+          print('Audit OK',got)
+          PY
+
+      - name: Build APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Sign and validate APK
+        shell: bash
+        run: |
+          test -f cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
+          APKSIGNER="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -1)"
+          test -n "$APKSIGNER"
+          "$APKSIGNER" sign \
+            --ks cefet-trainer/app/cefet-dev.keystore \
+            --ks-key-alias cefettrainer \
+            --ks-pass pass:cefet2027 \
+            --key-pass pass:cefet2027 \
+            --out CEFET_Caderno_2027_v0.20.0.apk \
+            cefet-trainer/app/build/outputs/apk/debug/app-debug.apk
+          "$APKSIGNER" verify --verbose --print-certs CEFET_Caderno_2027_v0.20.0.apk | tee signer.txt
+          grep -q 'CN=CEFET Trainer Dev' signer.txt
+          unzip -t CEFET_Caderno_2027_v0.20.0.apk >/dev/null
+          unzip -p CEFET_Caderno_2027_v0.20.0.apk assets/upgrade-v20.js | grep -q 'SESSÃO INTELIGENTE'
+          unzip -p CEFET_Caderno_2027_v0.20.0.apk assets/index.html | grep -q '"trail_count":210'
+          sha256sum CEFET_Caderno_2027_v0.20.0.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Caderno_2027_v0.20.0
+          path: CEFET_Caderno_2027_v0.20.0.apk
+          if-no-files-found: error
