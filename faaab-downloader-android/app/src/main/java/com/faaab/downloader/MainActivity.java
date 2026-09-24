@@ -4,12 +4,17 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +24,8 @@ import com.yausername.youtubedl_android.YoutubeDL;
 import com.yausername.youtubedl_android.YoutubeDLRequest;
 
 import java.io.File;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class MainActivity extends Activity {
     private EditText urlInput;
@@ -28,9 +35,135 @@ public class MainActivity extends Activity {
     private Button analyzeBtn;
     private Button mp3Btn;
     private Button mp4Btn;
+    private LinearLayout songList;
 
     private volatile boolean engineReady = false;
     private volatile boolean busy = false;
+
+    private static class SongEntry {
+        final String section;
+        final String unit;
+        final String song;
+        final String source;
+        final String youtubeUrl;
+        final boolean downloadable;
+
+        SongEntry(String section, String unit, String song, String source, String youtubeUrl, boolean downloadable) {
+            this.section = section;
+            this.unit = unit;
+            this.song = song;
+            this.source = source;
+            this.youtubeUrl = youtubeUrl;
+            this.downloadable = downloadable;
+        }
+    }
+
+    private static String ytSearch(String query) {
+        return "https://www.youtube.com/results?search_query=" +
+                URLEncoder.encode(query, StandardCharsets.UTF_8);
+    }
+
+    private static final SongEntry[] SONGS = new SongEntry[] {
+        new SongEntry("HINOS DAS FORÇAS", "Exército Brasileiro", "Canção do Exército Brasileiro",
+                "https://www.youtube.com/watch?v=wzjrNJL0aBs",
+                "https://www.youtube.com/watch?v=wzjrNJL0aBs", true),
+        new SongEntry("HINOS DAS FORÇAS", "Marinha do Brasil", "Cisne Branco",
+                "https://www.youtube.com/watch?v=50ZhNO9YmzY",
+                "https://www.youtube.com/watch?v=50ZhNO9YmzY", true),
+        new SongEntry("HINOS DAS FORÇAS", "Corpo de Fuzileiros Navais", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("HINOS DAS FORÇAS", "Força Aérea Brasileira", "Hino dos Aviadores",
+                "https://www.youtube.com/watch?v=obEI5HusSO4",
+                "https://www.youtube.com/watch?v=obEI5HusSO4", true),
+        new SongEntry("HINOS DAS FORÇAS", "CBM", "Soldados do Fogo",
+                "ytsearch1:Soldados do Fogo CBMERJ",
+                ytSearch("Soldados do Fogo CBMERJ"), true),
+
+        new SongEntry("EXÉRCITO BRASILEIRO", "1º BFE", "Canção das Forças Especiais",
+                "https://www.youtube.com/watch?v=0Tl0WewRaV0",
+                "https://www.youtube.com/watch?v=0Tl0WewRaV0", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "2º BPE", "Canção do 2º BPE",
+                "ytsearch1:Canção do 2º BPE",
+                ytSearch("Canção do 2º BPE"), true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "72º BI Caat", "Canção do 72º BI Caat",
+                "ytsearch1:Canção do 72º Batalhão de Infantaria de Caatinga",
+                ytSearch("Canção do 72º Batalhão de Infantaria de Caatinga"), true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "26º BI Pqdt", "Eterno Herói — Canção do Paraquedista",
+                "https://www.youtube.com/watch?v=HCDN0GVtTAg",
+                "https://www.youtube.com/watch?v=HCDN0GVtTAg", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "20º BIB", "Canção da Tropa Blindada",
+                "https://www.youtube.com/watch?v=w3KVoOnnik4",
+                "https://www.youtube.com/watch?v=w3KVoOnnik4", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "BCC", "Canção da Tropa Blindada (provisória)",
+                "https://www.youtube.com/watch?v=w3KVoOnnik4",
+                "https://www.youtube.com/watch?v=w3KVoOnnik4", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "1º BAC", "Canção dos Comandos",
+                "https://www.youtube.com/watch?v=HTe8DKG82pE",
+                "https://www.youtube.com/watch?v=HTe8DKG82pE", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "5º B Log", "Canção do 5º Batalhão Logístico",
+                "ytsearch1:Canção do 5º Batalhão Logístico",
+                ytSearch("Canção do 5º Batalhão Logístico"), true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "11º BI Mth", "Canção do Combatente de Montanha",
+                "https://www.youtube.com/watch?v=J53WStFyvjo",
+                "https://www.youtube.com/watch?v=J53WStFyvjo", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "B Sau", "Canção do Serviço de Saúde",
+                "https://www.youtube.com/watch?v=qN192Om7POo",
+                "https://www.youtube.com/watch?v=qN192Om7POo", true),
+        new SongEntry("EXÉRCITO BRASILEIRO", "1º RCG", "Canção da Cavalaria",
+                "https://www.youtube.com/watch?v=nVCH6f_XDyo",
+                "https://www.youtube.com/watch?v=nVCH6f_XDyo", true),
+
+        new SongEntry("MARINHA / CFN", "BOE FN / Tonelero", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("MARINHA / CFN", "BtlBldFuzNav", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("MARINHA / CFN", "BtlEngFuzNav", "Canção do Batalhão de Engenharia de Fuzileiros Navais",
+                "ytsearch1:Canção do Batalhão de Engenharia de Fuzileiros Navais",
+                ytSearch("Canção do Batalhão de Engenharia de Fuzileiros Navais"), true),
+        new SongEntry("MARINHA / CFN", "BtlVtrAnf", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("MARINHA / CFN", "BtlArtFuzNav", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("MARINHA / CFN", "Comandos Anfíbios", "Canção dos Comandos Anfíbios",
+                "ytsearch1:Canção Comandos Anfíbios Fuzileiros Navais",
+                ytSearch("Canção Comandos Anfíbios Fuzileiros Navais"), true),
+        new SongEntry("MARINHA / CFN", "CIAPOL", "Na Vanguarda",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo",
+                "https://www.youtube.com/watch?v=ZkFsz5iA0Uo", true),
+        new SongEntry("MARINHA / CFN", "BtlOpRib", "Hino do 1º Batalhão de Operações Ribeirinhas",
+                "ytsearch1:Hino do 1º Batalhão de Operações Ribeirinhas",
+                ytSearch("Hino do 1º Batalhão de Operações Ribeirinhas"), true),
+
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-BR", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-CO", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-MN", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-RF", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-GL", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+        new SongEntry("FORÇA AÉREA BRASILEIRA", "BINFAE-BE", "Canção da Infantaria da Aeronáutica",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE",
+                "https://www.youtube.com/watch?v=ctQuRwVR5jE", true),
+
+        new SongEntry("CBM — GRUPAMENTOS", "GBS", "Sem canção — regra atual do projeto", "", "", false),
+        new SongEntry("CBM — GRUPAMENTOS", "GSFMA", "Sem canção — regra atual do projeto", "", "", false),
+        new SongEntry("CBM — GRUPAMENTOS", "GOPP", "Sem canção — regra atual do projeto", "", "", false),
+        new SongEntry("CBM — GRUPAMENTOS", "GOA", "Sem canção — regra atual do projeto", "", "", false),
+        new SongEntry("CBM — GRUPAMENTOS", "GOESP", "Sem canção — regra atual do projeto", "", "", false)
+    };
 
     @Override
     public void onCreate(Bundle b) {
@@ -44,6 +177,7 @@ public class MainActivity extends Activity {
         analyzeBtn = findViewById(R.id.analyzeBtn);
         mp3Btn = findViewById(R.id.mp3Btn);
         mp4Btn = findViewById(R.id.mp4Btn);
+        songList = findViewById(R.id.songList);
 
         analyzeBtn.setOnClickListener(v -> analyze());
         mp3Btn.setOnClickListener(v -> download(true));
@@ -57,8 +191,107 @@ public class MainActivity extends Activity {
             }
         }
 
+        populateSongs();
         requestLegacyStorageIfNeeded();
         initEngine();
+    }
+
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
+    }
+
+    private TextView makeText(String text, float size, boolean bold) {
+        TextView v = new TextView(this);
+        v.setText(text);
+        v.setTextSize(size);
+        v.setTextColor(Color.rgb(25, 25, 25));
+        if (bold) v.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
+        return v;
+    }
+
+    private void populateSongs() {
+        songList.removeAllViews();
+        String lastSection = "";
+
+        for (SongEntry entry : SONGS) {
+            if (!entry.section.equals(lastSection)) {
+                TextView header = makeText(entry.section, 18, true);
+                LinearLayout.LayoutParams hp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                hp.topMargin = dp(24);
+                hp.bottomMargin = dp(8);
+                header.setLayoutParams(hp);
+                songList.addView(header);
+                lastSection = entry.section;
+            }
+
+            LinearLayout card = new LinearLayout(this);
+            card.setOrientation(LinearLayout.VERTICAL);
+            card.setPadding(dp(12), dp(10), dp(12), dp(10));
+            card.setBackgroundColor(Color.rgb(245, 245, 245));
+
+            LinearLayout.LayoutParams cp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            cp.bottomMargin = dp(8);
+            card.setLayoutParams(cp);
+
+            TextView unit = makeText(entry.unit, 16, true);
+            card.addView(unit);
+
+            TextView song = makeText(entry.song, 14, false);
+            LinearLayout.LayoutParams sp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            sp.topMargin = dp(3);
+            song.setLayoutParams(sp);
+            card.addView(song);
+
+            LinearLayout actions = new LinearLayout(this);
+            actions.setOrientation(LinearLayout.HORIZONTAL);
+            actions.setGravity(Gravity.CENTER_VERTICAL);
+            LinearLayout.LayoutParams ap = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            ap.topMargin = dp(8);
+            actions.setLayoutParams(ap);
+
+            if (entry.downloadable) {
+                Button youtube = new Button(this);
+                youtube.setText("YouTube");
+                youtube.setAllCaps(false);
+                youtube.setOnClickListener(v -> {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(entry.youtubeUrl)));
+                    } catch (Exception e) {
+                        toast("Não consegui abrir o YouTube.");
+                    }
+                });
+
+                Button download = new Button(this);
+                download.setText("Baixar MP3");
+                download.setAllCaps(false);
+                download.setOnClickListener(v -> downloadFromSource(entry.source, entry.unit + " — " + entry.song));
+
+                LinearLayout.LayoutParams bp1 = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+                LinearLayout.LayoutParams bp2 = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1);
+                bp2.leftMargin = dp(8);
+                actions.addView(youtube, bp1);
+                actions.addView(download, bp2);
+            } else {
+                TextView none = makeText("Sem botão de download", 13, false);
+                none.setTextColor(Color.DKGRAY);
+                actions.addView(none);
+            }
+
+            card.addView(actions);
+            songList.addView(card);
+        }
     }
 
     private void requestLegacyStorageIfNeeded() {
@@ -77,8 +310,8 @@ public class MainActivity extends Activity {
                 FFmpeg.getInstance().init(getApplicationContext());
                 engineReady = true;
                 runOnUiThread(() -> {
-                    setBusyUi(false, "Pronto. Cole um link e escolha MP3 ou MP4.");
-                    info.setText("Suporta sites compatíveis com yt-dlp. Não remove DRM nem proteções de acesso.");
+                    setBusyUi(false, "Pronto. Você pode usar a lista abaixo ou colar outro link.");
+                    info.setText("Os botões “Baixar MP3” usam o vídeo indicado ou uma busca automática no YouTube quando ainda não há vídeo fixo.");
                 });
             } catch (Exception e) {
                 runOnUiThread(() -> {
@@ -130,6 +363,16 @@ public class MainActivity extends Activity {
     }
 
     private void download(boolean audioOnly) {
+        String url = readUrl();
+        if (url == null) return;
+        downloadFromSource(url, audioOnly ? "Link colado — MP3" : "Link colado — MP4", audioOnly);
+    }
+
+    private void downloadFromSource(String source, String label) {
+        downloadFromSource(source, label, true);
+    }
+
+    private void downloadFromSource(String source, String label, boolean audioOnly) {
         if (!engineReady) {
             toast("O motor ainda está inicializando.");
             return;
@@ -138,9 +381,6 @@ public class MainActivity extends Activity {
             toast("Já existe uma operação em andamento.");
             return;
         }
-
-        String url = readUrl();
-        if (url == null) return;
 
         File dir = new File(
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
@@ -152,11 +392,11 @@ public class MainActivity extends Activity {
         }
 
         final String kind = audioOnly ? "MP3" : "MP4";
-        setBusyUi(true, "Baixando " + kind + "... Isso pode levar alguns minutos.");
+        setBusyUi(true, "Baixando " + kind + ": " + label);
 
         new Thread(() -> {
             try {
-                YoutubeDLRequest request = new YoutubeDLRequest(url);
+                YoutubeDLRequest request = new YoutubeDLRequest(source);
                 request.addOption("--no-playlist");
                 request.addOption("--no-mtime");
                 request.addOption("--windows-filenames");
@@ -179,13 +419,13 @@ public class MainActivity extends Activity {
 
                 runOnUiThread(() -> {
                     setBusyUi(false, kind + " concluído.");
-                    info.setText("Salvo em Downloads/FAAAB");
+                    info.setText("Salvo em Downloads/FAAAB — " + label);
                     toast("Download concluído");
                 });
             } catch (Exception e) {
                 runOnUiThread(() -> {
                     setBusyUi(false, "Falha no download: " + shortError(e));
-                    info.setText("Alguns sites exigem login, cookies ou bloqueiam downloads externos.");
+                    info.setText("Se esta faixa usou busca automática, toque em YouTube para conferir o resultado. Alguns vídeos também podem exigir login ou bloquear downloads externos.");
                 });
             }
         }).start();
