@@ -26,6 +26,12 @@ import com.yausername.youtubedl_android.YoutubeDLRequest;
 import java.io.File;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function3;
 
 public class MainActivity extends Activity {
     private EditText urlInput;
@@ -35,6 +41,7 @@ public class MainActivity extends Activity {
     private Button analyzeBtn;
     private Button mp3Btn;
     private Button mp4Btn;
+    private Button allBtn;
     private LinearLayout songList;
 
     private volatile boolean engineReady = false;
@@ -177,11 +184,13 @@ public class MainActivity extends Activity {
         analyzeBtn = findViewById(R.id.analyzeBtn);
         mp3Btn = findViewById(R.id.mp3Btn);
         mp4Btn = findViewById(R.id.mp4Btn);
+        allBtn = findViewById(R.id.allBtn);
         songList = findViewById(R.id.songList);
 
         analyzeBtn.setOnClickListener(v -> analyze());
         mp3Btn.setOnClickListener(v -> download(true));
         mp4Btn.setOnClickListener(v -> download(false));
+        allBtn.setOnClickListener(v -> downloadAllSongs());
 
         Intent intent = getIntent();
         if (intent != null && Intent.ACTION_SEND.equals(intent.getAction())) {
@@ -303,6 +312,7 @@ public class MainActivity extends Activity {
     }
 
     private void initEngine() {
+        progress.setIndeterminate(true);
         setBusyUi(true, "Inicializando yt-dlp + FFmpeg...");
         new Thread(() -> {
             try {
@@ -340,6 +350,9 @@ public class MainActivity extends Activity {
                 final String finalUpdateNote = updateNote;
                 engineReady = true;
                 runOnUiThread(() -> {
+                    progress.setIndeterminate(false);
+                    progress.setMax(100);
+                    progress.setProgress(0);
                     setBusyUi(false, "Pronto. Você pode usar a lista abaixo ou colar outro link.");
                     info.setText(finalUpdateNote + "\nOs botões “Baixar MP3” usam o vídeo indicado ou uma busca automática no YouTube quando ainda não há vídeo fixo.");
                 });
@@ -371,6 +384,7 @@ public class MainActivity extends Activity {
         String url = readUrl();
         if (url == null) return;
 
+        progress.setIndeterminate(true);
         setBusyUi(true, "Analisando o link...");
         info.setText("");
 
@@ -382,11 +396,15 @@ public class MainActivity extends Activity {
                 if (title == null || title.trim().isEmpty()) title = "Mídia encontrada";
                 final String finalTitle = title;
                 runOnUiThread(() -> {
+                    progress.setIndeterminate(false);
+                    progress.setProgress(0);
                     info.setText("Encontrado: " + finalTitle);
                     setBusyUi(false, "Escolha MP3 ou MP4.");
                 });
             } catch (Exception e) {
                 runOnUiThread(() -> {
+                    progress.setIndeterminate(false);
+                    progress.setProgress(0);
                     info.setText("");
                     setBusyUi(false, "Não consegui analisar: " + shortError(e));
                 });
@@ -414,43 +432,20 @@ public class MainActivity extends Activity {
             return;
         }
 
-        File dir = new File(
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                "FAAAB"
-        );
-        if (!dir.exists() && !dir.mkdirs()) {
-            toast("Não consegui criar Downloads/FAAAB");
-            return;
-        }
+        File dir = getDownloadDir();
+        if (dir == null) return;
 
         final String kind = audioOnly ? "MP3" : "MP4";
+        progress.setIndeterminate(false);
+        progress.setMax(100);
+        progress.setProgress(0);
         setBusyUi(true, "Baixando " + kind + ": " + label);
 
         new Thread(() -> {
             try {
-                YoutubeDLRequest request = new YoutubeDLRequest(source);
-                request.addOption("--no-playlist");
-                request.addOption("--no-warnings");
-                request.addOption("--no-mtime");
-                request.addOption("--windows-filenames");
-                request.addOption("-o", dir.getAbsolutePath() + "/%(title).120s.%(ext)s");
-
-                if (audioOnly) {
-                    request.addOption("-f", "bestaudio/best");
-                    request.addOption("-x");
-                    request.addOption("--audio-format", "mp3");
-                    request.addOption("--audio-quality", "0");
-                } else {
-                    request.addOption(
-                            "-f",
-                            "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best"
-                    );
-                    request.addOption("--merge-output-format", "mp4");
-                }
-
-                YoutubeDL.getInstance().execute(request);
-
+                executeWithFallback(source, label, audioOnly, dir, 0, 1);
                 runOnUiThread(() -> {
+                    progress.setProgress(100);
                     setBusyUi(false, kind + " concluído.");
                     info.setText("Salvo em Downloads/FAAAB — " + label);
                     toast("Download concluído");
@@ -458,9 +453,233 @@ public class MainActivity extends Activity {
             } catch (Exception e) {
                 runOnUiThread(() -> {
                     setBusyUi(false, "Falha no download: " + shortError(e));
-                    info.setText("Se esta faixa usou busca automática, toque em YouTube para conferir o resultado. Alguns vídeos também podem exigir login ou bloquear downloads externos.");
+                    info.setText("Tente o botão YouTube para conferir a faixa. O app já tentou o modo normal e clientes alternativos para contornar 403.");
                 });
             }
+        }).start();
+    }
+
+    private File getDownloadDir() {
+        File dir = new File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                "FAAAB"
+        );
+        if (!dir.exists() && !dir.mkdirs()) {
+            toast("Não consegui criar Downloads/FAAAB");
+            return null;
+        }
+        return dir;
+    }
+
+    private YoutubeDLRequest buildRequest(String source, boolean audioOnly, File dir, int strategy) {
+        YoutubeDLRequest request = new YoutubeDLRequest(source);
+        request.addOption("--no-playlist");
+        request.addOption("--no-warnings");
+        request.addOption("--no-mtime");
+        request.addOption("--windows-filenames");
+        request.addOption("--retries", "3");
+        request.addOption("--fragment-retries", "3");
+        request.addOption("--retry-sleep", "1");
+        request.addOption("-o", dir.getAbsolutePath() + "/%(title).120s.%(ext)s");
+
+        if (strategy == 1) {
+            request.addOption("--extractor-args", "youtube:player_client=android_vr");
+        } else if (strategy == 2) {
+            request.addOption("--extractor-args", "youtube:player_client=web_safari");
+        }
+
+        if (audioOnly) {
+            if (strategy == 2) {
+                request.addOption("-f", "bestaudio[protocol^=m3u8]/bestaudio/best");
+            } else {
+                request.addOption("-f", "bestaudio/best");
+            }
+            request.addOption("-x");
+            request.addOption("--audio-format", "mp3");
+            request.addOption("--audio-quality", "0");
+        } else {
+            request.addOption(
+                    "-f",
+                    "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best"
+            );
+            request.addOption("--merge-output-format", "mp4");
+        }
+
+        return request;
+    }
+
+    private void executeWithFallback(
+            String source,
+            String label,
+            boolean audioOnly,
+            File dir,
+            int itemIndex,
+            int totalItems
+    ) throws Exception {
+        Exception last = null;
+
+        for (int strategy = 0; strategy < 3; strategy++) {
+            try {
+                final int chosenStrategy = strategy;
+                final String processId = "FAAAB_" + System.nanoTime();
+
+                Function3<Float, Long, String, Unit> callback =
+                        new Function3<Float, Long, String, Unit>() {
+                            @Override
+                            public Unit invoke(Float itemProgress, Long eta, String line) {
+                                float p = itemProgress == null ? 0f : itemProgress;
+                                int overall = Math.min(
+                                        100,
+                                        Math.max(
+                                                0,
+                                                Math.round(((itemIndex + (p / 100f)) / totalItems) * 100f)
+                                        )
+                                );
+
+                                runOnUiThread(() -> {
+                                    progress.setProgress(overall);
+                                    String retryText = chosenStrategy == 0
+                                            ? ""
+                                            : chosenStrategy == 1
+                                                ? " • tentativa alternativa Android VR"
+                                                : " • tentativa alternativa HLS";
+                                    status.setText(
+                                            (itemIndex + 1) + "/" + totalItems +
+                                            " • " + Math.round(p) + "% • " + label + retryText
+                                    );
+                                });
+                                return Unit.INSTANCE;
+                            }
+                        };
+
+                YoutubeDLRequest request = buildRequest(source, audioOnly, dir, strategy);
+                YoutubeDL.getInstance().execute(request, processId, callback);
+                return;
+            } catch (Exception e) {
+                last = e;
+                String msg = e.getMessage() == null ? "" : e.getMessage();
+                boolean forbidden = msg.contains("403") ||
+                        msg.toLowerCase().contains("forbidden") ||
+                        msg.toLowerCase().contains("po token");
+
+                if (!forbidden) {
+                    throw e;
+                }
+            }
+        }
+
+        if (last != null) throw last;
+        throw new Exception("Falha desconhecida no download");
+    }
+
+    private void downloadAllSongs() {
+        if (!engineReady) {
+            toast("O motor ainda está inicializando.");
+            return;
+        }
+        if (busy) {
+            toast("Já existe uma operação em andamento.");
+            return;
+        }
+
+        File dir = getDownloadDir();
+        if (dir == null) return;
+
+        ArrayList<SongEntry> queue = new ArrayList<>();
+        Set<String> seen = new HashSet<>();
+
+        for (SongEntry entry : SONGS) {
+            if (!entry.downloadable) continue;
+
+            String key = entry.song + "|" + entry.source;
+            if (seen.add(key)) {
+                queue.add(entry);
+            }
+        }
+
+        if (queue.isEmpty()) {
+            toast("Não há músicas para baixar.");
+            return;
+        }
+
+        progress.setIndeterminate(false);
+        progress.setMax(100);
+        progress.setProgress(0);
+        setBusyUi(true, "Preparando download de todas as músicas...");
+        info.setText("0/" + queue.size() + " concluídas. Faixas repetidas serão baixadas apenas uma vez.");
+
+        new Thread(() -> {
+            int success = 0;
+            ArrayList<String> failed = new ArrayList<>();
+
+            for (int i = 0; i < queue.size(); i++) {
+                SongEntry entry = queue.get(i);
+                final int position = i;
+                final int doneBefore = success;
+
+                runOnUiThread(() -> {
+                    status.setText(
+                            (position + 1) + "/" + queue.size() +
+                            " • iniciando " + entry.unit + " — " + entry.song
+                    );
+                    info.setText(
+                            doneBefore + "/" + queue.size() +
+                            " concluídas • " + failed.size() + " falharam"
+                    );
+                });
+
+                try {
+                    executeWithFallback(
+                            entry.source,
+                            entry.unit + " — " + entry.song,
+                            true,
+                            dir,
+                            i,
+                            queue.size()
+                    );
+                    success++;
+                } catch (Exception e) {
+                    failed.add(entry.unit + " — " + entry.song + ": " + shortError(e));
+                }
+
+                final int completed = success;
+                final int failures = failed.size();
+                final int overall = Math.round(((i + 1f) / queue.size()) * 100f);
+
+                runOnUiThread(() -> {
+                    progress.setProgress(overall);
+                    info.setText(
+                            completed + "/" + queue.size() +
+                            " concluídas • " + failures + " falharam"
+                    );
+                });
+            }
+
+            final int finalSuccess = success;
+            final ArrayList<String> finalFailed = failed;
+
+            runOnUiThread(() -> {
+                progress.setProgress(100);
+                setBusyUi(false, "Download em lote finalizado.");
+
+                if (finalFailed.isEmpty()) {
+                    info.setText(
+                            "Tudo pronto: " + finalSuccess + "/" + queue.size() +
+                            " músicas salvas em Downloads/FAAAB."
+                    );
+                    toast("Todas as músicas foram baixadas");
+                } else {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(finalSuccess).append("/").append(queue.size())
+                            .append(" baixadas. ")
+                            .append(finalFailed.size()).append(" falharam:\n");
+                    for (String fail : finalFailed) {
+                        sb.append("• ").append(fail).append("\n");
+                    }
+                    info.setText(sb.toString().trim());
+                    toast("Lote concluído com algumas falhas");
+                }
+            });
         }).start();
     }
 
@@ -471,6 +690,7 @@ public class MainActivity extends Activity {
         analyzeBtn.setEnabled(!value && engineReady);
         mp3Btn.setEnabled(!value && engineReady);
         mp4Btn.setEnabled(!value && engineReady);
+        allBtn.setEnabled(!value && engineReady);
     }
 
     private String shortError(Exception e) {
