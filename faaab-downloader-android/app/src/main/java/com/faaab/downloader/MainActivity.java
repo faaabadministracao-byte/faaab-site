@@ -24,6 +24,8 @@ import com.yausername.youtubedl_android.YoutubeDL;
 import com.yausername.youtubedl_android.YoutubeDLRequest;
 
 import java.io.File;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -443,7 +445,12 @@ public class MainActivity extends Activity {
 
         new Thread(() -> {
             try {
-                executeWithFallback(source, label, audioOnly, dir, 0, 1);
+                if (audioOnly) {
+                    executeAudioMp3(source, label, dir, 0, 1);
+                } else {
+                    executeVideoWithFallback(source, label, dir, 0, 1);
+                }
+
                 runOnUiThread(() -> {
                     progress.setProgress(100);
                     setBusyUi(false, kind + " concluído.");
@@ -453,7 +460,7 @@ public class MainActivity extends Activity {
             } catch (Exception e) {
                 runOnUiThread(() -> {
                     setBusyUi(false, "Falha no download: " + shortError(e));
-                    info.setText("Tente o botão YouTube para conferir a faixa. O app já tentou o modo normal e clientes alternativos para contornar 403.");
+                    info.setText("O app tentou o link original, clientes alternativos e, para MP3, uma busca alternativa pelo nome da canção.");
                 });
             }
         }).start();
@@ -471,7 +478,7 @@ public class MainActivity extends Activity {
         return dir;
     }
 
-    private YoutubeDLRequest buildRequest(String source, boolean audioOnly, File dir, int strategy) {
+    private YoutubeDLRequest buildVideoRequest(String source, File dir, int strategy) {
         YoutubeDLRequest request = new YoutubeDLRequest(source);
         request.addOption("--no-playlist");
         request.addOption("--no-warnings");
@@ -488,30 +495,239 @@ public class MainActivity extends Activity {
             request.addOption("--extractor-args", "youtube:player_client=web_safari");
         }
 
-        if (audioOnly) {
-            if (strategy == 2) {
-                request.addOption("-f", "bestaudio[protocol^=m3u8]/bestaudio/best");
-            } else {
-                request.addOption("-f", "bestaudio/best");
-            }
-            request.addOption("-x");
-            request.addOption("--audio-format", "mp3");
-            request.addOption("--audio-quality", "0");
-        } else {
-            request.addOption(
-                    "-f",
-                    "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best"
-            );
-            request.addOption("--merge-output-format", "mp4");
-        }
-
+        request.addOption(
+                "-f",
+                "bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[height<=1080][ext=mp4]/best"
+        );
+        request.addOption("--merge-output-format", "mp4");
         return request;
     }
 
-    private void executeWithFallback(
+    private YoutubeDLRequest buildRawAudioRequest(String source, File tempDir, int strategy) {
+        YoutubeDLRequest request = new YoutubeDLRequest(source);
+        request.addOption("--no-playlist");
+        request.addOption("--no-warnings");
+        request.addOption("--no-mtime");
+        request.addOption("--windows-filenames");
+        request.addOption("--retries", "3");
+        request.addOption("--fragment-retries", "3");
+        request.addOption("--retry-sleep", "1");
+        request.addOption("-o", new File(tempDir, "input.%(ext)s").getAbsolutePath());
+
+        if (strategy == 1) {
+            request.addOption("--extractor-args", "youtube:player_client=android_vr");
+        } else if (strategy == 2) {
+            request.addOption("--extractor-args", "youtube:player_client=web_safari");
+        }
+
+        // IMPORTANTE: não usar -x/--audio-format aqui.
+        // O postprocessamento do yt-dlp tentava chamar ffprobe e falhava no Android.
+        request.addOption("-f", "bestaudio/best");
+        return request;
+    }
+
+    private String safeFileName(String text) {
+        String s = text.replaceAll("[\\\\/:*?\"<>|]", "_")
+                .replaceAll("\\s+", " ")
+                .trim();
+        if (s.length() > 120) s = s.substring(0, 120).trim();
+        if (s.isEmpty()) s = "audio";
+        return s;
+    }
+
+    private void deleteRecursive(File file) {
+        if (file == null || !file.exists()) return;
+        if (file.isDirectory()) {
+            File[] children = file.listFiles();
+            if (children != null) {
+                for (File child : children) deleteRecursive(child);
+            }
+        }
+        file.delete();
+    }
+
+    private File findDownloadedInput(File tempDir) throws Exception {
+        File[] files = tempDir.listFiles();
+        if (files == null || files.length == 0) {
+            throw new Exception("yt-dlp terminou sem criar o arquivo de áudio");
+        }
+
+        File best = null;
+        for (File f : files) {
+            String n = f.getName().toLowerCase();
+            if (!f.isFile() || n.endsWith(".part") || n.endsWith(".ytdl")) continue;
+            if (best == null || f.length() > best.length()) best = f;
+        }
+
+        if (best == null || best.length() == 0) {
+            throw new Exception("arquivo de áudio baixado está vazio");
+        }
+        return best;
+    }
+
+    private String runProcess(ProcessBuilder builder) throws Exception {
+        builder.redirectErrorStream(true);
+        Process process = builder.start();
+        StringBuilder out = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (out.length() < 6000) out.append(line).append("\n");
+            }
+        }
+        int exit = process.waitFor();
+        if (exit != 0) {
+            String msg = out.toString().trim();
+            if (msg.length() > 800) msg = msg.substring(msg.length() - 800);
+            throw new Exception("FFmpeg saiu com código " + exit + ": " + msg);
+        }
+        return out.toString();
+    }
+
+    private void convertToMp3(File input, File output) throws Exception {
+        File ffmpeg = new File(getApplicationInfo().nativeLibraryDir, "libffmpeg.so");
+        if (!ffmpeg.exists()) {
+            throw new Exception("FFmpeg interno não encontrado");
+        }
+
+        if (output.exists()) output.delete();
+
+        ProcessBuilder pb = new ProcessBuilder(
+                ffmpeg.getAbsolutePath(),
+                "-y",
+                "-hide_banner",
+                "-loglevel", "error",
+                "-i", input.getAbsolutePath(),
+                "-vn",
+                "-map_metadata", "-1",
+                output.getAbsolutePath()
+        );
+        pb.environment().put("LD_LIBRARY_PATH", getApplicationInfo().nativeLibraryDir);
+        runProcess(pb);
+
+        if (!output.exists() || output.length() < 1024) {
+            throw new Exception("FFmpeg não gerou um MP3 válido");
+        }
+    }
+
+    private File downloadAudioSource(
             String source,
             String label,
-            boolean audioOnly,
+            int itemIndex,
+            int totalItems
+    ) throws Exception {
+        ArrayList<String> candidates = new ArrayList<>();
+        candidates.add(source);
+
+        String searchQuery = "ytsearch1:" +
+                label.replace("—", " ")
+                        .replace("–", " ")
+                        .replaceAll("\\s+", " ")
+                        .trim() +
+                " oficial";
+
+        if (!source.startsWith("ytsearch")) candidates.add(searchQuery);
+
+        Exception last = null;
+
+        for (int candidateIndex = 0; candidateIndex < candidates.size(); candidateIndex++) {
+            String candidate = candidates.get(candidateIndex);
+
+            for (int strategy = 0; strategy < 3; strategy++) {
+                File tempDir = new File(getCacheDir(), "faaab_audio_" + System.nanoTime());
+                tempDir.mkdirs();
+
+                try {
+                    final int chosenStrategy = strategy;
+                    final int chosenCandidate = candidateIndex;
+                    final String processId = "FAAAB_A_" + System.nanoTime();
+
+                    Function3<Float, Long, String, Unit> callback =
+                            new Function3<Float, Long, String, Unit>() {
+                                @Override
+                                public Unit invoke(Float itemProgress, Long eta, String line) {
+                                    float p = itemProgress == null ? 0f : itemProgress;
+                                    int overall = Math.min(
+                                            99,
+                                            Math.max(
+                                                    0,
+                                                    Math.round(((itemIndex + (p * 0.90f / 100f)) / totalItems) * 100f)
+                                            )
+                                    );
+
+                                    runOnUiThread(() -> {
+                                        progress.setProgress(overall);
+                                        String retryText = "";
+                                        if (chosenCandidate > 0) retryText += " • busca alternativa";
+                                        if (chosenStrategy == 1) retryText += " • Android VR";
+                                        if (chosenStrategy == 2) retryText += " • HLS/Safari";
+                                        status.setText(
+                                                (itemIndex + 1) + "/" + totalItems +
+                                                " • " + Math.round(p) + "% • " + label + retryText
+                                        );
+                                    });
+                                    return Unit.INSTANCE;
+                                }
+                            };
+
+                    YoutubeDLRequest request = buildRawAudioRequest(candidate, tempDir, strategy);
+                    YoutubeDL.getInstance().execute(request, processId, callback);
+                    return findDownloadedInput(tempDir);
+                } catch (Exception e) {
+                    last = e;
+                    deleteRecursive(tempDir);
+                }
+            }
+        }
+
+        if (last != null) throw last;
+        throw new Exception("não foi possível obter o áudio");
+    }
+
+    private void executeAudioMp3(
+            String source,
+            String label,
+            File dir,
+            int itemIndex,
+            int totalItems
+    ) throws Exception {
+        File output = new File(dir, safeFileName(label) + ".mp3");
+
+        if (output.exists() && output.length() > 4096) {
+            runOnUiThread(() -> {
+                int overall = Math.round(((itemIndex + 1f) / totalItems) * 100f);
+                progress.setProgress(overall);
+                status.setText((itemIndex + 1) + "/" + totalItems + " • já existe • " + label);
+            });
+            return;
+        }
+
+        File input = null;
+        File tempParent = null;
+        try {
+            input = downloadAudioSource(source, label, itemIndex, totalItems);
+            tempParent = input.getParentFile();
+
+            runOnUiThread(() -> {
+                int base = Math.round(((itemIndex + 0.90f) / totalItems) * 100f);
+                progress.setProgress(Math.min(99, base));
+                status.setText((itemIndex + 1) + "/" + totalItems + " • convertendo para MP3 • " + label);
+            });
+
+            convertToMp3(input, output);
+
+            runOnUiThread(() -> {
+                int overall = Math.round(((itemIndex + 1f) / totalItems) * 100f);
+                progress.setProgress(overall);
+            });
+        } finally {
+            if (tempParent != null) deleteRecursive(tempParent);
+        }
+    }
+
+    private void executeVideoWithFallback(
+            String source,
+            String label,
             File dir,
             int itemIndex,
             int totalItems
@@ -521,7 +737,7 @@ public class MainActivity extends Activity {
         for (int strategy = 0; strategy < 3; strategy++) {
             try {
                 final int chosenStrategy = strategy;
-                final String processId = "FAAAB_" + System.nanoTime();
+                final String processId = "FAAAB_V_" + System.nanoTime();
 
                 Function3<Float, Long, String, Unit> callback =
                         new Function3<Float, Long, String, Unit>() {
@@ -535,14 +751,13 @@ public class MainActivity extends Activity {
                                                 Math.round(((itemIndex + (p / 100f)) / totalItems) * 100f)
                                         )
                                 );
-
                                 runOnUiThread(() -> {
                                     progress.setProgress(overall);
                                     String retryText = chosenStrategy == 0
                                             ? ""
                                             : chosenStrategy == 1
-                                                ? " • tentativa alternativa Android VR"
-                                                : " • tentativa alternativa HLS";
+                                                ? " • Android VR"
+                                                : " • HLS/Safari";
                                     status.setText(
                                             (itemIndex + 1) + "/" + totalItems +
                                             " • " + Math.round(p) + "% • " + label + retryText
@@ -552,24 +767,16 @@ public class MainActivity extends Activity {
                             }
                         };
 
-                YoutubeDLRequest request = buildRequest(source, audioOnly, dir, strategy);
+                YoutubeDLRequest request = buildVideoRequest(source, dir, strategy);
                 YoutubeDL.getInstance().execute(request, processId, callback);
                 return;
             } catch (Exception e) {
                 last = e;
-                String msg = e.getMessage() == null ? "" : e.getMessage();
-                boolean forbidden = msg.contains("403") ||
-                        msg.toLowerCase().contains("forbidden") ||
-                        msg.toLowerCase().contains("po token");
-
-                if (!forbidden) {
-                    throw e;
-                }
             }
         }
 
         if (last != null) throw last;
-        throw new Exception("Falha desconhecida no download");
+        throw new Exception("falha no download do vídeo");
     }
 
     private void downloadAllSongs() {
@@ -592,9 +799,7 @@ public class MainActivity extends Activity {
             if (!entry.downloadable) continue;
 
             String key = entry.song + "|" + entry.source;
-            if (seen.add(key)) {
-                queue.add(entry);
-            }
+            if (seen.add(key)) queue.add(entry);
         }
 
         if (queue.isEmpty()) {
@@ -629,10 +834,9 @@ public class MainActivity extends Activity {
                 });
 
                 try {
-                    executeWithFallback(
+                    executeAudioMp3(
                             entry.source,
                             entry.unit + " — " + entry.song,
-                            true,
                             dir,
                             i,
                             queue.size()
@@ -696,9 +900,23 @@ public class MainActivity extends Activity {
     private String shortError(Exception e) {
         String s = e.getMessage();
         if (s == null || s.trim().isEmpty()) s = e.getClass().getSimpleName();
-        s = s.replace("\n", " ").replace("\r", " ").trim();
-        if (s.length() > 220) s = s.substring(0, 220) + "...";
-        return s;
+
+        s = s.replace("\r", "");
+        String[] lines = s.split("\n");
+        StringBuilder useful = new StringBuilder();
+
+        for (String line : lines) {
+            String t = line.trim();
+            if (t.isEmpty()) continue;
+            if (t.startsWith("WARNING: Your yt-dlp version")) continue;
+            if (t.startsWith("WARNING: unable to obtain file audio codec with ffprobe")) continue;
+            if (useful.length() > 0) useful.append(" | ");
+            useful.append(t);
+        }
+
+        String out = useful.length() == 0 ? s.replace("\n", " ").trim() : useful.toString();
+        if (out.length() > 700) out = "..." + out.substring(out.length() - 697);
+        return out;
     }
 
     private void toast(String s) {
