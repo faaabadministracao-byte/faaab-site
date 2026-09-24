@@ -1,0 +1,48 @@
+name: Build FAAAB Downloader APK
+
+on:
+  push:
+    branches:
+      - build-faaab-downloader-apk
+    paths:
+      - 'faaab-downloader-android/**'
+      - '.github/workflows/build-faaab-downloader-apk.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        run: yes | sdkmanager --licenses >/dev/null || true
+          && sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Build debug APK
+        run: gradle -p faaab-downloader-android :app:assembleDebug --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: cp faaab-downloader-android/app/build/outputs/apk/debug/app-debug.apk FAAAB-Downloader-v1.0.0.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FAAAB-Downloader-v1.0.0
+          path: FAAAB-Downloader-v1.0.0.apk
+          if-no-files-found: error
