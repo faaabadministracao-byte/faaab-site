@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Cole o link de uma página ou vídeo. O app usa yt-dlp para extrair a mídia e FFmpeg para converter áudio."
+            android:text="Agora os batalhões/unidades já ficam listados abaixo com a canção e botão para baixar em MP3."
             android:textSize="15sp" />
 
         <EditText
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:hint="https://..."
+            android:hint="Ou cole outro link aqui..."
             android:inputType="textUri"
             android:minHeight="56dp"
             android:singleLine="true" />
@@ -73,7 +73,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="18dp"
             android:indeterminate="true" />
 
         <TextView
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="12dp"
+            android:paddingTop="10dp"
             android:text="Inicializando..."
             android:textStyle="bold" />
 
@@ -89,14 +89,35 @@
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
             android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Arquivos: Downloads/FAAAB\nMP4: melhor qualidade até 1080p quando disponível.\nMP3: melhor áudio disponível convertido para MP3.\nUse apenas conteúdo que você tenha permissão para baixar."
-            android:textSize="13sp" />
+            android:text="CATÁLOGO FAAAB"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Toque em YouTube para conferir a faixa ou em Baixar MP3 para salvar direto em Downloads/FAAAB."
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/songList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Use apenas conteúdo que você tenha permissão para baixar. O app não remove DRM nem proteções de acesso."
+            android:textSize="12sp" />
     </LinearLayout>
 </ScrollView>
