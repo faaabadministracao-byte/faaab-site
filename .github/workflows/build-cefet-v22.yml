@@ -53,6 +53,37 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import re
+          js=Path('cefet-trainer/app/src/main/assets/upgrade-v22.js')
+          z=js.read_text(encoding='utf-8')
+          a=z.index('const MODULES=')+len('const MODULES=')
+          b=z.index(';\\nconst MOD=',a)
+          import json
+          mods=json.loads(z[a:b])
+          fixes={
+            'M-EQ-1':'Isolando x: 3x=18. Dividindo os dois lados por 3, obtemos x=6.',
+            'M-EQ-2':'Fatorando x²−7x+12, temos (x−3)(x−4)=0; logo, x=3 ou x=4.',
+            'M-FUNC-1':'Substitua x por 4: f(4)=3·4+2=12+2=14.',
+            'M-FUNC-2':'Para achar a raiz, faça f(x)=0: −2x+8=0, então −2x=−8 e x=4.',
+            'M-FUNC-3':'A equação x²−9=0 equivale a x²=9; portanto, as raízes são x=3 e x=−3.',
+            'M-GEO-3':'A área do círculo é A=πr². Com r=4, A=π·4²=16π.',
+            'M-TRI-1':'Pelo Teorema de Pitágoras, h²=9²+12²=225; então h=√225=15.',
+            'M-TRI-2':'Os triângulos são semelhantes: 4/10=6/x. Fazendo o produto cruzado, 4x=60 e x=15.',
+            'M-ESP-1':'O volume do paralelepípedo é comprimento×largura×altura: 5×4×3=60 cm³.',
+            'F-MEC-1':'Velocidade média é distância dividida pelo tempo: v=180/3=60 km/h.',
+            'F-ENE-1':'Potência é trabalho dividido pelo intervalo de tempo: P=900/3=300 W.',
+            'F-WAVE-1':'Usando v=λf, isolamos λ=v/f. Assim, λ=20/5=4 m.',
+            'F-ELEC-1':'Pela Lei de Ohm, U=RI. Logo I=U/R=20/5=4 A.',
+            'Q-ATOM-1':'O número de nêutrons é N=A−Z. Portanto, N=40−18=22.'
+          }
+          for mod in mods:
+              if mod['id']=='M-NUM':
+                  mod['lesson']=mod['lesson'].replace('radiciação é a operação inversa','A radiciação é a operação inversa')
+              for q in mod['questions']:
+                  if q['id'] in fixes:
+                      q['explain']=fixes[q['id']]
+          z=z[:a]+json.dumps(mods,ensure_ascii=False,separators=(',',':'))+z[b:]
+          js.write_text(z,encoding='utf-8')
+
           p=Path('cefet-trainer/app/src/main/assets/index.html')
           h=p.read_text(encoding='utf-8')
           assert '"trail_count":210' in h
@@ -76,7 +107,7 @@ jobs:
         run: |
           grep -q 'Conteúdo = programa oficial 2027' cefet-trainer/app/src/main/assets/upgrade-v22.js
           grep -q 'explicação primeiro' cefet-trainer/app/src/main/assets/upgrade-v22.js
-          grep -q 'Radiciação é a operação inversa' cefet-trainer/app/src/main/assets/upgrade-v22.js
+          grep -q 'A radiciação é a operação inversa' cefet-trainer/app/src/main/assets/upgrade-v22.js
           grep -q 'Brasil Colonial: trabalho, açúcar e mineração' cefet-trainer/app/src/main/assets/upgrade-v22.js
           python3 - <<'PY'
           from pathlib import Path
@@ -111,7 +142,7 @@ jobs:
           cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Reta_Final_2027_v0.22.0.apk
           unzip -t CEFET_Reta_Final_2027_v0.22.0.apk >/dev/null
           unzip -p CEFET_Reta_Final_2027_v0.22.0.apk assets/upgrade-v22.js | grep -q 'Conteúdo = programa oficial 2027'
-          unzip -p CEFET_Reta_Final_2027_v0.22.0.apk assets/upgrade-v22.js | grep -q 'Radiciação é a operação inversa'
+          unzip -p CEFET_Reta_Final_2027_v0.22.0.apk assets/upgrade-v22.js | grep -q 'A radiciação é a operação inversa'
           sha256sum CEFET_Reta_Final_2027_v0.22.0.apk
 
       - uses: actions/upload-artifact@v4
