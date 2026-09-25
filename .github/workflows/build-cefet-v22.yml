@@ -56,7 +56,7 @@ jobs:
           js=Path('cefet-trainer/app/src/main/assets/upgrade-v22.js')
           z=js.read_text(encoding='utf-8')
           a=z.index('const MODULES=')+len('const MODULES=')
-          b=z.index(';\\nconst MOD=',a)
+          mpos=z.index('const MOD=',a)\n          b=z.rfind(';',a,mpos)
           import json
           mods=json.loads(z[a:b])
           fixes={
