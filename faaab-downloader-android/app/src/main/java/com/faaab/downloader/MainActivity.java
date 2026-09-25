@@ -770,8 +770,9 @@ public class MainActivity extends Activity {
                             @Override
                             public Unit invoke(Float itemProgress, Long eta, String line) {
                                 float p = itemProgress == null ? 0f : itemProgress;
-                                    if (p < 0f) p = 0f;
-                                    if (p > 100f) p = 100f;
+                                if (p < 0f) p = 0f;
+                                if (p > 100f) p = 100f;
+                                final float displayP = p;
                                 int overall = Math.min(
                                         100,
                                         Math.max(
