@@ -1,0 +1,121 @@
+name: Build CEFET Reta Final v0.22
+
+on:
+  push:
+    branches:
+      - build/cefet-trainer-014
+  workflow_dispatch:
+
+jobs:
+  build-v22:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore base app
+        shell: bash
+        run: |
+          cat cefet-clean/chunk00 cefet-clean/chunk01 cefet-clean/chunk02 cefet-clean/chunk03 cefet-clean/chunk04a0 cefet-clean/chunk04a1p0 cefet-clean/chunk04a1p1 cefet-clean/chunk04b cefet-clean/chunk05a cefet-clean/chunk05b cefet-clean/chunk06a cefet-clean/chunk06b cefet-clean/chunk07 cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          echo '852a994ca79e906786b13ff85d955f8d40ee2ea893bca9041dee2b6f0ce623d7  clean.b64' | sha256sum -c -
+          base64 -d clean.b64 > clean.tar.gz
+          echo '48f24d6b1150c282e37e1bf51b0a0b09b2882c95ce053687d014a698b6aa4997  clean.tar.gz' | sha256sum -c -
+          mkdir cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
+
+      - name: Restore v0.22 curriculum engine
+        shell: bash
+        run: |
+          cat cefet-v22/p00 cefet-v22/p01 cefet-v22/p02 cefet-v22/p03 > v22.b64
+          test "$(wc -c < v22.b64)" -eq 34732
+          echo 'd7c63f0990c466a0411ce27f2349ef2cdf77bd57bf5c95447334a23c16a9e48e  v22.b64' | sha256sum -c -
+          base64 -d v22.b64 > v22.tar.gz
+          test "$(wc -c < v22.tar.gz)" -eq 26048
+          echo 'f3a63f1fcbc6f8c7134b45e8212c9cfa8b7d2ae2eae9f93c1765d84b9a7494c2  v22.tar.gz' | sha256sum -c -
+          mkdir /tmp/v22
+          tar -xzf v22.tar.gz -C /tmp/v22
+          cp /tmp/v22/upgrade-v22.js cefet-trainer/app/src/main/assets/
+          cp /tmp/v22/upgrade-v22.css cefet-trainer/app/src/main/assets/
+          echo '9192275f8421e28642be613c2eaf2cc10fe6f0435e0a519ade801cd7c4b88456  cefet-trainer/app/src/main/assets/upgrade-v22.js' | sha256sum -c -
+          echo 'aa751389f11290c1dc6f2e68b94938ece8771e2ca46f418d308860f0c009f7b2  cefet-trainer/app/src/main/assets/upgrade-v22.css' | sha256sum -c -
+          node --check cefet-trainer/app/src/main/assets/upgrade-v22.js
+
+      - name: Configure app
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          h=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in h
+          h=h.replace('</head>','<link rel="stylesheet" href="upgrade-v22.css"></head>',1)
+          h=h.replace('</body>','<script src="upgrade-v22.js"></script></body>',1)
+          p.write_text(h,encoding='utf-8')
+          g=Path('cefet-trainer/app/build.gradle')
+          t=g.read_text(encoding='utf-8')
+          t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.retafinal22'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 220', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.22.0'", t)
+          g.write_text(t,encoding='utf-8')
+          m=Path('cefet-trainer/app/src/main/AndroidManifest.xml')
+          u=m.read_text(encoding='utf-8')
+          u=u.replace('CEFET Trainer 2027','CEFET Reta Final 2027').replace('CEFET Trainer','CEFET Reta Final 2027')
+          m.write_text(u,encoding='utf-8')
+          PY
+
+      - name: Audit content
+        shell: bash
+        run: |
+          grep -q 'Conteúdo = programa oficial 2027' cefet-trainer/app/src/main/assets/upgrade-v22.js
+          grep -q 'explicação primeiro' cefet-trainer/app/src/main/assets/upgrade-v22.js
+          grep -q 'Radiciação é a operação inversa' cefet-trainer/app/src/main/assets/upgrade-v22.js
+          grep -q 'Brasil Colonial: trabalho, açúcar e mineração' cefet-trainer/app/src/main/assets/upgrade-v22.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,re
+          s=Path('cefet-trainer/app/src/main/assets/upgrade-v22.js').read_text(encoding='utf-8')
+          a=s.index('const MODULES=')+len('const MODULES=')
+          b=s.index(';\nconst MOD=',a)
+          mods=json.loads(s[a:b])
+          assert len(mods)==35
+          qs=[q for m in mods for q in m['questions']]
+          assert len(qs)==86
+          assert len({q['id'] for q in qs})==86
+          assert len({q['prompt'] for q in qs})==86
+          assert all(len(q['options'])==4 and q['answer'] in q['options'] and len(q['explain'])>=25 for q in qs)
+          assert all(len(m['lesson'])>=100 and len(m['method'])>=80 and len(m['example'])>=40 for m in mods)
+          subjects={m['subject'] for m in mods}
+          assert subjects=={'Português','Matemática','Física','Química','Biologia','História','Geografia'}
+          history=' '.join(m['title']+' '+m['official'] for m in mods if m['subject']=='História').lower()
+          for banned in ['era vargas','ditadura militar','primeira guerra mundial','segunda guerra mundial','república velha','independência do brasil']:
+              assert banned not in history,banned
+          assert 'expansão marítima' in history and 'mercantilismo' in history and 'brasil colonial' in history
+          print('audit ok:',len(mods),'modules',len(qs),'questions')
+          PY
+
+      - name: Build APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Validate APK
+        shell: bash
+        run: |
+          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Reta_Final_2027_v0.22.0.apk
+          unzip -t CEFET_Reta_Final_2027_v0.22.0.apk >/dev/null
+          unzip -p CEFET_Reta_Final_2027_v0.22.0.apk assets/upgrade-v22.js | grep -q 'Conteúdo = programa oficial 2027'
+          unzip -p CEFET_Reta_Final_2027_v0.22.0.apk assets/upgrade-v22.js | grep -q 'Radiciação é a operação inversa'
+          sha256sum CEFET_Reta_Final_2027_v0.22.0.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Reta_Final_2027_v0.22.0
+          path: CEFET_Reta_Final_2027_v0.22.0.apk
+          if-no-files-found: error
