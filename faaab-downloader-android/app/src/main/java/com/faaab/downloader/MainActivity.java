@@ -671,6 +671,7 @@ public class MainActivity extends Activity {
                                     float p = itemProgress == null ? 0f : itemProgress;
                                     if (p < 0f) p = 0f;
                                     if (p > 100f) p = 100f;
+                                    final float displayP = p;
                                     int overall = Math.min(
                                             99,
                                             Math.max(
@@ -688,7 +689,7 @@ public class MainActivity extends Activity {
                                         if (chosenStrategy == 3) retryText += " • TV/Best";
                                         status.setText(
                                                 (itemIndex + 1) + "/" + totalItems +
-                                                " • " + Math.round(p) + "% • " + label + retryText
+                                                " • " + Math.round(displayP) + "% • " + label + retryText
                                         );
                                     });
                                     return Unit.INSTANCE;
@@ -759,7 +760,7 @@ public class MainActivity extends Activity {
     ) throws Exception {
         Exception last = null;
 
-        for (int strategy = 0; strategy < 3; strategy++) {
+        for (int strategy = 0; strategy < 4; strategy++) {
             try {
                 final int chosenStrategy = strategy;
                 final String processId = "FAAAB_V_" + System.nanoTime();
@@ -784,10 +785,12 @@ public class MainActivity extends Activity {
                                             ? ""
                                             : chosenStrategy == 1
                                                 ? " • Android VR"
-                                                : " • HLS/Safari";
+                                                : chosenStrategy == 2
+                                                    ? " • HLS/Safari"
+                                                    : " • TV/Best";
                                     status.setText(
                                             (itemIndex + 1) + "/" + totalItems +
-                                            " • " + Math.round(p) + "% • " + label + retryText
+                                            " • " + Math.round(displayP) + "% • " + label + retryText
                                     );
                                 });
                                 return Unit.INSTANCE;
