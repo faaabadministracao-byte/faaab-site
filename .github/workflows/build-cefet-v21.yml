@@ -1,0 +1,129 @@
+name: Build CEFET Reta Final v0.21
+
+on:
+  push:
+    branches:
+      - build/cefet-trainer-014
+  workflow_dispatch:
+
+jobs:
+  build-v21:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore app
+        shell: bash
+        run: |
+          cat cefet-clean/chunk00 cefet-clean/chunk01 cefet-clean/chunk02 cefet-clean/chunk03 cefet-clean/chunk04a0 cefet-clean/chunk04a1p0 cefet-clean/chunk04a1p1 cefet-clean/chunk04b cefet-clean/chunk05a cefet-clean/chunk05b cefet-clean/chunk06a cefet-clean/chunk06b cefet-clean/chunk07 cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          base64 -d clean.b64 > clean.tar.gz
+          mkdir cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
+
+      - name: Restore exam bank
+        shell: bash
+        run: |
+          cat cefet-v16-patch/c00 cefet-v16-patch/c01 cefet-v16-patch/c02 cefet-v16-patch/c03 cefet-v16-patch/c04 cefet-v16-patch/c05 cefet-v16-patch/c06 cefet-v16-patch/c07 cefet-v16-patch/c08 cefet-v16-patch/c09 cefet-v16-patch/c10 cefet-v16-patch/c11 cefet-v16-patch/c12 cefet-v16-patch/c13 cefet-v16-patch/c14 cefet-v16-patch/c15 cefet-v16-patch/c16 cefet-v16-patch/c17 cefet-v16-patch/c18 cefet-v16-patch/c19 cefet-v16-patch/c20 > v16.b64
+          test "$(wc -c < v16.b64)" -eq 32072
+          base64 -d v16.b64 > v16.tar.gz
+          mkdir /tmp/v16
+          tar -xzf v16.tar.gz -C /tmp/v16
+          cp /tmp/v16/upgrade-v16.js cefet-trainer/app/src/main/assets/
+
+      - name: Restore Reta Final engine
+        shell: bash
+        run: |
+          cat cefet-v21/p00 cefet-v21/p01 cefet-v21/p02 cefet-v21/p03 > v21.b64
+          test "$(wc -c < v21.b64)" -eq 26580
+          echo 'ca4fd5e660b4547287344c86221a3b1bf6f9b1c22d0c057c00705fbf27fbd2ed  v21.b64' | sha256sum -c -
+          base64 -d v21.b64 > v21.tar.gz
+          echo '7ea1d892e9bfac417747d5ba7893ce270dc7bad57fff3da3751711321f95854f  v21.tar.gz' | sha256sum -c -
+          mkdir /tmp/v21
+          tar -xzf v21.tar.gz -C /tmp/v21
+          cp /tmp/v21/upgrade-v21.js cefet-trainer/app/src/main/assets/
+          cp /tmp/v21/upgrade-v21.css cefet-trainer/app/src/main/assets/
+          node --check cefet-trainer/app/src/main/assets/upgrade-v21.js
+
+      - name: Configure app
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          a=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js')
+          s=a.read_text(encoding='utf-8')
+          marker="const oldDB=JSON.parse(document.getElementById('db').textContent);"
+          assert marker in s
+          a.write_text(s.replace(marker,"window.__CEFET_BANK=B; return;",1),encoding='utf-8')
+
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          h=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in h
+          h=h.replace('</head>','<link rel="stylesheet" href="upgrade-v21.css"></head>',1)
+          h=h.replace('</body>','<script src="upgrade-v16.js"></script><script src="upgrade-v21.js"></script></body>',1)
+          p.write_text(h,encoding='utf-8')
+
+          g=Path('cefet-trainer/app/build.gradle')
+          t=g.read_text(encoding='utf-8')
+          t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.retafinal21'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 210', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.21.0'", t)
+          g.write_text(t,encoding='utf-8')
+          PY
+
+      - name: Audit
+        shell: bash
+        run: |
+          grep -q 'GRANDE RETA FINAL' cefet-trainer/app/src/main/assets/upgrade-v21.js
+          grep -q 'ESCANEAR O BOSS' cefet-trainer/app/src/main/assets/upgrade-v21.js
+          grep -q 'BOSS FIGHT' cefet-trainer/app/src/main/assets/upgrade-v21.js
+          grep -q 'Radiciação é a operação inversa da potenciação' cefet-trainer/app/src/main/assets/upgrade-v21.js
+          grep -q 'window.scrollTo(0,y)' cefet-trainer/app/src/main/assets/upgrade-v21.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,json
+          h=Path('cefet-trainer/app/src/main/assets/index.html').read_text(encoding='utf-8')
+          m=re.search(r'<script id="db" type="application/json">(.*?)</script>',h,re.S)
+          db=json.loads(m.group(1))
+          assert len(db['trails'])==210
+          expected={'Português':45,'Matemática':50,'Física':20,'Química':18,'Biologia':22,'História':30,'Geografia':25}
+          assert {k:sum(t['subject']==k for t in db['trails'].values()) for k in expected}==expected
+          assert db['trails']['M07']['title']=='Radiciação e racionalização'
+          for t in db['trails'].values():
+              q=next(x for x in t['steps'] if x['kind']=='checkpoint')
+              assert len(q['options'])==4 and q['answer'] in q['options'] and q.get('explanation')
+          s=Path('cefet-trainer/app/src/main/assets/upgrade-v16.js').read_text(encoding='utf-8')
+          a=s.index('const B=')+len('const B=')
+          b=s.index(';\nwindow.__CEFET_BANK=B; return;',a)
+          bank=json.loads(s[a:b])
+          assert len(bank['exams'])==2
+          assert all(len(e['questions'])==30 for e in bank['exams'])
+          print('audit ok')
+          PY
+
+      - name: Build APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Validate APK
+        shell: bash
+        run: |
+          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Reta_Final_2027_v0.21.0.apk
+          unzip -t CEFET_Reta_Final_2027_v0.21.0.apk >/dev/null
+          unzip -p CEFET_Reta_Final_2027_v0.21.0.apk assets/upgrade-v21.js | grep -q 'GRANDE RETA FINAL'
+          unzip -p CEFET_Reta_Final_2027_v0.21.0.apk assets/index.html | grep -q '"trail_count":210'
+          sha256sum CEFET_Reta_Final_2027_v0.21.0.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Reta_Final_2027_v0.21.0
+          path: CEFET_Reta_Final_2027_v0.21.0.apk
+          if-no-files-found: error
