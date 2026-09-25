@@ -33,7 +33,7 @@ jobs:
       - name: Restore v0.22 curriculum engine
         shell: bash
         run: |
-          cat cefet-v22/p00 cefet-v22/p01 cefet-v22/p02 cefet-v22/p03 > v22.b64
+          cat cefet-v22/q00 cefet-v22/q01 cefet-v22/q02 cefet-v22/q03 cefet-v22/q04 cefet-v22/q05 cefet-v22/q06 cefet-v22/q07 > v22.b64
           test "$(wc -c < v22.b64)" -eq 34732
           echo 'd7c63f0990c466a0411ce27f2349ef2cdf77bd57bf5c95447334a23c16a9e48e  v22.b64' | sha256sum -c -
           base64 -d v22.b64 > v22.tar.gz
