@@ -518,11 +518,17 @@ public class MainActivity extends Activity {
             request.addOption("--extractor-args", "youtube:player_client=android_vr");
         } else if (strategy == 2) {
             request.addOption("--extractor-args", "youtube:player_client=web_safari");
+        } else if (strategy == 3) {
+            request.addOption("--extractor-args", "youtube:player_client=tv_embedded");
         }
 
         // IMPORTANTE: não usar -x/--audio-format aqui.
         // O postprocessamento do yt-dlp tentava chamar ffprobe e falhava no Android.
-        request.addOption("-f", "bestaudio/best");
+        if (strategy == 3) {
+            request.addOption("-f", "best");
+        } else {
+            request.addOption("-f", "bestaudio/best");
+        }
         return request;
     }
 
@@ -579,6 +585,9 @@ public class MainActivity extends Activity {
         if (exit != 0) {
             String msg = out.toString().trim();
             if (msg.length() > 800) msg = msg.substring(msg.length() - 800);
+            if (msg.contains("libavdevice.so") || msg.contains("CANNOT LINK EXECUTABLE")) {
+                throw new Exception("FFmpeg não conseguiu carregar as bibliotecas internas: " + msg);
+            }
             throw new Exception("FFmpeg saiu com código " + exit + ": " + msg);
         }
         return out.toString();
@@ -602,7 +611,20 @@ public class MainActivity extends Activity {
                 "-map_metadata", "-1",
                 output.getAbsolutePath()
         );
-        pb.environment().put("LD_LIBRARY_PATH", getApplicationInfo().nativeLibraryDir);
+        File ffmpegLibDir = new File(
+                getNoBackupFilesDir(),
+                "youtubedl-android/packages/ffmpeg/usr/lib"
+        );
+        File pythonLibDir = new File(
+                getNoBackupFilesDir(),
+                "youtubedl-android/packages/python/usr/lib"
+        );
+
+        String ldPath = getApplicationInfo().nativeLibraryDir +
+                ":" + ffmpegLibDir.getAbsolutePath() +
+                ":" + pythonLibDir.getAbsolutePath();
+
+        pb.environment().put("LD_LIBRARY_PATH", ldPath);
         runProcess(pb);
 
         if (!output.exists() || output.length() < 1024) {
@@ -633,7 +655,7 @@ public class MainActivity extends Activity {
         for (int candidateIndex = 0; candidateIndex < candidates.size(); candidateIndex++) {
             String candidate = candidates.get(candidateIndex);
 
-            for (int strategy = 0; strategy < 3; strategy++) {
+            for (int strategy = 0; strategy < 4; strategy++) {
                 File tempDir = new File(getCacheDir(), "faaab_audio_" + System.nanoTime());
                 tempDir.mkdirs();
 
@@ -647,6 +669,8 @@ public class MainActivity extends Activity {
                                 @Override
                                 public Unit invoke(Float itemProgress, Long eta, String line) {
                                     float p = itemProgress == null ? 0f : itemProgress;
+                                    if (p < 0f) p = 0f;
+                                    if (p > 100f) p = 100f;
                                     int overall = Math.min(
                                             99,
                                             Math.max(
@@ -661,6 +685,7 @@ public class MainActivity extends Activity {
                                         if (chosenCandidate > 0) retryText += " • busca alternativa";
                                         if (chosenStrategy == 1) retryText += " • Android VR";
                                         if (chosenStrategy == 2) retryText += " • HLS/Safari";
+                                        if (chosenStrategy == 3) retryText += " • TV/Best";
                                         status.setText(
                                                 (itemIndex + 1) + "/" + totalItems +
                                                 " • " + Math.round(p) + "% • " + label + retryText
@@ -744,6 +769,8 @@ public class MainActivity extends Activity {
                             @Override
                             public Unit invoke(Float itemProgress, Long eta, String line) {
                                 float p = itemProgress == null ? 0f : itemProgress;
+                                    if (p < 0f) p = 0f;
+                                    if (p > 100f) p = 100f;
                                 int overall = Math.min(
                                         100,
                                         Math.max(
