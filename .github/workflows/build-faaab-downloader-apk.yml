@@ -42,11 +42,11 @@ jobs:
         run: gradle -p faaab-downloader-android :app:assembleDebug --no-daemon --stacktrace
 
       - name: Rename APK
-        run: cp faaab-downloader-android/app/build/outputs/apk/debug/app-debug.apk FAAAB-Media-Downloader-v2.3.0.apk
+        run: cp faaab-downloader-android/app/build/outputs/apk/debug/app-debug.apk FAAAB-Media-Downloader-v2.3.1.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: FAAAB-Media-Downloader-v2.3.0
-          path: FAAAB-Media-Downloader-v2.3.0.apk
+          name: FAAAB-Media-Downloader-v2.3.1
+          path: FAAAB-Media-Downloader-v2.3.1.apk
           if-no-files-found: error
