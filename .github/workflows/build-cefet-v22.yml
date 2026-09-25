@@ -115,7 +115,8 @@ jobs:
           import json,re
           s=Path('cefet-trainer/app/src/main/assets/upgrade-v22.js').read_text(encoding='utf-8')
           a=s.index('const MODULES=')+len('const MODULES=')
-          b=s.index(';\nconst MOD=',a)
+          mpos=s.index('const MOD=',a)
+          b=s.rfind(';',a,mpos)
           mods=json.loads(s[a:b])
           assert len(mods)==35
           qs=[q for m in mods for q in m['questions']]
