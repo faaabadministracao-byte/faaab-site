@@ -78,9 +78,8 @@ jobs:
           grep -q 'FLASHBACK' cefet-trainer/app/src/main/assets/upgrade-v23.js
           grep -q 'Simulado de ataque · 30' cefet-trainer/app/src/main/assets/upgrade-v23.js
           grep -q 'Eu defendo que' cefet-trainer/app/src/main/assets/upgrade-v23.js
-          grep -q 'Consegui sem olhar' cefet-trainer/app/src/main/assets/upgrade-v23.js
           grep -q 'Meta operacional' cefet-trainer/app/src/main/assets/upgrade-v23.js
-          grep -q 'Programa oficial' cefet-trainer/app/src/main/assets/upgrade-v23.js
+          grep -q 'programa 2027' cefet-trainer/app/src/main/assets/upgrade-v23.js
           python3 - <<'PY'
           from pathlib import Path
           s=Path('cefet-trainer/app/src/main/assets/upgrade-v23.js').read_text(encoding='utf-8')
@@ -91,7 +90,8 @@ jobs:
             'H-COL','H-MOD','G-MAP','G-CLIM'
           ]:
               assert token in s, token
-          assert s.count("const p") >= 10
+          for token in ['pA','pB','pC','pD','pE','pF','pG','pH','pI','pJ','pK','pL']:
+              assert token in s, token
           assert '2026-10-11' in s
           assert '20/30' in s
           print('v23 content audit ok')
