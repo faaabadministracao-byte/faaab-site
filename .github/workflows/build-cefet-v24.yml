@@ -1,0 +1,124 @@
+name: Build CEFET Reta Final 20plus v0.24
+
+on:
+  push:
+    branches:
+      - build/cefet-trainer-014
+  workflow_dispatch:
+
+jobs:
+  build-v24:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Restore base app
+        shell: bash
+        run: |
+          cat cefet-clean/chunk00 cefet-clean/chunk01 cefet-clean/chunk02 cefet-clean/chunk03 cefet-clean/chunk04a0 cefet-clean/chunk04a1p0 cefet-clean/chunk04a1p1 cefet-clean/chunk04b cefet-clean/chunk05a cefet-clean/chunk05b cefet-clean/chunk06a cefet-clean/chunk06b cefet-clean/chunk07 cefet-clean/chunk08 > clean.b64
+          test "$(wc -c < clean.b64)" -eq 74436
+          echo '852a994ca79e906786b13ff85d955f8d40ee2ea893bca9041dee2b6f0ce623d7  clean.b64' | sha256sum -c -
+          base64 -d clean.b64 > clean.tar.gz
+          echo '48f24d6b1150c282e37e1bf51b0a0b09b2882c95ce053687d014a698b6aa4997  clean.tar.gz' | sha256sum -c -
+          mkdir cefet-trainer
+          tar -xzf clean.tar.gz -C cefet-trainer
+
+      - name: Restore v0.23 content bank
+        shell: bash
+        run: |
+          cat cefet-v23/c00 cefet-v23/c01 cefet-v23/c02 > v23.b64
+          test "$(wc -c < v23.b64)" -eq 31064
+          echo 'd2780cdcce4e351092d7806ffcc789da73f403976e662fee520c1ae8b478835a  v23.b64' | sha256sum -c -
+          base64 -d v23.b64 > v23.tar.gz
+          test "$(wc -c < v23.tar.gz)" -eq 23296
+          echo '30c44e45c38148cdf7b37cbc83ddfc47983b75008f1fbba49472d35d53a86aca  v23.tar.gz' | sha256sum -c -
+          mkdir /tmp/v23
+          tar -xzf v23.tar.gz -C /tmp/v23
+          cp /tmp/v23/upgrade-v23.js cefet-trainer/app/src/main/assets/
+          echo 'a32d47fce01d28145976f00fa2bc14476294b2764624bd9edfde91390aee465f  cefet-trainer/app/src/main/assets/upgrade-v23.js' | sha256sum -c -
+
+      - name: Apply v0.24 hotfix
+        shell: bash
+        run: |
+          python3 cefet-v24/patch-v24.py
+          node --check cefet-trainer/app/src/main/assets/upgrade-v24.js
+          grep -q 'RF.answerIndex' cefet-trainer/app/src/main/assets/upgrade-v24.js
+          grep -q 'RF.testAnswerIndex' cefet-trainer/app/src/main/assets/upgrade-v24.js
+          grep -q 'RF.ruleAnswer' cefet-trainer/app/src/main/assets/upgrade-v24.js
+          ! grep -q "RF.answer('" cefet-trainer/app/src/main/assets/upgrade-v24.js
+          ! grep -q "RF.testAnswer(" cefet-trainer/app/src/main/assets/upgrade-v24.js
+          ! grep -q "JSON.stringify(q).replace" cefet-trainer/app/src/main/assets/upgrade-v24.js
+
+      - name: Configure app
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('cefet-trainer/app/src/main/assets/index.html')
+          h=p.read_text(encoding='utf-8')
+          assert '"trail_count":210' in h
+          h=h.replace('</body>','<script src="upgrade-v24.js"></script></body>',1)
+          p.write_text(h,encoding='utf-8')
+
+          g=Path('cefet-trainer/app/build.gradle')
+          t=g.read_text(encoding='utf-8')
+          t=re.sub(r'applicationId\s+["\']br\.com\.cefettrainer\.app["\']', "applicationId 'br.com.cefettrainer.retafinal24'", t)
+          t=re.sub(r'versionCode\s+\d+', 'versionCode 240', t)
+          t=re.sub(r'versionName\s+["\'][^"\']+["\']', "versionName '0.24.0'", t)
+          g.write_text(t,encoding='utf-8')
+
+          m=Path('cefet-trainer/app/src/main/AndroidManifest.xml')
+          u=m.read_text(encoding='utf-8')
+          u=u.replace('CEFET Trainer 2027','CEFET Reta Final 20+ v0.24').replace('CEFET Trainer','CEFET Reta Final 20+ v0.24')
+          m.write_text(u,encoding='utf-8')
+          PY
+
+      - name: Audit interaction and content
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          s=Path('cefet-trainer/app/src/main/assets/upgrade-v24.js').read_text(encoding='utf-8')
+          for token in [
+              'RETA FINAL 20+','TENTAR AGORA','TROCA RÁPIDA','FLASHBACK','CHEFE — SEM DICA',
+              'P-LEIT','M-PROP','M-GEO','M-EQ','N-ATOM','H-COL','G-MAP',
+              'Eu defendo que','Simulado de ataque · 30'
+          ]:
+              assert token in s, token
+          assert 'onclick="RF.answerIndex(' in s
+          assert 'onclick="RF.testAnswerIndex(' in s
+          assert "function answerIndex(" in s
+          assert "function testAnswerIndex(" in s
+          assert "function ruleAnswer(" in s
+          assert "function buzz(" in s
+          assert "function answer(skillId" not in s
+          assert "function testAnswer(txt)" not in s
+          print('v24 audit ok')
+          PY
+
+      - name: Build APK
+        working-directory: cefet-trainer
+        run: gradle --no-daemon clean assembleDebug
+
+      - name: Validate APK
+        shell: bash
+        run: |
+          cp cefet-trainer/app/build/outputs/apk/debug/app-debug.apk CEFET_Reta_Final_20plus_v0.24.0.apk
+          unzip -t CEFET_Reta_Final_20plus_v0.24.0.apk >/dev/null
+          unzip -p CEFET_Reta_Final_20plus_v0.24.0.apk assets/upgrade-v24.js | grep -q 'RF.answerIndex'
+          unzip -p CEFET_Reta_Final_20plus_v0.24.0.apk assets/upgrade-v24.js | grep -q 'TROCA RÁPIDA'
+          sha256sum CEFET_Reta_Final_20plus_v0.24.0.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CEFET_Reta_Final_20plus_v0.24.0
+          path: CEFET_Reta_Final_20plus_v0.24.0.apk
+          if-no-files-found: error
