@@ -1,6 +1,6 @@
 {
-  "versao": 2,
-  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados. Os desafios especiais são rotas propostas de gameplay, sem funcionalidade garantida até que o mapa seja implementado.",
+  "versao": 3,
+  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados. Os desafios especiais foram replanejados como circuitos individuais terrestres, aquáticos ou aéreos, sem misturar as modalidades. São ideias para construir no Roblox Studio.",
   "policia": [
     {
       "id": "PM-BASE",
@@ -41,12 +41,12 @@
         "Coordenador"
       ],
       "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real.",
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-04",
-        "mix-26",
-        "mix-27",
-        "mix-28"
+        "ter-02",
+        "ter-03",
+        "ter-11",
+        "ter-14"
       ]
     },
     {
@@ -88,12 +88,12 @@
         "Comandante de unidade"
       ],
       "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB.",
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-05",
-        "mix-13",
-        "mix-19",
-        "mix-33"
+        "ter-04",
+        "ter-06",
+        "ter-10",
+        "ter-17"
       ]
     },
     {
@@ -134,12 +134,12 @@
         "Coordenador"
       ],
       "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real.",
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-16",
-        "mix-24",
-        "mix-27",
-        "mix-28"
+        "ter-07",
+        "ter-11",
+        "ter-13",
+        "ter-16"
       ]
     },
     {
@@ -180,12 +180,12 @@
         "Comandante"
       ],
       "aviso": "Não apresenta técnicas reais de contenção ou uso de força.",
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-04",
-        "mix-09",
-        "mix-26",
-        "mix-28"
+        "ter-02",
+        "ter-08",
+        "ter-16",
+        "ter-18"
       ]
     },
     {
@@ -226,12 +226,12 @@
         "Supervisor"
       ],
       "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário.",
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-13",
-        "mix-19",
-        "mix-26",
-        "mix-30"
+        "ter-04",
+        "ter-09",
+        "ter-13",
+        "ter-15"
       ]
     }
   ],
@@ -273,12 +273,12 @@
         "Instrutor",
         "Chefe de equipe"
       ],
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-06",
-        "mix-08",
-        "mix-21",
-        "mix-22"
+        "ter-08",
+        "aqu-01",
+        "aqu-03",
+        "aqu-07"
       ]
     },
     {
@@ -318,12 +318,12 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-10",
-        "mix-15",
-        "mix-23",
-        "mix-25"
+        "ter-05",
+        "ter-08",
+        "ter-17",
+        "aqu-06"
       ]
     },
     {
@@ -363,12 +363,12 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-14",
-        "mix-19",
-        "mix-26",
-        "mix-32"
+        "ter-04",
+        "ter-06",
+        "ter-09",
+        "ter-16"
       ]
     },
     {
@@ -408,12 +408,12 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-01",
-        "mix-05",
-        "mix-06",
-        "mix-29"
+        "aer-01",
+        "aer-02",
+        "aer-07",
+        "aer-08"
       ]
     },
     {
@@ -453,12 +453,12 @@
         "Chefe de equipe",
         "Comandante"
       ],
-      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
       "circuitosSugeridos": [
-        "mix-14",
-        "mix-21",
-        "mix-22",
-        "mix-36"
+        "ter-03",
+        "ter-16",
+        "aqu-02",
+        "aqu-08"
       ]
     }
   ]
