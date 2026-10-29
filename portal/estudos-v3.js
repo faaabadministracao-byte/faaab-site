@@ -117,7 +117,7 @@ if(session.lesson!==id){session={lesson:id,stage:0,mode:"explain",index:0,answer
 }
 function footerLesson(e,l){
 return '<nav class="edu3-subnav" aria-label="Voltar ou trocar de matéria">'+
-'<a class="edu3-btn secondary" href="#prova='+encodeURIComponent(e.id)+'">Voltar às matérias desta prova</a>'+
+'<a class="edu3-btn secondary" href="#materias">Voltar às aulas</a>'+
 '<a class="edu3-btn mild" href="#provas">Trocar de prova</a>'+
 '</nav>';
 }
