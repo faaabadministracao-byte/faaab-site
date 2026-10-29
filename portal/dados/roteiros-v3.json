@@ -1,21 +1,21 @@
 {
-  "versao": 3,
+  "versao": 4,
   "data": "2026-10-29",
   "titulo": "Preparação de provas e estudos na FAAAB",
   "aviso": "Não confundir curso, treinamento, formação e prova. Apenas avaliações documentadas aparecem no menu Provas. Sem matriz de matérias aprovada, não inventar aulas ou questões.",
   "avaliacoes": [
     {
       "id": "alistamento",
-      "nome": "Alistamento — entrevista escrita",
-      "tipo": "Avaliação de ingresso",
-      "origem": "Entrevista escrita do alistamento FAAAB",
-      "confirmacao": "Há perguntas de Matemática básica, Português e preferências. A sequência exata da entrevista depende do alistamento.",
+      "nome": "Alistamento — aulas de apoio",
+      "tipo": "Preparação para a triagem",
+      "origem": "Aulas básicas de apoio, não edital ou prova oficial",
+      "confirmacao": "Matemática básica e Português aparecem nas perguntas da triagem de alistamento da FAAAB. A seleção para Recruta é registrada em seção própria.",
       "programa": "apoio",
       "materias": [
         "Matemática básica",
         "Português"
       ],
-      "observacao": "Aulas de apoio para as matérias explicitamente citadas; não são o questionário oficial nem garantem que todas essas questões aparecerão.",
+      "observacao": "Estas aulas ajudam a entender Matemática e Português, mas não reproduzem o exame de ingresso e não concedem aprovação nem patente.",
       "aulas": [
         {
           "id": "soma",
@@ -402,50 +402,7 @@
           ]
         }
       ]
-    },
-    {
-      "id": "CUR-10-2",
-      "nome": "CTA — avaliação do curso",
-      "tipo": "Avaliação de habilitação",
-      "origem": "Capacitação vinculada ao CTA",
-      "confirmacao": "O curso e sua avaliação estão documentados, mas não há matriz aprovada das questões.",
-      "programa": "pendente",
-      "materias": [],
-      "aulas": [],
-      "observacao": "Não foram inventadas questões de armamento, notas ou requisitos. As instruções reais do curso ainda precisam ser cadastradas."
-    },
-    {
-      "id": "CUR-10-5",
-      "nome": "ESA — avaliações de formação",
-      "tipo": "Avaliação de escola",
-      "origem": "Formação da ESA na FAAAB",
-      "confirmacao": "A ESA possui formação e avaliação; as matérias de uma eventual prova teórica da FAAAB ainda não foram especificadas.",
-      "programa": "pendente",
-      "materias": [],
-      "aulas": [],
-      "observacao": "Regras de matrícula e uniformes não serão apresentadas como questões de prova."
-    },
-    {
-      "id": "CUR-10-16",
-      "nome": "CFOG — avaliações de formação",
-      "tipo": "Avaliação de carreira",
-      "origem": "Formação de oficiais-generais da FAAAB",
-      "confirmacao": "O CFOG possui formação com avaliações; os tópicos avaliados ainda não estão aprovados.",
-      "programa": "pendente",
-      "materias": [],
-      "aulas": [],
-      "observacao": "Patentes dos alunos e dos instrutores são dados administrativos, não conteúdo de prova."
-    },
-    {
-      "id": "CUR-10-15",
-      "nome": "Teste de retorno de oficiais",
-      "tipo": "Teste específico",
-      "origem": "Teste Limpeza de Oficiais no planejamento da FAAAB",
-      "confirmacao": "Aplicado apenas a oficiais que retornam após inatividade prolongada, nas condições documentadas.",
-      "programa": "pendente",
-      "materias": [],
-      "aulas": [],
-      "observacao": "Não é um curso geral e não deve aparecer para todos os estudantes. O conteúdo do teste não está documentado."
     }
-  ]
+  ],
+  "descricao": "Biblioteca de aulas: não inclui exames da ESA, CTA ou CFOG. Provas de ingresso ficam exclusivamente em selecoes.json."
 }
