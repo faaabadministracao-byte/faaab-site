@@ -49,7 +49,7 @@ function renderTrack(){
  ].map(s=>'<div class="edu-stat"><strong>'+esc(s[1])+'</strong><small>'+esc(s[0])+'</small></div>').join("");
  $("lessonLayout").classList.toggle("edu-hidden",!all.length);
  $("pendingPanel").classList.toggle("edu-hidden",!!all.length);
- $("reviewAll").disabled=!all.some(l=>progressRead(t.id,l.id)?.quizAttempts);
+ $("reviewAll").disabled=due(t).length===0;
  $("simulation").disabled=!all.length;
  if(!all.length){
    $("pendingReason").textContent=t.observacao;
@@ -174,7 +174,7 @@ function boot(){
  $("changeExam").addEventListener("click",()=>{current=null;saved.selected=null;save();directory()});
  $("reviewAll").addEventListener("click",()=>startReview(false));
  $("simulation").addEventListener("click",showSimulation);
- $("refreshTrack").addEventListener("click",renderTrack);
+ $("loader").hidden=true;
  if(exam){current=exam.id;lesson=exam.unidades[0]?.id||null;renderTrack()}
  else directory();
 }
