@@ -1395,21 +1395,6 @@
     "grupoSeparado": null
   },
   {
-    "id": "FMB-GRUMEC",
-    "sigla": "GRUMEC",
-    "nome": "Grupamento de Mergulhadores de Combate",
-    "forca": "FMB",
-    "tipo": "unidade",
-    "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
-    "logo": null,
-    "vidaReal": "Grupamento de elite de mergulhadores de combate da Marinha.",
-    "noJogo": "Operações especiais militares navais, infiltração e reconhecimento; NÃO atua como equipe civil de enchentes.",
-    "requisitos": null,
-    "aprovado": true,
-    "referencia": "Verificar correspondência exata caso a caso",
-    "grupoSeparado": null
-  },
-  {
     "id": "FMB-ComForSup",
     "sigla": "ComForSup",
     "nome": "Comando da Força de Superfície",
