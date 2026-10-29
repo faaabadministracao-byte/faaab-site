@@ -378,5 +378,155 @@
     "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
     "estado": "Estrutura em planejamento",
     "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-01",
+    "forca": "PM",
+    "titulo": "Instrução Inicial da Polícia Militar",
+    "sigla": "Instrução Inicial da Polícia Militar",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Aprendiz da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Soldado de Segunda Classe.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-02",
+    "forca": "PM",
+    "titulo": "Formação Básica Policial",
+    "sigla": "Formação Básica Policial",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Soldado de Segunda Classe da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Soldado de Primeira Classe.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-03",
+    "forca": "PM",
+    "titulo": "Aperfeiçoamento de Soldados da PM",
+    "sigla": "Aperfeiçoamento de Soldados da PM",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Soldado de Primeira Classe da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Cabo.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-04",
+    "forca": "PM",
+    "titulo": "Formação de Sargentos da PM",
+    "sigla": "Formação de Sargentos da PM",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Cabo da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Terceiro-Sargento.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-05",
+    "forca": "PM",
+    "titulo": "Estágio de Liderança de Pequena Equipe",
+    "sigla": "Estágio de Liderança de Pequena Equipe",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Terceiro-Sargento da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Segundo-Sargento.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
+  },
+  {
+    "id": "CUR-PM-06",
+    "forca": "PM",
+    "titulo": "Aperfeiçoamento de Sargentos da PM",
+    "sigla": "Aperfeiçoamento de Sargentos da PM",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Segundo-Sargento da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Primeiro-Sargento.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-07",
+    "forca": "PM",
+    "titulo": "Estágio de Chefia de Guarnição",
+    "sigla": "Estágio de Chefia de Guarnição",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Primeiro-Sargento da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Subtenente.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
+  },
+  {
+    "id": "CUR-PM-08",
+    "forca": "PM",
+    "titulo": "Formação para Oficialato da PM",
+    "sigla": "Formação para Oficialato da PM",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Subtenente da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Cadete.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-09",
+    "forca": "PM",
+    "titulo": "Formação de Oficiais — Fase de Cadete",
+    "sigla": "Formação de Oficiais — Fase de Cadete",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Cadete da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Aspirante a Oficial.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-10",
+    "forca": "PM",
+    "titulo": "Estágio de Adaptação ao Oficialato",
+    "sigla": "Estágio de Adaptação ao Oficialato",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Aspirante a Oficial da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Segundo-Tenente.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
+  },
+  {
+    "id": "CUR-PM-11",
+    "forca": "PM",
+    "titulo": "Estágio de Comando de Pelotão",
+    "sigla": "Estágio de Comando de Pelotão",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Segundo-Tenente da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Primeiro-Tenente.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
+  },
+  {
+    "id": "CUR-PM-12",
+    "forca": "PM",
+    "titulo": "Aperfeiçoamento de Oficiais PM",
+    "sigla": "Aperfeiçoamento de Oficiais PM",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Primeiro-Tenente da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Capitão.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-13",
+    "forca": "PM",
+    "titulo": "Estágio de Comando de Companhia",
+    "sigla": "Estágio de Comando de Companhia",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Capitão da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Major.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
+  },
+  {
+    "id": "CUR-PM-14",
+    "forca": "PM",
+    "titulo": "Curso Superior de Polícia Militar",
+    "sigla": "Curso Superior de Polícia Militar",
+    "detalhes": "Modalidade: curso.\nPúblico proposto: Major da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Tenente-Coronel.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do curso: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o curso.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-PM-15",
+    "forca": "PM",
+    "titulo": "Estágio de Administração de Batalhão",
+    "sigla": "Estágio de Administração de Batalhão",
+    "detalhes": "Modalidade: estágio.\nPúblico proposto: Tenente-Coronel da Polícia Militar da FAAAB.\nPossível etapa na progressão para: Coronel.\nConteúdo, instrutores, turmas e critérios: pendentes de aprovação.\nDuração do estágio: NÃO DEFINIDA — a combinar com os responsáveis e usuários.\nSe a etapa for definida como obrigatória, a conclusão é requisito; o tempo mínimo na patente não substitui o estágio.\nNão concede promoção automática.",
+    "origem": "Plano de carreira PM da FAAAB, proposta de 29/10/2026",
+    "estado": "Proposta — conteúdo e obrigatoriedade não homologados",
+    "tipo": "estágio"
   }
 ]
