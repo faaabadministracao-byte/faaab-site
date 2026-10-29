@@ -30,10 +30,10 @@
             {
               "enunciado": "Durante o treinamento, o monitor pede para conceder uma promoção a outro aluno. Qual resposta segue as regras?",
               "alternativas": [
-                "Registrar a promoção pedida.",
+                "Registrar a promoção solicitada.",
                 "Encaminhar ao responsável autorizado.",
-                "Permitir após o fim da aula.",
-                "Trocar a patente por certificado."
+                "Aprovar após o fim da instrução.",
+                "Autorizar com parecer do monitor."
               ],
               "correta": 1,
               "explicacao": "A função de monitor não inclui conceder promoções."
@@ -41,9 +41,9 @@
             {
               "enunciado": "Quem conduz a aula deve possuir principalmente:",
               "alternativas": [
-                "Maior tempo de conta.",
-                "Inscrição na mesma turma.",
-                "O uniforme mais recente.",
+                "Experiência anterior na turma.",
+                "Participação em cursos básicos.",
+                "Patente superior à dos alunos.",
                 "Designação e habilitação."
               ],
               "correta": 3,
@@ -53,9 +53,9 @@
               "enunciado": "Se o aluno recebe instruções contraditórias, o melhor primeiro passo é:",
               "alternativas": [
                 "Confirmar com a chefia da instrução.",
-                "Seguir quem chegou ao servidor antes.",
-                "Esperar qualquer jogador decidir.",
-                "Ignorar a atividade inteira."
+                "Seguir a ordem recebida por último.",
+                "Executar a orientação mais antiga.",
+                "Solicitar opinião a outro aluno."
               ],
               "correta": 0,
               "explicacao": "Confirmar a autoridade responsável evita ações incoerentes."
@@ -78,12 +78,12 @@
           "erros": "Não copiar essas etapas do Exército para cursos das outras forças.",
           "questoes": [
             {
-              "enunciado": "Qual etapa consta da formação Recruta → Soldado da FAAAB?",
+              "enunciado": "Qual sequência pertence à formação de Recruta para Soldado da FAAAB?",
               "alternativas": [
-                "Curso de Controle Aéreo.",
-                "Centro de Instrução Naval.",
-                "Seleção de Brigada.",
-                "Formação de Fuzileiros."
+                "Expedição → ESA → TC-1.",
+                "Seleção → AMAN → TC-1.",
+                "Expedição → Seleção → TC-1.",
+                "Expedição → CTA → TC-1."
               ],
               "correta": 2,
               "explicacao": "Seleção de Brigada é um dos três componentes documentados."
@@ -91,10 +91,10 @@
             {
               "enunciado": "Uma pessoa concluiu somente a Expedição Militar. Qual conclusão é adequada?",
               "alternativas": [
-                "Já terminou a formação.",
+                "Basta confirmar a presença.",
                 "Ainda faltam etapas previstas.",
-                "Recebeu curso de instrutor.",
-                "Passa direto a Coronel."
+                "Só falta autorização de farda.",
+                "Depende apenas do tempo mínimo."
               ],
               "correta": 1,
               "explicacao": "Há também Seleção de Brigada e TC-1."
@@ -102,9 +102,9 @@
             {
               "enunciado": "A rota de Mobilizado de 2ª Classe é:",
               "alternativas": [
-                "Obrigatoriamente via Recruta.",
-                "Igual à da Marinha.",
-                "Uma modalidade de escola FAB.",
+                "Formação integrada à ESA.",
+                "Passagem obrigatória por Recruta.",
+                "Curso básico da Marinha.",
                 "Uma progressão própria."
               ],
               "correta": 3,
@@ -142,9 +142,9 @@
             {
               "enunciado": "Após concluir o CTA, o militar deve receber:",
               "alternativas": [
-                "Patente de Sargento.",
-                "Comando do batalhão.",
-                "Acesso irrestrito ao servidor.",
+                "Promoção na carreira regular.",
+                "Licença geral para armaria.",
+                "Designação como chefe de equipe.",
                 "Habilitação autorizada."
               ],
               "correta": 3,
@@ -153,24 +153,24 @@
             {
               "enunciado": "Um jogador concluiu o curso e trocou de unidade. O sistema deve:",
               "alternativas": [
-                "Conferir as autorizações na nova unidade.",
-                "Conceder toda permissão de imediato.",
-                "Desconsiderar todas as habilitações.",
-                "Aplicar a patente de instrutor."
+                "Conferir autorizações na nova unidade.",
+                "Conservar o acesso da unidade anterior.",
+                "Trocar o registro de habilitação.",
+                "Validar apenas a patente atual."
               ],
               "correta": 0,
               "explicacao": "As permissões precisam de verificação conforme a nova função."
             },
             {
-              "enunciado": "O nome completo da sigla CTA está:",
+              "enunciado": "Se o nome completo de CTA ainda não foi aprovado, o portal deve:",
               "alternativas": [
-                "Definido por lei nacional.",
-                "Confirmado no curso da FAB.",
-                "Pendente de confirmação.",
-                "Substituído pelo TC-1."
+                "Usar um nome não registrado.",
+                "Omitir a sigla em todas as páginas.",
+                "Mostrar sigla e pendência de nome.",
+                "Adotar um nome de curso da FAB."
               ],
               "correta": 2,
-              "explicacao": "O próprio manual FAAAB registra a expansão de CTA como pendente."
+              "explicacao": "É correto registrar a sigla CTA e indicar que a expansão do nome está pendente, sem inventá-la."
             }
           ]
         },
@@ -192,10 +192,10 @@
             {
               "enunciado": "O sistema encontra habilitação, mas não há autorização para a missão. Ele deve:",
               "alternativas": [
-                "Aprovar por tempo de serviço.",
+                "Conceder acesso por antiguidade.",
                 "Negar e informar a restrição.",
-                "Conceder permissão provisória.",
-                "Apagar o curso concluído."
+                "Registrar liberação provisória.",
+                "Transferir permissão de unidade."
               ],
               "correta": 1,
               "explicacao": "A missão também requer autorização específica."
@@ -203,9 +203,9 @@
             {
               "enunciado": "O que pertence a um checklist de acesso?",
               "alternativas": [
-                "Popularidade do jogador.",
-                "Pontuação em combate.",
-                "Cor do distintivo.",
+                "Curso e data de inscrição.",
+                "Tempo de conta e patente.",
+                "Unidade e tipo de uniforme.",
                 "Identidade e habilitação."
               ],
               "correta": 3,
@@ -215,9 +215,9 @@
               "enunciado": "Um acesso negado por falta de unidade exige:",
               "alternativas": [
                 "Revisar a designação e o cadastro.",
-                "Promover o soldado imediatamente.",
-                "Repetir qualquer curso de história.",
-                "Criar um novo grupo Roblox."
+                "Alterar a nota do curso anterior.",
+                "Pedir nova inscrição sem análise.",
+                "Reutilizar permissão da antiga unidade."
               ],
               "correta": 0,
               "explicacao": "A ausência de vínculo com a unidade é uma questão de cadastro ou designação."
@@ -276,10 +276,10 @@
             {
               "enunciado": "Quem aparece como instrutor habilitado na ESA FAAAB?",
               "alternativas": [
-                "2º Tenente.",
-                "3º Sargento aluno.",
-                "Cabo matriculado.",
-                "Aluno do alistamento."
+                "2º Tenente habilitado.",
+                "1º Tenente em formação.",
+                "3º Sargento participante.",
+                "Cabo monitor da turma."
               ],
               "correta": 0,
               "explicacao": "O papel previsto de instrutor é do 2º Tenente habilitado."
@@ -287,10 +287,10 @@
             {
               "enunciado": "Um Cabo conclui etapa da ESA. O resultado deve ser:",
               "alternativas": [
-                "Permissão total no Roblox.",
-                "Matrícula em qualquer escola.",
+                "Promoção aprovada na etapa.",
+                "Matrícula em outra formação.",
                 "Registro da etapa concluída.",
-                "Patente imediata de General."
+                "Conclusão de todas as fases."
               ],
               "correta": 2,
               "explicacao": "A etapa é registrada e a promoção exige processo próprio."
@@ -298,9 +298,9 @@
             {
               "enunciado": "Qual afirmação sobre AO, AT e AF está correta?",
               "alternativas": [
-                "São patentes navais.",
-                "São notas de matemática.",
-                "Já têm expansão oficial pública.",
+                "Representam três cargos de aluno.",
+                "São três graduações previstas.",
+                "Suas expansões estão oficializadas.",
                 "A expansão ainda requer validação."
               ],
               "correta": 3,
@@ -326,10 +326,10 @@
             {
               "enunciado": "Qual avaliação revela melhor compreensão?",
               "alternativas": [
-                "Copiar uma resposta exibida.",
+                "Comparar respostas decoradas.",
                 "Responder e justificar uma situação.",
-                "Repetir as letras do gabarito.",
-                "Escolher a frase mais extensa."
+                "Repetir questões com mesma redação.",
+                "Conferir somente o tempo de prova."
               ],
               "correta": 1,
               "explicacao": "A justificativa mostra o raciocínio aplicado ao conteúdo."
@@ -337,10 +337,10 @@
             {
               "enunciado": "Após um erro, o instrutor deve primeiro:",
               "alternativas": [
-                "Ignorar o tópico incorreto.",
-                "Dar patente como incentivo.",
+                "Registrar somente a nota final.",
+                "Aplicar nova prova sem correção.",
                 "Explicar o motivo e retomar o conceito.",
-                "Alterar o gabarito sem registro."
+                "Revisar a lista de presença da turma."
               ],
               "correta": 2,
               "explicacao": "A correção explicativa ajuda a desfazer o mal-entendido."
@@ -349,9 +349,9 @@
               "enunciado": "Uma revisão após um intervalo serve para:",
               "alternativas": [
                 "Verificar recuperação posterior.",
-                "Confirmar a letra decorada.",
-                "Eliminar a próxima aula.",
-                "Converter curso em patente."
+                "Confirmar reconhecimento imediato.",
+                "Comparar a turma com a anterior.",
+                "Medir rapidez em uma nova questão."
               ],
               "correta": 0,
               "explicacao": "A recuperação espaçada verifica retenção além da memória imediata."
@@ -454,10 +454,10 @@
             {
               "enunciado": "Na estrutura documentada, a fase 7 corresponde a:",
               "alternativas": [
-                "Cadete em fase final.",
-                "Coronel como aluno.",
+                "Cadete na quinta fase.",
+                "Cadete na sétima fase.",
                 "Aspirante em formação.",
-                "Instrutor recém-formado."
+                "Aspirante após formatura."
               ],
               "correta": 2,
               "explicacao": "As fases 6 a 10 são previstas para Aspirante."
@@ -465,10 +465,10 @@
             {
               "enunciado": "Quem aparece como instrutor previsto na AMAN?",
               "alternativas": [
-                "Recruta com medalha.",
+                "Cadete com formação concluída.",
                 "1º Tenente habilitado.",
                 "2º Tenente recém-formado.",
-                "Soldado matriculado."
+                "Subtenente da fase preparatória."
               ],
               "correta": 1,
               "explicacao": "A documentação prevê 1º Tenente e Capitão habilitados."
@@ -476,9 +476,9 @@
             {
               "enunciado": "Ao concluir a formação, o posto final previsto é:",
               "alternativas": [
-                "Cabo.",
-                "Major.",
-                "Subtenente.",
+                "Cadete de estágio final.",
+                "Aspirante em estágio final.",
+                "Capitão em primeiro comando.",
                 "2º Tenente."
               ],
               "correta": 3,
@@ -505,9 +505,9 @@
               "enunciado": "Uma equipe não compreendeu quem executa cada tarefa. A chefia deve:",
               "alternativas": [
                 "Repassar responsabilidades claramente.",
-                "Encerrar a atividade sem explicação.",
-                "Aumentar cargos do organograma.",
-                "Trocar todos de patente."
+                "Pedir avaliação antes de explicar.",
+                "Trocar a chefia sem justificar.",
+                "Manter a ordem sem ajustes."
               ],
               "correta": 0,
               "explicacao": "Atribuições claras permitem executar e acompanhar as tarefas."
@@ -515,10 +515,10 @@
             {
               "enunciado": "A missão mudou de região. A primeira medida adequada é:",
               "alternativas": [
-                "Continuar sem comunicar ninguém.",
-                "Remover as permissões da turma.",
+                "Manter o plano original.",
+                "Suspender sem justificar.",
                 "Conferir a condição e informar ajustes.",
-                "Criar outra escola automaticamente."
+                "Delegar toda decisão sem orientação."
               ],
               "correta": 2,
               "explicacao": "É necessário verificar o que mudou e comunicar novas orientações."
@@ -526,9 +526,9 @@
             {
               "enunciado": "O relatório mais útil deve informar:",
               "alternativas": [
-                "Somente o nome do servidor.",
-                "Somente o número de jogadores.",
-                "A cor da farda usada.",
+                "Mencionar apenas a duração.",
+                "Registrar somente os presentes.",
+                "Relatar apenas as ordens iniciais.",
                 "Resultado, dificuldades e próximas ações."
               ],
               "correta": 3,
@@ -621,9 +621,9 @@
             {
               "enunciado": "O CIAAR no planejamento representa:",
               "alternativas": [
-                "Um único curso genérico.",
-                "Um batalhão de tanques.",
-                "Um posto de Sargento.",
+                "Curso inicial sem subdivisões.",
+                "Escola formadora de cadetes.",
+                "Esquadrão de defesa da base.",
                 "Um centro de instrução."
               ],
               "correta": 3,
@@ -632,10 +632,10 @@
             {
               "enunciado": "Uma das linhas oferecidas na conclusão é:",
               "alternativas": [
-                "Batalhão de Infantaria de Caatinga.",
+                "Operações de suporte terrestre.",
                 "Operações Aéreas/Aviação.",
-                "Comando de navios de superfície.",
-                "Governo estadual da FAAAB."
+                "Formação de manutenção naval.",
+                "Operações de defesa costeira."
               ],
               "correta": 1,
               "explicacao": "A formação direciona à linha de operações aéreas ou aviação."
@@ -643,10 +643,10 @@
             {
               "enunciado": "A escolha da linha de Aviação permite:",
               "alternativas": [
-                "Pilotar sem treinamento adicional.",
-                "Assumir o comando da FAB.",
+                "Pilotar após escolher a linha.",
+                "Receber função de instrutor.",
                 "Seguir para qualificações específicas.",
-                "Ganhar permissão de administrador."
+                "Obter habilitação na matrícula."
               ],
               "correta": 2,
               "explicacao": "A escolha de linha não substitui habilitações de pilotagem."
@@ -672,9 +672,9 @@
               "enunciado": "Um integrante da proteção da base solicita pilotar. O sistema deve:",
               "alternativas": [
                 "Exigir a habilitação apropriada.",
-                "Autorizar por usar farda FAB.",
-                "Autorizar pelo tempo de conta.",
-                "Transferir sua patente ao Exército."
+                "Autorizar mediante troca de função.",
+                "Liberar após uma sessão prática.",
+                "Aceitar registro de outra aeronave."
               ],
               "correta": 0,
               "explicacao": "Pilotagem depende de autorização e qualificação específicas."
@@ -682,9 +682,9 @@
             {
               "enunciado": "Qual separação evita confusão entre áreas da FAB?",
               "alternativas": [
-                "Juntar todos em uma escola.",
-                "Usar a mesma prova para tudo.",
-                "Retirar a função do cadastro.",
+                "Manter todos na mesma turma.",
+                "Organizar cursos sem área de atuação.",
+                "Atribuir função apenas após cada missão.",
                 "Diferenciar função e habilitação."
               ],
               "correta": 3,
@@ -693,10 +693,10 @@
             {
               "enunciado": "A trilha de estudos de um controlador deve priorizar:",
               "alternativas": [
-                "Conteúdos sem vínculo com o cargo.",
+                "Conhecimentos comuns de qualquer força.",
                 "Assuntos do seu próprio curso.",
-                "Todas as provas militares reunidas.",
-                "Somente patentes da Marinha."
+                "Programa de formação de pilotos.",
+                "Conteúdos de todas as divisões da FAB."
               ],
               "correta": 1,
               "explicacao": "O currículo deve seguir a formação selecionada."
@@ -756,9 +756,9 @@
               "enunciado": "Qual patente está prevista para o aluno na EEAR?",
               "alternativas": [
                 "Cabo.",
-                "Cadete Naval.",
-                "General de Brigada.",
-                "Almirante de Esquadra."
+                "Soldado de 2ª Classe.",
+                "3º Sargento.",
+                "Aspirante a Oficial."
               ],
               "correta": 0,
               "explicacao": "O manual indica Cabo como aluno da EEAR/CFS."
@@ -766,10 +766,10 @@
             {
               "enunciado": "O instrutor previsto é:",
               "alternativas": [
-                "Cabo em formação.",
-                "Soldado recém-alistado.",
+                "2º Tenente habilitado.",
+                "3º Sargento habilitado.",
                 "Capitão habilitado.",
-                "Aspirante sem designação."
+                "Suboficial habilitado."
               ],
               "correta": 2,
               "explicacao": "O instrutor na matriz é o Capitão habilitado."
@@ -778,7 +778,7 @@
               "enunciado": "Qual é o posto de formatura descrito?",
               "alternativas": [
                 "1º Tenente.",
-                "Coronel.",
+                "2º Sargento.",
                 "Suboficial.",
                 "3º Sargento."
               ],
@@ -805,10 +805,10 @@
             {
               "enunciado": "O aluno conclui uma das etapas, mas falta outra. A situação correta é:",
               "alternativas": [
-                "Formatura automática.",
+                "Formatura após a etapa.",
                 "Etapa concluída, curso pendente.",
-                "Curso cancelado sem revisão.",
-                "Instrutor promovido junto ao aluno."
+                "Matrícula encerrada nesta fase.",
+                "Aprovação de todas as fases."
               ],
               "correta": 1,
               "explicacao": "Cada atividade tem progresso próprio e o curso depende de todas as exigências."
@@ -816,9 +816,9 @@
             {
               "enunciado": "Um erro conceitual deve gerar:",
               "alternativas": [
-                "Punição sem justificativa.",
-                "Mudança de curso obrigatória.",
-                "Aumento de patente do aluno.",
+                "Repetição da mesma pergunta.",
+                "Leitura da nota sem feedback.",
+                "Correção sem retomada conceitual.",
                 "Explicação e nova prática."
               ],
               "correta": 3,
@@ -828,9 +828,9 @@
               "enunciado": "A revisão em outro dia investiga:",
               "alternativas": [
                 "Retenção além da sessão atual.",
-                "Capacidade de copiar alternativas.",
-                "Velocidade de clicar em botões.",
-                "A preferência pelo uniforme."
+                "Velocidade para completar a aula.",
+                "Recordação apenas no mesmo momento.",
+                "Comparação com o resultado da turma."
               ],
               "correta": 0,
               "explicacao": "Recuperar depois de um intervalo testa memória mais duradoura."
@@ -944,10 +944,10 @@
             {
               "enunciado": "Há uma aeronave ocupando a pista. A segunda solicita entrada. O controlador deve:",
               "alternativas": [
-                "Autorizar as duas para agilizar.",
-                "Ignorar a primeira aeronave.",
+                "Autorizar por ordem de chegada.",
+                "Orientar ambas a aguardar na pista.",
                 "Verificar a ocupação antes de autorizar.",
-                "Encerrar todos os voos por padrão."
+                "Suspender qualquer voo por padrão."
               ],
               "correta": 2,
               "explicacao": "A autorização depende de a pista estar disponível."
@@ -956,19 +956,19 @@
               "enunciado": "Uma instrução de torre precisa informar:",
               "alternativas": [
                 "Aeronave, local e ação esperada.",
-                "A patente de todos os passageiros.",
-                "A quantidade de medalhas do piloto.",
-                "A marca do computador usado."
+                "Aeronave, prioridade e uniforme.",
+                "Local, horário e nome da turma.",
+                "Identificação, nota e formatura."
               ],
               "correta": 0,
               "explicacao": "Comunicação operacional precisa ser identificável e verificável."
             },
             {
-              "enunciado": "O programa específico da prova real de controle aéreo está:",
+              "enunciado": "No planejamento atual, o programa da prova de Controle Aéreo FAAAB está:",
               "alternativas": [
-                "Integralmente confirmado.",
-                "Copiado da formação naval.",
-                "Definido no manual de alistamento.",
+                "Confirmado para todas as forças.",
+                "Incluído na matriz básica da ESA.",
+                "Substituído pelo curso de pilotagem.",
                 "Pendente de definição na FAAAB."
               ],
               "correta": 3,
@@ -994,10 +994,10 @@
             {
               "enunciado": "A mensagem 'pode seguir' sem destinatário é inadequada porque:",
               "alternativas": [
-                "É longa demais.",
+                "Não informa o início da operação.",
                 "Não identifica quem recebeu a ordem.",
-                "Depende do uniforme.",
-                "Não contém data de formatura."
+                "Não descreve a função do instrutor.",
+                "Não indica a etapa do treinamento."
               ],
               "correta": 1,
               "explicacao": "Sem destinatário, outras pessoas podem interpretar a ordem erroneamente."
@@ -1005,9 +1005,9 @@
             {
               "enunciado": "Se uma instrução técnica não foi confirmada, é correto:",
               "alternativas": [
-                "Considerá-la cumprida.",
-                "Duplicar a autorização.",
-                "Mudar a patente do receptor.",
+                "Considerá-la recebida pelo piloto.",
+                "Executar e pedir confirmação depois.",
+                "Conferir somente ao final do voo.",
                 "Solicitar confirmação antes de executar."
               ],
               "correta": 3,
@@ -1016,10 +1016,10 @@
             {
               "enunciado": "Uma comunicação completa de movimentação identifica:",
               "alternativas": [
-                "Somente o nome da escola.",
-                "Somente a patente do controlador.",
+                "Destinatário, horário e uniforme.",
+                "Prioridade, curso e autoridade.",
                 "Destinatário, local e ação.",
-                "O ano da fundação da FAAAB."
+                "Missão, matrícula e tempo de espera."
               ],
               "correta": 2,
               "explicacao": "Esses três elementos descrevem o comando operacional."
@@ -1140,7 +1140,7 @@
               "enunciado": "Em uma carta com norte para cima, o oeste fica:",
               "alternativas": [
                 "À direita.",
-                "Na diagonal superior.",
+                "À esquerda do norte.",
                 "Na parte inferior.",
                 "À esquerda."
               ],
@@ -1201,10 +1201,10 @@
             {
               "enunciado": "Qual atividade faz parte do roteiro da FAAAB para CIAMPA?",
               "alternativas": [
-                "Curso de comando de submarinos.",
+                "Navegação costeira e porto.",
                 "Navegação terrestre e marcha.",
-                "Defesa aérea por caça.",
-                "Formação da Polícia Militar."
+                "Condução de submarinos em equipe.",
+                "Manutenção de navios de superfície."
               ],
               "correta": 1,
               "explicacao": "As etapas de marcha e navegação terrestre constam do roteiro."
@@ -1212,9 +1212,9 @@
             {
               "enunciado": "Um aluno conclui apenas a marcha. O registro correto é:",
               "alternativas": [
-                "Patente de oficial concedida.",
-                "Fim automático de toda formação.",
-                "Avaliação sem necessidade de instrutor.",
+                "Registro de conclusão total.",
+                "Aprovação por presença na turma.",
+                "Emissão de certificado da escola.",
                 "Etapa de marcha concluída."
               ],
               "correta": 3,
@@ -1224,9 +1224,9 @@
               "enunciado": "Na formação naval, a função 'monitor' representa:",
               "alternativas": [
                 "Papel de apoio à instrução.",
-                "Patente superior a Almirante.",
-                "Cargo equivalente a Presidente.",
-                "Graduação obrigatória do soldado."
+                "Função formal de avaliador final.",
+                "Posto de comando de pelotão.",
+                "Graduação militar da formação."
               ],
               "correta": 0,
               "explicacao": "Monitor é uma função pedagógica, não patente militar."
@@ -1251,10 +1251,10 @@
             {
               "enunciado": "Antes do exercício, a equipe precisa identificar:",
               "alternativas": [
-                "Somente o horário do servidor.",
-                "A cor da farda dos líderes.",
+                "Somente o destino final.",
+                "Apenas o tempo previsto.",
                 "Partida, destino e referências.",
-                "A patente dos jogadores ausentes."
+                "Equipamentos individuais utilizados."
               ],
               "correta": 2,
               "explicacao": "São os elementos essenciais para interpretar o trajeto."
@@ -1263,9 +1263,9 @@
               "enunciado": "O caminho fica bloqueado. Qual ação demonstra boa decisão?",
               "alternativas": [
                 "Verificar alternativa autorizada e comunicar.",
-                "Continuar sem observar o terreno.",
-                "Pedir promoção para concluir a etapa.",
-                "Eliminar a avaliação do curso."
+                "Manter o trajeto mesmo com bloqueio.",
+                "Registrar o problema ao fim da sessão.",
+                "Aguardar instrução sem informar a equipe."
               ],
               "correta": 0,
               "explicacao": "O plano deve ser adaptado com comunicação e responsabilidade."
@@ -1273,9 +1273,9 @@
             {
               "enunciado": "Qual relatório permite avaliar o raciocínio do aluno?",
               "alternativas": [
-                "Apenas o nome da equipe.",
-                "Somente a duração da sessão.",
-                "Lista de acessórios usados.",
+                "Somente o percurso feito.",
+                "Apenas os participantes.",
+                "Lista de decisões isoladas.",
                 "Percurso, mudança e justificativa."
               ],
               "correta": 3,
