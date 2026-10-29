@@ -7,7 +7,7 @@ const shuffle=arr=>{let a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.fl
 const localDate=ts=>{const d=new Date(ts);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")};
 const readableDate=ts=>new Date(ts).toLocaleDateString("pt-BR",{day:"2-digit",month:"short"});
 const durationDays=ts=>Math.max(0,Math.ceil((ts-Date.now())/DAY));
-let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false,reviewDraft="",reviewRatings={};
+let supports={},theoryStep=0,quizIsSim=false,practiceExtraAdded=false,practiceChallengeAdded=false;let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false,reviewDraft="",reviewRatings={};
 let saved={selected:null,progress:{},simulados:{}};try{const x=JSON.parse(localStorage.getItem(STORAGE)||"null");if(x&&typeof x==="object"){saved={selected:x.selected||null,progress:x.progress||{},simulados:x.simulados||{}}}}catch(e){}
 const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){$("storageNotice").textContent="Este navegador não conseguiu guardar o progresso. Verifique se o armazenamento está permitido.";$("storageNotice").hidden=false}};
 const selectPanel=(name)=>{screen=name;$("directory").classList.toggle("edu-hidden",name!=="directory");$("learning").classList.toggle("edu-hidden",name==="directory");$("breadcrumb").innerHTML=name==="directory"?'<span class="active">1. Escolha a prova</span><span>2. Estude o conteúdo</span><span>3. Treine e revise</span>':'<span>1. Prova escolhida</span><span class="active">2. Conteúdo exclusivo</span><span class="active">3. Exercícios e revisão</span>'};
@@ -31,7 +31,7 @@ function directory(){
 }
 function selectTrack(id){
  let t=tracks.find(x=>x.id===id);if(!t)return;
- current=t.id;lesson=t.unidades[0]?.id||null;saved.selected=current;save();view="theory";recallOpen=false;
+ current=t.id;lesson=t.unidades[0]?.id||null;saved.selected=current;save();view="theory";theoryStep=0;recallOpen=false;
  renderTrack();jumpTop();
 }
 function renderTrack(){
@@ -69,27 +69,52 @@ function drawLessonList(){
  const status=stateLabel(t,l);
  return '<button class="edu-mod" type="button" data-lesson="'+esc(l.id)+'" aria-current="'+(lesson===l.id)+'"><strong>'+esc(l.materia+" — "+l.titulo)+'</strong><span>'+esc(status)+'</span></button>'
  }).join("");
- $("lessonList").querySelectorAll("[data-lesson]").forEach(b=>b.addEventListener("click",()=>{lesson=b.dataset.lesson;view="theory";recallOpen=false;renderTrack()}));
+ $("lessonList").querySelectorAll("[data-lesson]").forEach(b=>b.addEventListener("click",()=>{lesson=b.dataset.lesson;view="theory";theoryStep=0;recallOpen=false;renderTrack()}));
 }
 function selectedLesson(){return lessons(track()).find(l=>l.id===lesson)}
+function material(){return supports[current]?.[lesson]||null}
+function listen(text){
+ if(typeof window==="undefined"||!("speechSynthesis" in window))return;
+ try{const t=window.speechSynthesis; t.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="pt-BR";u.rate=.92;t.speak(u)}catch(e){}
+}
+function stopReading(){if(typeof window!=="undefined"&&window.speechSynthesis)try{window.speechSynthesis.cancel()}catch(e){}}
 function showTheory(){
- view="theory";let l=selectedLesson();if(!l)return;
- const p=progressRead(current,l.id);
- $("lessonMain").innerHTML=
- '<span class="edu-step">Aula exclusiva desta prova · Estudo guiado</span><h2>'+esc(l.titulo)+'</h2><p class="edu-preamble"><strong>Objetivo:</strong> '+esc(l.objetivo)+'</p>'+
- '<div class="edu-explain">'+l.teoria.map(t=>'<p>'+esc(t)+'</p>').join("")+'</div>'+
- '<div class="edu-example"><strong>Exemplo resolvido:</strong><p>'+esc(l.exemplo)+'</p></div>'+
- '<div class="edu-mistake"><strong>Atenção ao erro frequente:</strong> '+esc(l.erros)+'</div>'+
- '<div class="edu-recall"><h3>Antes de ver as alternativas, tente lembrar</h3><p>'+esc(l.lembrar)+'</p>'+
- '<label for="recallText" class="edu-quiet">Escreva sua explicação com suas palavras (opcional; não é enviada ao servidor)</label><textarea id="recallText" placeholder="Pense na resposta. Você também pode explicar em voz alta."></textarea>'+
- '<div class="edu-actions"><button class="edu-secondary" id="revealTheory" type="button">'+(recallOpen?"Ocultar resposta modelo":"Conferir a resposta modelo")+'</button></div>'+
- '<div id="theoryAnswer" class="edu-recall-answer'+(recallOpen?"":" edu-hidden")+'">'+esc(l.resposta)+'</div></div>'+
- '<div class="edu-actions"><button id="startQuiz" class="edu-primary" type="button">Praticar com questões desta aula</button>'+
- (p?.quizAttempts?'<button id="reviewThis" class="edu-secondary" type="button">Revisar de memória</button>':"")+
- '</div><p class="edu-quiet">As respostas corretas não aparecem antes da tentativa. Acertar hoje não elimina a necessidade de revisar em outro dia.</p>';
- $("revealTheory").addEventListener("click",()=>{recallOpen=!recallOpen;$("theoryAnswer").classList.toggle("edu-hidden",!recallOpen);$("revealTheory").textContent=recallOpen?"Ocultar resposta modelo":"Conferir a resposta modelo"});
- $("startQuiz").addEventListener("click",()=>startQuiz(false));
- if($("reviewThis"))$("reviewThis").addEventListener("click",()=>startReview(true,l.id));
+ view="theory";const l=selectedLesson();if(!l)return;
+ const m=material(),steps=m?.passos?.length?m.passos:l.teoria;
+ theoryStep=Math.min(Math.max(0,theoryStep),steps.length);
+ const isEnd=theoryStep===steps.length,p=progressRead(current,l.id);
+ const step=steps[theoryStep]||"",prev=steps[theoryStep-1]||"";
+ let content='<span class="edu-step">Aula '+(isEnd?"— Vamos praticar":"— Parte "+(theoryStep+1)+" de "+steps.length)+'</span>'+
+ '<h2>'+esc(l.titulo)+'</h2><p class="edu-preamble"><strong>O que você vai aprender:</strong> '+esc(l.objetivo)+'</p>';
+ if(!isEnd){
+   content+='<div class="edu-shortstep" aria-live="polite"><span class="edu-eyebrow">Leia com calma</span><p>'+esc(step)+'</p></div>'+
+   (theoryStep>0?'<p class="edu-quiet"><strong>Antes:</strong> '+esc(prev)+'</p>':"")+
+   '<div class="edu-progressbar" role="progressbar" aria-label="Explicação da aula" aria-valuemin="0" aria-valuemax="'+steps.length+'" aria-valuenow="'+(theoryStep+1)+'"><span style="width:'+Math.round((theoryStep+1)/steps.length*100)+'%"></span></div>'+
+   '<div class="edu-actions"><button id="continueStep" class="edu-primary" type="button">'+(theoryStep===steps.length-1?"Ver o exemplo":"Continuar")+'</button>'+
+   (theoryStep>0?'<button id="priorStep" class="edu-secondary" type="button">Ver parte anterior</button>':"")+
+   '</div>';
+ }else{
+   content+='<div class="edu-example"><strong>Veja um exemplo:</strong><p>'+esc(l.exemplo)+'</p></div>'+
+   (m?.palavras?.length?'<div class="edu-glossary"><h3>Palavras importantes</h3>'+m.palavras.map(a=>'<p><strong>'+esc(a[0])+':</strong> '+esc(a[1])+'</p>').join("")+'</div>':"")+
+   '<div class="edu-mistake"><strong>Guarde esta ideia:</strong> '+esc(l.erros)+'</div>'+
+   '<div class="edu-recall"><h3>Agora tente lembrar</h3><p>'+esc(l.lembrar)+'</p>'+
+   '<label for="recallText" class="edu-quiet">Responda com suas palavras, por escrito ou em voz alta. Não é preciso digitar para continuar.</label>'+
+   '<textarea id="recallText" placeholder="Como você explicaria isso para outra pessoa?"></textarea>'+
+   '<div class="edu-actions"><button class="edu-secondary" id="revealTheory" type="button">'+(recallOpen?"Ocultar explicação":"Conferir explicação")+'</button></div>'+
+   '<div id="theoryAnswer" class="edu-recall-answer'+(recallOpen?"":" edu-hidden")+'">'+esc(l.resposta)+'</div></div>'+
+   '<div class="edu-actions"><button id="startQuiz" class="edu-primary" type="button">Resolver questões</button>'+
+   '<button id="priorStep" class="edu-secondary" type="button">Rever a explicação</button>'+
+   (p?.quizAttempts?'<button id="reviewThis" class="edu-soft" type="button">Relembrar o que estudei</button>':"")+
+   '</div>';
+ }
+ content+='<div class="edu-actions"><button id="listenStep" type="button" class="edu-soft">Ouvir o texto</button></div>';
+ $("lessonMain").innerHTML=content;
+ if($("continueStep"))$("continueStep").addEventListener("click",()=>{stopReading();theoryStep++;showTheory()});
+ if($("priorStep"))$("priorStep").addEventListener("click",()=>{stopReading();theoryStep=isEnd?0:Math.max(0,theoryStep-1);recallOpen=false;showTheory()});
+ if($("revealTheory"))$("revealTheory").addEventListener("click",()=>{recallOpen=!recallOpen;$("theoryAnswer").classList.toggle("edu-hidden",!recallOpen);$("revealTheory").textContent=recallOpen?"Ocultar explicação":"Conferir explicação"});
+ if($("startQuiz"))$("startQuiz").addEventListener("click",()=>{stopReading();startQuiz(false)});
+ if($("reviewThis"))$("reviewThis").addEventListener("click",()=>{stopReading();startReview(true,l.id)});
+ if($("listenStep"))$("listenStep").addEventListener("click",()=>listen(isEnd?l.exemplo+" "+l.lembrar:step));
 }
 function questionsFor(isSim){
  let t=track();
@@ -97,12 +122,27 @@ function questionsFor(isSim){
  return shuffle(lessons(t).flatMap(l=>l.questoes.map(q=>({...q,from:l.id,lessonTitle:l.titulo,optionOrder:shuffle([0,1,2,3])})))).slice(0,Math.min(12,lessons(t).reduce((n,l)=>n+l.questoes.length,0)));
 }
 function startQuiz(sim){
- questions=questionsFor(sim);cursor=0;results=[];answered=false;view=sim?"sim":"quiz";renderTrack();
+ questions=questionsFor(sim);cursor=0;results=[];answered=false;quizIsSim=sim;practiceExtraAdded=false;practiceChallengeAdded=false;view=sim?"sim":"quiz";renderTrack();
+}
+function addPracticeQuestion(right){
+ const l=selectedLesson(),bank=material();if(!bank)return;
+ const missed=results.some(x=>!x.correct);
+ const put=(raw,source)=>{if(!raw||raw.length<4)return;questions.push({
+   enunciado:raw[0],alternativas:raw[1],correta:raw[2],explicacao:raw[3],optionOrder:shuffle([0,1,2,3]),
+   from:l.id,lessonTitle:l.titulo,addedType:source
+ })};
+ if(!right&&!practiceExtraAdded){
+   practiceExtraAdded=true;
+   put(bank.reforco,"reforco");
+ }else if(!missed&&!practiceChallengeAdded&&results.length===l.questoes.length){
+   practiceChallengeAdded=true;
+   put(bank.desafio,"aplicacao");
+ }
 }
 function score(){return results.filter(x=>x.correct).length}
 function showQuestion(){
  const q=questions[cursor];if(!q){showSummary();return}
- const sim=view==="sim",isAnswered=!!results[cursor];
+ const sim=quizIsSim,isAnswered=!!results[cursor];
  const options=q.optionOrder;
  const selection=isAnswered?results[cursor]:null;
  $("lessonMain").innerHTML='<span class="edu-step">'+(sim?"Simulado desta prova — sem gabarito durante a tentativa":"Prática da aula")+'</span>'+
@@ -111,30 +151,32 @@ function showQuestion(){
  '<div class="edu-progressbar"><span style="width:'+((cursor+1)/questions.length*100).toFixed(1)+'%"></span></div>'+
  '<p class="edu-question">'+esc(q.enunciado)+'</p>'+
  options.map((original,i)=>'<button type="button" class="edu-choice" data-choice="'+original+'" '+(isAnswered?"disabled":"")+'>'+String.fromCharCode(65+i)+") "+esc(q.alternativas[original])+'</button>').join("")+
- (isAnswered?'<div class="edu-feedback'+(selection.correct?"":" error")+'"><strong>'+(selection.correct?"Você acertou.":"Você errou.")+'</strong><p>'+esc(q.explicacao)+'</p><p>Resposta correta: '+esc(q.alternativas[q.correta])+'</p></div>'+
+ (isAnswered?'<div class="edu-feedback'+(selection.correct?"":" error")+'"><strong>'+(selection.correct?"Você acertou.":"Vamos entender o motivo.")+'</strong><p>'+esc(q.explicacao)+'</p>'+(!selection.correct&&material()?.pista?'<p><strong>Como pensar:</strong> '+esc(material().pista)+'</p>':"")+'<p>Resposta correta: '+esc(q.alternativas[q.correta])+'</p></div>'+
  '<div class="edu-actions"><button id="nextQuestion" class="edu-primary" type="button">'+(cursor===questions.length-1?"Ver resultado da aula":"Próxima questão")+'</button></div>':"");
  if(!isAnswered){$("lessonMain").querySelectorAll("[data-choice]").forEach(b=>b.addEventListener("click",()=>{
    let original=Number(b.dataset.choice);
-   results.push({chosen:original,correct:original===q.correta,source:q.from,question:q.enunciado,explanation:q.explicacao,correctText:q.alternativas[q.correta]});
+   const right=original===q.correta;
+   results.push({chosen:original,correct:right,source:q.from,question:q.enunciado,explanation:q.explicacao,correctText:q.alternativas[q.correta]});
+   if(!sim)addPracticeQuestion(right);
    if(sim){cursor++;if(cursor>=questions.length)finishQuiz();else showQuestion()}
    else showQuestion();
  }))}
  if(isAnswered&&$("nextQuestion"))$("nextQuestion").addEventListener("click",()=>{cursor++;if(cursor>=questions.length)finishQuiz();else showQuestion()});
 }
 function finishQuiz(){
- const t=track(),sim=view==="sim",raw=score(),total=questions.length;
- if(!sim){const p=getProgress(current,lesson);p.quizAttempts++;p.lastScore=Math.round(raw/total*100);p.passed=raw/total>=.8;p.lastQuizAt=Date.now();p.errors=results.filter(x=>!x.correct).map(x=>x.question);if(!p.nextReview||!p.passed)p.nextReview=p.passed?Date.now()+DAY:Date.now();save()}
+ const t=track(),sim=quizIsSim,raw=score(),total=questions.length;
+ if(!sim){const p=getProgress(current,lesson);p.quizAttempts++;p.lastScore=Math.round(raw/total*100);p.passed=raw/total>=.75&&results.slice(-2).every(x=>x.correct);p.earlyErrors=(p.earlyErrors||0)+results.filter(x=>!x.correct).length;p.lastQuizAt=Date.now();p.errors=results.filter(x=>!x.correct).map(x=>x.question);if(!p.nextReview||!p.passed)p.nextReview=p.passed?Date.now()+DAY:Date.now();save()}
  else{saved.simulados[current]??=[];saved.simulados[current].push({date:Date.now(),score:Math.round(raw/total*100),correct:raw,total});saved.simulados[current]=saved.simulados[current].slice(-30);save()}
  view="summary";renderTrack();
 }
 function showSummary(){
- view="summary";let t=track(),sim=results.some(x=>x.source!==lesson)||(results.length>3),pct=Math.round(score()/results.length*100),missed=results.filter(x=>!x.correct);
+ view="summary";let t=track(),sim=quizIsSim,pct=Math.round(score()/results.length*100),missed=results.filter(x=>!x.correct);
  $("lessonMain").innerHTML='<span class="edu-step">'+(sim?"Resultado do simulado":"Resultado da prática")+'</span>'+
  '<h2>'+score()+' de '+results.length+' questões corretas · '+pct+'%</h2>'+
  '<p>'+ (sim?"Este simulado usou somente os assuntos disponíveis nesta prova. É um treino demonstrativo, não uma prova oficial.":pct>=80?"Você concluiu a prática inicial. O próximo desafio é recuperar o conteúdo em outro dia.":"Há conceitos a reforçar. Volte ao exemplo e às explicações antes de tentar novamente.") +'</p>'+
  (missed.length?'<h3>O que precisa ser entendido</h3>'+missed.map(x=>'<article class="edu-simresult wrong"><strong>'+esc(x.question)+'</strong><p>'+esc(x.explanation)+'</p><p><strong>Resposta correta:</strong> '+esc(x.correctText)+'</p></article>').join(""):'<div class="edu-example">Você respondeu a todas as questões corretamente. Isso mede esta tentativa; não comprova retenção a longo prazo.</div>')+
  '<div class="edu-actions"><button id="againTheory" class="edu-secondary" type="button">Voltar à explicação</button><button id="againQuiz" class="edu-primary" type="button">'+(sim?"Refazer simulado":"Fazer novo treino")+'</button>'+(sim?"":'<button id="goReview" class="edu-soft" type="button">Treinar recordação</button>')+'</div>';
- $("againTheory").addEventListener("click",()=>{view="theory";recallOpen=false;renderTrack()});
+ $("againTheory").addEventListener("click",()=>{view="theory";theoryStep=0;recallOpen=false;renderTrack()});
  $("againQuiz").addEventListener("click",()=>startQuiz(sim));
  if($("goReview"))$("goReview").addEventListener("click",()=>startReview(true,lesson));
 }
@@ -191,7 +233,7 @@ function boot(){
  $("examFilters").querySelectorAll("[data-force]").forEach(b=>b.addEventListener("click",()=>{filterForce=b.dataset.force;directory()}));
  $("find").addEventListener("input",directory);
  $("onlyReady").addEventListener("change",e=>{onlyReady=e.target.checked;directory()});
- $("changeExam").addEventListener("click",()=>{current=null;saved.selected=null;save();directory()});
+ $("changeExam").addEventListener("click",()=>{stopReading();current=null;saved.selected=null;save();directory()});
  $("reviewAll").addEventListener("click",()=>startReview(false));
  $("simulation").addEventListener("click",showSimulation);
  $("loader").hidden=true;
@@ -200,6 +242,7 @@ function boot(){
 }
 Promise.all([
  fetch("dados/provas.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("provas indisponíveis");return r.json()}),
- fetch("dados/cursos.json").then(r=>{if(!r.ok)throw Error("cursos indisponíveis");return r.json()})
-]).then(([j,c])=>{tracks=j.trilhas;courses=c;boot()}).catch(e=>{$("loader").textContent="Não foi possível carregar as provas: "+e.message;$("loader").hidden=false});
+ fetch("dados/cursos.json").then(r=>{if(!r.ok)throw Error("cursos indisponíveis");return r.json()}),
+ fetch("dados/etapas-estudo.json").then(r=>{if(!r.ok)throw Error("etapas indisponíveis");return r.json()})
+]).then(([j,c,m])=>{tracks=j.trilhas;courses=c;supports=m.apoios;boot()}).catch(e=>{$("loader").textContent="Não foi possível carregar as provas: "+e.message;$("loader").hidden=false});
 })();
