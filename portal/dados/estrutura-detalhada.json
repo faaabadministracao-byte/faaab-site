@@ -43,14 +43,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
+        "Integrante do BFE",
+        "Operador do DAD",
+        "Integrante do DRE",
+        "Instrutor de Seleção",
         "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Subcomandante do BFE",
+        "Comandante do BFE"
       ],
       "atividades": [
         "Briefing de missão",
@@ -106,14 +105,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
+        "Policial do Exército",
+        "Integrante do Pelotão de Choque (PC)",
+        "Chefe do PC",
+        "Instrutor de Segurança",
         "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Subcomandante do BPE",
+        "Comandante do BPE"
       ],
       "atividades": [
         "Briefing de missão",
@@ -170,12 +168,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Integrante do BI Caat",
+        "Integrante do PELOPES",
+        "Integrante do DCS",
+        "Chefe de Pelotão",
+        "Instrutor de Caatinga",
         "Subcomandante",
         "Comandante"
       ],
@@ -234,12 +231,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Paraquedista da Unidade",
+        "Integrante de Precursores",
+        "Chefe do CFP",
+        "Instrutor de Salto Simulado",
+        "Chefe de Companhia",
         "Subcomandante",
         "Comandante"
       ],
@@ -359,12 +355,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Tripulante de Blindado",
+        "Motorista Habilitado",
+        "Operador de Tanque",
+        "Instrutor do CFB",
+        "Chefe de Pelotão Blindado",
         "Subcomandante",
         "Comandante"
       ],
@@ -483,12 +478,10 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Operador do BAC",
+        "Integrante do DCOE",
+        "Chefe do DCOE",
+        "Instrutor de Operações",
         "Subcomandante",
         "Comandante"
       ],
@@ -608,12 +601,10 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Integrante de Montanha",
+        "Integrante do PRGM",
+        "Instrutor do CFM",
+        "Chefe de Pelotão",
         "Subcomandante",
         "Comandante"
       ],
@@ -673,12 +664,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Socorrista Militar",
+        "Integrante do DRT",
+        "Integrante do GRE",
+        "Integrante do PAPH",
+        "Supervisor de Triagem",
+        "Chefe Médico de Missão",
         "Subcomandante",
         "Comandante"
       ],
@@ -1200,12 +1191,12 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Análise de informações de roleplay, segurança de dados do jogo e documentação.",
+      "missao": "Atividade de inteligência fictícia, documentação de incidentes e segurança informacional.",
       "subdivisoes": [
         "SC",
         "DGC"
       ],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Somente integrantes habilitados e designados. Centro de inteligência não é uma escola em que todos entram como aluno.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1225,14 +1216,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
+        "Analista",
+        "Assistente de Inteligência",
+        "Chefe de Análise",
+        "Responsável de Contrainteligência (SC)",
+        "Responsável de Guerra Cibernética (DGC)",
         "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor do Centro"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1347,14 +1337,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
+        "Aluno de Guerra na Selva",
+        "Monitor de Treinamento",
+        "Instrutor de Selva",
+        "Líder do POS",
         "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor do Centro"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1745,9 +1733,9 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formar e aperfeiçoar sargentos do Exército da FAAAB, com turmas, módulos, prática e avaliações por etapa.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Alunos previstos: Cabo e 3º Sargento em etapas específicas. Instrutor: 2º Tenente habilitado. Os demais postos não viram alunos automaticamente.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1767,14 +1755,14 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
+        "Aluno Cabo",
+        "Aluno 3º Sargento",
+        "Monitor de Turma",
+        "Instrutor 2º Tenente Habilitado",
+        "Avaliador de Formação",
         "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Subdiretor da ESA",
+        "Diretor da ESA"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1784,8 +1772,9 @@
         "Certificação após aprovação"
       ],
       "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Aprovação dos módulos da ESA",
+        "Habilitação docente separada da patente",
+        "Validação de atividade por instrutor habilitado"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -1805,9 +1794,9 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Curso preparatório para ingresso na etapa de cadete da carreira do Exército dentro do jogo.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Na carreira documentada, a passagem de Subtenente para a etapa de Cadete depende da EsPCEx. Requisitos completos seguem o manual e podem ser ajustados.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1827,14 +1816,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
+        "Cursante da EsPCEx",
+        "Monitor de Companhia de Alunos",
         "Instrutor Habilitado",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador de Formação",
+        "Subcomandante da Escola",
+        "Comandante da Escola"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1865,7 +1853,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação de cadetes do Exército em liderança, planejamento, instrução e desempenho em missões simuladas.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -1887,14 +1875,14 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Cadete",
+        "Monitor de Turma",
+        "Instrutor Militar",
+        "Avaliador de Curso",
+        "Chefe de Curso",
+        "Coordenador Acadêmico",
+        "Subcomandante da AMAN",
+        "Comandante da AMAN"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1925,7 +1913,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Aperfeiçoamento de oficiais com módulos de liderança, planejamento, gestão de operações e avaliação.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -1947,14 +1935,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
+        "Oficial Aluno",
+        "Monitor Acadêmico",
+        "Instrutor de Aperfeiçoamento",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Chefe de Curso",
+        "Diretor"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1985,7 +1971,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação avançada de estado-maior para planejamento e coordenação de operações do roleplay.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -2007,14 +1993,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
+        "Oficial Aluno",
+        "Instrutor de Estado-Maior",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador de Simulação",
+        "Diretor da Escola"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -2045,7 +2028,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Especialização de sargentos em transporte, abastecimento, manutenção e suporte operacional.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -2067,14 +2050,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aluno de Logística",
         "Monitor",
-        "Instrutor Habilitado",
+        "Instrutor de Logística",
         "Avaliador",
         "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -2105,7 +2086,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação de profissionais de saúde e áreas complementares do Exército fictício.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -2127,14 +2108,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aluno",
         "Monitor",
-        "Instrutor Habilitado",
+        "Instrutor de Saúde",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador de Formação",
+        "Diretor"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -2553,14 +2532,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DAD",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2614,14 +2590,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DRE",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2675,14 +2648,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do PC",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2736,14 +2706,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do PELOPES",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2797,14 +2764,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DCS",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2858,14 +2822,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do Precs",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2919,14 +2880,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DCOE",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -2980,14 +2938,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do PRGM",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3041,14 +2996,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DRT",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3102,14 +3054,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do GRE",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3163,14 +3112,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do PAPH",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3224,14 +3170,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do SC",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3285,14 +3228,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do DGC",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3346,14 +3286,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Integrante do POS",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Chefe de Equipe",
+        "Chefe da Divisão",
+        "Subcomandante da Unidade-Mãe"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3523,14 +3460,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Piloto Militar Habilitado",
+        "Líder de Esquadrilha",
+        "Oficial de Operações Aéreas",
+        "Instrutor de Voo",
+        "Comandante de Esquadrão"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3582,14 +3516,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Piloto de Helicóptero Habilitado",
+        "Tripulante",
+        "Chefe de Missão",
+        "Instrutor de Voo",
+        "Comandante do Esquadrão"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3641,14 +3572,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Piloto de Transporte",
+        "Tripulante de Carga",
+        "Oficial de Logística Aérea",
+        "Líder de Missão",
+        "Comandante do Esquadrão"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3857,7 +3785,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação e adaptação de militares da Aeronáutica, conforme cursos previstos no catálogo FAAAB.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -3877,14 +3805,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aluno de Formação",
         "Monitor",
         "Instrutor Habilitado",
         "Avaliador",
         "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Comandante do Centro"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3915,7 +3841,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação e especialização de sargentos da FAB, com módulos técnicos, avaliações e provas práticas.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -3935,14 +3861,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
+        "Aluno Especialista",
+        "Monitor de Turma",
+        "Instrutor de Especialidade",
+        "Avaliador Técnico",
         "Coordenador de Curso",
-        "Chefe de Instrução",
         "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor da EEAR"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3973,7 +3898,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação preparatória para cadetes da Aeronáutica, com estudos teóricos e avaliação de disciplina e liderança.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -3993,14 +3918,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
+        "Aluno da EPCAR",
+        "Monitor de Turma",
+        "Instrutor",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Chefe de Formação",
+        "Diretor da EPCAR"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4031,7 +3954,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Academia de formação dos cadetes da FAB, com matérias militares e treinamento em aviação simulada.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -4051,14 +3974,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Cadete da FAB",
         "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
+        "Instrutor de Voo Habilitado",
+        "Instrutor Acadêmico",
+        "Avaliador de Voo",
         "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Comandante da AFA"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4089,7 +4011,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Curso de comando e estado-maior para a formação avançada de oficiais da FAB.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -4109,14 +4031,11 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
+        "Oficial Aluno",
+        "Instrutor de Estado-Maior",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador",
+        "Comandante da Escola"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4147,9 +4066,9 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Apoio informacional e análises de risco para operações militares aéreas fictícias.",
+      "missao": "Análise de informações e proteção informacional da FAB no contexto do jogo.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Ingresso por designação e análise de requisitos. Não pressupõe matrícula como aluno.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -4167,14 +4086,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
+        "Analista de Inteligência",
+        "Assistente",
+        "Supervisor de Informações",
+        "Chefe de Análise",
         "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor do CIAER"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4224,14 +4141,11 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Tripulante",
+        "Operador de Patrulha",
+        "Encarregado de Navegação",
+        "Comandante de Embarcação",
+        "Chefe de Grupamento"
       ],
       "atividades": [
         "Briefing de missão",
@@ -4340,14 +4254,11 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Tripulante de Submarino",
+        "Oficial de Navegação",
+        "Encarregado de Engenharia",
+        "Comandante de Submarino",
+        "Comandante da Força"
       ],
       "atividades": [
         "Briefing de missão",
@@ -4398,14 +4309,11 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Operador de Comunicações",
+        "Supervisor de Rádio",
+        "Chefe de Rede",
         "Subcomandante",
-        "Comandante"
+        "Comandante do Grupamento"
       ],
       "atividades": [
         "Briefing de missão",
@@ -4514,14 +4422,11 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Tripulante de Navio",
+        "Chefe de Navegação",
+        "Comandante de Navio",
+        "Oficial de Operações",
+        "Comandante da Força de Superfície"
       ],
       "atividades": [
         "Briefing de missão",
@@ -4553,9 +4458,9 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Processamento de informações navais e inteligência de roleplay.",
+      "missao": "Tratamento de informações navais, documentação e inteligência fictícia dentro da Marinha FAAAB.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Centro de inteligência: acesso por designação; não é curso de matrícula livre.",
       "patentes": [
         "Marinheiro",
         "Cabo",
@@ -4572,14 +4477,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
+        "Analista Naval",
+        "Assistente de Inteligência",
+        "Chefe de Análise",
+        "Coordenador",
         "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Diretor do CIM"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4609,7 +4512,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Infantaria de Fuzileiros Navais.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4667,7 +4570,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB).",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4725,7 +4628,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Comandos Anfíbios.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4783,7 +4686,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Blindados de Fuzileiros Navais.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4841,7 +4744,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Engenharia de Fuzileiros Navais.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4899,7 +4802,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Viaturas Anfíbias.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -4957,7 +4860,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Artilharia de Fuzileiros Navais.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -5015,7 +4918,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Operações Ribeirinhas (adaptação da FAAAB).",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -5073,7 +4976,7 @@
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Companhia de Polícia de Fuzileiros Navais.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
@@ -5132,7 +5035,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação inicial de Fuzileiros Navais dentro da cadeia da Marinha da FAAAB.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5151,14 +5054,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
+        "Aluno Fuzileiro Naval",
+        "Monitor da Turma",
+        "Instrutor de Formação FN",
+        "Avaliador de Campo",
         "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Comandante do CIAMPA"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -5189,7 +5090,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Especialização de praças da Marinha; competências técnicas por área e certificações de curso.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5208,14 +5109,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aluno de Especialização",
         "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Instrutor de Especialidade",
+        "Avaliador Técnico",
+        "Coordenador",
+        "Diretor do CIAA"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -5246,7 +5145,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Instrução e adaptação de oficiais da Marinha, com estágios e competências da carreira naval.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5265,14 +5164,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Oficial Aluno",
         "Monitor",
-        "Instrutor Habilitado",
+        "Instrutor",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador de Formação",
+        "Diretor do CIAW"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -5303,7 +5200,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação inicial de aprendizes-marinheiros, rotina de bordo, navegação e disciplina de tripulação.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5322,14 +5219,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
+        "Aprendiz-Marinheiro",
+        "Monitor de Turma",
+        "Instrutor Naval",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Chefe de Curso",
+        "Diretor da Escola"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -5360,7 +5255,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação preparatória de alunos para a carreira de oficiais da Marinha fictícia.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5379,14 +5274,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aluno do Colégio Naval",
         "Monitor",
-        "Instrutor Habilitado",
+        "Instrutor Acadêmico",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Chefe de Formação",
+        "Comandante do Colégio"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -5417,7 +5310,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação e qualificação de integrantes conforme a carreira e o conteúdo previsto.",
+      "missao": "Formação dos futuros oficiais da Marinha com cursos de comando, navegação e estágio de bordo.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -5436,14 +5329,12 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno / Cursante",
+        "Aspirante da Escola Naval",
         "Monitor",
-        "Instrutor Habilitado",
+        "Instrutor Naval",
         "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
+        "Coordenador de Navegação",
+        "Comandante da Escola Naval"
       ],
       "atividades": [
         "Aula prática e teórica",
