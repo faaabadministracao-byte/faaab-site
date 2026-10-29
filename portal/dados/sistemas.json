@@ -131,9 +131,9 @@
     {
       "id": "SIS-15",
       "categoria": "Formação",
-      "nome": "Centro de Instrução Militar (CIM)",
+      "nome": "Centro de formação e instrução militar",
       "resumo": "Salas, instruções, triagem e exames para progressão inicial.",
-      "implementacao": "Entrada orientada por etapa de formação; avaliações com feedback.",
+      "implementacao": "Salas e exercícios da formação básica. A sigla interna deste centro de ensino está a confirmar, para não confundir com CIM — Centro de Inteligência da Marinha.",
       "criterio": "Aluno não sai de prova sem correção e próximos passos",
       "estado": "Especificado no planejamento; não verificado no Roblox Studio"
     },
