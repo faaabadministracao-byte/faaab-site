@@ -50,3 +50,26 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .edu-footer{background:#173a22;color:#d6e2d7;text-align:center;padding:24px;font-size:12px}
 @media(max-width:980px){.edudirectory{grid-template-columns:repeat(2,minmax(0,1fr))}.edu-layout{grid-template-columns:240px 1fr}}
 @media(max-width:690px){.eduwrap{padding:23px 13px 55px}.edutoolbar{grid-template-columns:1fr}.edudirectory{grid-template-columns:1fr}.eduexam{min-height:0}.edu-layout{grid-template-columns:1fr}.edu-side{position:static}.edu-main{padding:16px}.edu-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.edu-stat{padding:11px}.edu-stat strong{font-size:20px}.edu-stat small{font-size:10px}.edu-question{font-size:16px}}
+
+/* Leitura contínua, sem precisar configurar um perfil. */
+.edu-shortstep{max-width:66ch;padding:clamp(18px,3vw,28px);border:1px solid #b4ceb9;border-left:5px solid #427b4c;background:#f2f8f0;margin:21px 0}
+.edu-shortstep p{font-size:clamp(18px,2.3vw,21px);line-height:1.8;letter-spacing:.005em;color:#263c2c;margin:10px 0 0;font-weight:500}
+.edu-glossary{border-top:1px solid #d4e0d3;padding:16px 0;margin-top:20px;max-width:69ch}
+.edu-glossary p{font-size:15px;line-height:1.7;margin:10px 0}
+.edu-main{font-size:16px;line-height:1.75;min-width:0}
+.edu-main .edu-preamble,.edu-main .edu-explain p{font-size:16px;line-height:1.8;max-width:67ch}
+.edu-main .edu-example{font-size:16px;line-height:1.7;max-width:70ch}
+.edu-main .edu-mistake,.edu-main .edu-recall{font-size:15px;line-height:1.7;max-width:70ch}
+.edu-quiet{font-size:13px;line-height:1.6}
+.edu-main .edu-cardfront{font-size:20px;line-height:1.65}
+.edu-primary,.edu-secondary,.edu-soft,.edu-choice,.edu-reviewbar button,.edu-back,.edu-mod{min-height:48px;border-radius:7px;touch-action:manipulation}
+.edu-choice{font-size:16px;line-height:1.6;padding:16px;max-width:74ch}
+.edu-main textarea{font-size:16px;line-height:1.7;border-radius:6px;max-width:70ch}
+.edu-question{font-size:19px;line-height:1.65;max-width:69ch}
+.edu-feedback{max-width:71ch}
+.eduwrap .edu-status{font-size:13px}
+.eduwrap .edu-step{font-size:12px;line-height:1.4}
+.edu-back:hover,.edu-primary:hover,.edu-secondary:hover,.edu-soft:hover,.edu-reviewbar button:hover{filter:brightness(.96)}
+@media(prefers-reduced-motion:reduce){.edu-progressbar span{transition:none!important}html{scroll-behavior:auto}}
+@media(max-width:690px){.edu-shortstep p{font-size:19px}.edu-main{padding:16px}.edu-main .edu-preamble{font-size:16px}.edu-choice{font-size:16px;padding:15px}.edu-reviewbar button{flex:1 1 100%}.edu-actions button{max-width:100%}.edu-stat strong{font-size:18px}.edu-stat small{font-size:11px}}
+@media(prefers-contrast:more){.edu-choice,.edu-shortstep,.edu-main,.edu-mod{border-color:#233f2b}.edu-quiet{color:#2d4031}}
