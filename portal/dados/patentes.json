@@ -78,6 +78,19 @@
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
   },
   {
+    "id": "FTB-TFE",
+    "forca": "FTB",
+    "sigla": "TFE",
+    "cargo": "Taifeiro Especial",
+    "diasMinimos": "A confirmar — sem prazo aprovado",
+    "requisitos": "Requisitos e critérios de concessão específicos a confirmar pela administração FAAAB; não é promoção automática.",
+    "competencias": "Funções de apoio, serviços e logística; não é etapa obrigatória entre Cabo e 3º Sargento.",
+    "formacao": "A definir pela instituição",
+    "proximaEtapa": "Carreira própria conforme regulamentação",
+    "fonte": "Estrutura de carreira FAAAB, atualização 2026-10-29",
+    "observacao": "Função ou graduação da carreira geral. Não criar posto interno fictício em batalhão."
+  },
+  {
     "id": "FTB-T-SGT",
     "forca": "FTB",
     "sigla": "T-SGT",
@@ -112,9 +125,35 @@
     "requisitos": "6 dias mínimos + TC-7.",
     "competencias": "Supervisão de sargentos, disciplina de subunidade e instrução avançada.",
     "formacao": "TC-7",
-    "proximaEtapa": "Subtenente",
+    "proximaEtapa": "Sargento-Mor",
     "fonte": "Manual CDP da FAAAB (setembro/2026)",
     "observacao": "Prazos em dias: propostas de balanceamento, não valores finais aprovados."
+  },
+  {
+    "id": "FTB-SGTMOR",
+    "forca": "FTB",
+    "sigla": "SGT-MOR",
+    "cargo": "Sargento-Mor",
+    "diasMinimos": "A confirmar — sem prazo aprovado",
+    "requisitos": "Requisitos e critérios de concessão específicos a confirmar pela administração FAAAB; não é promoção automática.",
+    "competencias": "Graduação de liderança de sargentos prevista no planejamento da FAAAB.",
+    "formacao": "A definir pela instituição",
+    "proximaEtapa": "Sargento-Mor de Comando",
+    "fonte": "Estrutura de carreira FAAAB, atualização 2026-10-29",
+    "observacao": "Função ou graduação da carreira geral. Não criar posto interno fictício em batalhão."
+  },
+  {
+    "id": "FTB-SGTMORCMD",
+    "forca": "FTB",
+    "sigla": "SGT-MOR-CMD",
+    "cargo": "Sargento-Mor de Comando",
+    "diasMinimos": "A confirmar — sem prazo aprovado",
+    "requisitos": "Requisitos e critérios de concessão específicos a confirmar pela administração FAAAB; não é promoção automática.",
+    "competencias": "Coordenação e assessoramento do comando em função especializada do projeto.",
+    "formacao": "A definir pela instituição",
+    "proximaEtapa": "Subtenente",
+    "fonte": "Estrutura de carreira FAAAB, atualização 2026-10-29",
+    "observacao": "Função ou graduação da carreira geral. Não criar posto interno fictício em batalhão."
   },
   {
     "id": "FTB-SUB-TEN",
