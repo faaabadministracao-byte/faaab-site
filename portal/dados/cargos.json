@@ -50,16 +50,6 @@
     "nota": "Titular não definido no histórico recuperado"
   },
   {
-    "id": "GOV-GVR",
-    "forca": "GOV",
-    "sigla": "GVR",
-    "nome": "Governador",
-    "altoEscalao": false,
-    "titular": null,
-    "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
-  },
-  {
     "id": "GOV-SGP",
     "forca": "GOV",
     "sigla": "SGP",
