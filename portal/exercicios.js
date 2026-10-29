@@ -4,9 +4,11 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const simplify=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 let data=null,selected="FTB",search="",only="todos";
 function matches(c){
- const q=simplify(search);
- return (only==="todos"||only==="agua"&&simplify(c.ambiente).includes("agua")||only==="voo"&&simplify(c.ambiente).includes("voo")||only==="altura"&&/altura|torre/i.test(c.ambiente))&&
- (!q||simplify([c.nome,c.ambiente,...c.etapas].join(" ")).includes(q));
+ const q=simplify(search),all=simplify([c.nome,c.ambiente,...c.etapas,...c.dependencias].join(" "));
+ const water=/agua|nadar|nadando|nado|rio|lago|mar|mergulho|baia/.test(all);
+ const flight=/voo|voar|aeronave|helicoptero|planador|paraquedas|asa-delta|jetpack|aereo/.test(all);
+ const height=/altura|torre|escalar|escadaria|guindaste|passarela elevada/.test(all);
+ return (only==="todos"||only==="agua"&&water||only==="voo"&&flight||only==="altura"&&height)&&(!q||all.includes(q));
 }
 function special(c,index){
  return '<details class="area-exercise area-circuit" id="circuit-'+esc(c.id)+'">'+
