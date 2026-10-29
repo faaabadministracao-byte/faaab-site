@@ -1,0 +1,141 @@
+{
+  "versao": 1,
+  "referencia": "2026-10-29",
+  "regraCentral": "Uma prova de seleção é uma avaliação pontual e independente da sequência de aulas ou estágios de um curso. Ser aprovado pode autorizar o ingresso, uma matrícula, a progressão ou uma habilitação, somente quando o regulamento específico confirmar esse efeito. A aprovação não implica conclusão de curso.",
+  "aviso": "Somente seleções explicitamente confirmadas e com destinatários e efeitos conhecidos podem ser publicadas. Não gerar prova automaticamente ao cadastrar curso, batalhão, centro ou patente.",
+  "tipos": [
+    {
+      "id": "publica",
+      "nome": "Pública",
+      "descricao": "Inscrição disponível aos integrantes que atendam aos requisitos publicados. Pode envolver pessoas fora das forças ou grupos do projeto. Não significa ausência de requisitos."
+    },
+    {
+      "id": "reservada",
+      "nome": "Reservada",
+      "descricao": "Inscrição por convite, autorização ou grupo específico; não necessariamente restrita à força inteira."
+    },
+    {
+      "id": "interna",
+      "nome": "Interna",
+      "descricao": "Exige vínculo dentro de uma força, batalhão, centro, unidade ou outro grupo; pode restringir patentes ou funções."
+    }
+  ],
+  "forcas": [
+    {
+      "id": "FTB",
+      "nome": "Exército",
+      "exemplosDeVinculo": [
+        "patente militar",
+        "batalhão",
+        "brigada",
+        "centro de instrução",
+        "força"
+      ]
+    },
+    {
+      "id": "FAB",
+      "nome": "Força Aérea",
+      "exemplosDeVinculo": [
+        "patente militar",
+        "esquadrão",
+        "centro",
+        "força"
+      ]
+    },
+    {
+      "id": "FMB",
+      "nome": "Marinha e Fuzileiros Navais",
+      "exemplosDeVinculo": [
+        "patente naval",
+        "organização naval",
+        "centro",
+        "força"
+      ]
+    },
+    {
+      "id": "CBM",
+      "nome": "Bombeiros",
+      "exemplosDeVinculo": [
+        "patente",
+        "grupamento",
+        "corpo de bombeiros"
+      ]
+    },
+    {
+      "id": "PM",
+      "nome": "Polícia Militar",
+      "exemplosDeVinculo": [
+        "patente",
+        "batalhão",
+        "unidade especializada",
+        "polícia militar"
+      ]
+    }
+  ],
+  "provas": [],
+  "processosDocumentados": [
+    {
+      "id": "alistamento",
+      "nome": "Alistamento e triagem",
+      "tipo": "processo-de-ingresso",
+      "forca": "FTB",
+      "situacao": "Existência documentada no planejamento FAAAB",
+      "descricao": "Portaria, triagem, aulas e testes do alistamento. A existência de uma prova pública separada ainda não foi confirmada neste cadastro.",
+      "materialDeApoio": "alistamento",
+      "promocaoAutomatica": false
+    }
+  ],
+  "verificacoesDocumentadas": [
+    {
+      "id": "retorno-oficiais",
+      "nome": "Teste de retorno de oficiais",
+      "forca": "FTB",
+      "tipo": "verificacao-de-reativacao",
+      "situacao": "Registrado no catálogo como Teste Limpeza de Oficiais",
+      "publico": "Somente oficiais que ficaram inativos por longo período após a patente de Capitão e retornaram.",
+      "restricaoPatente": "Após Capitão (condição textual do manual, não lista de patentes definida)",
+      "efeito": "Verificar a regularização do retorno; não é um concurso de ingresso, promoção ou matrícula em curso.",
+      "programa": "Não definido",
+      "inscricao": "Não aberta neste site",
+      "podeEmitirPatente": false
+    }
+  ],
+  "contratoProva": {
+    "id": "Identificador único estável",
+    "titulo": "Nome da prova validado",
+    "publicada": false,
+    "modalidade": "publica | reservada | interna",
+    "forca": "FTB | FAB | FMB | CBM | PM",
+    "objetivo": "ingresso | habilitacao | selecao_de_curso | progressao",
+    "prerequisitos": {
+      "patentesPermitidas": [],
+      "unidadesPermitidas": [],
+      "centrosPermitidos": [],
+      "gruposPermitidos": [],
+      "cargosPermitidos": [],
+      "permitidosForaDaForca": false,
+      "outrosRequisitos": []
+    },
+    "resultado": {
+      "acao": "ingresso_em_formacao | liberacao_de_acesso | elegivel_para_promocao | promocao_aprovada | registro",
+      "cursoDestino": null,
+      "unidadeDestino": null,
+      "patenteDestino": null,
+      "automatico": false
+    },
+    "conteudoConfirmado": [],
+    "bancaOuAutoridade": null,
+    "criteriosAprovacao": null,
+    "inscricoesAbertas": false,
+    "provaDeExemplo": false
+  },
+  "regrasDeSeguranca": [
+    "Nunca permitir inscrição em prova interna apenas com dados fornecidos pelo navegador.",
+    "Validar no servidor do jogo a conta, a patente atual, o vínculo ao grupo, unidade e autorizações.",
+    "Aplicar o efeito da aprovação somente após correção e validação autorizadas.",
+    "Não oferecer botão de inscrição sem prova publicada, regulamento e backend de autorização.",
+    "Não mudar patente automaticamente por concluir aula, prova de treino ou etapa de curso.",
+    "Não gerar provas para AMAN, EsPCEx, ESA, bombeiros ou polícia a partir do nome de uma instituição.",
+    "Um nome de curso não é evidência de que exista concurso de ingresso."
+  ]
+}
