@@ -47,11 +47,26 @@ function explainEligibility(p){
  return [p.objetivo?"Finalidade: "+p.objetivo:null,a.patentesPermitidas?.length?"Patentes: "+a.patentesPermitidas.join(", "):null,a.unidadesPermitidas?.length?"Unidades: "+a.unidadesPermitidas.join(", "):null,a.centrosPermitidos?.length?"Centros: "+a.centrosPermitidos.join(", "):null,a.gruposPermitidos?.length?"Grupos: "+a.gruposPermitidos.join(", "):null].filter(Boolean).join(" · ")||"Consultar requisitos publicados";
 }
 function renderSelection(p){
- root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[p.titulo]])+
- heading(typeLabel(p.modalidade)+" · "+p.forca,p.titulo,explainEligibility(p))+
- '<div class="edu3-box"><h2>Quem pode participar?</h2><p>'+escape(explainEligibility(p))+'</p><h3>O que a aprovação permite</h3><p>'+escape(p.resultado?.acao||"O resultado ainda não foi definido")+'</p>'+
- '<div class="edu3-info">Esta página descreve regras. Não concede patente, matrícula ou acesso ao jogo. A inscrição e a validação precisam ser autorizadas no servidor Roblox.</div></div>'+
- actions("provas","Voltar às provas","cursos","Ver formações");
+const a=p.prerequisitos||{},result=p.resultado||{};
+const restrictions=[
+ a.patentesPermitidas?.length?["Patente ou condição atual",a.patentesPermitidas.join(", ")]:null,
+ a.unidadesPermitidas?.length?["Unidades",a.unidadesPermitidas.join(", ")]:null,
+ a.centrosPermitidos?.length?["Centros",a.centrosPermitidos.join(", ")]:null,
+ a.gruposPermitidos?.length?["Grupos",a.gruposPermitidos.join(", ")]:null,
+ ...(a.outrosRequisitos||[]).map(x=>["Condição",x])
+].filter(Boolean);
+const items=list=>list?.length?'<ul class="edu3-plain-list">'+list.map(x=>'<li>'+escape(x)+'</li>').join("")+'</ul>':"";
+root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[p.titulo]])+
+ heading(typeLabel(p.modalidade)+" · "+(selections.forcas.find(x=>x.id===p.forca)?.nome||p.forca),p.titulo,p.descricao||explainEligibility(p))+
+ '<section class="edu3-section"><h2>Quem pode fazer?</h2><div class="edu3-box"><dl class="edu3-requirements">'+restrictions.map(x=>'<div><dt>'+escape(x[0])+'</dt><dd>'+escape(x[1])+'</dd></div>').join("")+'</dl></div></section>'+
+ (p.triagemAnterior?.length?'<section class="edu3-section"><h2>Antes da prova: triagem inicial</h2><p class="edu3-muted">Atendimento separado da prova de ingresso, não um estágio de curso.</p><div class="edu3-box">'+items(p.triagemAnterior)+'</div></section>':"")+
+ (p.conteudoConfirmado?.length?'<section class="edu3-section"><h2>O que acontece na prova</h2><p class="edu3-muted">Atividades documentadas para esta seleção do jogo.</p><div class="edu3-box">'+items(p.conteudoConfirmado)+'</div></section>':"")+
+ '<section class="edu3-section"><h2>Se for aprovado</h2><div class="edu3-box"><p>'+escape(result.descricao||"O efeito depende das regras da seleção.")+'</p>'+
+ '<p><strong>Responsável:</strong> '+escape(p.bancaOuAutoridade||"A definir")+'</p>'+
+ '<p><strong>Critério:</strong> '+escape(p.criterioAprovacao||"A definir")+'</p></div></section>'+
+ (p.id==="ingresso-recruta-eb"?'<div class="edu3-actions"><a class="edu3-btn mild" href="#materias">Estudar Português e Matemática</a></div>':"")+
+ '<div class="edu3-info">Esta página informa as regras do jogo. A seleção é conduzida pelos responsáveis da FAAAB no Roblox. Aqui não é possível inscrever-se, concluir a prova nem ganhar patente por clicar.</div>'+
+ actions("provas","Voltar às seleções","cursos","Ver formações");
 }
 function renderProcess(p){
  const lesson=exams.find(e=>e.id===p.materialDeApoio);
@@ -132,7 +147,7 @@ root.innerHTML=crumb([["Início","inicio"],["Cursos e treinamentos"]])+heading("
 actions("inicio","Voltar ao início","provas","Ver provas");
 }
 function renderCourse(c){
-const x=(selections.provas||[]).find(x=>x.publicada===true&&x.cursoDestino===c.id);
+const x=(selections.provas||[]).find(x=>x.publicada===true&&x.resultado?.cursoDestino===c.id);
 root.innerHTML=crumb([["Início","inicio"],["Cursos e treinamentos","cursos"],[c.titulo]])+
 heading(humanForce(c.forca),c.titulo,summaries[c.id]||"Informações do curso FAAAB.")+
 '<div class="edu3-box"><h2>Sobre esta formação</h2><p>'+escape(summaries[c.id]||"Formação em organização no projeto.")+'</p>'+
