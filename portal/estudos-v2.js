@@ -7,7 +7,7 @@ const shuffle=arr=>{let a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.fl
 const localDate=ts=>{const d=new Date(ts);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")};
 const readableDate=ts=>new Date(ts).toLocaleDateString("pt-BR",{day:"2-digit",month:"short"});
 const durationDays=ts=>Math.max(0,Math.ceil((ts-Date.now())/DAY));
-let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false,reviewDraft="";
+let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false,reviewDraft="",reviewRatings={};
 let saved={selected:null,progress:{},simulados:{}};try{const x=JSON.parse(localStorage.getItem(STORAGE)||"null");if(x&&typeof x==="object"){saved={selected:x.selected||null,progress:x.progress||{},simulados:x.simulados||{}}}}catch(e){}
 const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){$("storageNotice").textContent="Este navegador não conseguiu guardar o progresso. Verifique se o armazenamento está permitido.";$("storageNotice").hidden=false}};
 const selectPanel=(name)=>{screen=name;$("directory").classList.toggle("edu-hidden",name!=="directory");$("learning").classList.toggle("edu-hidden",name==="directory");$("breadcrumb").innerHTML=name==="directory"?'<span class="active">1. Escolha a prova</span><span>2. Estude o conteúdo</span><span>3. Treine e revise</span>':'<span>1. Prova escolhida</span><span class="active">2. Conteúdo exclusivo</span><span class="active">3. Exercícios e revisão</span>'};
@@ -138,32 +138,52 @@ function showSummary(){
  $("againQuiz").addEventListener("click",()=>startQuiz(sim));
  if($("goReview"))$("goReview").addEventListener("click",()=>startReview(true,lesson));
 }
+function reviewCards(l,scheduled){
+ const facts=[{front:l.lembrar,back:l.resposta,kind:"Conceito"}];
+ for(const q of l.questoes.slice(0,2)){facts.push({front:q.enunciado,back:q.alternativas[q.correta]+". "+q.explicacao,kind:"Aplicação sem alternativas"})}
+ return facts.map(x=>({...x,lesson:l,scheduled}));
+}
 function startReview(includeEarly,onlyOne=null){
- let t=track(),reviewed=lessons(t).filter(l=>{let p=progressRead(current,l.id);return p?.quizAttempts&&(onlyOne===null||onlyOne===l.id)&&(includeEarly||p.nextReview<=Date.now())});
- if(!reviewed.length){view="review";reviewQueue=[];showReview();return}
- reviewQueue=reviewed;reviewEarly=includeEarly;reviewReveal=false;reviewDraft="";view="review";renderTrack();
+ const t=track(),reviewed=lessons(t).filter(l=>{const p=progressRead(current,l.id);return p?.quizAttempts&&(onlyOne===null||onlyOne===l.id)&&(includeEarly||p.nextReview<=Date.now())});
+ reviewQueue=reviewed.flatMap(l=>reviewCards(l,progressRead(current,l.id).nextReview<=Date.now()));
+ reviewRatings={};reviewEarly=includeEarly;reviewReveal=false;reviewDraft="";view="review";renderTrack();
 }
 function showReview(){
- view="review";const l=reviewQueue[0];
- if(!l){$("lessonMain").innerHTML='<h2>Revisões desta prova</h2><p>Não há mais revisões na fila. As próximas aparecerão conforme o prazo de cada módulo; você não precisa estudar todas as provas juntas.</p><div class="edu-actions"><button id="backLesson" class="edu-primary" type="button">Voltar às aulas</button></div>';$("backLesson").addEventListener("click",()=>{view="theory";renderTrack()});return}
- const p=progressRead(current,l.id),scheduled=p.nextReview<=Date.now();
+ view="review";const card=reviewQueue[0];
+ if(!card){$("lessonMain").innerHTML='<h2>Revisões desta prova</h2><p>Você terminou as perguntas desta rodada. A próxima revisão será planejada conforme seu desempenho e só contará como revisão espaçada se ocorrer em outro dia.</p><div class="edu-actions"><button id="backLesson" class="edu-primary" type="button">Voltar às aulas</button></div>';$("backLesson").addEventListener("click",()=>{view="theory";renderTrack()});return}
+ const l=card.lesson,scheduled=card.scheduled;
  $("lessonMain").innerHTML='<span class="edu-step">Recordação ativa · '+esc(track().nome)+'</span>'+
- '<h2>O que você ainda lembra?</h2><p class="edu-eyebrow">'+esc(l.materia+" / "+l.titulo)+'</p><div class="edu-recall"><p class="edu-cardfront">'+esc(l.lembrar)+'</p>'+
- '<textarea aria-label="Sua resposta" id="reviewInput" placeholder="Tente lembrar sem consultar o texto; também pode responder em voz alta."></textarea>'+
+ '<h2>O que você ainda lembra?</h2><p class="edu-eyebrow">'+esc(l.materia+" / "+l.titulo)+' · '+esc(card.kind)+'</p><div class="edu-recall"><p class="edu-cardfront">'+esc(card.front)+'</p>'+
+ '<label class="edu-quiet" for="reviewInput">Tente explicar sem alternativas e sem consultar a aula. Resposta por escrito ou mental.</label>'+
+ '<textarea aria-label="Sua resposta" id="reviewInput" placeholder="Sua explicação... Também pode responder em voz alta."></textarea>'+
  '<div class="edu-actions"><button class="edu-secondary" id="showRecallAnswer" type="button">Revelar resposta para conferir</button></div>'+
- (reviewReveal?'<div class="edu-recall-answer"><strong>Resposta modelo:</strong> '+esc(l.resposta)+'</div>'+
- '<p class="edu-quiet">Compare sinceramente sua resposta com o modelo. Esta autoavaliação não substitui prova supervisionada.</p>'+
+ (reviewReveal?'<div class="edu-recall-answer"><strong>Resposta modelo:</strong> '+esc(card.back)+'</div>'+
+ '<p class="edu-quiet">Compare o que lembrou com a explicação. Uma resposta incompleta conta como «lembrei com esforço» ou «não lembrei».</p>'+
  '<div class="edu-reviewbar"><button class="missed" data-rate="again">Não lembrei</button><button data-rate="hard">Lembrei com esforço</button><button data-rate="easy">Lembrei bem</button></div>':"")+'</div>'+
- '<p class="edu-quiet">'+(scheduled?"Revisão prevista para agora.":"Revisão antecipada: ela não acelera a contagem de dias de memória.")+' Faltam '+(reviewQueue.length-1)+' tópicos nesta fila.</p>';
- $("reviewInput").value=reviewDraft;$("reviewInput").addEventListener("input",e=>{reviewDraft=e.target.value});$("showRecallAnswer").addEventListener("click",()=>{reviewDraft=$("reviewInput").value;reviewReveal=true;showReview()});
- $("lessonMain").querySelectorAll("[data-rate]").forEach(b=>b.addEventListener("click",()=>gradeRecall(b.dataset.rate,l,scheduled)));
+ '<p class="edu-quiet">'+(scheduled?"Revisão programada.":"Treino antecipado: não acelera a progressão de memória.")+' Restam '+(reviewQueue.length-1)+' perguntas de revisão nesta fila.</p>';
+ $("reviewInput").value=reviewDraft;$("reviewInput").addEventListener("input",e=>{reviewDraft=e.target.value});
+ $("showRecallAnswer").addEventListener("click",()=>{reviewDraft=$("reviewInput").value;reviewReveal=true;showReview()});
+ $("lessonMain").querySelectorAll("[data-rate]").forEach(b=>b.addEventListener("click",()=>gradeRecall(b.dataset.rate,card)));
 }
-function gradeRecall(rate,l,scheduled){
- const p=getProgress(current,l.id),today=localDate(Date.now());
- p.reviewAttempts=(p.reviewAttempts||0)+1;p.lastRecall=Date.now();p.lastRating=rate;
- if(rate==="again"){p.stage=0;p.nextReview=Date.now()+DAY}
- else if(scheduled){p.stage=Math.min(5,(p.stage||0)+(rate==="easy"?1:0));const intervals=[1,3,7,14,30,45];const span=rate==="hard"?1:intervals[p.stage];p.nextReview=Date.now()+span*DAY;if(!p.successDays.includes(today))p.successDays.push(today)}
- save();reviewQueue.shift();reviewReveal=false;reviewDraft="";renderTrack();
+function gradeRecall(rate,card){
+ const l=card.lesson,id=l.id;
+ reviewRatings[id]??=[];
+ reviewRatings[id].push(rate);
+ reviewQueue.shift();reviewReveal=false;reviewDraft="";
+ if(!reviewQueue.some(x=>x.lesson.id===id)){
+   const p=getProgress(current,id),today=localDate(Date.now()),r=reviewRatings[id];
+   const overall=r.includes("again")?"again":r.includes("hard")?"hard":"easy";
+   p.reviewAttempts=(p.reviewAttempts||0)+1;p.lastRecall=Date.now();p.lastRating=overall;
+   if(overall==="again"){p.stage=0;p.nextReview=Date.now()+DAY}
+   else if(card.scheduled){
+     p.stage=Math.min(5,(p.stage||0)+(overall==="easy"?1:0));
+     const intervals=[1,3,7,14,30,45],span=overall==="hard"?1:intervals[p.stage];
+     p.nextReview=Date.now()+span*DAY;
+     if(!p.successDays.includes(today))p.successDays.push(today);
+   }
+   save();
+ }
+ renderTrack();
 }
 function showSimulation(){if(!lessons(track()).length)return;startQuiz(true)}
 function boot(){
