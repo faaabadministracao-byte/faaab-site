@@ -1,6 +1,6 @@
 {
-  "versao": 3,
-  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados. Os desafios especiais foram replanejados como circuitos individuais terrestres, aquáticos ou aéreos, sem misturar as modalidades. São ideias para construir no Roblox Studio.",
+  "versao": 4,
+  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá adaptar os mesmos exercícios básicos ao seu ambiente, respeitando os regulamentos aprovados. Treinamentos especializados não fazem parte dos exercícios gerais. São ideias para construir no Roblox Studio.",
   "policia": [
     {
       "id": "PM-BASE",
@@ -41,13 +41,7 @@
         "Coordenador"
       ],
       "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real.",
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-02",
-        "ter-03",
-        "ter-11",
-        "ter-14"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "PM-BOPE",
@@ -88,13 +82,7 @@
         "Comandante de unidade"
       ],
       "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB.",
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-04",
-        "ter-06",
-        "ter-10",
-        "ter-17"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "PM-ROTAM",
@@ -134,13 +122,7 @@
         "Coordenador"
       ],
       "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real.",
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-07",
-        "ter-11",
-        "ter-13",
-        "ter-16"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "PM-BPChoque",
@@ -180,13 +162,7 @@
         "Comandante"
       ],
       "aviso": "Não apresenta técnicas reais de contenção ou uso de força.",
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-02",
-        "ter-08",
-        "ter-16",
-        "ter-18"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "PM-BPP",
@@ -226,13 +202,7 @@
         "Supervisor"
       ],
       "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário.",
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-04",
-        "ter-09",
-        "ter-13",
-        "ter-15"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     }
   ],
   "bombeiros": [
@@ -273,13 +243,7 @@
         "Instrutor",
         "Chefe de equipe"
       ],
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-08",
-        "aqu-01",
-        "aqu-03",
-        "aqu-07"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "CBM-GSFMA",
@@ -318,13 +282,7 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-05",
-        "ter-08",
-        "ter-17",
-        "aqu-06"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "CBM-GOPP",
@@ -363,13 +321,7 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-04",
-        "ter-06",
-        "ter-09",
-        "ter-16"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "CBM-GOA",
@@ -408,13 +360,7 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "aer-01",
-        "aer-02",
-        "aer-07",
-        "aer-08"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     },
     {
       "id": "CBM-GOESP",
@@ -453,13 +399,7 @@
         "Chefe de equipe",
         "Comandante"
       ],
-      "treinoPratico": "Cada desafio é um circuito independente do Roblox. Os obstáculos terrestres, aquáticos e aéreos não são misturados no mesmo percurso. Estes desafios são propostas, não requisitos de aprovação.",
-      "circuitosSugeridos": [
-        "ter-03",
-        "ter-16",
-        "aqu-02",
-        "aqu-08"
-      ]
+      "treinoPratico": "Os exercícios básicos desta unidade usam os mesmos tipos gerais da FAAAB: parkour (fácil, médio, difícil, grande e grande difícil), flexões, polichinelos, pulos e corrida. Quantidades, níveis e exigências específicas dependem de regulamentação própria."
     }
   ]
 }
