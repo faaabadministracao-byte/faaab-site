@@ -25,10 +25,6 @@
 <h2 id="directoryTitle">Para qual prova você quer estudar?</h2>
 <p class="eduintro">A mesma matéria pode aparecer em dois cursos com objetivos diferentes. O conteúdo, o simulado e o progresso ficam separados para cada prova.</p>
 <div class="edutoolbar">
-<label>Força
-<select id="forceSelect" aria-label="Filtrar por força">
-<option value="todos">Todas</option><option value="FTB">Exército</option><option value="FAB">FAB</option><option value="FMB">Marinha</option>
-</select></label>
 <label>Nome da prova ou curso
 <input type="search" id="find" placeholder="Ex.: ESA, C-NAV, EEAR, CTA" autocomplete="off"></label>
 </div>
@@ -51,9 +47,8 @@
 <p class="edu-quiet" id="examDisclaimer"></p>
 <div class="edu-summary" id="stats" aria-label="Progresso desta prova"></div>
 <div class="edu-actions">
-<button id="reviewAll" class="edu-primary" type="button">Revisar o que já estudei</button>
+<button id="reviewAll" class="edu-primary" type="button">Revisões pendentes de hoje</button>
 <button id="simulation" class="edu-secondary" type="button">Simulado desta prova</button>
-<button id="refreshTrack" class="edu-soft" type="button">Atualizar progresso</button>
 </div>
 <section id="pendingPanel" class="edu-hidden" aria-labelledby="pendingTitle">
 <div class="edu-courseraw"><h3 id="pendingTitle">Programa dessa prova ainda não definido</h3>
