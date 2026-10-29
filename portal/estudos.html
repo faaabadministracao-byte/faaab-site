@@ -1,25 +1,75 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Estudos e cursos | FAAAB</title><meta name="description" content="Aulas completas, exercícios corrigidos e catálogo de cursos militares da FAAAB."><link rel="stylesheet" href="estilo.css">
-<style>
-nav.barnav{display:flex;overflow-x:auto;background:#25472f}nav.barnav a{padding:13px 15px;white-space:nowrap;color:white;font-size:13px;font-weight:800}nav.barnav a:hover{background:#3c6043;text-decoration:none}.holder{max-width:1210px;margin:auto;padding:36px 18px 76px}.holder h1{font-size:clamp(34px,5vw,59px)}.tabsx{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}.tabsx button{background:white;border:1px solid #bbccbc;padding:13px 17px;font-weight:800;cursor:pointer;color:#264932}.tabsx button[aria-selected=true]{color:white;background:#25472f}.editorial{display:grid;grid-template-columns:290px 1fr;gap:17px;align-items:start}.sidenav,.contentpane{background:white;border:1px solid #d9e2d9;padding:20px}.sidenav{position:sticky;top:10px}.sidenav button{display:block;width:100%;padding:11px 9px;margin:5px 0;text-align:left;border:1px solid #d9e1d8;background:#f8faf7;color:#344d39;font-size:13px;cursor:pointer}.sidenav button[aria-current=true]{background:#25472f;color:white}.sidenav p{font-size:12px;color:#647665}.contentpane h2{font-size:30px;margin:10px 0 14px}.chapter-text{font-size:16px;line-height:1.85;color:#3b4b40}.example{background:#eef4ed;border-left:4px solid #477654;padding:17px;margin:20px 0;font-size:15px}.test{margin:30px 0 10px;border-top:1px solid #d6e0d6;padding-top:19px}.test h3{font-size:16px}.choice{display:block;width:100%;text-align:left;margin:7px 0;padding:13px 15px;border:1px solid #b8cabb;background:#f9fbf8;color:#213c2a;cursor:pointer;line-height:1.5}.choice:hover:not(:disabled){border-color:#497f59;background:#edf4ed}.choice:disabled{cursor:default}.choice.correct{border-color:#568b62;background:#e7f3e9}.choice.wrong{border-color:#ba786b;background:#f8ebe8}.feedback{padding:13px 16px;background:#f1f4ef;border-left:3px solid #78987c;font-size:14px;margin:13px 0}.feedback strong{display:block}.actionsx{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.actionx{padding:10px 16px;background:#25472f;color:#fff;border:0;cursor:pointer;font-weight:800}.actionx.secondary{background:white;border:1px solid #7f9b84;color:#25472f}.filterrow{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.filterrow button{padding:9px 12px;border:1px solid #abc1ae;background:white;cursor:pointer;font-weight:800;color:#24482c}.filterrow button[aria-pressed=true]{background:#25472f;color:white}.small{color:#667667;font-size:12px}.course{padding:16px;border:1px solid #d7e1d4;margin:12px 0;background:#fafbf9}.course summary{cursor:pointer;font-weight:800}.course pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 Segoe UI,Arial,sans-serif;color:#475947;background:white;border:1px solid #e3e9e1;padding:13px}.course small{color:#6e7f6d}.herohelp{padding:14px;border-left:4px solid #ab9969;background:#f5f1de;font-size:14px}.hidden{display:none!important}.course-search{padding:12px;border:1px solid #aec1b0;background:white;width:100%}.footx{background:#163721;color:white;text-align:center;padding:23px;font-size:12px}@media(max-width:770px){.editorial{grid-template-columns:1fr}.sidenav{position:static}.holder{padding:25px 13px 50px}.contentpane{padding:17px}.sidenav{padding:14px}.contentpane h2{font-size:26px}.chapter-text{font-size:15px}}
-</style></head><body>
-<nav class="barnav"><a href="index.html">Início</a><a href="central.html">FAAAB Central</a><a href="patentes.html">Patentes</a><a href="estudos.html">Estudos</a><a href="sistemas.html">Sistemas</a><a href="governo.html">Governo</a><a href="civil.html">Civil</a></nav>
-<main class="holder"><div class="eyebrow">Aprendizado dentro do projeto</div><h1>Estudos e formação</h1><p class="intro">Conteúdo para aprender de verdade: primeiro a explicação com exemplo resolvido, depois exercícios de múltipla escolha e correção comentada. Os cursos das forças possuem um catálogo próprio, separado das aulas gerais.</p>
-<div class="tabsx" role="tablist"><button type="button" id="tabLessons" role="tab" aria-selected="true" aria-controls="lessons">Aulas e exercícios</button><button type="button" id="tabCourses" role="tab" aria-selected="false" aria-controls="courses">Cursos e academias da FAAAB</button></div>
-<section id="lessons" role="tabpanel" aria-labelledby="tabLessons"><div class="herohelp">Os gabaritos não são exibidos antes da resposta. A correção traz o motivo de cada resposta. O desempenho fica salvo somente neste navegador, não no Roblox.</div><div class="filterrow" id="subjects"></div><div class="editorial"><aside class="sidenav"><strong>Escolha uma aula</strong><p id="progress">Carregando aulas...</p><div id="lessonList"></div></aside><article class="contentpane" id="lessonPane" aria-live="polite">Carregando conteúdo...</article></div></section>
-<section id="courses" role="tabpanel" aria-labelledby="tabCourses" class="hidden"><div class="herohelp">Esta seção apresenta os cursos documentados no planejamento da FAAAB. Formação não equivale à promoção automática, e funções de instrutor, diretor, monitor e avaliador não são patentes militares.</div><div class="filterrow" id="forces"><button type="button" data-force="FTB" aria-pressed="true">Exército</button><button type="button" data-force="FAB" aria-pressed="false">FAB</button><button type="button" data-force="FMB" aria-pressed="false">Marinha / CFN</button></div><input id="courseQuery" class="course-search" type="search" placeholder="Pesquisar curso, escola, academia ou instrução"><p id="courseTotal" class="small"></p><div id="courseList"></div></section>
-</main><footer class="footx">FAAAB — Portal educacional do projeto fictício de roleplay no Roblox.</footer>
-<script>(()=>{'use strict';
-let lessons=[],courses=[],subject='',chosen=null,courseForce='FTB',scores={};const $=id=>document.getElementById(id);
-const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const norm=t=>String(t??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-try{scores=JSON.parse(localStorage.getItem('faaab-estudos-2026')||'{}')||{}}catch{scores={}}
-function persist(){try{localStorage.setItem('faaab-estudos-2026',JSON.stringify(scores))}catch{}}
-function displayTab(tab){const isLessons=tab==='lessons';$('lessons').classList.toggle('hidden',!isLessons);$('courses').classList.toggle('hidden',isLessons);$('tabLessons').setAttribute('aria-selected',String(isLessons));$('tabCourses').setAttribute('aria-selected',String(!isLessons))}
-$('tabLessons').addEventListener('click',()=>displayTab('lessons'));$('tabCourses').addEventListener('click',()=>displayTab('courses'));
-const identity=l=>lessons.indexOf(l);
-function drawSubjects(){$('subjects').innerHTML=[...new Set(lessons.map(x=>x.disciplina))].map(s=>'<button data-subject="'+esc(s)+'" aria-pressed="'+(s===subject)+'">'+esc(s)+'</button>').join('');$('subjects').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{subject=b.dataset.subject;chosen=lessons.find(x=>x.disciplina===subject);drawSubjects();drawLessonList();drawLesson()}))}
-function drawLessonList(){const group=lessons.filter(x=>x.disciplina===subject);$('progress').textContent=group.length+' aulas neste assunto';$('lessonList').innerHTML=group.map(l=>'<button data-lesson="'+identity(l)+'" aria-current="'+(l===chosen)+'">'+esc(l.titulo)+'<small class="small"> · '+(l.q.filter((q,i)=>scores[identity(l)+'-'+i]!==undefined).length)+'/'+l.q.length+' resolvidas</small></button>').join('');$('lessonList').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{chosen=lessons[Number(b.dataset.lesson)];drawLessonList();drawLesson();if(innerWidth<770)$('lessonPane').scrollIntoView({behavior:'smooth',block:'start'})}))}
-function drawLesson(){const l=chosen;if(!l)return;$('lessonPane').innerHTML='<div class="eyebrow">'+esc(l.disciplina)+' · '+esc(l.nivel)+'</div><h2>'+esc(l.titulo)+'</h2><div class="chapter-text">'+esc(l.conteudo)+'</div><div class="example"><strong>Exemplo resolvido</strong><div>'+esc(l.exemplo)+'</div></div><h3>Agora é sua vez</h3><p class="small">Responda e veja a explicação; só depois a alternativa correta aparecerá.</p>'+l.q.map((q,i)=>{const k=identity(l)+'-'+i,choice=scores[k],answered=Number.isInteger(choice);return '<div class="test" id="test-'+i+'"><h3>Questão '+(i+1)+'. '+esc(q[0])+'</h3>'+q[1].map((opt,j)=>'<button class="choice'+(answered&&j===q[2]?' correct':'')+(answered&&j===choice&&choice!==q[2]?' wrong':'')+'" type="button" data-question="'+i+'" data-choice="'+j+'" '+(answered?'disabled':'')+'>'+String.fromCharCode(65+j)+') '+esc(opt)+'</button>').join('')+(answered?'<div class="feedback"><strong>'+(choice===q[2]?'Resposta correta.':'Resposta incorreta.')+'</strong>'+esc(q[3])+'</div>':'')+'</div>'}).join('')+'<div class="actionsx"><button type="button" id="redo" class="actionx secondary">Refazer esta aula</button><button type="button" id="next" class="actionx">Próxima aula</button></div>';$('lessonPane').querySelectorAll('[data-question]').forEach(b=>b.addEventListener('click',()=>{const q=Number(b.dataset.question),choice=Number(b.dataset.choice);scores[identity(l)+'-'+q]=choice;persist();drawLesson();drawLessonList();const current=$('test-'+q);if(current&&innerWidth<600)current.scrollIntoView({behavior:'smooth',block:'nearest'})}));$('redo').addEventListener('click',()=>{if(confirm('Refazer esta aula e apagar suas respostas anteriores?')){l.q.forEach((q,i)=>delete scores[identity(l)+'-'+i]);persist();drawLesson();drawLessonList()}});$('next').addEventListener('click',()=>{let group=lessons.filter(x=>x.disciplina===subject);chosen=group[(group.indexOf(l)+1)%group.length];drawLessonList();drawLesson();$('lessonPane').scrollIntoView({behavior:'smooth',block:'start'})})}
-function drawCourses(){const q=norm($('courseQuery').value),out=courses.filter(c=>c.forca===courseForce&&norm(c.titulo+' '+c.detalhes).includes(q));$('courseTotal').textContent=out.length+' registros de formação';$('courseList').innerHTML=out.map(c=>'<details class="course"><summary>'+esc(c.titulo)+'</summary><p class="small"><strong>Estado: '+esc(c.estado)+'</strong> · '+esc(c.forca)+' · '+esc(c.origem)+'</p><pre>'+esc(c.detalhes)+'</pre><p class="small">Funções de ensino: aluno/cursante, monitor, instrutor habilitado, avaliador e coordenação conforme a escola. Não implicam promoção automática.</p></details>').join('')||'<p>Nenhum curso disponível com esse filtro.</p>'}
-$('forces').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{courseForce=b.dataset.force;$('forces').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));drawCourses()}));$('courseQuery').addEventListener('input',drawCourses);
-Promise.all([fetch('dados/aulas.json').then(r=>{if(!r.ok)throw Error('Aulas indisponíveis');return r.json()}),fetch('dados/cursos.json').then(r=>{if(!r.ok)throw Error('Cursos indisponíveis');return r.json()})]).then(([l,c])=>{lessons=l.aulas;courses=c;subject=lessons[0].disciplina;chosen=lessons[0];drawSubjects();drawLessonList();drawLesson();drawCourses()}).catch(e=>{$('lessonPane').textContent='Erro ao carregar as aulas: '+e.message;$('courseList').textContent='Os cursos não puderam ser carregados.'});
-})();</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Prepare-se para cursos da FAAAB com trilhas de estudo separadas por prova, explicações, exercícios e revisão para memória.">
+<meta name="theme-color" content="#25472f">
+<title>Preparação por prova | Estudos FAAAB</title>
+<link rel="stylesheet" href="estilo.css"><link rel="stylesheet" href="estudos-v2.css">
+<script defer src="estudos-v2.js"></script>
+</head>
+<body>
+<nav class="edunav" aria-label="Navegação do portal"><div class="wrap">
+<a href="index.html">Início</a><a href="central.html">FAAAB Central</a><a href="patentes.html">Patentes</a><a href="estudos.html" aria-current="page">Estudos</a><a href="sistemas.html">Sistemas</a><a href="governo.html">Governo</a><a href="civil.html">Civil</a>
+</div></nav>
+<main class="eduwrap">
+<div class="eyebrow">Centro de preparação — FAAAB</div>
+<h1>Estude para a prova certa.</h1>
+<p class="eduintro">As disciplinas não são jogadas numa lista única. Escolha a prova ou o curso, estude somente seus módulos, resolva exercícios com correção e volte para revisões de memória.</p>
+<div class="edunote">Esta é uma plataforma de preparação interna para o projeto fictício FAAAB no Roblox. As trilhas piloto são materiais didáticos de demonstração, não editais oficiais. Quando a matéria da prova não foi definida, o site não inventa um programa.</div>
+<div class="eduflow" id="breadcrumb" aria-label="Etapas do estudo"><span class="active">1. Escolha a prova</span><span>2. Estude o conteúdo</span><span>3. Treine e revise</span></div>
+<p id="loader" class="edu-quiet">Carregando as trilhas...</p>
+<p id="storageNotice" class="edunote" hidden></p>
+
+<section id="directory" aria-labelledby="directoryTitle">
+<h2 id="directoryTitle">Para qual prova você quer estudar?</h2>
+<p class="eduintro">A mesma matéria pode aparecer em dois cursos com objetivos diferentes. O conteúdo, o simulado e o progresso ficam separados para cada prova.</p>
+<div class="edutoolbar">
+<label>Força
+<select id="forceSelect" aria-label="Filtrar por força">
+<option value="todos">Todas</option><option value="FTB">Exército</option><option value="FAB">FAB</option><option value="FMB">Marinha</option>
+</select></label>
+<label>Nome da prova ou curso
+<input type="search" id="find" placeholder="Ex.: ESA, C-NAV, EEAR, CTA" autocomplete="off"></label>
+</div>
+<div class="edu-actions" id="examFilters">
+<button class="edu-secondary" data-force="todos" aria-pressed="true" type="button">Todas</button>
+<button class="edu-secondary" data-force="FTB" aria-pressed="false" type="button">Exército</button>
+<button class="edu-secondary" data-force="FAB" aria-pressed="false" type="button">FAB</button>
+<button class="edu-secondary" data-force="FMB" aria-pressed="false" type="button">Marinha</button>
+</div>
+<label class="edu-quiet"><input type="checkbox" id="onlyReady"> Mostrar só provas com aulas disponíveis</label>
+<p class="edu-quiet" id="examCount" aria-live="polite"></p>
+<div class="edudirectory" id="examList" aria-live="polite"></div>
+</section>
+
+<section id="learning" class="edu-hidden" aria-labelledby="trackTitle">
+<div class="edu-target"><div class="edu-targethead">
+<div><span class="edu-eyebrow" id="trackForce"></span><h2 id="trackTitle"></h2><p id="trackIntro"></p></div>
+<button id="changeExam" class="edu-back" type="button">Escolher outra prova</button>
+</div></div>
+<p class="edu-quiet" id="examDisclaimer"></p>
+<div class="edu-summary" id="stats" aria-label="Progresso desta prova"></div>
+<div class="edu-actions">
+<button id="reviewAll" class="edu-primary" type="button">Revisar o que já estudei</button>
+<button id="simulation" class="edu-secondary" type="button">Simulado desta prova</button>
+<button id="refreshTrack" class="edu-soft" type="button">Atualizar progresso</button>
+</div>
+<section id="pendingPanel" class="edu-hidden" aria-labelledby="pendingTitle">
+<div class="edu-courseraw"><h3 id="pendingTitle">Programa dessa prova ainda não definido</h3>
+<p id="pendingReason">Não há assuntos confirmados.</p>
+<p class="edu-quiet">Por enquanto, o sistema não mistura aulas de outros cursos apenas porque têm a mesma matéria.</p></div>
+<div id="pendingCourse"></div>
+</section>
+<div class="edu-layout" id="lessonLayout">
+<aside class="edu-side" aria-label="Matérias desta prova">
+<h3>Matérias desta prova</h3>
+<p class="edu-quiet">Toque num módulo para estudar. As revisões são independentes entre provas.</p>
+<div id="lessonList"></div>
+</aside>
+<div class="edu-main" id="lessonMain" aria-live="polite" aria-atomic="false"></div>
+</div>
+</section>
+</main>
+<footer class="edu-footer">FAAAB — Simulação militar e educacional fictícia, sem vínculo com as instituições reais.</footer>
+</body></html>
