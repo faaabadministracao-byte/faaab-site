@@ -1,47 +1,66 @@
 (()=>{"use strict";
 const $=id=>document.getElementById(id),out=$("ex-out");
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-let data=null,selected="FTB",done={};
-try{done=JSON.parse(localStorage.getItem("faaab-exercicio-progresso-v2")||"{}")||{}}catch(e){}
-function save(){try{localStorage.setItem("faaab-exercicio-progresso-v2",JSON.stringify(done))}catch(e){}}
-function fullID(force,item){return force+"-"+item.id}
-function tile(item,force){
-const checked=done[fullID(force,item)]===true,details=(item.modelos||[]);
-return '<article class="area-exercise"><span class="area-label">'+esc(item.tipo||"Circuito")+'</span>'+
-'<h3>'+esc(item.nome)+'</h3>'+
-'<p>'+esc(item.como)+'</p>'+
-(details.length?'<p><strong>Exemplos de obstáculos:</strong> '+esc(details.join(", "))+'.</p>':"")+
-'<p class="edu3-muted"><strong>Uso no jogo:</strong> '+esc(item.avaliacao)+'</p>'+
-'<label><input type="checkbox" data-mark="'+esc(fullID(force,item))+'" '+(checked?'checked':'')+'> Já pratiquei no jogo</label></article>';
+const simplify=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+let data=null,selected="FTB",search="",only="todos";
+function matches(c){
+ const q=simplify(search);
+ return (only==="todos"||only==="agua"&&simplify(c.ambiente).includes("agua")||only==="voo"&&simplify(c.ambiente).includes("voo")||only==="altura"&&/altura|torre/i.test(c.ambiente))&&
+ (!q||simplify([c.nome,c.ambiente,...c.etapas].join(" ")).includes(q));
+}
+function special(c,index){
+ return '<details class="area-exercise area-circuit" id="circuit-'+esc(c.id)+'">'+
+ '<summary><span class="area-label">Circuito '+String(index).padStart(2,"0")+' · '+esc(c.ambiente)+'</span><h3>'+esc(c.nome)+'</h3><span class="area-see">Ver percurso e obstáculos</span></summary>'+
+ '<div class="area-circuit-body"><ol class="area-stages">'+c.etapas.map(s=>'<li>'+esc(s)+'</li>').join("")+'</ol>'+
+ '<p><strong>O mapa precisa de:</strong> '+esc(c.dependencias.join(", "))+'.</p>'+
+ (c.nota?'<p class="area-note">'+esc(c.nota)+'</p>':"")+
+ '</div></details>';
+}
+function core(c){
+ return '<article class="area-exercise area-core"><span class="area-label">Parkour base</span><h3>'+esc(c.nome)+'</h3><p>'+esc(c.como)+'</p>'+
+ '<p><strong>Exemplos de obstáculos:</strong> '+esc((c.modelos||[]).join(", "))+'.</p></article>';
+}
+function other(c){
+ return '<article class="area-exercise area-other"><span class="area-label">'+esc(c.tipo)+'</span><h3>'+esc(c.nome)+'</h3><p>'+esc(c.como)+'</p>'+
+ '<p><strong>Na seleção já definida:</strong> '+esc(c.avaliacao)+'</p></article>';
+}
+function displayCircuits(){
+const force=data.forcas.find(f=>f.id===selected),all=data.circuitosEspeciais.filter(c=>c.forcas.includes(selected)),filtered=all.filter(matches),section=$("area-special-list"),count=$("area-special-count");
+if(!section||!count)return;
+count.textContent=filtered.length+" circuitos para explorar nesta força.";
+section.innerHTML=filtered.map(c=>special(c,all.indexOf(c)+1)).join("")||'<div class="area-panel"><p>Nenhum circuito corresponde à pesquisa. Apague a busca para ver todos.</p></div>';
 }
 function render(){
 if(!data)return;
-let hash=decodeURIComponent(location.hash.slice(1));if(data.forcas.some(x=>x.id===hash))selected=hash;
-const force=data.forcas.find(x=>x.id===selected),extra=force.exercicios||[],current=[...data.comuns,...extra];
-const count=current.filter(x=>done[fullID(selected,x)]).length;
-out.innerHTML='<header class="area-head"><span class="area-label">Treinamento prático no Roblox</span>'+
-'<h1>Parkours e exercícios</h1>'+
-'<p>Os exercícios são circuitos e movimentos que o jogador executa no mapa. As aulas e perguntas teóricas ficam na página de Estudos, não aqui.</p></header>'+
-'<nav class="area-tabs" aria-label="Escolher força">'+data.forcas.map(f=>
-'<button type="button" data-force="'+esc(f.id)+'" aria-pressed="'+String(selected===f.id)+'">'+esc(f.nome)+'</button>').join("")+'</nav>'+
-'<section class="area-panel"><span class="area-label">'+esc(force.status)+'</span><h2>'+esc(force.nome)+'</h2>'+
-'<p>'+esc(force.requisitos)+'</p>'+
-'<div class="area-note">Os circuitos são opções de treino do jogo. A obrigatoriedade, o número de tentativas e a aprovação precisam ser definidos por prova, curso ou unidade. Marcar uma atividade aqui não libera patente.</div>'+
-'<strong>Treinos realizados neste navegador: '+count+' de '+current.length+'</strong><div class="area-bar"><span style="width:'+Math.round(100*count/current.length)+'%"></span></div></section>'+
-'<section><h2>Os cinco parkours</h2><p class="edu3-muted">Tipos de circuito que você definiu para o projeto. As variações abaixo são ideias de construção do mapa, não novas categorias.</p>'+
-'<div class="area-exercises">'+data.comuns.map(x=>tile(x,selected)).join("")+'</div></section>'+
-(extra.length?'<section><h2>Outros exercícios do Exército</h2>'+
-'<p class="edu3-muted">Atividades registradas na seleção para Recruta e uma marcha de planejamento. As quantidades citadas são exclusivas daquela seleção.</p>'+
-'<div class="area-exercises">'+extra.map(x=>tile(x,selected)).join("")+'</div></section>':
-'<section class="area-panel"><h2>Exercícios específicos desta força</h2>'+
-'<p>Os exercícios obrigatórios da '+esc(force.nome)+' ainda não foram confirmados. Por enquanto, os cinco parkours estão disponíveis para prática, sem copiar automaticamente os requisitos do Exército.</p></section>')+
-'<nav class="area-links"><a href="estudos.html#provas">Provas de ingresso</a><a href="formacao.html#'+selected+'">Formação desta força</a><a href="index.html">Início do portal</a></nav>';
-out.querySelectorAll("[data-force]").forEach(btn=>btn.addEventListener("click",()=>{selected=btn.dataset.force;location.hash=selected;render()}));
-out.querySelectorAll("[data-mark]").forEach(el=>el.addEventListener("change",()=>{done[el.dataset.mark]=el.checked;save();const pos=window.scrollY;render();if(typeof window.scrollTo==="function")window.scrollTo(0,pos)}));
+let h=decodeURIComponent(location.hash.slice(1)),f=data.forcas.find(x=>x.id===h);
+if(f)selected=f.id;
+const force=data.forcas.find(x=>x.id===selected),otherExercises=force.exercicios||[];
+out.innerHTML='<header class="area-head"><span class="area-label">Percursos e obstáculos do Roblox</span><h1>Parkours, água e voo</h1>'+
+'<p>De saltos simples até percursos que começam numa torre, passam pela água e terminam numa aeronave. Clique no nome de um circuito para ver todas as etapas que ele teria no mapa.</p></header>'+
+'<nav class="area-tabs" aria-label="Escolher força">'+data.forcas.map(x=>'<button type="button" data-force="'+esc(x.id)+'" aria-pressed="'+String(x.id===selected)+'">'+esc(x.nome)+'</button>').join("")+'</nav>'+
+'<section class="area-panel"><span class="area-label">'+esc(force.nome)+'</span><h2>Obstáculos e treinamento desta força</h2><p>'+esc(force.requisitos)+'</p>'+
+'<p class="area-note"><strong>Importante:</strong> os cinco níveis básicos são parte do planejamento confirmado. Os circuitos mistos abaixo são conceitos de mapas e mecânicas novas — ainda precisam ser construídos no Roblox Studio. Eles não são provas obrigatórias.</p></section>'+
+'<section class="area-block" id="parkours"><h2>Os cinco parkours principais</h2><div class="area-exercises">'+data.comuns.map(core).join("")+'</div></section>'+
+'<section class="area-block" id="especiais"><h2>Circuitos especiais</h2>'+
+'<p class="edu3-muted">Combine saltos, nado, barcos, helicópteros, planadores, pontes móveis, torres, túneis e eventos do mapa. Cada circuito tem começo, sequência e chegada.</p>'+
+'<div class="area-explore"><label for="area-search">Encontrar um circuito</label><input id="area-search" type="search" placeholder="Ex.: água, voo, torre, helicóptero..." autocomplete="off" value="'+esc(search)+'">'+
+'<div class="area-quick" aria-label="Buscar circuitos por ambiente">'+
+[['todos','Todos'],['agua','Com água'],['voo','Com voo'],['altura','Com altura']].map(([id,label])=>'<button type="button" data-quick="'+id+'" aria-pressed="'+String(only===id)+'">'+label+'</button>').join("")+'</div></div>'+
+'<p id="area-special-count" class="edu3-muted"></p><div id="area-special-list" class="area-exercises"></div></section>'+
+(otherExercises.length?'<section class="area-block" id="outros"><h2>Outros movimentos do Exército</h2>'+
+'<p class="edu3-muted">Flexões, polichinelos, pulos, corrida e comandos já aparecem nas regras do ingresso para Recruta. A marcha fica como possibilidade de treinamento, sem exigência fixada.</p>'+
+'<div class="area-exercises">'+otherExercises.map(other).join("")+'</div></section>':"")+
+'<nav class="area-links"><a href="estudos.html#provas">Provas</a><a href="formacao.html#'+selected+'">Formação</a><a href="index.html">Voltar ao portal</a></nav>';
+out.querySelectorAll("[data-force]").forEach(btn=>btn.addEventListener("click",()=>{selected=btn.dataset.force;search="";only="todos";location.hash=selected;render()}));
+$("area-search").addEventListener("input",e=>{search=e.target.value;displayCircuits()});
+out.querySelectorAll("[data-quick]").forEach(btn=>btn.addEventListener("click",()=>{
+only=btn.dataset.quick;out.querySelectorAll("[data-quick]").forEach(x=>x.setAttribute("aria-pressed",String(x===btn)));displayCircuits()
+}));
+displayCircuits();
 }
 window.addEventListener("hashchange",render);
-fetch("dados/exercicios-formacao.json",{cache:"no-cache"})
-.then(r=>{if(!r.ok)throw Error("catálogo indisponível");return r.json()})
-.then(j=>{data=j;render()})
-.catch(e=>{out.innerHTML='<p class="area-note">Não foi possível carregar os exercícios: '+esc(e.message)+'</p><a href="index.html">Voltar ao portal</a>'});
+fetch("dados/exercicios-formacao.json",{cache:"no-cache"}).then(r=>{
+if(!r.ok)throw Error("catálogo não disponível");return r.json()
+}).then(j=>{data=j;render()})
+.catch(e=>{out.innerHTML='<div class="area-note">Não foi possível carregar os circuitos. '+esc(e.message)+'</div><a href="index.html">Voltar ao portal</a>'});
 })();
