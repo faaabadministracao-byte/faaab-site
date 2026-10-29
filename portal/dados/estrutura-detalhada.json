@@ -4336,64 +4336,6 @@
       "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
     },
     {
-      "id": "FMB-GRUMEC",
-      "sigla": "GRUMEC",
-      "nome": "Grupamento de Mergulhadores de Combate",
-      "forca": "FMB",
-      "tipo": "unidade",
-      "secao": "MARINHA - UNIDADES NAVAIS DO PROJETO",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Referência histórica de mergulhadores de combate; emprego no jogo depende de confirmação da estrutura.",
-      "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
-      "patentes": [
-        "Marinheiro",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Suboficial",
-        "Guarda-Marinha",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão-Tenente",
-        "Capitão de Corveta",
-        "Capitão de Fragata",
-        "Capitão de Mar e Guerra"
-      ],
-      "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Grupamento de elite de mergulhadores de combate da Marinha.",
-      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
-    },
-    {
       "id": "FMB-ComForSup",
       "sigla": "ComForSup",
       "nome": "Comando da Força de Superfície",
