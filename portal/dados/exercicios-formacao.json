@@ -1,7 +1,7 @@
 {
-  "versao": 2,
+  "versao": 3,
   "data": "2026-10-29",
-  "nota": "Exercícios físicos e obstáculos VIRTUAIS do Roblox. Cinco níveis de parkour são pedidos expressamente pelo criador. Outros exercícios de alistamento do Exército foram registrados separadamente. Nenhuma outra força recebe exigências inventadas.",
+  "nota": "Os cinco níveis básicos de parkour foram pedidos pelo usuário. Os 36 circuitos especiais são novas propostas de gameplay para o Roblox: precisam de mapa, scripts, veículos e testes. Não são provas obrigatórias nem experiências já construídas.",
   "comuns": [
     {
       "id": "pk-facil",
@@ -214,10 +214,11 @@
     }
   ],
   "criterios": [
-    "Não confundir exercícios práticos e aulas de Matemática, Português, procedimentos ou teoria",
-    "Somente o instrutor ou regulamento da atividade decide quais circuitos serão cobrados",
-    "Não copiar quantidades da prova de Recruta do Exército para outras forças",
-    "Completar exercício de treino não concede patente, habilitação ou aprovação em seleção"
+    "Exercício é obstáculo, movimento ou circuito executado pelo avatar no Roblox — não pergunta teórica.",
+    "Não há botão Já pratiquei, contagem de progresso ou aprovação local.",
+    "Os cinco parkours básicos permanecem; circuitos especiais são ideias de mapas a implementar.",
+    "Aeronaves são conduzidas por quem tem habilitação no jogo; personagens podem participar como passageiros.",
+    "Requisitos de provas confirmadas continuam na seção Provas e não são copiados automaticamente para outras forças."
   ],
   "repertorioPendente": [
     "Parkour de torres",
@@ -226,5 +227,928 @@
     "Corridas com obstáculos",
     "Formação e marchas"
   ],
-  "observacaoRepertorio": "Essas variantes vieram de catálogo antigo marcado como planejamento, não como modalidades obrigatórias aprovadas."
+  "observacaoRepertorio": "Essas variantes vieram de catálogo antigo marcado como planejamento, não como modalidades obrigatórias aprovadas.",
+  "circuitosEspeciais": [
+    {
+      "id": "mix-01",
+      "nome": "Mergulho e decolagem",
+      "etapas": [
+        "Subir a plataforma de salto acima da água.",
+        "Saltar na água e nadar até a boia iluminada.",
+        "Subir na plataforma flutuante e alcançar o heliporto.",
+        "Embarcar como passageiro no helicóptero autorizado.",
+        "Sobrevoar três arcos e desembarcar na ilha de chegada."
+      ],
+      "forcas": [
+        "FAB",
+        "FMB",
+        "CBM"
+      ],
+      "ambiente": "Água + voo",
+      "dependencias": [
+        "Plataforma de salto",
+        "água navegável",
+        "boias e plataformas flutuantes",
+        "helicóptero pilotado por jogador habilitado",
+        "arcos aéreos"
+      ],
+      "nota": "O passageiro não precisa pilotar. O voo depende de aeronave e piloto disponíveis.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-02",
+      "nome": "Salto, nado e asa-delta",
+      "etapas": [
+        "Concluir a torre de plataformas pequenas.",
+        "Saltar no lago e cruzar entre marcadores flutuantes.",
+        "Subir a parede de escalada da margem.",
+        "Acionar o asa-delta virtual no topo.",
+        "Planar por arcos até o deque final."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Água + voo",
+      "dependencias": [
+        "Mecânica de nado",
+        "escalada",
+        "asa-delta virtual a implementar",
+        "arcos e zona de pouso"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-03",
+      "nome": "Paraquedas até o rio",
+      "etapas": [
+        "Embarcar em avião com piloto autorizado.",
+        "Voar até o marcador acima do rio.",
+        "Saltar com paraquedas virtual em local do mapa planejado.",
+        "Cair na água e nadar até a margem.",
+        "Escalar a plataforma final e tocar o checkpoint."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB"
+      ],
+      "ambiente": "Ar + água",
+      "dependencias": [
+        "Avião com piloto habilitado",
+        "paraquedas virtual",
+        "água nadável",
+        "checkpoint de chegada"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-04",
+      "nome": "Ilha dos três caminhos",
+      "etapas": [
+        "Cruzar três plataformas móveis sobre um canal.",
+        "Escolher entre ponte, nado ou tirolesa virtual.",
+        "Retornar ao mesmo ponto por caminho diferente.",
+        "Escalar a torre da ilha e alcançar a bandeira."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Água + obstáculos",
+      "dependencias": [
+        "Plataformas móveis",
+        "canal",
+        "tirolesa simulada",
+        "torre e bandeira"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-05",
+      "nome": "Heliponto no topo",
+      "etapas": [
+        "Subir escadas e apoios alternados de um prédio.",
+        "Cruzar uma ponte suspensa com peças que oscilam.",
+        "Alcançar o heliponto da cobertura.",
+        "Embarcar em helicóptero autorizado.",
+        "Pousar no outro prédio e completar dois saltos finais."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Altura + voo",
+      "dependencias": [
+        "Torres",
+        "ponte móvel",
+        "dois helipontos",
+        "helicóptero pilotável"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-06",
+      "nome": "Resgate da plataforma alagada",
+      "etapas": [
+        "Cruzar passarelas até a estação inundada.",
+        "Nadar por um corredor de água até a área segura.",
+        "Localizar o personagem fictício de treino.",
+        "Acionar a plataforma de elevação e levá-lo ao ponto de espera.",
+        "Embarcar na aeronave de resgate como equipe de apoio."
+      ],
+      "forcas": [
+        "CBM",
+        "FAB",
+        "FMB"
+      ],
+      "ambiente": "Água + resgate",
+      "dependencias": [
+        "Área inundável",
+        "boneco/NPC de resgate",
+        "plataforma de elevação",
+        "veículo aéreo de resgate"
+      ],
+      "nota": "Sem atendimento real: é um minijogo de localização e transporte.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-07",
+      "nome": "Travessia do navio em movimento",
+      "etapas": [
+        "Saltar do cais para uma passarela oscilante.",
+        "Alcançar o convés de um navio em movimento lento.",
+        "Desviar de caixas e saltar entre duas áreas do convés.",
+        "Descer a rampa e entrar em lancha virtual.",
+        "Chegar ao píer final sem cair fora do circuito."
+      ],
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "ambiente": "Porto + água",
+      "dependencias": [
+        "Navio animado",
+        "passarela",
+        "obstáculos",
+        "lancha",
+        "cais"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-08",
+      "nome": "Tirolesa sobre o lago",
+      "etapas": [
+        "Subir uma torre de madeira.",
+        "Passar por três plataformas sem guarda-corpo no jogo.",
+        "Prender o avatar a uma tirolesa virtual.",
+        "Deslizar acima do lago até uma boia de chegada.",
+        "Nadar os últimos metros até o checkpoint."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Altura + água",
+      "dependencias": [
+        "Torre",
+        "tirolesa",
+        "lago",
+        "checkpoint"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-09",
+      "nome": "Chuva e ponte desmoronando",
+      "etapas": [
+        "Iniciar a corrida enquanto começa chuva virtual.",
+        "Cruzar plataformas que caem após cada pisada.",
+        "Subir uma rampa escorregadia.",
+        "Pular para a plataforma central antes da ponte sumir.",
+        "Alcançar a área coberta final."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Chuva + plataformas",
+      "dependencias": [
+        "Clima com chuva",
+        "plataformas temporizadas",
+        "rampa com efeito de atrito"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-10",
+      "nome": "Ciclone de vento",
+      "etapas": [
+        "Saltar por plataformas do campo aberto.",
+        "Observar o indicador de vento virtual.",
+        "Atravessar uma ponte que empurra o avatar lateralmente.",
+        "Esperar a rajada diminuir antes do salto longo.",
+        "Chegar ao abrigo final."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Vento + obstáculos",
+      "dependencias": [
+        "Sistema de vento do mapa",
+        "ponte estreita",
+        "indicador de rajadas"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-11",
+      "nome": "Pêndulos do hangar",
+      "etapas": [
+        "Correr por um corredor de caixas e plataformas.",
+        "Atravessar três pêndulos que se movem em ritmos diferentes.",
+        "Escalar um avião estático cenográfico pelas estruturas permitidas.",
+        "Pular entre passarelas no alto do hangar.",
+        "Descer pelo escorregador final."
+      ],
+      "forcas": [
+        "FAB",
+        "FTB",
+        "PM"
+      ],
+      "ambiente": "Hangar + altura",
+      "dependencias": [
+        "Hangar",
+        "pêndulos",
+        "aeronave cenográfica",
+        "escorregador"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-12",
+      "nome": "Pista, rampa e planador",
+      "etapas": [
+        "Correr pela pista de obstáculos no solo.",
+        "Subir uma rampa inclinada até o ponto de lançamento.",
+        "Acionar um planador virtual.",
+        "Passar por argolas aéreas sem tocar os marcadores proibidos.",
+        "Pousar no círculo indicado do mapa."
+      ],
+      "forcas": [
+        "FAB",
+        "FTB",
+        "CBM"
+      ],
+      "ambiente": "Solo + voo",
+      "dependencias": [
+        "Pista de obstáculos",
+        "rampa",
+        "planador virtual",
+        "argolas e zona de pouso"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-13",
+      "nome": "Torre dos lasers virtuais",
+      "etapas": [
+        "Entrar no galpão com obstáculos luminosos do jogo.",
+        "Saltar sobre feixes baixos sem tocar os sensores.",
+        "Passar entre paredes que deslizam.",
+        "Subir a torre de blocos móveis.",
+        "Tocar o interruptor que libera a saída."
+      ],
+      "forcas": [
+        "PM",
+        "FTB",
+        "FAB"
+      ],
+      "ambiente": "Interior + obstáculos",
+      "dependencias": [
+        "Sensores de colisão",
+        "paredes móveis",
+        "torre",
+        "portão acionável"
+      ],
+      "nota": "Sensores e lasers são efeitos cenográficos do minijogo.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-14",
+      "nome": "Labirinto que inunda",
+      "etapas": [
+        "Entrar no labirinto com duas rotas de saída.",
+        "Localizar o primeiro checkpoint antes de o nível da água subir.",
+        "Nadar pelo corredor inundado.",
+        "Usar plataformas altas para escapar da área alagada.",
+        "Encontrar a saída antes do próximo ciclo de água."
+      ],
+      "forcas": [
+        "CBM",
+        "FMB",
+        "PM"
+      ],
+      "ambiente": "Labirinto + água",
+      "dependencias": [
+        "Labirinto",
+        "subida controlada de água virtual",
+        "checkpoints",
+        "plataformas"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-15",
+      "nome": "Cachoeira das plataformas",
+      "etapas": [
+        "Descer por pedras suspensas junto à cachoeira.",
+        "Saltar numa corrente de água cenográfica.",
+        "Nadar até a primeira caverna.",
+        "Escalar uma parede de pedras pequenas.",
+        "Atravessar o último vão com uma corda suspensa."
+      ],
+      "forcas": [
+        "FTB",
+        "FMB",
+        "CBM"
+      ],
+      "ambiente": "Cachoeira + caverna",
+      "dependencias": [
+        "Cachoeira",
+        "pedras",
+        "caverna",
+        "corda/tirolesa"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-16",
+      "nome": "Rota de containers",
+      "etapas": [
+        "Correr entre fileiras de containers.",
+        "Subir uma empilhadeira cenográfica até a primeira pilha.",
+        "Saltar entre containers de alturas diferentes.",
+        "Atravessar ponte de guindaste.",
+        "Descer a escada de serviço até o cais."
+      ],
+      "forcas": [
+        "FMB",
+        "PM",
+        "FTB",
+        "CBM"
+      ],
+      "ambiente": "Porto + altura",
+      "dependencias": [
+        "Containers",
+        "empilhadeira de cenário",
+        "guindaste",
+        "escadas"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-17",
+      "nome": "Corrida de barcos e plataformas",
+      "etapas": [
+        "Cruzar um deck flutuante.",
+        "Saltar para barcos parados em sequência.",
+        "Esperar o barco que se move devagar aproximar do próximo.",
+        "Pular dele para a ponte curta.",
+        "Subir o farol e tocar o ponto final."
+      ],
+      "forcas": [
+        "FMB",
+        "CBM",
+        "FAB"
+      ],
+      "ambiente": "Água + plataformas móveis",
+      "dependencias": [
+        "Boias",
+        "barcos estáticos",
+        "barco em trilho",
+        "farol"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-18",
+      "nome": "Voo por entre os anéis",
+      "etapas": [
+        "Escalar a torre de lançamento.",
+        "Ativar jetpack virtual limitado ou planador do minijogo.",
+        "Voar por cinco anéis em posições diferentes.",
+        "Pousar numa ilha intermediária.",
+        "Concluir dois saltos de plataforma até o fim."
+      ],
+      "forcas": [
+        "FAB",
+        "FTB"
+      ],
+      "ambiente": "Voo + precisão",
+      "dependencias": [
+        "Jetpack/planador virtual a implementar",
+        "arcos",
+        "ilha de pouso"
+      ],
+      "nota": "Equipamento de voo seria uma mecânica fictícia, não item já construído.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-19",
+      "nome": "Túnel e elevador secreto",
+      "etapas": [
+        "Entrar num túnel por uma rampa estreita.",
+        "Encontrar interruptor que abre o caminho correto.",
+        "Cruzar piso de peças que somem.",
+        "Acessar elevador vertical em movimento.",
+        "Saltar para a torre de saída quando atingir o topo."
+      ],
+      "forcas": [
+        "FTB",
+        "PM",
+        "CBM"
+      ],
+      "ambiente": "Subterrâneo + altura",
+      "dependencias": [
+        "Túnel",
+        "botões",
+        "plataformas que somem",
+        "elevador"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-20",
+      "nome": "Salto do farol",
+      "etapas": [
+        "Subir a escadaria do farol.",
+        "Passar por uma passarela externa em espiral.",
+        "Saltar do deque alto na água do jogo.",
+        "Nadar até o bote virtual.",
+        "Cruzar a baía e saltar no píer de chegada."
+      ],
+      "forcas": [
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Altura + água",
+      "dependencias": [
+        "Farol",
+        "água navegável",
+        "bote ou barco",
+        "píer"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-21",
+      "nome": "Corrida anfíbia",
+      "etapas": [
+        "Correr por um trecho de areia com barreiras.",
+        "Entrar na água e atravessar três marcadores.",
+        "Subir na rocha usando pequenas plataformas.",
+        "Cruzar uma ponte de corda virtual.",
+        "Retornar correndo até a bandeira final."
+      ],
+      "forcas": [
+        "FTB",
+        "FMB",
+        "CBM"
+      ],
+      "ambiente": "Areia + água",
+      "dependencias": [
+        "Praia",
+        "marcadores aquáticos",
+        "pedras",
+        "ponte de corda"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-22",
+      "nome": "Resgate da ilha isolada",
+      "etapas": [
+        "Completar parkour médio na margem.",
+        "Embarcar numa lancha autorizada.",
+        "Alcançar a ilha fictícia e localizar o sinalizador.",
+        "Levar o objeto de missão à área de embarque.",
+        "Retornar por uma ponte que surge após ativação."
+      ],
+      "forcas": [
+        "CBM",
+        "FMB",
+        "PM"
+      ],
+      "ambiente": "Terra + navegação",
+      "dependencias": [
+        "Parkour na margem",
+        "lancha",
+        "objeto interativo",
+        "ponte ativável"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-23",
+      "nome": "Montanha de gelo",
+      "etapas": [
+        "Subir plataformas de neve em zigue-zague.",
+        "Atravessar uma ponte gelada com baixa aderência no jogo.",
+        "Pular sobre três blocos que deslizam.",
+        "Acionar elevador preso à montanha.",
+        "Chegar ao cume pelo último obstáculo."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "CBM"
+      ],
+      "ambiente": "Montanha + gelo",
+      "dependencias": [
+        "Plataformas nevadas",
+        "efeito de gelo",
+        "elevador vertical"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-24",
+      "nome": "Deserto das pontes móveis",
+      "etapas": [
+        "Correr entre dunas virtuais.",
+        "Subir uma plataforma que se move como elevador.",
+        "Cruzar ponte de areia que desaparece por partes.",
+        "Saltar entre duas rochas suspensas.",
+        "Atravessar a linha de chegada sob tempestade de areia cenográfica."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "PM"
+      ],
+      "ambiente": "Deserto + vento",
+      "dependencias": [
+        "Dunas",
+        "elevador",
+        "ponte temporizada",
+        "clima de areia"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-25",
+      "nome": "Pantanal de troncos",
+      "etapas": [
+        "Pular entre troncos flutuantes num lago raso virtual.",
+        "Usar passarela de tábuas que balança.",
+        "Escalar raízes de árvore com pequenos apoios.",
+        "Atravessar nado curto entre duas ilhas.",
+        "Completar a rota na torre de observação."
+      ],
+      "forcas": [
+        "FTB",
+        "FMB",
+        "CBM"
+      ],
+      "ambiente": "Pântano + água",
+      "dependencias": [
+        "Troncos flutuantes",
+        "passarela",
+        "árvore escalável",
+        "água"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-26",
+      "nome": "Labirinto das portas que fecham",
+      "etapas": [
+        "Entrar em um corredor com três portas de tempo limitado.",
+        "Acionar o botão que abre a primeira passagem.",
+        "Subir rapidamente plataformas até a porta seguinte.",
+        "Desviar de paredes móveis.",
+        "Sair pelo portão final antes de reiniciar."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Interior + tempo",
+      "dependencias": [
+        "Portas temporizadas",
+        "botões",
+        "paredes móveis",
+        "checkpoints"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-27",
+      "nome": "Parkour com percurso aleatório",
+      "etapas": [
+        "Começar numa plataforma de entrada.",
+        "Observar quais plataformas aparecem na rodada.",
+        "Escolher a rota entre três alternativas aleatórias.",
+        "Atravessar pontes que mudam entre tentativas.",
+        "Chegar ao portal de saída."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Plataformas + sorteio",
+      "dependencias": [
+        "Gerador de rotas",
+        "plataformas alternáveis",
+        "portal de saída"
+      ],
+      "nota": "O mapa muda por rodada; não precisa confundir com uma prova oficial.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-28",
+      "nome": "Revezamento de três equipes",
+      "etapas": [
+        "Primeiro jogador completa o parkour fácil.",
+        "Aciona botão para liberar corredor de água.",
+        "Segundo jogador nada até a plataforma oposta.",
+        "Terceiro jogador usa tirolesa virtual para trazer a bandeira.",
+        "Equipe conclui reunindo todos no ponto final."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Equipe + misto",
+      "dependencias": [
+        "Parkour fácil",
+        "botões",
+        "nado",
+        "tirolesa",
+        "bandeira"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-29",
+      "nome": "Escada, bote e helicóptero",
+      "etapas": [
+        "Subir o guindaste do porto por plataformas.",
+        "Descer por cabo virtual até o bote.",
+        "Atravessar o canal com a embarcação.",
+        "Entrar no heliponto da outra margem.",
+        "Embarcar como passageiro e sobrevoar o marcador final."
+      ],
+      "forcas": [
+        "FMB",
+        "CBM",
+        "FAB"
+      ],
+      "ambiente": "Porto + voo",
+      "dependencias": [
+        "Guindaste",
+        "cabo virtual",
+        "bote",
+        "helicóptero",
+        "helipontos"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-30",
+      "nome": "Circuito sem chão",
+      "etapas": [
+        "Subir uma torre de plataformas pequenas.",
+        "Saltar entre três plataformas suspensas.",
+        "Usar tirolesa até outra estrutura.",
+        "Seguir por um piso transparente de trechos seguros.",
+        "Chegar ao elevador de saída sem tocar o chão do mapa."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Altura + tirolesa",
+      "dependencias": [
+        "Torres",
+        "plataformas suspensas",
+        "tirolesa",
+        "piso transparente"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-31",
+      "nome": "Temporal no aeroporto",
+      "etapas": [
+        "Sair do hangar virtual durante chuva cenográfica.",
+        "Cruzar as plataformas acima do pátio.",
+        "Descer até um abrigo sinalizado.",
+        "Subir uma passarela que muda de altura.",
+        "Chegar ao edifício do controle pelo checkpoint final."
+      ],
+      "forcas": [
+        "FAB",
+        "CBM"
+      ],
+      "ambiente": "Aeroporto + chuva",
+      "dependencias": [
+        "Aeroporto",
+        "chuva virtual",
+        "passarelas móveis",
+        "checkpoints"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-32",
+      "nome": "Doca invertida",
+      "etapas": [
+        "Correr sobre uma ponte inclinada.",
+        "Saltar entre barcos presos a plataformas móveis.",
+        "Entrar num corredor de água e nadar por baixo do píer.",
+        "Subir uma escada até o guindaste.",
+        "Usar cabo virtual para alcançar o destino."
+      ],
+      "forcas": [
+        "FMB",
+        "PM",
+        "CBM"
+      ],
+      "ambiente": "Porto + mergulho",
+      "dependencias": [
+        "Ponte",
+        "barcos",
+        "canal submerso",
+        "escadas",
+        "cabo virtual"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-33",
+      "nome": "Escadaria da torre impossível",
+      "etapas": [
+        "Subir escadas móveis com interrupções.",
+        "Desviar de blocos que giram.",
+        "Atravessar quatro saltos em altura crescente.",
+        "Usar um elevador curto para trocar de lado.",
+        "Completar o último salto até o topo."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Torre + altura",
+      "dependencias": [
+        "Escadas móveis",
+        "blocos giratórios",
+        "elevador"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-34",
+      "nome": "Corredor de gravidade virtual",
+      "etapas": [
+        "Cruzar o primeiro corredor de plataformas.",
+        "Entrar numa área com baixa gravidade do jogo.",
+        "Executar três saltos longos entre ilhas flutuantes.",
+        "Sair da área de gravidade e pousar numa plataforma grande.",
+        "Descer por rampas até a linha de chegada."
+      ],
+      "forcas": [
+        "FAB",
+        "FTB",
+        "PM"
+      ],
+      "ambiente": "Gravidade + voo curto",
+      "dependencias": [
+        "Zona de gravidade customizada",
+        "ilhas flutuantes",
+        "plataformas e rampas"
+      ],
+      "nota": "Mecânica totalmente fictícia do Roblox, ainda a construir.",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-35",
+      "nome": "Circuito das duas embarcações",
+      "etapas": [
+        "Atravessar plataformas do porto.",
+        "Embarcar como passageiro em lancha do jogo.",
+        "Pular para ilha de areia e completar parkour médio.",
+        "Entrar num segundo barco mais adiante.",
+        "Alcançar a doca de finalização."
+      ],
+      "forcas": [
+        "FMB",
+        "CBM",
+        "FTB"
+      ],
+      "ambiente": "Barcos + parkour",
+      "dependencias": [
+        "Duas lanchas",
+        "ilhas",
+        "parkour médio",
+        "pontos de embarque"
+      ],
+      "nota": "",
+      "status": "Conceito para construir no mapa"
+    },
+    {
+      "id": "mix-36",
+      "nome": "Aventura completa: terra, água e céu",
+      "etapas": [
+        "Completar o parkour fácil até a torre de largada.",
+        "Saltar na água e nadar até a ilha central.",
+        "Escalar o farol por plataformas de dificuldade média.",
+        "Acionar asa-delta virtual para planar até a pista.",
+        "Embarcar em aeronave autorizada e seguir pelos arcos de voo.",
+        "Pousar no último ponto e vencer um parkour difícil curto."
+      ],
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "ambiente": "Terra + água + voo",
+      "dependencias": [
+        "Parkour fácil/médio/difícil",
+        "água nadável",
+        "farol",
+        "asa-delta virtual",
+        "aeronave pilotada por habilitado",
+        "arcos de voo"
+      ],
+      "nota": "A versão integral depende da criação de mecânicas e veículos no mapa.",
+      "status": "Conceito para construir no mapa"
+    }
+  ]
 }
