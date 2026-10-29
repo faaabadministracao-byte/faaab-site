@@ -1,0 +1,510 @@
+{
+  "atualizado": "2026-10-29",
+  "descricao": "Conteúdos educativos com explicações antes da prova. Gabarito visível apenas após resposta.",
+  "aulas": [
+    {
+      "disciplina": "Matemática",
+      "titulo": "Frações: partes, equivalência e soma",
+      "nivel": "Fundamentos",
+      "conteudo": "Uma fração representa uma parte de um inteiro: numerador é quantas partes escolhemos; denominador é em quantas partes iguais o inteiro foi dividido. Para somar 2/3 e 1/6, não se somam os denominadores. Transformamos 2/3 em 4/6, pois multiplicamos numerador e denominador por 2, e então calculamos 4/6 + 1/6 = 5/6. Para encontrar 3/4 de 120, dividimos 120 em quatro grupos iguais (30) e pegamos três grupos (90). Em uma razão 2:5, o total possui sete partes, não cinco.",
+      "exemplo": "Exemplo resolvido: 5/8 + 1/4 = 5/8 + 2/8 = 7/8.",
+      "q": [
+        [
+          "Quanto vale 2/3 + 1/6?",
+          [
+            "3/9",
+            "5/6",
+            "3/6",
+            "4/9"
+          ],
+          1,
+          "Dois terços equivalem a 4/6. Somando 4/6 e 1/6, obtemos 5/6."
+        ],
+        [
+          "Em uma turma com 120 alunos, 3/4 participam de um evento. Quantos?",
+          [
+            "80",
+            "96",
+            "90",
+            "100"
+          ],
+          2,
+          "120 dividido por 4 é 30; três partes correspondem a 90."
+        ],
+        [
+          "Uma equipe está na proporção 2:5 e possui 35 integrantes. Quantos estão no primeiro grupo?",
+          [
+            "12",
+            "15",
+            "10",
+            "14"
+          ],
+          2,
+          "A soma da proporção é 7; 35/7 = 5 por parte; 2 × 5 = 10."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Matemática",
+      "titulo": "Porcentagem e descontos sucessivos",
+      "nivel": "Intermediário",
+      "conteudo": "Porcentagem significa 'por cem'. Para descobrir 15% de um valor, calcule 0,15 × valor. Aumento de 15% significa multiplicar por 1,15; desconto de 20% significa multiplicar por 0,80. Dois descontos de 10% não equivalem a desconto direto de 20%: cada desconto incide sobre o valor já reduzido. É importante distinguir o valor percentual, o valor final e a diferença entre eles.",
+      "exemplo": "Exemplo resolvido: R$ 200 com 10% de desconto fica R$ 180; com mais 10%, fica R$ 162.",
+      "q": [
+        [
+          "Um produto de R$ 150 tem 20% de desconto. Qual o valor final?",
+          [
+            "R$ 120",
+            "R$ 125",
+            "R$ 130",
+            "R$ 115"
+          ],
+          0,
+          "20% de 150 são 30; 150 − 30 = 120."
+        ],
+        [
+          "Um valor de R$ 80 aumenta 15%. Quanto passa a valer?",
+          [
+            "R$ 94",
+            "R$ 90",
+            "R$ 96",
+            "R$ 92"
+          ],
+          3,
+          "15% de 80 são 12. Somando 80 + 12, temos 92."
+        ],
+        [
+          "Dois descontos sucessivos de 10% em R$ 100 resultam em:",
+          [
+            "R$ 80",
+            "R$ 81",
+            "R$ 82",
+            "R$ 90"
+          ],
+          1,
+          "100 × 0,9 × 0,9 = 81; o desconto total foi 19%."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Português",
+      "titulo": "Crase: encontro de dois ‘a’",
+      "nivel": "Intermediário",
+      "conteudo": "Crase acontece quando a preposição 'a' se encontra com o artigo feminino 'a' ou 'as'. Uma estratégia é trocar a palavra feminina por uma masculina: se surgir 'ao', em geral ocorre 'à' na feminina. 'Fui à escola' equivale a 'fui ao colégio'. Nem todo 'a' leva acento: antes de verbo, em geral não ocorre ('começou a estudar'). Com 'casa', a especificação importa: 'voltei a casa' (minha residência, sem especificação), mas 'fui à casa de meus tios' (casa determinada). Há ainda expressões femininas como 'à tarde' e 'às vezes'.",
+      "exemplo": "Exemplo resolvido: 'Dirigi-me apressado à casa de meus tios.' A casa está especificada, e 'dirigir-se a' exige a preposição.",
+      "q": [
+        [
+          "Qual frase emprega corretamente a crase?",
+          [
+            "Começou à pesquisar.",
+            "Chegou à tempo.",
+            "Voltou à escola.",
+            "Escreveu à lápis."
+          ],
+          2,
+          "'Voltou a' exige preposição e 'escola' aceita artigo feminino: voltou à escola."
+        ],
+        [
+          "A forma correta é 'dirigi-me apressado ... casa de meus tios'. Qual completa?",
+          [
+            "a",
+            "à",
+            "há",
+            "as"
+          ],
+          1,
+          "A casa é determinada pela expressão 'de meus tios': dirigiu-se à casa."
+        ],
+        [
+          "Em qual expressão a crase está correta?",
+          [
+            "às vezes",
+            "à partir de",
+            "à estudar",
+            "à pé"
+          ],
+          0,
+          "'Às vezes' é locução adverbial feminina; as demais não recebem crase."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Português",
+      "titulo": "Interpretação: informação, inferência e limite",
+      "nivel": "Intermediário",
+      "conteudo": "Interpretar um texto é identificar o que ele afirma e o que pode ser deduzido com segurança. 'Todos', 'sempre', 'nunca' e 'somente' mudam completamente uma afirmação. Uma conclusão é inválida se acrescenta detalhes não apresentados. Leia o trecho, destaque a restrição e confira se cada alternativa respeita o sentido original. Inferir é usar uma pista textual; inventar um motivo é extrapolar.",
+      "exemplo": "Texto-base: 'Durante a reforma, a escola suspendeu visitas espontâneas, mas manteve atendimentos previamente agendados.' Portanto, não fechou todo o atendimento.",
+      "q": [
+        [
+          "Segundo o texto, o atendimento da escola foi:",
+          [
+            "Encerrado integralmente.",
+            "Aberto sem qualquer condição.",
+            "Transferido para outra sede.",
+            "Mantido com agendamento."
+          ],
+          3,
+          "O trecho afirma que atendimentos previamente agendados foram mantidos."
+        ],
+        [
+          "Qual conclusão é sustentada pelo texto?",
+          [
+            "A reforma terminou cedo.",
+            "Visitas sem agendamento foram suspensas.",
+            "Alunos deixaram de estudar.",
+            "A secretaria funcionou só à noite."
+          ],
+          1,
+          "A suspensão de visitas espontâneas está expressa; os demais detalhes não aparecem."
+        ],
+        [
+          "'Manteve' indica, no contexto, que a escola:",
+          [
+            "Continuou certa atividade.",
+            "Iniciou um serviço inédito.",
+            "Cancelou todas as visitas.",
+            "Reformou todas as salas."
+          ],
+          0,
+          "'Manteve' indica continuidade, especificamente dos atendimentos agendados."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Geografia",
+      "titulo": "Escalas e orientação em mapas",
+      "nivel": "Intermediário",
+      "conteudo": "Na escala 1:100.000, um centímetro no mapa corresponde a 100.000 centímetros reais, ou seja, 1 quilômetro. Uma distância desenhada de 3 cm representa 3 km. Para ler mapas orientados com o norte para cima, o leste fica à direita, o oeste à esquerda e o sul abaixo. Nunca esqueça de converter centímetros para metros ou quilômetros antes de responder. Uma escala com número denominador maior apresenta menor detalhamento para a mesma área representada.",
+      "exemplo": "Exemplo resolvido: em 1:200.000, 4 cm no mapa correspondem a 8 km reais.",
+      "q": [
+        [
+          "Na escala 1:100.000, 6 cm representam:",
+          [
+            "600 m",
+            "60 km",
+            "6 km",
+            "600 km"
+          ],
+          2,
+          "Cada centímetro corresponde a 1 km; seis centímetros representam 6 km."
+        ],
+        [
+          "Se o norte está no alto do mapa, o oeste fica:",
+          [
+            "À esquerda",
+            "À direita",
+            "Na parte inferior",
+            "Na parte superior"
+          ],
+          0,
+          "A orientação convencional coloca oeste à esquerda e leste à direita."
+        ],
+        [
+          "Em 1:200.000, 2,5 cm no mapa equivalem a:",
+          [
+            "2,5 km",
+            "5 km",
+            "25 km",
+            "50 km"
+          ],
+          1,
+          "1 cm equivale a 2 km; 2,5 × 2 = 5 km."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Geografia",
+      "titulo": "Biomas do Brasil e suas diferenças",
+      "nivel": "Fundamentos",
+      "conteudo": "Biomas combinam clima, relevo, vegetação e formas de vida. A Caatinga possui clima semiárido e vegetação adaptada a períodos longos de estiagem. O Pantanal é marcado por planícies com cheias sazonais. A Amazônia possui florestas úmidas e elevada biodiversidade. O Cerrado inclui vegetação adaptada a estação seca e incêndios naturais, mas isso não significa ausência de floresta. Saber diferenciar os processos ambientais ajuda a elaborar missões fictícias coerentes sem confundir seus ecossistemas reais.",
+      "exemplo": "Comparação: Caatinga → escassez hídrica; Pantanal → dinâmica das cheias.",
+      "q": [
+        [
+          "Qual característica marca o Pantanal?",
+          [
+            "Dunas costeiras contínuas.",
+            "Gelo permanente nas serras.",
+            "Ausência de rios e lagos.",
+            "Planícies com cheias sazonais."
+          ],
+          3,
+          "O Pantanal possui regime de inundação variável ao longo do ano."
+        ],
+        [
+          "Na Caatinga, muitas plantas apresentam:",
+          [
+            "Adaptações à escassez de água.",
+            "Folhas largas durante toda a seca.",
+            "Raízes apenas superficiais.",
+            "Dependência de neve no inverno."
+          ],
+          0,
+          "Muitas espécies possuem estruturas que reduzem perdas e armazenam água."
+        ],
+        [
+          "A floresta amazônica é conhecida por:",
+          [
+            "Clima predominantemente polar.",
+            "Baixa diversidade de espécies.",
+            "Elevada umidade e biodiversidade.",
+            "Vegetação restrita ao litoral."
+          ],
+          2,
+          "Florestas úmidas e biodiversidade elevada estão entre suas características."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Ciências",
+      "titulo": "Velocidade média e unidades",
+      "nivel": "Intermediário",
+      "conteudo": "Velocidade média é a distância percorrida dividida pelo intervalo de tempo: v = d ÷ t. Se um veículo percorre 180 km em 3 horas, sua velocidade média é 60 km/h. Para converter km/h para m/s, divida aproximadamente por 3,6. A velocidade média não informa se o veículo acelerou ou parou ao longo do trajeto; usa a distância total e o tempo total. A unidade usada no resultado deve ser compatível com os dados.",
+      "exemplo": "Exemplo resolvido: 150 m percorridos em 30 s produzem velocidade média de 5 m/s.",
+      "q": [
+        [
+          "Um veículo percorre 180 km em 3 h. Qual a velocidade média?",
+          [
+            "54 km/h",
+            "63 km/h",
+            "45 km/h",
+            "60 km/h"
+          ],
+          3,
+          "Dividimos distância por tempo: 180 ÷ 3 = 60 km/h."
+        ],
+        [
+          "Um corredor percorre 150 m em 30 s. A velocidade média é:",
+          [
+            "4 m/s",
+            "5 m/s",
+            "6 m/s",
+            "3 m/s"
+          ],
+          1,
+          "150 dividido por 30 equivale a 5 m/s."
+        ],
+        [
+          "Uma viagem de 240 km leva 4 h. Qual a média em km/h?",
+          [
+            "60",
+            "80",
+            "55",
+            "65"
+          ],
+          0,
+          "240 ÷ 4 = 60 km/h."
+        ]
+      ]
+    },
+    {
+      "disciplina": "Ciências",
+      "titulo": "Ciclo da água e previsão do tempo",
+      "nivel": "Fundamentos",
+      "conteudo": "A energia solar favorece a evaporação da água. O vapor sobe, esfria e condensa em gotículas que podem formar nuvens. Quando as gotas crescem, ocorre precipitação (chuva, neve ou granizo, conforme condições atmosféricas). 'Tempo' descreve condições atmosféricas de curto prazo; 'clima' representa padrões observados ao longo de períodos prolongados. Uma tempestade em um dia não altera sozinha a classificação climática de uma região.",
+      "exemplo": "Exemplo resolvido: roupa secando → evaporação; gotas no lado externo de um copo frio → condensação.",
+      "q": [
+        [
+          "A formação de gotículas a partir de vapor chama-se:",
+          [
+            "Evaporação",
+            "Fusão",
+            "Condensação",
+            "Sublimação"
+          ],
+          2,
+          "Na condensação, o vapor passa ao estado líquido."
+        ],
+        [
+          "Um dia chuvoso informa principalmente sobre:",
+          [
+            "O tempo atmosférico.",
+            "O clima de 30 anos.",
+            "A latitude do local.",
+            "A estrutura do solo."
+          ],
+          0,
+          "O estado da atmosfera em um dia é uma observação do tempo, não do clima."
+        ],
+        [
+          "A etapa em que água cai das nuvens é:",
+          [
+            "Infiltração",
+            "Evaporação",
+            "Condensação",
+            "Precipitação"
+          ],
+          3,
+          "Precipitação é a queda de água em forma de chuva, neve ou granizo."
+        ]
+      ]
+    },
+    {
+      "disciplina": "História",
+      "titulo": "Independência, Império e abolição",
+      "nivel": "Fundamentos",
+      "conteudo": "A Independência do Brasil é tradicionalmente associada a 7 de setembro de 1822, mas não significou transformação imediata de todas as relações sociais. O país tornou-se uma monarquia independente e a escravidão permaneceu legal por décadas. A Lei Áurea, assinada em 13 de maio de 1888, aboliu juridicamente a escravidão. Em 15 de novembro de 1889, ocorreu a Proclamação da República. Essas datas correspondem a processos diferentes, com causas e consequências próprias.",
+      "exemplo": "Linha do tempo: 1822 Independência → 1888 Abolição → 1889 República.",
+      "q": [
+        [
+          "O Brasil declarou sua Independência em:",
+          [
+            "1888",
+            "1822",
+            "1889",
+            "1808"
+          ],
+          1,
+          "A data tradicional da Independência é 7 de setembro de 1822."
+        ],
+        [
+          "A Lei Áurea está relacionada a:",
+          [
+            "Proclamação da República.",
+            "Criação do primeiro reinado.",
+            "Fundação de Brasília.",
+            "Abolição legal da escravidão."
+          ],
+          3,
+          "A Lei Áurea aboliu juridicamente a escravidão em 1888."
+        ],
+        [
+          "Qual acontecimento ocorreu em 1889?",
+          [
+            "Proclamação da República.",
+            "Independência do Brasil.",
+            "Abolição da escravidão.",
+            "Chegada da corte portuguesa."
+          ],
+          0,
+          "A Proclamação da República ocorreu em 15 de novembro de 1889."
+        ]
+      ]
+    },
+    {
+      "disciplina": "História",
+      "titulo": "Constituição e funções dos poderes",
+      "nivel": "Intermediário",
+      "conteudo": "A Constituição de 1988 estrutura a República Federativa do Brasil. O Executivo administra e executa políticas públicas; o Legislativo elabora leis e fiscaliza; o Judiciário julga conflitos e aplica o direito. Os três poderes exercem controles recíprocos. A organização fictícia do Governo FAAAB pode se inspirar nesses conceitos, mas não deve ser confundida com o Estado brasileiro real. Exercer um cargo político no jogo não é o mesmo que controlar os sistemas técnicos do Roblox.",
+      "exemplo": "Exemplo: aprovar uma lei envolve o Legislativo; julgar sua aplicação em um conflito envolve o Judiciário.",
+      "q": [
+        [
+          "A função típica do Legislativo é:",
+          [
+            "Executar o orçamento sozinho.",
+            "Julgar recursos judiciais.",
+            "Legislar e fiscalizar.",
+            "Comandar todas as polícias."
+          ],
+          2,
+          "O Legislativo elabora leis e exerce fiscalização prevista em lei."
+        ],
+        [
+          "O Poder Judiciário tem como função típica:",
+          [
+            "Julgar conflitos jurídicos.",
+            "Elaborar todas as leis.",
+            "Administrar secretarias.",
+            "Realizar eleições sozinho."
+          ],
+          0,
+          "Julgar controvérsias jurídicas é função típica do Judiciário."
+        ],
+        [
+          "A Constituição brasileira em vigor foi promulgada em:",
+          [
+            "1964",
+            "1985",
+            "1994",
+            "1988"
+          ],
+          3,
+          "A Constituição da República Federativa do Brasil vigente foi promulgada em 1988."
+        ]
+      ]
+    },
+    {
+      "disciplina": "FAAAB",
+      "titulo": "Patente militar, função e ingresso em batalhão",
+      "nivel": "Formação interna",
+      "conteudo": "No projeto FAAAB, patente militar identifica a posição da pessoa na carreira de sua força. Função operacional indica o trabalho exercido dentro da unidade, como instrutor, líder de equipe ou comandante designado. Habilitação indica curso ou competência comprovada. Essas três camadas não são a mesma coisa. Um Soldado do Exército pode ingressar em um batalhão; não se exige a função inventada de Soldado de 1ª Classe dentro dele. Concluir um curso pode habilitar alguém a pilotar um veículo ou atuar em uma equipe, sem causar promoção automática.",
+      "exemplo": "Exemplo resolvido: Soldado do BFE com curso de reconhecimento permanece Soldado, mas pode desempenhar função especializada autorizada.",
+      "q": [
+        [
+          "Um Soldado concluiu um curso do batalhão. O que ocorre?",
+          [
+            "Vira oficial por equivalência.",
+            "Assume comando automaticamente.",
+            "Mantém a patente, podendo obter habilitação.",
+            "Recebe acesso técnico de administrador."
+          ],
+          2,
+          "Curso e habilitação são separados de promoção e administração do Roblox."
+        ],
+        [
+          "Quem pode solicitar ingresso em um batalhão do EB FAAAB?",
+          [
+            "Somente Tenente ou superior.",
+            "Soldado, sujeito à seleção.",
+            "Somente Soldado de 1ª Classe.",
+            "Apenas instrutores da escola."
+          ],
+          1,
+          "A regra definida permite que Soldado solicite ingresso sem patente interna de Soldado de 1ª Classe."
+        ],
+        [
+          "Qual é uma função, e não patente militar?",
+          [
+            "Instrutor de curso.",
+            "Terceiro-Sargento.",
+            "Primeiro-Tenente.",
+            "Tenente-Coronel."
+          ],
+          0,
+          "Instrutor é uma designação funcional; os demais são graduações ou postos."
+        ]
+      ]
+    },
+    {
+      "disciplina": "FAAAB",
+      "titulo": "Escolas, avaliações e segurança de acesso",
+      "nivel": "Formação interna",
+      "conteudo": "Escolas e academias possuem responsabilidades distintas: aluno frequenta a formação, monitor apoia atividades, instrutor leciona, avaliador confere critérios, coordenador organiza turmas e diretor responde pelo funcionamento. Cada pessoa pode ter uma patente militar e uma função pedagógica sem criar uma nova patente. A administração técnica do jogo é independente de cargos de governo. Resultados de avaliação precisam registrar conteúdo, tentativa, responsável e feedback. Quem não possui autorização não deve acessar armamento, veículos ou comandos de administração por engano.",
+      "exemplo": "Exemplo resolvido: um Cabo designado monitor apoia o instrutor, mas não pode promover o aluno por ter corrigido um exercício.",
+      "q": [
+        [
+          "Quem deve validar a conclusão de uma avaliação?",
+          [
+            "Qualquer aluno da turma.",
+            "Somente um visitante.",
+            "Apenas o jogador mais antigo.",
+            "Um avaliador habilitado."
+          ],
+          3,
+          "Avaliação e certificação dependem de autorização pedagógica definida."
+        ],
+        [
+          "O monitor de uma escola pode, automaticamente:",
+          [
+            "Promover um Soldado.",
+            "Auxiliar atividades da turma.",
+            "Conceder administrador Roblox.",
+            "Alterar notas de qualquer curso."
+          ],
+          1,
+          "Monitor presta apoio, sem herdar poderes de promoção ou administração."
+        ],
+        [
+          "A posse de um cargo no Governo FAAAB concede:",
+          [
+            "Acesso irrestrito aos scripts.",
+            "Controle total sobre o servidor.",
+            "Permissões apenas quando autorizadas.",
+            "Poder de editar contas de terceiros."
+          ],
+          2,
+          "Poder técnico exige permissão explícita, independentemente do cargo político fictício."
+        ]
+      ]
+    }
+  ]
+}
