@@ -72,7 +72,66 @@
       ]
     }
   ],
-  "provas": [],
+  "provas": [
+    {
+      "id": "ingresso-recruta-eb",
+      "titulo": "Seleção de ingresso para Recruta — Exército",
+      "publicada": true,
+      "modalidade": "publica",
+      "forca": "FTB",
+      "objetivo": "ingresso",
+      "tipo": "prova-de-ingresso",
+      "descricao": "Avaliação de ingresso do Exército FAAAB para candidatos civis após atendimento e triagem. Não é um curso ou estágio.",
+      "prerequisitos": {
+        "patentesPermitidas": [
+          "Candidato civil — sem patente militar no Exército FAAAB"
+        ],
+        "unidadesPermitidas": [],
+        "centrosPermitidos": [],
+        "gruposPermitidos": [],
+        "cargosPermitidos": [],
+        "permitidosForaDaForca": true,
+        "outrosRequisitos": [
+          "Verificação de identidade e grupos pela Taifa",
+          "Não pertencer previamente a instituição ou outro grupo do Exército em conflito com as regras de ingresso",
+          "Ficha de candidato entregue ao responsável do alistamento"
+        ]
+      },
+      "resultado": {
+        "acao": "ingresso",
+        "cursoDestino": null,
+        "unidadeDestino": null,
+        "patenteDestino": "Recruta",
+        "automatico": false,
+        "descricao": "A aprovação confirmada por responsável autoriza o ingresso como Recruta. Não concede a patente de Soldado. O CDP do Recruta é feito depois."
+      },
+      "conteudoConfirmado": [
+        "Cinco perguntas de Português",
+        "Cinco flexões",
+        "Cinco polichinelos",
+        "Dez pulos",
+        "Execução de comandos de volver",
+        "Corrida de três voltas",
+        "Três parkours diferentes",
+        "Texto gramatical de três a seis linhas, valendo dez pontos"
+      ],
+      "triagemAnterior": [
+        "Taifa: identificação e verificação de grupos",
+        "Teste breve de dois polichinelos e duas flexões",
+        "Uso do sistema de braço: continência, sentido e descansar",
+        "Entrevista escrita com preferência de força, justificativa, Matemática básica e Português"
+      ],
+      "criterioAprovacao": "Resultado aprovado ou reprovado, atribuído pelo responsável autorizado. Nota de corte total não confirmada.",
+      "provaDeExemplo": false,
+      "inscricoesAbertas": false,
+      "bancaOuAutoridade": "Equipe autorizada do alistamento FAAAB",
+      "origem": "Regras previamente fornecidas pelo criador do projeto FAAAB; não se referem à EsPCEx real.",
+      "conteudoValidadoParaEstudo": [
+        "Português básico e produção textual"
+      ],
+      "observacao": "Aulas da biblioteca são apenas preparação; a avaliação efetiva ocorre no jogo."
+    }
+  ],
   "processosDocumentados": [
     {
       "id": "alistamento",
@@ -80,9 +139,11 @@
       "tipo": "processo-de-ingresso",
       "forca": "FTB",
       "situacao": "Existência documentada no planejamento FAAAB",
-      "descricao": "Portaria, triagem, aulas e testes do alistamento. A existência de uma prova pública separada ainda não foi confirmada neste cadastro.",
+      "descricao": "Atendimento pela Taifa, verificação de identidade e grupos, teste inicial breve e entrevista escrita. A seleção posterior de ingresso para Recruta é uma prova distinta.",
       "materialDeApoio": "alistamento",
-      "promocaoAutomatica": false
+      "promocaoAutomatica": false,
+      "provaRelacionada": "ingresso-recruta-eb",
+      "observacao": "Triagem não concede Soldado e não é CDP do Recruta."
     }
   ],
   "verificacoesDocumentadas": [
@@ -136,6 +197,7 @@
     "Não oferecer botão de inscrição sem prova publicada, regulamento e backend de autorização.",
     "Não mudar patente automaticamente por concluir aula, prova de treino ou etapa de curso.",
     "Não gerar provas para AMAN, EsPCEx, ESA, bombeiros ou polícia a partir do nome de uma instituição.",
-    "Um nome de curso não é evidência de que exista concurso de ingresso."
+    "Um nome de curso não é evidência de que exista concurso de ingresso.",
+    "A prova de ingresso para Recruta é diferente da triagem inicial da Taifa e da formação de Recruta para Soldado."
   ]
 }
