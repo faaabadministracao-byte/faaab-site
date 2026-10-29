@@ -11,19 +11,21 @@ function pick(force){return tracks.forcas.find(x=>x.id===force)}
 function show(){
  if(!tracks)return;let hash=location.hash.slice(1);if(tracks.forcas.some(x=>x.id===hash))selected=hash;
  const force=pick(selected),unitsList=units[selected==="CBM"?"bombeiros":"policia"]||[];
+ const special=(tracks.especializados||[]).filter(e=>e.forca===selected);
  const list=courses.filter(c=>c.forca===selected);
  const cbm=selected==="CBM"?cat.filter(c=>c.forca==="CBM"&&c.tipo==="curso"):[];
  const proposal=selected==="PM"?unitsList.filter(x=>x.tipo==="centro"):[];
  out.innerHTML='<header class="area-head"><span class="area-label">Carreira e formação</span><h1>Formação por força</h1><p>O caminho de ingresso, treinamento, curso e progressão é diferente em cada instituição. Prova de entrada é uma seleção à parte; estágio de aula não vira prova de concurso.</p></header>'+
  '<nav class="area-tabs" aria-label="Força">'+tracks.forcas.map(f=>'<button type="button" data-force="'+f.id+'" aria-pressed="'+(selected===f.id)+'">'+esc(f.nome)+'</button>').join("")+'</nav>'+
- '<section class="area-panel"><span class="area-label">'+esc(force.status)+'</span><h2>'+esc(force.nome)+'</h2><p><strong>Requisitos:</strong> '+esc(force.requisitos)+'</p><div class="area-note">'+esc(force.ingresso)+'</div>'+
+ '<section class="area-panel"><span class="area-label">'+esc(force.status)+'</span><h2>'+esc(force.nome)+'</h2><p><strong>Exercícios gerais:</strong> '+esc(force.adaptacao.texto)+'</p><div class="area-note">Cenário básico: '+esc(force.adaptacao.ambiente)+'. A variação de quantidade e dificuldade não implica habilitação especializada.</div>'+
  '<h3>Etapas da carreira no jogo</h3><div class="area-rows">'+flow[selected].map((x,i)=>'<div class="area-row"><h4>'+(i+1)+'. '+esc(x)+'</h4></div>').join("")+'</div></section>'+
  '<section class="area-panel"><h2>Escolas, centros e cursos</h2><p>Os nomes abaixo são registros do projeto. O fato de haver curso não prova que exista concurso público ou promoção automática.</p>'+
  (list.length?list.map(c=>'<details class="area-course"><summary>'+esc(c.titulo)+'</summary><p><span class="area-pill">'+esc(c.estado)+'</span></p><pre>'+esc(c.detalhes)+'</pre></details>').join(""):"")+
  cbm.map(c=>'<details class="area-course"><summary>'+esc(c.sigla)+' — '+esc(c.nome)+'</summary><p><span class="area-pill">Formação catalogada</span></p><p>'+esc(c.noJogo||"Requisitos e matriz exatos ainda a definir.")+'</p></details>').join("")+
  proposal.map(c=>'<details class="area-course"><summary>'+esc(c.sigla)+' — '+esc(c.nome)+'</summary><p>'+esc(c.missao)+'</p><p><strong>Requisitos propostos:</strong> '+esc(c.requisitos.join("; "))+'</p></details>').join("")+
  '<p class="edu3-muted">Qualquer curso com requisitos incompletos permanece em planejamento. Não serão criados exames fictícios.</p></section>'+
- '<section class="area-panel"><h2>O que treinar antes de ingressar numa unidade?</h2><p>'+esc(force.foco.join(", "))+'.</p><div class="area-links"><a href="exercicios.html#'+selected+'">Ver os exercícios desta força</a>'+
+ '<section class="area-panel"><h2>Treinamentos especializados</h2><p>Não são exercícios gerais. Só podem participar jogadores vinculados à função, com qualificação e permissão válida no jogo. A patente, isoladamente, não concede acesso.</p>'+special.map(e=>'<details class="area-course"><summary>'+esc(e.nome)+'</summary><p><strong>Áreas responsáveis:</strong> '+esc(e.unidades.length?e.unidades.join(', '):'Atribuição da organização ainda não especificada')+'</p><p><strong>Exige:</strong> '+esc(e.habilitacao)+'</p><p><strong>Patentes:</strong> '+esc(e.patentes)+'</p><p>'+esc(e.disponibilidade)+'</p></details>').join('')+'</section>'+ 
+ '<section class="area-panel"><h2>Antes de uma especialização</h2><p>Todos podem ter os mesmos tipos de treino básico, como parkour, flexões, polichinelos e corrida, em formatos diferentes por força.</p><div class="area-links"><a href="exercicios.html#'+selected+'">Exercícios gerais desta força</a>'+
  (selected==="PM"?'<a href="policia.html">Unidades da PM</a>':selected==="CBM"?'<a href="bombeiros.html">Grupamentos dos Bombeiros</a>':'<a href="central.html?forca='+selected+'">Organizações</a>')+
  '<a href="estudos.html#provas">Provas de seleção</a></div></section>';
  out.querySelectorAll("[data-force]").forEach(b=>b.addEventListener("click",()=>{selected=b.dataset.force;location.hash=selected;show()}));
