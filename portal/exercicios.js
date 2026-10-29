@@ -22,7 +22,7 @@ function core(c){
 }
 function other(c){
  return '<article class="area-exercise area-other"><span class="area-label">'+esc(c.tipo)+'</span><h3>'+esc(c.nome)+'</h3><p>'+esc(c.como)+'</p>'+
- '<p><strong>Na seleção já definida:</strong> '+esc(c.avaliacao)+'</p></article>';
+ '<p><strong>Situação:</strong> '+esc(c.status)+'</p><p><strong>Aplicação:</strong> '+esc(c.avaliacao)+'</p></article>';
 }
 function displayCircuits(){
 const force=data.forcas.find(f=>f.id===selected),all=data.circuitosEspeciais.filter(c=>c.forcas.includes(selected)),filtered=all.filter(matches),section=$("area-special-list"),count=$("area-special-count");
@@ -47,7 +47,7 @@ out.innerHTML='<header class="area-head"><span class="area-label">Percursos e ob
 '<div class="area-quick" aria-label="Buscar circuitos por ambiente">'+
 [['todos','Todos'],['terrestre','Terrestres'],['aquatico','Aquáticos'],['aereo','Aéreos']].map(([id,label])=>'<button type="button" data-quick="'+id+'" aria-pressed="'+String(only===id)+'">'+label+'</button>').join("")+'</div></div>'+
 '<p id="area-special-count" class="edu3-muted"></p><div id="area-special-list" class="area-exercises"></div></section>'+
-(otherExercises.length?'<section class="area-block" id="outros"><h2>Outros movimentos do Exército</h2>'+
+(otherExercises.length?'<section class="area-block" id="outros"><h2>Outros exercícios práticos do Exército</h2>'+
 '<p class="edu3-muted">Flexões, polichinelos, pulos, corridas e comandos já registrados para o Exército. Quantidades da prova de Recruta não são exigidas automaticamente nos outros cursos.</p>'+
 '<div class="area-exercises">'+otherExercises.map(other).join("")+'</div></section>':"")+
 '<nav class="area-links"><a href="estudos.html#provas">Provas</a><a href="formacao.html#'+selected+'">Formação</a><a href="index.html">Voltar ao portal</a></nav>';
