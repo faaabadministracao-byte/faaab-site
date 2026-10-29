@@ -19,3 +19,37 @@
 .area-list{padding-left:21px;font-size:14px;line-height:1.85;color:#465e4c}
 @media(max-width:800px){.area-layout{grid-template-columns:1fr}.area-side{position:static;max-height:none;display:flex;overflow-x:auto;padding:7px}.area-side a{white-space:nowrap}.area-exercises{grid-template-columns:1fr}}
 @media(max-width:650px){.area-panel{padding:17px}.area-exercise{padding:16px}.area-head h1{font-size:33px}}
+
+/* Catálogo de circuitos do Roblox: sem checklist nem pontuação pessoal. */
+.area-block{margin:28px 0 36px}
+.area-block>h2{font-size:clamp(23px,3vw,30px);margin:0 0 10px;line-height:1.25}
+.area-block>.edu3-muted{margin:0 0 18px;max-width:74ch;line-height:1.75}
+.area-core{border-left:4px solid #4a8154}
+.area-core h3{font-size:19px}
+.area-other h3{font-size:18px}
+.area-circuit{padding:0;min-width:0;align-self:start;overflow:hidden;border:1px solid #cadccc}
+.area-circuit summary{display:block;cursor:pointer;padding:19px;list-style:none}
+.area-circuit summary::-webkit-details-marker{display:none}
+.area-circuit summary::marker{display:none}
+.area-circuit summary h3{font-size:19px;line-height:1.4;margin:7px 0}
+.area-circuit summary .area-label{color:#647b65}
+.area-circuit summary .area-see{display:inline-block;font-size:13px;font-weight:750;color:#266639;margin-top:4px}
+.area-circuit summary:hover{background:#f1f7f0}
+.area-circuit summary:focus-visible{outline:3px solid #b5a060;outline-offset:-3px}
+.area-circuit[open]{border-color:#5b9468;box-shadow:0 3px 12px #214b2b12}
+.area-circuit[open] summary{background:#eaf5e9;border-bottom:1px solid #c6d8c6}
+.area-circuit[open] summary .area-see{display:none}
+.area-circuit-body{padding:16px 18px 20px}
+.area-circuit-body>p{font-size:13px;line-height:1.7}
+.area-circuit-body .area-note{margin:13px 0 0;font-size:12px}
+.area-stages{margin:0 0 18px;padding-left:25px;display:grid;gap:10px}
+.area-stages li{line-height:1.7;font-size:14px;padding-left:2px}
+.area-stages li::marker{font-weight:850;color:#347d49}
+.area-explore{border:1px solid #d0ded0;border-radius:9px;background:#fff;padding:17px;margin:20px 0 13px}
+.area-explore>label{display:block;font-weight:800;font-size:14px;margin-bottom:7px}
+.area-explore input{min-height:47px;width:100%;font-size:16px;border:1px solid #91b398;border-radius:7px;padding:11px 13px;color:#26432c;background:#fff}
+.area-quick{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
+.area-quick button{border:1px solid #b5c9b5;border-radius:7px;padding:8px 12px;background:#fff;color:#255b34;min-height:42px;cursor:pointer;font-size:13px;font-weight:750}
+.area-quick button[aria-pressed="true"]{background:#285533;color:#fff;border-color:#285533}
+#area-special-count{margin:12px 0;color:#536953}
+@media(max-width:650px){.area-circuit summary{padding:16px}.area-circuit-body{padding:15px}.area-stages li{font-size:14px}.area-explore{padding:13px}}
