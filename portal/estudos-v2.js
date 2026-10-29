@@ -107,7 +107,7 @@ function showTheory(){
    (p?.quizAttempts?'<button id="reviewThis" class="edu-soft" type="button">Relembrar o que estudei</button>':"")+
    '</div>';
  }
- content+='<div class="edu-actions"><button id="listenStep" type="button" class="edu-soft">Ouvir o texto</button></div>';
+ if(typeof window!=="undefined"&&"speechSynthesis" in window)content+='<div class="edu-actions"><button id="listenStep" type="button" class="edu-soft">Ouvir o texto</button></div>';
  $("lessonMain").innerHTML=content;
  if($("continueStep"))$("continueStep").addEventListener("click",()=>{stopReading();theoryStep++;showTheory()});
  if($("priorStep"))$("priorStep").addEventListener("click",()=>{stopReading();theoryStep=isEnd?0:Math.max(0,theoryStep-1);recallOpen=false;showTheory()});
