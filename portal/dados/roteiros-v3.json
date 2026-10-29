@@ -435,6 +435,17 @@
       "materias": [],
       "aulas": [],
       "observacao": "Patentes dos alunos e dos instrutores são dados administrativos, não conteúdo de prova."
+    },
+    {
+      "id": "CUR-10-15",
+      "nome": "Teste de retorno de oficiais",
+      "tipo": "Teste específico",
+      "origem": "Teste Limpeza de Oficiais no planejamento da FAAAB",
+      "confirmacao": "Aplicado apenas a oficiais que retornam após inatividade prolongada, nas condições documentadas.",
+      "programa": "pendente",
+      "materias": [],
+      "aulas": [],
+      "observacao": "Não é um curso geral e não deve aparecer para todos os estudantes. O conteúdo do teste não está documentado."
     }
   ]
 }
