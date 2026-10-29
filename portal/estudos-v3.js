@@ -65,7 +65,7 @@ root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[p.t
  '<p><strong>Responsável:</strong> '+escape(p.bancaOuAutoridade||"A definir")+'</p>'+
  '<p><strong>Critério:</strong> '+escape(p.criterioAprovacao||"A definir")+'</p></div></section>'+
  (p.id==="ingresso-recruta-eb"?'<div class="edu3-actions"><a class="edu3-btn mild" href="#materias">Estudar Português e Matemática</a></div>':"")+
- '<div class="edu3-info">Esta página informa as regras do jogo. A seleção é conduzida pelos responsáveis da FAAAB no Roblox. Aqui não é possível inscrever-se, concluir a prova nem ganhar patente por clicar.</div>'+
+ (p.id==="ingresso-recruta-eb"?'<div class="edu3-actions"><a class="edu3-btn secondary" href="#processo=alistamento">Ver a triagem da Taifa</a></div>':"")+'<div class="edu3-info">Esta página informa as regras do jogo. A seleção é conduzida pelos responsáveis da FAAAB no Roblox. Aqui não é possível inscrever-se, concluir a prova nem ganhar patente por clicar.</div>'+
  actions("provas","Voltar às seleções","cursos","Ver formações");
 }
 function renderProcess(p){
@@ -74,7 +74,8 @@ function renderProcess(p){
  heading("Ingresso · "+p.forca,p.nome,p.descricao)+
  '<section class="edu3-box"><h2>Como está registrado?</h2><p>'+escape(p.situacao)+'</p>'+
  '<p>O alistamento pode ter instrução e triagem sem que toda essa sequência seja uma prova pública escrita. Ser aprovado para iniciar uma formação não significa terminar a formação ou receber uma patente por uma nota de treino.</p></section>'+
- (lesson?'<section class="edu3-section"><h2>Aprender antes do alistamento</h2><p class="edu3-muted">Estas são aulas de apoio, não um edital nem uma prova oficial.</p>'+examLessonCards(lesson)+'</section>':"")+
+ '<div class="edu3-actions"><a class="edu3-btn" href="#selecao=ingresso-recruta-eb">Ver a prova de ingresso para Recruta</a></div>'+ 
+(lesson?'<section class="edu3-section"><h2>Aprender antes do alistamento</h2><p class="edu3-muted">Estas são aulas de apoio, não um edital nem uma prova oficial.</p>'+examLessonCards(lesson)+'</section>':"")+
  actions("provas","Voltar a seleções","materias","Ver aulas");
 }
 function renderVerification(v){
