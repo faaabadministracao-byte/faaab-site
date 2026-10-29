@@ -1,70 +1,82 @@
 {
-  "versao": 1,
+  "versao": 2,
   "data": "2026-10-29",
-  "nota": "Conteúdo de exercício da FAAAB para roleplay no Roblox, com propostas não aprovadas explicitamente indicadas. Não substitui certificações reais, não exige atividades físicas perigosas e não promove automaticamente.",
+  "nota": "Exercícios físicos e obstáculos VIRTUAIS do Roblox. Cinco níveis de parkour são pedidos expressamente pelo criador. Outros exercícios de alistamento do Exército foram registrados separadamente. Nenhuma outra força recebe exigências inventadas.",
   "comuns": [
     {
-      "id": "com-01",
-      "nome": "Reconhecer a cadeia de comando",
-      "tipo": "comum",
-      "objetivo": "Saber a quem comunicar dúvidas e ocorrências",
-      "como": "O instrutor apresenta três funções; o aluno indica quem pode orientar, avaliar e autorizar",
-      "avaliacao": "Identifica função correta e explica a escolha",
-      "formato": "Quiz de situações"
+      "id": "pk-facil",
+      "nome": "Parkour fácil",
+      "tipo": "Parkour",
+      "grupo": "Parkours",
+      "status": "Confirmado",
+      "formato": "Obstáculos Roblox",
+      "como": "Um percurso curto com saltos simples, plataformas largas e tempo para entender os controles.",
+      "avaliacao": "Chegar ao final do circuito do mapa; não existe tempo de corte geral definido.",
+      "modelos": [
+        "Plataformas largas",
+        "Rampas e escadas",
+        "Barreiras baixas"
+      ]
     },
     {
-      "id": "com-02",
-      "nome": "Comandos e postura",
-      "tipo": "comum",
-      "objetivo": "Praticar atenção, posição e resposta a comandos do roleplay",
-      "como": "O instrutor chama sentido, descansar, alinhamento e deslocamento curto",
-      "avaliacao": "Respeita o comando e corrige após feedback",
-      "formato": "Prática em grupo"
+      "id": "pk-medio",
+      "nome": "Parkour médio",
+      "tipo": "Parkour",
+      "grupo": "Parkours",
+      "status": "Confirmado",
+      "formato": "Obstáculos Roblox",
+      "como": "Saltos que exigem mais precisão, mudanças de direção e plataformas alternadas.",
+      "avaliacao": "Completar o circuito indicado no treinamento.",
+      "modelos": [
+        "Plataformas alternadas",
+        "Zigue-zague",
+        "Plataformas estreitas"
+      ]
     },
     {
-      "id": "com-03",
-      "nome": "Comunicação clara",
-      "tipo": "comum",
-      "objetivo": "Relatar quem, onde e o que aconteceu",
-      "como": "Diante de um evento simulado, produzir mensagem curta que não deixa dúvida",
-      "avaliacao": "Informa local, situação e ação",
-      "formato": "Cenário"
+      "id": "pk-dificil",
+      "nome": "Parkour difícil",
+      "tipo": "Parkour",
+      "grupo": "Parkours",
+      "status": "Confirmado",
+      "formato": "Obstáculos Roblox",
+      "como": "Trecho mais técnico, com apoios pequenos, saltos precisos e obstáculos combinados.",
+      "avaliacao": "Completar a sequência prevista; sem tempo de corte universal.",
+      "modelos": [
+        "Apoios pequenos",
+        "Plataformas temporárias",
+        "Mudança de direção"
+      ]
     },
     {
-      "id": "com-04",
-      "nome": "Convivência e proteção",
-      "tipo": "comum",
-      "objetivo": "Atuar sem discriminação, humilhação ou abuso",
-      "como": "Resolver uma situação de desrespeito com acolhimento e comunicação responsável",
-      "avaliacao": "Escolhe medida proporcional e respeitosa",
-      "formato": "Decisão"
+      "id": "pk-grande",
+      "nome": "Parkour grande",
+      "tipo": "Parkour",
+      "grupo": "Parkours",
+      "status": "Confirmado",
+      "formato": "Circuito longo Roblox",
+      "como": "Circuito extenso, com muitos obstáculos e pontos de verificação, sem necessariamente exigir saltos difíceis.",
+      "avaliacao": "Concluir o trajeto inteiro, respeitando checkpoints definidos no mapa.",
+      "modelos": [
+        "Circuito longo",
+        "Travessia da base",
+        "Torre longa"
+      ]
     },
     {
-      "id": "com-05",
-      "nome": "Trabalho de equipe",
-      "tipo": "comum",
-      "objetivo": "Dividir tarefas sem ultrapassar permissões",
-      "como": "Um grupo precisa organizar uma missão simulada com líder, registro e participantes",
-      "avaliacao": "Cada integrante entende sua tarefa",
-      "formato": "Cenário"
-    },
-    {
-      "id": "com-06",
-      "nome": "Circuito de deslocamento",
-      "tipo": "comum",
-      "objetivo": "Controlar movimentação no cenário",
-      "como": "Percurso curto com pontos de conferência e sem tempo obrigatório",
-      "avaliacao": "Completa com segurança e segue o percurso",
-      "formato": "Simulação Roblox"
-    },
-    {
-      "id": "com-07",
-      "nome": "Registro de atividade",
-      "tipo": "comum",
-      "objetivo": "Lembrar informações úteis",
-      "como": "Após missão curta, escrever o que aconteceu, os problemas e como resolveu",
-      "avaliacao": "Relato coerente, sem inventar fatos",
-      "formato": "Relatório"
+      "id": "pk-grande-dificil",
+      "nome": "Parkour grande difícil",
+      "tipo": "Parkour",
+      "grupo": "Parkours",
+      "status": "Confirmado",
+      "formato": "Circuito longo e difícil Roblox",
+      "como": "Percurso extenso que também usa obstáculos difíceis e combina precisão com continuidade.",
+      "avaliacao": "Chegar ao final do circuito longo e difícil quando essa atividade tiver sido atribuída.",
+      "modelos": [
+        "Torre extensa",
+        "Obstáculos combinados",
+        "Circuito final"
+      ]
     }
   ],
   "forcas": [
@@ -72,79 +84,75 @@
       "id": "FTB",
       "nome": "Exército",
       "home": "central.html?forca=FTB",
-      "requisitos": "Manter os requisitos de Recruta, Soldado, patentes e escolas já documentados pela FAAAB. Soldado pode pedir ingresso em batalhão. Cursos não geram patente automaticamente.",
-      "status": "regras existentes",
-      "ingresso": "Seleção para Recruta registrada; formação posterior pelo CDP. Critérios de unidades e cursos não devem ser fundidos.",
+      "status": "Parkours confirmados; outras atividades conforme seleção",
+      "requisitos": "O Exército já tem regras próprias para a seleção de Recruta e formação posterior. As cinco opções de parkour não significam que todas sejam cobradas na mesma prova.",
+      "ingresso": "No Exército, usar o número de repetições do alistamento somente na prova que o definiu.",
       "foco": [
-        "orientação terrestre",
-        "organização de brigadas",
-        "comunicação de equipe",
-        "instrução em batalhões"
+        "parkours virtuais",
+        "corrida",
+        "flexões e polichinelos",
+        "ordem unida"
       ],
       "exercicios": [
         {
-          "id": "ter-01",
-          "nome": "Orientação entre pontos no mapa",
-          "como": "O participante recebe mapa com três marcos e indica uma rota viável",
-          "avaliacao": "Escolhe caminho e justifica",
-          "formato": "Planejamento de deslocamento",
-          "tipo": "especifico"
+          "id": "fis-flexoes",
+          "nome": "Flexões",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Registrado no ingresso do Exército",
+          "formato": "Animação/comando Roblox",
+          "como": "Executar a flexão do jogo conforme o instrutor.",
+          "avaliacao": "A seleção de ingresso para Recruta tem 5 flexões. Outros cursos não herdam esse número."
         },
         {
-          "id": "ter-02",
-          "nome": "Briefing de operação",
-          "como": "Definir objetivo, responsáveis e condições de encerramento antes de iniciar",
-          "avaliacao": "Apresenta plano compreensível",
-          "formato": "Reunião de equipe",
-          "tipo": "especifico"
+          "id": "fis-polichinelos",
+          "nome": "Polichinelos",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Registrado no ingresso do Exército",
+          "formato": "Animação/comando Roblox",
+          "como": "Executar os polichinelos no jogo conforme o comando.",
+          "avaliacao": "A seleção para Recruta tem 5 polichinelos; a triagem inicial é diferente."
         },
         {
-          "id": "ter-03",
-          "nome": "Identificação de área e limite",
-          "como": "Comparar duas áreas de treinamento e reconhecer acesso restrito",
-          "avaliacao": "Respeita limite do jogo",
-          "formato": "Observação",
-          "tipo": "especifico"
+          "id": "fis-pulos",
+          "nome": "Pulos",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Registrado no ingresso do Exército",
+          "formato": "Comando Roblox",
+          "como": "Executar saltos no jogo seguindo o responsável pelo treinamento.",
+          "avaliacao": "A seleção para Recruta do Exército prevê 10 pulos."
         },
         {
-          "id": "ter-04",
-          "nome": "Organização de pelotão",
-          "como": "Conduzir a equipe em um circuito simples sem perder comunicação",
-          "avaliacao": "Mantém integrantes informados",
-          "formato": "Prática em grupo",
-          "tipo": "especifico"
+          "id": "fis-corrida",
+          "nome": "Corrida",
+          "tipo": "Deslocamento",
+          "grupo": "Outros exercícios práticos",
+          "status": "Registrado no ingresso do Exército",
+          "formato": "Circuito Roblox",
+          "como": "Percorrer a pista marcada no jogo.",
+          "avaliacao": "A seleção para Recruta prevê 3 voltas; a distância de cada volta depende do mapa."
         },
         {
-          "id": "ter-05",
-          "nome": "Logística do acampamento",
-          "como": "Conferir água, equipamentos permitidos, ponto de encontro e retorno",
-          "avaliacao": "Checklist completo",
-          "formato": "Missão logística",
-          "tipo": "especifico"
+          "id": "fis-volver",
+          "nome": "Comandos de volver",
+          "tipo": "Ordem unida",
+          "grupo": "Outros exercícios práticos",
+          "status": "Registrado no ingresso do Exército",
+          "formato": "Comando Roblox",
+          "como": "Responder aos comandos de virar e alinhar a direção no jogo.",
+          "avaliacao": "A seleção para Recruta inclui comandos de volver, sem pontuação detalhada confirmada."
         },
         {
-          "id": "ter-06",
-          "nome": "Comunicação entre brigadas",
-          "como": "Transferir uma orientação usando destinatário e ponto de referência",
-          "avaliacao": "Mensagem sem ambiguidades",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "ter-07",
-          "nome": "Identificar especialidades do Exército",
-          "como": "Selecionar a unidade adequada a três missões fictícias",
-          "avaliacao": "Associa função e missão",
-          "formato": "Quiz",
-          "tipo": "especifico"
-        },
-        {
-          "id": "ter-08",
-          "nome": "Relatório de patrulha simulada",
-          "como": "Descrever percurso, evento, resposta e resultado sem inventar ações",
-          "avaliacao": "Relatório consistente",
-          "formato": "Relatório",
-          "tipo": "especifico"
+          "id": "fis-marcha",
+          "nome": "Marcha",
+          "tipo": "Ordem unida",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório — aplicação não confirmada",
+          "formato": "Percurso Roblox",
+          "como": "Realizar deslocamento em grupo no mapa quando incluído pelo instrutor.",
+          "avaliacao": "Sem exigência universal de aprovação ou percurso definido."
         }
       ]
     },
@@ -152,382 +160,71 @@
       "id": "FAB",
       "nome": "Aeronáutica",
       "home": "central.html?forca=FAB",
-      "requisitos": "Proposta FAAAB: ingresso inicial definido separadamente das qualificações de infantaria, operações de solo, aviação, transporte e resgate. Pilotagem exige habilitação própria e autorização no jogo.",
-      "status": "proposta para aprovação",
-      "ingresso": "A estrutura de CIAAR/CFAer e cursos FAB está documentada; faltam confirmar quais têm seleção, patentes mínimas e prova de entrada.",
+      "status": "Parkours disponíveis; exigências específicas pendentes",
+      "requisitos": "Não há quantidades de flexões, corridas ou nível de parkour aprovadas para a seleção ou os cursos da FAB da FAAAB.",
+      "ingresso": "A seleção e os exercícios obrigatórios da FAB precisam ser confirmados separadamente dos do Exército.",
       "foco": [
-        "base aérea",
-        "segurança de pista",
-        "comunicação de voo simulado",
-        "funções de apoio e aviação"
+        "circuitos práticos",
+        "formação própria",
+        "simulação de base aérea"
       ],
-      "exercicios": [
-        {
-          "id": "aer-01",
-          "nome": "Reconhecer áreas da base",
-          "como": "Identificar pista, pátio, hangar e área de acesso controlado",
-          "avaliacao": "Diferencia áreas e permissões",
-          "formato": "Mapa de base",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-02",
-          "nome": "Pista ocupada ou livre",
-          "como": "Analisar duas aeronaves com pedidos incompatíveis no simulador",
-          "avaliacao": "Evita autorização conflitante",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-03",
-          "nome": "Mensagens de torre",
-          "como": "Criar comunicação que identifique aeronave, local e ação",
-          "avaliacao": "Mensagem clara e confirmada",
-          "formato": "Comunicação",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-04",
-          "nome": "Escolher linha de atuação",
-          "como": "Distinguir funções de infantaria, aviação e apoio",
-          "avaliacao": "Escolha fundamentada",
-          "formato": "Quiz",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-05",
-          "nome": "Checklist de hangar",
-          "como": "Conferir se aeronave está liberada, identificada e com tripulação autorizada",
-          "avaliacao": "Identifica faltas",
-          "formato": "Simulação de manutenção",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-06",
-          "nome": "Rota de transporte",
-          "como": "Comparar dois destinos e definir a ordem segura de missão fictícia",
-          "avaliacao": "Justifica o percurso",
-          "formato": "Mapa",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-07",
-          "nome": "Isolar ocorrência no pátio",
-          "como": "Diante de incidente simulado, afastar personagens e chamar equipe habilitada",
-          "avaliacao": "Não invade área de risco",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "aer-08",
-          "nome": "Relatar situação de voo",
-          "como": "Registrar origem, destino, estado e alteração simulada",
-          "avaliacao": "Registro completo",
-          "formato": "Relatório",
-          "tipo": "especifico"
-        }
-      ]
+      "exercicios": []
     },
     {
       "id": "FMB",
       "nome": "Marinha e Fuzileiros Navais",
       "home": "central.html?forca=FMB",
-      "requisitos": "Proposta FAAAB: carreira naval e Corpo de Fuzileiros Navais possuem caminhos próprios; cursos de navegação, tripulação e CIAMPA dependem de inscrição, unidade e habilitação. Não misturar com formação terrestre do Exército.",
-      "status": "proposta para aprovação",
-      "ingresso": "EAM, Escola Naval, CIAW, CIAA, CIAMPA e C-NAV já estão no catálogo. Inscrição, patente inicial e eventuais provas ainda exigem deliberação.",
+      "status": "Parkours disponíveis; exigências específicas pendentes",
+      "requisitos": "Os cinco circuitos são modelos do projeto. A quantidade exigida nos cursos de Marinha e Fuzileiros Navais ainda não foi aprovada.",
+      "ingresso": "Não copiar automaticamente a prova de Recruta do Exército.",
       "foco": [
-        "orientação náutica",
-        "segurança de bordo",
-        "comunicação naval",
-        "Fuzileiros Navais e desembarque simulado"
+        "parkours virtuais",
+        "formação naval",
+        "treinamentos específicos futuros"
       ],
-      "exercicios": [
-        {
-          "id": "nav-01",
-          "nome": "Localizar proa, popa e bordos",
-          "como": "No convés virtual, indicar proa, popa, bombordo e boreste",
-          "avaliacao": "Localiza os quatro lados",
-          "formato": "Visita guiada",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-02",
-          "nome": "Orientação de cartas",
-          "como": "Converter escala simples em distância e explicar rumo",
-          "avaliacao": "Conta correta e interpretação",
-          "formato": "Mapa e cálculo",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-03",
-          "nome": "Sinais de equipe",
-          "como": "Interpretar mensagens curtas entre ponte e convés no jogo",
-          "avaliacao": "Reproduz conteúdo sem perder informações",
-          "formato": "Comunicação",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-04",
-          "nome": "Inspeção de segurança de bordo",
-          "como": "Identificar saída, ponto de encontro e item fora do lugar",
-          "avaliacao": "Registra irregularidades",
-          "formato": "Checklist",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-05",
-          "nome": "Organização da tripulação",
-          "como": "Distribuir funções para navegação simulada sem confundir comando e apoio",
-          "avaliacao": "Atribuições adequadas",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-06",
-          "nome": "Incidente no convés",
-          "como": "Acionar equipe de resposta e evitar circulação em área fictícia de risco",
-          "avaliacao": "Prioriza segurança coletiva",
-          "formato": "Decisão",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-07",
-          "nome": "Fuzileiro: trajeto terrestre",
-          "como": "Localizar rota e ponto de encontro de equipe FN",
-          "avaliacao": "Segue referências corretamente",
-          "formato": "Percurso de mapa",
-          "tipo": "especifico"
-        },
-        {
-          "id": "nav-08",
-          "nome": "Registro da missão naval",
-          "como": "Produzir relatório com rota, alteração e resultado",
-          "avaliacao": "Registro objetivo",
-          "formato": "Relatório",
-          "tipo": "especifico"
-        }
-      ]
+      "exercicios": []
     },
     {
       "id": "CBM",
       "nome": "Corpo de Bombeiros",
       "home": "bombeiros.html",
-      "requisitos": "Proposta FAAAB: ingresso no Corpo de Bombeiros antes de acessar grupamentos. Para GBS, GOA, GOPP, GSFMA e GOESP, exigir vínculo CBM, qualificação específica e autorização da chefia; patentes mínimas ainda não aprovadas.",
-      "status": "proposta para aprovação",
-      "ingresso": "Formações CFP/BM, CFS/BM e CFO/BM catalogadas; a aprovação de cursos ou testes não deve conceder promoção automaticamente.",
+      "status": "Parkours disponíveis; exigências específicas pendentes",
+      "requisitos": "O Corpo de Bombeiros da FAAAB ainda não possui tabela aprovada de níveis de parkour, provas físicas e repetições por patente.",
+      "ingresso": "Não copiar automaticamente testes da seleção do Exército nem inventar tempos e número de repetições.",
       "foco": [
-        "prevenção de incêndios",
-        "resgate civil",
-        "comunicação de emergência",
-        "atendimento inicial simulado"
+        "parkours virtuais",
+        "treinamento prático no mapa",
+        "formação de bombeiros a definir"
       ],
-      "exercicios": [
-        {
-          "id": "bom-01",
-          "nome": "Reconhecer perigo de incêndio",
-          "como": "Identificar saída bloqueada e materiais colocados incorretamente em cenário fictício",
-          "avaliacao": "Detecta e reporta riscos",
-          "formato": "Inspeção virtual",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-02",
-          "nome": "Acionamento de emergência",
-          "como": "Informar localização, natureza da ocorrência e pessoas envolvidas",
-          "avaliacao": "Comunicação sem lacunas",
-          "formato": "Simulação",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-03",
-          "nome": "Rotas de saída",
-          "como": "Escolher rota segura de evacuação no mapa do jogo",
-          "avaliacao": "Evita áreas bloqueadas",
-          "formato": "Percurso",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-04",
-          "nome": "Organização de equipe de socorro",
-          "como": "Separar comunicação, isolamento e apoio em situação simulada",
-          "avaliacao": "Mantém atribuições definidas",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-05",
-          "nome": "Primeiros cuidados do jogo",
-          "como": "Reconhecer que a equipe deve proteger a cena e chamar profissional habilitado",
-          "avaliacao": "Não inventa atendimento invasivo",
-          "formato": "Decisão",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-06",
-          "nome": "Busca e localização",
-          "como": "Encontrar personagem em ambiente virtual com referências e comunicação",
-          "avaliacao": "Sinaliza localização",
-          "formato": "Busca simulada",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-07",
-          "nome": "Incêndio florestal fictício",
-          "como": "Reconhecer direção de fumaça e áreas a evitar, sem ensinar combate real ao fogo",
-          "avaliacao": "Sinaliza risco e pede apoio",
-          "formato": "Mapa",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-08",
-          "nome": "Atuação do GOPP",
-          "como": "Isolar vazamento fictício e solicitar equipe especializada",
-          "avaliacao": "Não manipula material desconhecido",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-09",
-          "nome": "Resposta aérea GOA",
-          "como": "Escolher quais informações repassar à equipe aérea habilitada",
-          "avaliacao": "Transmite localização e condições",
-          "formato": "Comunicação",
-          "tipo": "especifico"
-        },
-        {
-          "id": "bom-10",
-          "nome": "Relatório de salvamento",
-          "como": "Descrever evento, localização, medidas seguras e desfecho",
-          "avaliacao": "Registra fatos sem inventar",
-          "formato": "Relatório",
-          "tipo": "especifico"
-        }
-      ]
+      "exercicios": []
     },
     {
       "id": "PM",
       "nome": "Polícia Militar",
       "home": "policia.html",
-      "requisitos": "Proposta FAAAB: acesso inicial à PM separado de seleções para BOPE, ROTAM, BPChoque e BPP. Candidatos de unidade especial devem ter vínculo PM, patente aceita pela unidade, formação e autorização. Patente e prova de entrada exatas ainda pendentes.",
-      "status": "proposta para aprovação",
-      "ingresso": "Polícia Militar da FAAAB tem quatro unidades catalogadas; currículo de ingresso, carreira e provas específicas precisam de homologação do projeto.",
+      "status": "Parkours disponíveis; exigências específicas pendentes",
+      "requisitos": "A Polícia Militar da FAAAB ainda precisa definir quais circuitos são exigidos para ingresso ou unidades e quais patentes podem participar.",
+      "ingresso": "As provas internas e os exercícios de batalhão serão definidos separadamente.",
       "foco": [
-        "atendimento à população",
-        "direitos e garantias",
-        "mediação de conflitos",
-        "registro de ocorrências"
+        "parkours virtuais",
+        "treinamento prático no mapa",
+        "formação policial a definir"
       ],
-      "exercicios": [
-        {
-          "id": "pol-01",
-          "nome": "Atendimento ao cidadão",
-          "como": "Receber uma solicitação simulada e pedir informações essenciais sem hostilidade",
-          "avaliacao": "Escuta e explica próximo passo",
-          "formato": "Diálogo",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-02",
-          "nome": "Comunicação pelo rádio",
-          "como": "Enviar mensagem com unidade, local e situação sem informações sensíveis desnecessárias",
-          "avaliacao": "Relato objetivo",
-          "formato": "Comunicação",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-03",
-          "nome": "Registro de ocorrência",
-          "como": "Diferenciar fato observado, relato de terceiro e hipótese",
-          "avaliacao": "Não inventa provas",
-          "formato": "Relatório",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-04",
-          "nome": "Direitos e respeito",
-          "como": "Escolher conduta diante de pessoa em situação de vulnerabilidade",
-          "avaliacao": "Preserva dignidade",
-          "formato": "Decisão",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-05",
-          "nome": "Mediação e desescalada",
-          "como": "Resolver discussão fictícia usando comunicação e apoio adequado",
-          "avaliacao": "Evita agravar conflito",
-          "formato": "Roleplay",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-06",
-          "nome": "Organização de patrulha no mapa",
-          "como": "Localizar pontos de referência e serviço de apoio do cenário",
-          "avaliacao": "Navegação e comunicação",
-          "formato": "Mapa",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-07",
-          "nome": "Policiamento comunitário",
-          "como": "Planejar contato com moradores e ouvir problemas da região fictícia",
-          "avaliacao": "Prioriza prevenção e cooperação",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-08",
-          "nome": "Áreas de acesso restrito",
-          "como": "Identificar quando pedir autorização de chefia antes de entrar",
-          "avaliacao": "Respeita competência",
-          "formato": "Decisão",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-09",
-          "nome": "Ocorrência com pessoa ferida",
-          "como": "Priorizar proteção do local e acionamento de socorro habilitado",
-          "avaliacao": "Busca apoio sem improvisos",
-          "formato": "Cenário",
-          "tipo": "especifico"
-        },
-        {
-          "id": "pol-10",
-          "nome": "Relatório de turno",
-          "como": "Resumir fatos, comunicações e pendências",
-          "avaliacao": "Clareza e consistência",
-          "formato": "Relatório",
-          "tipo": "especifico"
-        }
-      ]
+      "exercicios": []
     }
   ],
   "criterios": [
-    "Avaliar entendimento e aplicação; não apenas marcar alternativas",
-    "Oferecer explicação antes de aplicar o exercício",
-    "Permitir correção e nova tentativa com situação diferente",
-    "Manter exercícios e requisitos separados de prova de ingresso",
-    "Atividades reais que exigem habilitação ficam como simulação segura no jogo"
+    "Não confundir exercícios práticos e aulas de Matemática, Português, procedimentos ou teoria",
+    "Somente o instrutor ou regulamento da atividade decide quais circuitos serão cobrados",
+    "Não copiar quantidades da prova de Recruta do Exército para outras forças",
+    "Completar exercício de treino não concede patente, habilitação ou aprovação em seleção"
   ],
-  "referencias": [
-    {
-      "titulo": "Formação militar da FAB, CFSD (2026)",
-      "url": "https://www.sislaer.fab.mil.br/TerminalWebCENDOC/VisualizadorHtml?codigoArquivo=50888&tipoMidia=0"
-    },
-    {
-      "titulo": "CIAMPA e formação de Fuzileiros Navais",
-      "url": "https://www.marinha.mil.br/ciampa/cfsdfn"
-    },
-    {
-      "titulo": "CFAP do CBMERJ",
-      "url": "https://www.cbmerj.rj.gov.br/sobre-o-cbmerj/unidade/unidades-de-ensino/centro-de-formacao-e-aperfeicoamento-de-pracas-cfap/"
-    },
-    {
-      "titulo": "CFAP da PMERJ",
-      "url": "https://sepm.rj.gov.br/unidade/?id=119"
-    },
-    {
-      "titulo": "Matriz Curricular Nacional para segurança pública",
-      "url": "https://bibliotecadigital.mj.gov.br/handle/1/2320"
-    }
-  ]
+  "repertorioPendente": [
+    "Parkour de torres",
+    "Parkour de precisão",
+    "Parkour com plataformas móveis",
+    "Corridas com obstáculos",
+    "Formação e marchas"
+  ],
+  "observacaoRepertorio": "Essas variantes vieram de catálogo antigo marcado como planejamento, não como modalidades obrigatórias aprovadas."
 }
