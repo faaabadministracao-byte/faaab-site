@@ -1,7 +1,7 @@
 {
   "versao": 4,
   "data": "2026-10-29",
-  "nota": "Catálogo FAAAB de exercícios PRÁTICOS no Roblox. Cinco parkours básicos já definidos; 36 conceitos NOVOS e separados por tipo terrestre, aquático ou aéreo, sem misturar modalidades. Exigências de ingresso são definidas somente pelo regulamento de cada prova ou curso. Circuitos novos precisam de construção e scripts no Roblox Studio.",
+  "nota": "Catálogo FAAAB de exercícios PRÁTICOS no Roblox. Cinco parkours básicos já definidos; 36 conceitos NOVOS e separados por tipo terrestre, aquático ou aéreo, sem misturar modalidades. Exigências de ingresso são definidas somente pelo regulamento de cada prova ou curso. Circuitos novos precisam de construção e scripts no Roblox Studio. Complemento da lista histórica de atividades físicas, volvers, corridas e estande virtual do Exército; não transforma repertório em prova ou curso obrigatório.",
   "comuns": [
     {
       "id": "pk-facil",
@@ -153,6 +153,146 @@
           "formato": "Percurso Roblox",
           "como": "Realizar deslocamento em grupo no mapa quando incluído pelo instrutor.",
           "avaliacao": "Sem exigência universal de aprovação ou percurso definido."
+        },
+        {
+          "id": "fis-agachamentos",
+          "nome": "Agachamento virtual",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Ativar animação R6 de agachamento com retorno à posição inicial.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-abdominal",
+          "nome": "Abdominal simulado",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Executar a animação de abdominal do avatar no espaço de exercício.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-prancha",
+          "nome": "Prancha simulada",
+          "tipo": "Preparo físico virtual",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Manter a animação de prancha do avatar durante o período determinado pela atividade.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-corrida-obstaculos",
+          "nome": "Corrida com obstáculos",
+          "tipo": "Corrida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Percorrer a pista correndo, pulando obstáculos e seguindo as setas do chão.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-revezamento",
+          "nome": "Corrida de revezamento",
+          "tipo": "Corrida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Completar um trecho e liberar a passagem para outro integrante da equipe.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-corrida-checkpoint",
+          "nome": "Corrida de checkpoints",
+          "tipo": "Corrida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Alcançar as bandeiras intermediárias na ordem marcada no mapa.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-pulo-direcao",
+          "nome": "Pulos com mudança de direção",
+          "tipo": "Saltos Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Realizar saltos no avatar, alternando as direções indicadas pelas setas.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-pulo-sequencia",
+          "nome": "Pulos em sequência",
+          "tipo": "Saltos Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Avançar por obstáculos usando saltos sucessivos no mesmo percurso.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-passo-marcado",
+          "nome": "Marcar passo",
+          "tipo": "Ordem unida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Executar a animação de marcar passo quando o instrutor der o comando.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-formacao-coluna",
+          "nome": "Formação em coluna",
+          "tipo": "Ordem unida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Organizar os avatares em coluna e seguir o deslocamento indicado.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-sentido-descansar",
+          "nome": "Sentido e descansar",
+          "tipo": "Ordem unida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Alternar entre as posições virtuais segundo as ordens do instrutor.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-frente-volver",
+          "nome": "Frente, volver",
+          "tipo": "Ordem unida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Girar o avatar até a frente apontada pelo instrutor.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-reset-volver",
+          "nome": "Voltar / reset, volver",
+          "tipo": "Ordem unida Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Retornar à orientação inicial no circuito após o comando.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+        },
+        {
+          "id": "fis-stand-virtual",
+          "nome": "Estande virtual de alvos",
+          "tipo": "Minijogo Roblox",
+          "grupo": "Outros exercícios práticos",
+          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
+          "formato": "Atividade de avatar no Roblox",
+          "como": "Acertar os alvos cenográficos do estande respeitando os comandos do minijogo.",
+          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
         }
       ]
     },
