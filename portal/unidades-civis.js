@@ -3,17 +3,19 @@ let list=[],training;
 function get(id){return list.find(x=>x.id===id)}
 function anchor(id){return "#"+encodeURIComponent(id)}
 function detail(u){
- const tests=training.comuns||[];
- const circuits=(u.circuitosSugeridos||[]).map(id=>training.circuitosEspeciais?.find(c=>c.id===id)).filter(Boolean);
+ const basics=training.gerais||[];
+ const specialized=(training.especializados||[]).filter(e=>(e.unidades||[]).includes(u.id));
  return '<article class="area-panel"><span class="area-label">'+esc(u.status)+'</span><h2>'+esc(u.sigla+' — '+u.nome)+'</h2>'+
  '<p>'+esc(u.missao)+'</p>'+
  (u.aviso?'<div class="area-note">'+esc(u.aviso)+'</div>':"")+
  '<h3>Equipes e seções previstas</h3><div class="area-rows">'+u.equipes.map(x=>'<div class="area-row"><h4>'+esc(x[0])+'</h4><p>'+esc(x[1])+'</p></div>').join("")+'</div>'+
  '<h3>Quem pode participar: requisitos propostos</h3><ul class="area-require">'+u.requisitos.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>'+
- '<h3>Funções dentro desta unidade</h3><div>'+u.funcoes.map(x=>'<span class="area-pill">'+esc(x)+'</span>').join("")+'</div>'+
- '<h3>Parkours para praticar</h3><p>'+esc(u.treinoPratico)+'</p><div class="area-rows">'+tests.map(e=>'<div class="area-row"><h4>'+esc(e.nome)+'</h4><p>'+esc(e.como)+'</p></div>').join("")+'</div>'+
- '<h3>Circuitos especiais sugeridos</h3><p>São circuitos independentes do Roblox: cada um é terrestre, aquático ou aéreo. Não há mistura de modalidades nem obrigatoriedade de ingresso definida.</p><div class="area-rows">'+circuits.map(c=>'<a class="area-row" href="exercicios.html#'+force+'"><strong>'+esc(c.nome)+'</strong><p>'+esc(c.etapas.join(" → "))+'</p></a>').join("")+'</div>'+
- '<div class="area-links"><a href="exercicios.html#'+force+'">Todos os exercícios</a><a href="formacao.html#'+force+'">Trilha de formação</a><a href="#inicio">Voltar às unidades</a></div></article>';
+ '<h3>Funções da unidade</h3><div>'+u.funcoes.map(x=>'<span class="area-pill">'+esc(x)+'</span>').join("")+'</div>'+
+ '<h3>Exercícios básicos</h3><p>'+esc(u.treinoPratico)+'</p><div class="area-rows">'+
+ basics.map(e=>'<div class="area-row"><h4>'+esc(e.nome)+'</h4><p>'+esc(e.descricao)+'</p></div>').join("")+'</div>'+
+ (specialized.length?'<h3>Treinamento especializado — acesso restrito</h3><p>Somente quem tem vínculo à função, qualificação e autorização pode participar. Não é exigência geral de todos os membros da unidade.</p>'+
+ '<div class="area-rows">'+specialized.map(e=>'<div class="area-row"><h4>'+esc(e.nome)+'</h4><p>'+esc(e.habilitacao)+'</p></div>').join("")+'</div>':"")+
+ '<div class="area-links"><a href="exercicios.html#'+force+'">Exercícios gerais</a><a href="formacao.html#'+force+'">Formação e especializações</a><a href="#inicio">Voltar às unidades</a></div></article>';
 }
 function render(){
  const slug=decodeURIComponent(location.hash.slice(1)),picked=get(slug);const isPM=force==="PM";
