@@ -1,66 +1,42 @@
 (()=>{"use strict";
 const $=id=>document.getElementById(id),out=$("ex-out");
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const simplify=s=>String(s??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-let data=null,selected="FTB",search="",only="todos";
-function matches(c){
- const q=simplify(search);
- const all=simplify([c.nome,c.ambiente,c.modalidade,...c.etapas,...c.dependencias].join(" "));
- return (only==="todos"||c.modalidade===only)&&(!q||all.includes(q));
-}
-function special(c,index){
- return '<details class="area-exercise area-circuit" id="circuit-'+esc(c.id)+'">'+
- '<summary><span class="area-label">'+esc(({terrestre:"Terrestre",aquatico:"Aquático",aereo:"Aéreo"})[c.modalidade]||"Circuito")+' · '+esc(c.ambiente)+'</span><h3>'+esc(c.nome)+'</h3><span class="area-see">Ver percurso e obstáculos</span></summary>'+
- '<div class="area-circuit-body"><ol class="area-stages">'+c.etapas.map(s=>'<li>'+esc(s)+'</li>').join("")+'</ol>'+
- '<p><strong>O mapa precisa de:</strong> '+esc(c.dependencias.join(", "))+'.</p>'+
- (c.nota?'<p class="area-note">'+esc(c.nota)+'</p>':"")+
- '</div></details>';
-}
-function core(c){
- return '<article class="area-exercise area-core"><span class="area-label">Parkour base</span><h3>'+esc(c.nome)+'</h3><p>'+esc(c.como)+'</p>'+
- '<p><strong>Exemplos de obstáculos:</strong> '+esc((c.modelos||[]).join(", "))+'.</p></article>';
-}
-function other(c){
- return '<article class="area-exercise area-other"><span class="area-label">'+esc(c.tipo)+'</span><h3>'+esc(c.nome)+'</h3><p>'+esc(c.como)+'</p>'+
- '<p><strong>Situação:</strong> '+esc(c.status)+'</p><p><strong>Aplicação:</strong> '+esc(c.avaliacao)+'</p></article>';
-}
-function displayCircuits(){
-const force=data.forcas.find(f=>f.id===selected),all=data.circuitosEspeciais.filter(c=>c.forcas.includes(selected)),filtered=all.filter(matches),section=$("area-special-list"),count=$("area-special-count");
-if(!section||!count)return;
-count.textContent=filtered.length+" circuitos para explorar nesta força.";
-section.innerHTML=filtered.map(c=>special(c,all.indexOf(c)+1)).join("")||'<div class="area-panel"><p>Nenhum circuito corresponde à pesquisa. Apague a busca para ver todos.</p></div>';
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let data=null,selected="FTB";
+function item(ex,force){
+ const appl=force.adaptacao.aplicacoes?.[ex.id]||"Critérios específicos ainda não definidos.";
+ const list=(ex.variantes||[]);
+ return '<article class="area-exercise area-core"><h3>'+esc(ex.nome)+'</h3>'+
+ '<p>'+esc(ex.descricao)+'</p>'+
+ (list.length?'<div class="area-rows">'+list.map(v=>'<div class="area-row"><strong>'+esc(v.nome)+'</strong>'+
+ (v.descricao?'<p>'+esc(v.descricao)+'</p>':"")+'</div>').join("")+'</div>':"")+
+ '<div class="area-use"><strong>Como pode ser usado nesta força:</strong> '+esc(appl)+'</div>'+
+ (ex.situacao==="Repertório em planejamento"?'<p class="edu3-muted">Possibilidade de treinamento, ainda não obrigatória.</p>':"")+
+ '</article>';
 }
 function render(){
 if(!data)return;
-let h=decodeURIComponent(location.hash.slice(1)),f=data.forcas.find(x=>x.id===h);
-if(f)selected=f.id;
-const force=data.forcas.find(x=>x.id===selected),otherExercises=force.exercicios||[];
-out.innerHTML='<header class="area-head"><span class="area-label">Percursos e obstáculos do Roblox</span><h1>Desafios do Roblox</h1>'+
-'<p>Parkours, flexões e obstáculos do jogo: esteiras, pontes que somem, torres, canais de natação e provas de pilotagem virtual. Cada circuito é somente terrestre, aquático ou aéreo.</p></header>'+
-'<nav class="area-tabs" aria-label="Escolher força">'+data.forcas.map(x=>'<button type="button" data-force="'+esc(x.id)+'" aria-pressed="'+String(x.id===selected)+'">'+esc(x.nome)+'</button>').join("")+'</nav>'+
-'<section class="area-panel"><span class="area-label">'+esc(force.nome)+'</span><h2>Obstáculos e treinamento desta força</h2><p>'+esc(force.requisitos)+'</p>'+
-'<p class="area-note"><strong>Importante:</strong> os cinco parkours básicos já foram definidos. Os circuitos adicionais são propostas de obstáculos Roblox e precisam de construção e scripts; não são provas obrigatórias.</p></section>'+
-'<section class="area-block" id="parkours"><h2>Os cinco parkours principais</h2><div class="area-exercises">'+data.comuns.map(core).join("")+'</div></section>'+
-'<section class="area-block" id="especiais"><h2>Circuitos especiais</h2>'+
-'<p class="edu3-muted">Obbies e desafios separados por modalidade: solo, água ou ar. Abra o circuito para ver os obstáculos, comandos e mecânicas que o avatar precisa executar.</p>'+
-'<div class="area-explore"><label for="area-search">Procurar obstáculo</label><input id="area-search" type="search" placeholder="Ex.: esteira, boia, pêndulo, drone..." autocomplete="off" value="'+esc(search)+'">'+
-'<div class="area-quick" aria-label="Buscar circuitos por ambiente">'+
-[['todos','Todos'],['terrestre','Terrestres'],['aquatico','Aquáticos'],['aereo','Aéreos']].map(([id,label])=>'<button type="button" data-quick="'+id+'" aria-pressed="'+String(only===id)+'">'+label+'</button>').join("")+'</div></div>'+
-'<p id="area-special-count" class="edu3-muted"></p><div id="area-special-list" class="area-exercises"></div></section>'+
-(otherExercises.length?'<section class="area-block" id="outros"><h2>Outros exercícios práticos do Exército</h2>'+
-'<p class="edu3-muted">Flexões, polichinelos, pulos, corridas e comandos já registrados para o Exército. Quantidades da prova de Recruta não são exigidas automaticamente nos outros cursos.</p>'+
-'<div class="area-exercises">'+otherExercises.map(other).join("")+'</div></section>':"")+
-'<nav class="area-links"><a href="estudos.html#provas">Provas</a><a href="formacao.html#'+selected+'">Formação</a><a href="index.html">Voltar ao portal</a></nav>';
-out.querySelectorAll("[data-force]").forEach(btn=>btn.addEventListener("click",()=>{selected=btn.dataset.force;search="";only="todos";location.hash=selected;render()}));
-$("area-search").addEventListener("input",e=>{search=e.target.value;displayCircuits()});
-out.querySelectorAll("[data-quick]").forEach(btn=>btn.addEventListener("click",()=>{
-only=btn.dataset.quick;out.querySelectorAll("[data-quick]").forEach(x=>x.setAttribute("aria-pressed",String(x===btn)));displayCircuits()
+const hash=decodeURIComponent((location.hash||"").slice(1));
+if(data.forcas.some(f=>f.id===hash))selected=hash;
+const force=data.forcas.find(f=>f.id===selected);
+out.innerHTML='<header class="area-head"><span class="area-label">Treino básico do Roblox</span><h1>Exercícios gerais</h1>'+
+ '<p>O exercício é o mesmo tipo para todas as forças. O que muda é a quantidade, a dificuldade, o mapa e o regulamento de cada treinamento.</p></header>'+
+ '<nav class="area-tabs" aria-label="Força responsável pelo treinamento">'+data.forcas.map(f=>'<button type="button" data-force="'+esc(f.id)+'" aria-pressed="'+String(f.id===selected)+'">'+esc(f.nome)+'</button>').join("")+'</nav>'+
+ '<section class="area-panel"><h2>'+esc(force.nome)+'</h2><p>'+esc(force.adaptacao.texto)+'</p>'+
+ '<p><strong>Cenário básico:</strong> '+esc(force.adaptacao.ambiente)+'</p>'+
+ '<div class="area-note">Os exemplos abaixo mostram como organizar os treinos desta força. Só os números da seleção de Recruta do Exército já estão registrados como exigência específica; os demais são propostas, sem aprovação automática.</div></section>'+
+ '<section class="area-block"><h2>Tipos de exercício</h2><p class="edu3-muted">O parkour é um único exercício com cinco níveis. Flexões e polichinelos também são exercícios gerais, não exclusivos do Exército.</p>'+
+ '<div class="area-exercises">'+data.gerais.map(ex=>item(ex,force)).join("")+'</div></section>'+
+ '<section class="area-panel"><h2>E os treinamentos avançados?</h2><p>Pilotagem de avião, helicóptero, blindado e embarcação não entra nesta lista. Exige vínculo à área responsável, formação/habilitação e autorização dentro do jogo. A patente sozinha não libera esse treinamento.</p>'+
+ '<div class="area-links"><a href="formacao.html#'+selected+'">Ver formação e especialidades</a><a href="estudos.html#provas">Provas de ingresso</a></div></section>';
+out.querySelectorAll("[data-force]").forEach(btn=>btn.addEventListener("click",()=>{
+ const next=btn.dataset.force;if(next===selected)return;selected=next;location.hash=next;render();
 }));
-displayCircuits();
 }
 window.addEventListener("hashchange",render);
 fetch("dados/exercicios-formacao.json",{cache:"no-cache"}).then(r=>{
-if(!r.ok)throw Error("catálogo não disponível");return r.json()
-}).then(j=>{data=j;render()})
-.catch(e=>{out.innerHTML='<div class="area-note">Não foi possível carregar os circuitos. '+esc(e.message)+'</div><a href="index.html">Voltar ao portal</a>'});
+ if(!r.ok)throw Error("dados não disponíveis");return r.json()
+}).then(d=>{
+ if(!Array.isArray(d.gerais)||!Array.isArray(d.forcas))throw Error("catálogo incompleto");
+ data=d;render();
+}).catch(e=>{out.innerHTML='<div class="area-note">Não foi possível abrir os exercícios gerais: '+esc(e.message)+'</div><a href="index.html">Voltar ao portal</a>'});
 })();
