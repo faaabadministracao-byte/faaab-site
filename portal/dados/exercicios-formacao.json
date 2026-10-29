@@ -1,7 +1,7 @@
 {
-  "versao": 3,
+  "versao": 4,
   "data": "2026-10-29",
-  "nota": "Os cinco níveis básicos de parkour foram pedidos pelo usuário. Os 36 circuitos especiais são novas propostas de gameplay para o Roblox: precisam de mapa, scripts, veículos e testes. Não são provas obrigatórias nem experiências já construídas.",
+  "nota": "Catálogo FAAAB de exercícios PRÁTICOS no Roblox. Cinco parkours básicos já definidos; 36 conceitos NOVOS e separados por tipo terrestre, aquático ou aéreo, sem misturar modalidades. Exigências de ingresso são definidas somente pelo regulamento de cada prova ou curso. Circuitos novos precisam de construção e scripts no Roblox Studio.",
   "comuns": [
     {
       "id": "pk-facil",
@@ -214,57 +214,28 @@
     }
   ],
   "criterios": [
-    "Exercício é obstáculo, movimento ou circuito executado pelo avatar no Roblox — não pergunta teórica.",
-    "Não há botão Já pratiquei, contagem de progresso ou aprovação local.",
-    "Os cinco parkours básicos permanecem; circuitos especiais são ideias de mapas a implementar.",
-    "Aeronaves são conduzidas por quem tem habilitação no jogo; personagens podem participar como passageiros.",
-    "Requisitos de provas confirmadas continuam na seção Provas e não são copiados automaticamente para outras forças."
+    "Cada circuito especial é apenas terrestre, ou aquático, ou aéreo. Nunca combinar modalidades no mesmo circuito.",
+    "Flexões, polichinelos, saltos, corridas, volvers e marcha são exercícios práticos separados de aulas teóricas.",
+    "Os níveis de parkour fácil, médio, difícil, grande e grande difícil continuam cadastrados.",
+    "Não criar checkboxes, Ja pratiquei, metas pessoais nem contadores de progresso.",
+    "Não converter circuitos propostos em provas obrigatórias; as regras de cada força e patente dependem de aprovação.",
+    "Cada exercício deve especificar obstáculos e mecânicas reais do Roblox ou indicar o script que ainda falta."
   ],
   "repertorioPendente": [
-    "Parkour de torres",
+    "Parkour de velocidade",
+    "Parkour cooperativo",
     "Parkour de precisão",
-    "Parkour com plataformas móveis",
-    "Corridas com obstáculos",
-    "Formação e marchas"
+    "Parkour noturno",
+    "Parkour de escadas",
+    "Marchas e volvers adicionais"
   ],
-  "observacaoRepertorio": "Essas variantes vieram de catálogo antigo marcado como planejamento, não como modalidades obrigatórias aprovadas.",
+  "observacaoRepertorio": "Repertório histórico de planejamento com 124 atividades. Itens confirmados e exemplos de planejamento não são a mesma coisa.",
   "circuitosEspeciais": [
     {
-      "id": "mix-01",
-      "nome": "Mergulho e decolagem",
-      "etapas": [
-        "Subir a plataforma de salto acima da água.",
-        "Saltar na água e nadar até a boia iluminada.",
-        "Subir na plataforma flutuante e alcançar o heliporto.",
-        "Embarcar como passageiro no helicóptero autorizado.",
-        "Sobrevoar três arcos e desembarcar na ilha de chegada."
-      ],
-      "forcas": [
-        "FAB",
-        "FMB",
-        "CBM"
-      ],
-      "ambiente": "Água + voo",
-      "dependencias": [
-        "Plataforma de salto",
-        "água navegável",
-        "boias e plataformas flutuantes",
-        "helicóptero pilotado por jogador habilitado",
-        "arcos aéreos"
-      ],
-      "nota": "O passageiro não precisa pilotar. O voo depende de aeronave e piloto disponíveis.",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-02",
-      "nome": "Salto, nado e asa-delta",
-      "etapas": [
-        "Concluir a torre de plataformas pequenas.",
-        "Saltar no lago e cruzar entre marcadores flutuantes.",
-        "Subir a parede de escalada da margem.",
-        "Acionar o asa-delta virtual no topo.",
-        "Planar por arcos até o deque final."
-      ],
+      "id": "ter-01",
+      "nome": "Ponte Fantasma",
+      "modalidade": "terrestre",
+      "ambiente": "Obby de plataformas que desaparecem",
       "forcas": [
         "FTB",
         "FAB",
@@ -272,50 +243,25 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Água + voo",
-      "dependencias": [
-        "Mecânica de nado",
-        "escalada",
-        "asa-delta virtual a implementar",
-        "arcos e zona de pouso"
+      "etapas": [
+        "O avatar entra numa ponte de blocos suspensos.",
+        "A primeira placa apaga quando o jogador pisa nela.",
+        "O próximo bloco aparece por alguns segundos.",
+        "O jogador segue a sequência luminosa até o último checkpoint."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Placas com colisão temporizada",
+        "luzes indicadoras",
+        "checkpoints"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-03",
-      "nome": "Paraquedas até o rio",
-      "etapas": [
-        "Embarcar em avião com piloto autorizado.",
-        "Voar até o marcador acima do rio.",
-        "Saltar com paraquedas virtual em local do mapa planejado.",
-        "Cair na água e nadar até a margem.",
-        "Escalar a plataforma final e tocar o checkpoint."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB"
-      ],
-      "ambiente": "Ar + água",
-      "dependencias": [
-        "Avião com piloto habilitado",
-        "paraquedas virtual",
-        "água nadável",
-        "checkpoint de chegada"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-04",
-      "nome": "Ilha dos três caminhos",
-      "etapas": [
-        "Cruzar três plataformas móveis sobre um canal.",
-        "Escolher entre ponte, nado ou tirolesa virtual.",
-        "Retornar ao mesmo ponto por caminho diferente.",
-        "Escalar a torre da ilha e alcançar a bandeira."
-      ],
+      "id": "ter-02",
+      "nome": "Muralha de Alturas",
+      "modalidade": "terrestre",
+      "ambiente": "Escalada e saltos",
       "forcas": [
         "FTB",
         "FAB",
@@ -323,554 +269,74 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Água + obstáculos",
-      "dependencias": [
-        "Plataformas móveis",
-        "canal",
-        "tirolesa simulada",
-        "torre e bandeira"
+      "etapas": [
+        "Subir uma parede baixa por um degrau.",
+        "Alcançar o segundo muro saltando sobre caixotes.",
+        "Escalar a escada lateral do terceiro muro.",
+        "Passar sobre a última barreira e descer pela rampa."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Muros de alturas progressivas",
+        "caixas",
+        "escada e rampas"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-05",
-      "nome": "Heliponto no topo",
-      "etapas": [
-        "Subir escadas e apoios alternados de um prédio.",
-        "Cruzar uma ponte suspensa com peças que oscilam.",
-        "Alcançar o heliponto da cobertura.",
-        "Embarcar em helicóptero autorizado.",
-        "Pousar no outro prédio e completar dois saltos finais."
-      ],
+      "id": "ter-03",
+      "nome": "Pista de Flexões e Saltos",
+      "modalidade": "terrestre",
+      "ambiente": "Exercício e obstáculo Roblox",
       "forcas": [
         "FTB",
-        "FAB",
-        "CBM",
-        "PM"
-      ],
-      "ambiente": "Altura + voo",
-      "dependencias": [
-        "Torres",
-        "ponte móvel",
-        "dois helipontos",
-        "helicóptero pilotável"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-06",
-      "nome": "Resgate da plataforma alagada",
-      "etapas": [
-        "Cruzar passarelas até a estação inundada.",
-        "Nadar por um corredor de água até a área segura.",
-        "Localizar o personagem fictício de treino.",
-        "Acionar a plataforma de elevação e levá-lo ao ponto de espera.",
-        "Embarcar na aeronave de resgate como equipe de apoio."
-      ],
-      "forcas": [
-        "CBM",
-        "FAB",
-        "FMB"
-      ],
-      "ambiente": "Água + resgate",
-      "dependencias": [
-        "Área inundável",
-        "boneco/NPC de resgate",
-        "plataforma de elevação",
-        "veículo aéreo de resgate"
-      ],
-      "nota": "Sem atendimento real: é um minijogo de localização e transporte.",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-07",
-      "nome": "Travessia do navio em movimento",
-      "etapas": [
-        "Saltar do cais para uma passarela oscilante.",
-        "Alcançar o convés de um navio em movimento lento.",
-        "Desviar de caixas e saltar entre duas áreas do convés.",
-        "Descer a rampa e entrar em lancha virtual.",
-        "Chegar ao píer final sem cair fora do circuito."
-      ],
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "ambiente": "Porto + água",
-      "dependencias": [
-        "Navio animado",
-        "passarela",
-        "obstáculos",
-        "lancha",
-        "cais"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-08",
-      "nome": "Tirolesa sobre o lago",
-      "etapas": [
-        "Subir uma torre de madeira.",
-        "Passar por três plataformas sem guarda-corpo no jogo.",
-        "Prender o avatar a uma tirolesa virtual.",
-        "Deslizar acima do lago até uma boia de chegada.",
-        "Nadar os últimos metros até o checkpoint."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "ambiente": "Altura + água",
-      "dependencias": [
-        "Torre",
-        "tirolesa",
-        "lago",
-        "checkpoint"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-09",
-      "nome": "Chuva e ponte desmoronando",
-      "etapas": [
-        "Iniciar a corrida enquanto começa chuva virtual.",
-        "Cruzar plataformas que caem após cada pisada.",
-        "Subir uma rampa escorregadia.",
-        "Pular para a plataforma central antes da ponte sumir.",
-        "Alcançar a área coberta final."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "ambiente": "Chuva + plataformas",
-      "dependencias": [
-        "Clima com chuva",
-        "plataformas temporizadas",
-        "rampa com efeito de atrito"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-10",
-      "nome": "Ciclone de vento",
-      "etapas": [
-        "Saltar por plataformas do campo aberto.",
-        "Observar o indicador de vento virtual.",
-        "Atravessar uma ponte que empurra o avatar lateralmente.",
-        "Esperar a rajada diminuir antes do salto longo.",
-        "Chegar ao abrigo final."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "ambiente": "Vento + obstáculos",
-      "dependencias": [
-        "Sistema de vento do mapa",
-        "ponte estreita",
-        "indicador de rajadas"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-11",
-      "nome": "Pêndulos do hangar",
-      "etapas": [
-        "Correr por um corredor de caixas e plataformas.",
-        "Atravessar três pêndulos que se movem em ritmos diferentes.",
-        "Escalar um avião estático cenográfico pelas estruturas permitidas.",
-        "Pular entre passarelas no alto do hangar.",
-        "Descer pelo escorregador final."
-      ],
-      "forcas": [
-        "FAB",
-        "FTB",
-        "PM"
-      ],
-      "ambiente": "Hangar + altura",
-      "dependencias": [
-        "Hangar",
-        "pêndulos",
-        "aeronave cenográfica",
-        "escorregador"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-12",
-      "nome": "Pista, rampa e planador",
-      "etapas": [
-        "Correr pela pista de obstáculos no solo.",
-        "Subir uma rampa inclinada até o ponto de lançamento.",
-        "Acionar um planador virtual.",
-        "Passar por argolas aéreas sem tocar os marcadores proibidos.",
-        "Pousar no círculo indicado do mapa."
-      ],
-      "forcas": [
-        "FAB",
-        "FTB",
-        "CBM"
-      ],
-      "ambiente": "Solo + voo",
-      "dependencias": [
-        "Pista de obstáculos",
-        "rampa",
-        "planador virtual",
-        "argolas e zona de pouso"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-13",
-      "nome": "Torre dos lasers virtuais",
-      "etapas": [
-        "Entrar no galpão com obstáculos luminosos do jogo.",
-        "Saltar sobre feixes baixos sem tocar os sensores.",
-        "Passar entre paredes que deslizam.",
-        "Subir a torre de blocos móveis.",
-        "Tocar o interruptor que libera a saída."
-      ],
-      "forcas": [
         "PM",
-        "FTB",
-        "FAB"
-      ],
-      "ambiente": "Interior + obstáculos",
-      "dependencias": [
-        "Sensores de colisão",
-        "paredes móveis",
-        "torre",
-        "portão acionável"
-      ],
-      "nota": "Sensores e lasers são efeitos cenográficos do minijogo.",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-14",
-      "nome": "Labirinto que inunda",
-      "etapas": [
-        "Entrar no labirinto com duas rotas de saída.",
-        "Localizar o primeiro checkpoint antes de o nível da água subir.",
-        "Nadar pelo corredor inundado.",
-        "Usar plataformas altas para escapar da área alagada.",
-        "Encontrar a saída antes do próximo ciclo de água."
-      ],
-      "forcas": [
-        "CBM",
-        "FMB",
-        "PM"
-      ],
-      "ambiente": "Labirinto + água",
-      "dependencias": [
-        "Labirinto",
-        "subida controlada de água virtual",
-        "checkpoints",
-        "plataformas"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-15",
-      "nome": "Cachoeira das plataformas",
-      "etapas": [
-        "Descer por pedras suspensas junto à cachoeira.",
-        "Saltar numa corrente de água cenográfica.",
-        "Nadar até a primeira caverna.",
-        "Escalar uma parede de pedras pequenas.",
-        "Atravessar o último vão com uma corda suspensa."
-      ],
-      "forcas": [
-        "FTB",
-        "FMB",
-        "CBM"
-      ],
-      "ambiente": "Cachoeira + caverna",
-      "dependencias": [
-        "Cachoeira",
-        "pedras",
-        "caverna",
-        "corda/tirolesa"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-16",
-      "nome": "Rota de containers",
-      "etapas": [
-        "Correr entre fileiras de containers.",
-        "Subir uma empilhadeira cenográfica até a primeira pilha.",
-        "Saltar entre containers de alturas diferentes.",
-        "Atravessar ponte de guindaste.",
-        "Descer a escada de serviço até o cais."
-      ],
-      "forcas": [
-        "FMB",
-        "PM",
-        "FTB",
-        "CBM"
-      ],
-      "ambiente": "Porto + altura",
-      "dependencias": [
-        "Containers",
-        "empilhadeira de cenário",
-        "guindaste",
-        "escadas"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-17",
-      "nome": "Corrida de barcos e plataformas",
-      "etapas": [
-        "Cruzar um deck flutuante.",
-        "Saltar para barcos parados em sequência.",
-        "Esperar o barco que se move devagar aproximar do próximo.",
-        "Pular dele para a ponte curta.",
-        "Subir o farol e tocar o ponto final."
-      ],
-      "forcas": [
-        "FMB",
         "CBM",
         "FAB"
       ],
-      "ambiente": "Água + plataformas móveis",
-      "dependencias": [
-        "Boias",
-        "barcos estáticos",
-        "barco em trilho",
-        "farol"
+      "etapas": [
+        "Acionar o ponto de flexões no chão e executar a animação solicitada.",
+        "Saltar três barreiras em sequência.",
+        "Percorrer uma escada curta de agilidade.",
+        "Voltar à linha de partida e tocar o botão final."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Animação R6 de flexão",
+        "barreiras",
+        "pontos de interação"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "A quantidade de flexões varia conforme a prova ou treino; este circuito não cria nota ou requisito universal."
     },
     {
-      "id": "mix-18",
-      "nome": "Voo por entre os anéis",
-      "etapas": [
-        "Escalar a torre de lançamento.",
-        "Ativar jetpack virtual limitado ou planador do minijogo.",
-        "Voar por cinco anéis em posições diferentes.",
-        "Pousar numa ilha intermediária.",
-        "Concluir dois saltos de plataforma até o fim."
-      ],
-      "forcas": [
-        "FAB",
-        "FTB"
-      ],
-      "ambiente": "Voo + precisão",
-      "dependencias": [
-        "Jetpack/planador virtual a implementar",
-        "arcos",
-        "ilha de pouso"
-      ],
-      "nota": "Equipamento de voo seria uma mecânica fictícia, não item já construído.",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-19",
-      "nome": "Túnel e elevador secreto",
-      "etapas": [
-        "Entrar num túnel por uma rampa estreita.",
-        "Encontrar interruptor que abre o caminho correto.",
-        "Cruzar piso de peças que somem.",
-        "Acessar elevador vertical em movimento.",
-        "Saltar para a torre de saída quando atingir o topo."
-      ],
+      "id": "ter-04",
+      "nome": "Túnel Rastejante",
+      "modalidade": "terrestre",
+      "ambiente": "Rastejar e agachar",
       "forcas": [
         "FTB",
         "PM",
         "CBM"
       ],
-      "ambiente": "Subterrâneo + altura",
-      "dependencias": [
-        "Túnel",
-        "botões",
-        "plataformas que somem",
-        "elevador"
+      "etapas": [
+        "Abaixar o avatar usando a animação de agachar.",
+        "Passar por três corredores de teto baixo.",
+        "Rastejar pela galeria com pisos elevados.",
+        "Sair, levantar e correr ao checkpoint."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Animação R6 de agachar e rastejar",
+        "túneis",
+        "sensor de postura"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Depende de animações e hitbox de agachar ou rastejar."
     },
     {
-      "id": "mix-20",
-      "nome": "Salto do farol",
-      "etapas": [
-        "Subir a escadaria do farol.",
-        "Passar por uma passarela externa em espiral.",
-        "Saltar do deque alto na água do jogo.",
-        "Nadar até o bote virtual.",
-        "Cruzar a baía e saltar no píer de chegada."
-      ],
-      "forcas": [
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "ambiente": "Altura + água",
-      "dependencias": [
-        "Farol",
-        "água navegável",
-        "bote ou barco",
-        "píer"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-21",
-      "nome": "Corrida anfíbia",
-      "etapas": [
-        "Correr por um trecho de areia com barreiras.",
-        "Entrar na água e atravessar três marcadores.",
-        "Subir na rocha usando pequenas plataformas.",
-        "Cruzar uma ponte de corda virtual.",
-        "Retornar correndo até a bandeira final."
-      ],
-      "forcas": [
-        "FTB",
-        "FMB",
-        "CBM"
-      ],
-      "ambiente": "Areia + água",
-      "dependencias": [
-        "Praia",
-        "marcadores aquáticos",
-        "pedras",
-        "ponte de corda"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-22",
-      "nome": "Resgate da ilha isolada",
-      "etapas": [
-        "Completar parkour médio na margem.",
-        "Embarcar numa lancha autorizada.",
-        "Alcançar a ilha fictícia e localizar o sinalizador.",
-        "Levar o objeto de missão à área de embarque.",
-        "Retornar por uma ponte que surge após ativação."
-      ],
-      "forcas": [
-        "CBM",
-        "FMB",
-        "PM"
-      ],
-      "ambiente": "Terra + navegação",
-      "dependencias": [
-        "Parkour na margem",
-        "lancha",
-        "objeto interativo",
-        "ponte ativável"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-23",
-      "nome": "Montanha de gelo",
-      "etapas": [
-        "Subir plataformas de neve em zigue-zague.",
-        "Atravessar uma ponte gelada com baixa aderência no jogo.",
-        "Pular sobre três blocos que deslizam.",
-        "Acionar elevador preso à montanha.",
-        "Chegar ao cume pelo último obstáculo."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "CBM"
-      ],
-      "ambiente": "Montanha + gelo",
-      "dependencias": [
-        "Plataformas nevadas",
-        "efeito de gelo",
-        "elevador vertical"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-24",
-      "nome": "Deserto das pontes móveis",
-      "etapas": [
-        "Correr entre dunas virtuais.",
-        "Subir uma plataforma que se move como elevador.",
-        "Cruzar ponte de areia que desaparece por partes.",
-        "Saltar entre duas rochas suspensas.",
-        "Atravessar a linha de chegada sob tempestade de areia cenográfica."
-      ],
-      "forcas": [
-        "FTB",
-        "FAB",
-        "PM"
-      ],
-      "ambiente": "Deserto + vento",
-      "dependencias": [
-        "Dunas",
-        "elevador",
-        "ponte temporizada",
-        "clima de areia"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-25",
-      "nome": "Pantanal de troncos",
-      "etapas": [
-        "Pular entre troncos flutuantes num lago raso virtual.",
-        "Usar passarela de tábuas que balança.",
-        "Escalar raízes de árvore com pequenos apoios.",
-        "Atravessar nado curto entre duas ilhas.",
-        "Completar a rota na torre de observação."
-      ],
-      "forcas": [
-        "FTB",
-        "FMB",
-        "CBM"
-      ],
-      "ambiente": "Pântano + água",
-      "dependencias": [
-        "Troncos flutuantes",
-        "passarela",
-        "árvore escalável",
-        "água"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-26",
-      "nome": "Labirinto das portas que fecham",
-      "etapas": [
-        "Entrar em um corredor com três portas de tempo limitado.",
-        "Acionar o botão que abre a primeira passagem.",
-        "Subir rapidamente plataformas até a porta seguinte.",
-        "Desviar de paredes móveis.",
-        "Sair pelo portão final antes de reiniciar."
-      ],
+      "id": "ter-05",
+      "nome": "Trilhos Vivos",
+      "modalidade": "terrestre",
+      "ambiente": "Traves móveis",
       "forcas": [
         "FTB",
         "FAB",
@@ -878,26 +344,52 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Interior + tempo",
+      "etapas": [
+        "Avançar até duas traves que correm lateralmente.",
+        "Saltar na primeira trave quando ela se aproxima.",
+        "Passar para a segunda sem cair.",
+        "Cruzar a plataforma fixa até a bandeira."
+      ],
+      "dependencias": [
+        "Duas plataformas em trilhos",
+        "sensores de queda",
+        "bandeira de chegada"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-06",
+      "nome": "Relógio das Portas",
+      "modalidade": "terrestre",
+      "ambiente": "Portas com contagem regressiva",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Apertar o botão que inicia a rodada.",
+        "Correr até a primeira porta antes de fechar.",
+        "Saltar sobre um bloco para alcançar o segundo botão.",
+        "Passar pela última porta e alcançar o piso final."
+      ],
       "dependencias": [
         "Portas temporizadas",
         "botões",
-        "paredes móveis",
-        "checkpoints"
+        "contagem visual",
+        "piso de chegada"
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-27",
-      "nome": "Parkour com percurso aleatório",
-      "etapas": [
-        "Começar numa plataforma de entrada.",
-        "Observar quais plataformas aparecem na rodada.",
-        "Escolher a rota entre três alternativas aleatórias.",
-        "Atravessar pontes que mudam entre tentativas.",
-        "Chegar ao portal de saída."
-      ],
+      "id": "ter-07",
+      "nome": "Esteira Contra o Jogador",
+      "modalidade": "terrestre",
+      "ambiente": "Esteiras e deslocamento",
       "forcas": [
         "FTB",
         "FAB",
@@ -905,25 +397,25 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Plataformas + sorteio",
-      "dependencias": [
-        "Gerador de rotas",
-        "plataformas alternáveis",
-        "portal de saída"
+      "etapas": [
+        "Entrar na esteira que empurra o avatar para trás.",
+        "Desviar de blocos que chegam em direção contrária.",
+        "Usar uma esteira lateral para mudar de trilha.",
+        "Chegar ao círculo de saída sem encostar nos obstáculos."
       ],
-      "nota": "O mapa muda por rodada; não precisa confundir com uma prova oficial.",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Esteiras com velocidade controlada",
+        "obstáculos móveis",
+        "marcadores"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-28",
-      "nome": "Revezamento de três equipes",
-      "etapas": [
-        "Primeiro jogador completa o parkour fácil.",
-        "Aciona botão para liberar corredor de água.",
-        "Segundo jogador nada até a plataforma oposta.",
-        "Terceiro jogador usa tirolesa virtual para trazer a bandeira.",
-        "Equipe conclui reunindo todos no ponto final."
-      ],
+      "id": "ter-08",
+      "nome": "Torres Gêmeas",
+      "modalidade": "terrestre",
+      "ambiente": "Subida e travessia",
       "forcas": [
         "FTB",
         "FAB",
@@ -931,53 +423,234 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Equipe + misto",
+      "etapas": [
+        "Subir a primeira torre por plataformas diagonais.",
+        "Alcançar a ponte suspensa entre as duas torres.",
+        "Atravessar os apoios que mudam de posição.",
+        "Descer a segunda torre pulando em plataformas sucessivas."
+      ],
       "dependencias": [
-        "Parkour fácil",
+        "Duas torres",
+        "ponte móvel",
+        "plataformas de descida"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-09",
+      "nome": "Labirinto de Piso Falso",
+      "modalidade": "terrestre",
+      "ambiente": "Escolha de caminho",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Entrar na sala com três corredores idênticos.",
+        "Testar o primeiro piso marcado com luzes.",
+        "Encontrar o caminho sem placas falsas.",
+        "Acionar o interruptor que libera a saída."
+      ],
+      "dependencias": [
+        "Pisos falsos",
+        "indicação visual de resposta",
+        "interruptor e portão"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-10",
+      "nome": "Pêndulos do Depósito",
+      "modalidade": "terrestre",
+      "ambiente": "Tempo de salto",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Entrar no corredor de pêndulos giratórios.",
+        "Aguardar a primeira abertura para avançar.",
+        "Passar por três pêndulos com ritmos diferentes.",
+        "Chegar à plataforma elevada sem tocar os objetos."
+      ],
+      "dependencias": [
+        "Pêndulos com colisão",
+        "cronômetros opcionais",
+        "checkpoint"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-11",
+      "nome": "Zigue-Zague de Barreiras",
+      "modalidade": "terrestre",
+      "ambiente": "Corrida curta e mudanças de direção",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Correr entre barreiras alternadas.",
+        "Fazer curvas fechadas nas marcações do chão.",
+        "Pular as duas barreiras finais.",
+        "Encerrar o percurso no sensor de chegada."
+      ],
+      "dependencias": [
+        "Barreiras",
+        "marcações de piso",
+        "sensor final"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-12",
+      "nome": "Escadaria em Movimento",
+      "modalidade": "terrestre",
+      "ambiente": "Escadas mecânicas",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Subir três degraus móveis que mudam de altura.",
+        "Esperar uma plataforma alinhar com a escada maior.",
+        "Alcançar a passarela superior.",
+        "Descer pela sequência de degraus móveis até o checkpoint."
+      ],
+      "dependencias": [
+        "Degraus animados",
+        "plataforma de alinhamento",
+        "passarela"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-13",
+      "nome": "Corrida dos Botões",
+      "modalidade": "terrestre",
+      "ambiente": "Obby com interruptores",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Pular até o primeiro botão no alto de uma caixa.",
+        "Ativar a ponte que aparece à frente.",
+        "Correr e pressionar o segundo botão antes da ponte sumir.",
+        "Atravessar o último corredor até a saída."
+      ],
+      "dependencias": [
+        "Botões de pressão",
+        "ponte temporizada",
+        "sinalização"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-14",
+      "nome": "Plataformas de Cor",
+      "modalidade": "terrestre",
+      "ambiente": "Memória visual e salto",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Observar a sequência de três cores exibida numa tela.",
+        "Saltar nas plataformas da mesma ordem.",
+        "Aguardar a próxima sequência, com quatro cores.",
+        "Completar o último trecho até a bandeira."
+      ],
+      "dependencias": [
+        "Painel com sequência",
+        "plataformas coloridas",
+        "checagem de ordem"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "A sequência muda a cada rodada; não depende de adivinhar."
+    },
+    {
+      "id": "ter-15",
+      "nome": "Fenda do Elevador",
+      "modalidade": "terrestre",
+      "ambiente": "Elevador vertical",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "Entrar no elevador aberto do galpão.",
+        "Saltar para uma plataforma lateral durante a parada.",
+        "Acionar um segundo elevador de altura diferente.",
+        "Sair na cobertura e completar dois saltos finais."
+      ],
+      "dependencias": [
+        "Elevadores com paradas",
+        "plataformas laterais",
+        "marcadores"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "ter-16",
+      "nome": "Revezamento da Bandeira",
+      "modalidade": "terrestre",
+      "ambiente": "Obby cooperativo",
+      "forcas": [
+        "FTB",
+        "FAB",
+        "FMB",
+        "CBM",
+        "PM"
+      ],
+      "etapas": [
+        "O primeiro integrante completa um circuito fácil até o botão.",
+        "O botão abre uma porta para o segundo integrante.",
+        "O segundo percorre a ponte móvel.",
+        "O terceiro leva a bandeira virtual até a área de chegada."
+      ],
+      "dependencias": [
+        "Sistema de equipes",
         "botões",
-        "nado",
-        "tirolesa",
-        "bandeira"
+        "porta remota",
+        "bandeira virtual"
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-29",
-      "nome": "Escada, bote e helicóptero",
-      "etapas": [
-        "Subir o guindaste do porto por plataformas.",
-        "Descer por cabo virtual até o bote.",
-        "Atravessar o canal com a embarcação.",
-        "Entrar no heliponto da outra margem.",
-        "Embarcar como passageiro e sobrevoar o marcador final."
-      ],
-      "forcas": [
-        "FMB",
-        "CBM",
-        "FAB"
-      ],
-      "ambiente": "Porto + voo",
-      "dependencias": [
-        "Guindaste",
-        "cabo virtual",
-        "bote",
-        "helicóptero",
-        "helipontos"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-30",
-      "nome": "Circuito sem chão",
-      "etapas": [
-        "Subir uma torre de plataformas pequenas.",
-        "Saltar entre três plataformas suspensas.",
-        "Usar tirolesa até outra estrutura.",
-        "Seguir por um piso transparente de trechos seguros.",
-        "Chegar ao elevador de saída sem tocar o chão do mapa."
-      ],
+      "id": "ter-17",
+      "nome": "Queda no Checkpoint",
+      "modalidade": "terrestre",
+      "ambiente": "Obstáculos e respawn",
       "forcas": [
         "FTB",
         "FAB",
@@ -985,76 +658,26 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Altura + tirolesa",
-      "dependencias": [
-        "Torres",
-        "plataformas suspensas",
-        "tirolesa",
-        "piso transparente"
+      "etapas": [
+        "Subir a torre com dois trechos de parkour médio.",
+        "Ativar o checkpoint intermediário.",
+        "Passar por plataformas que giram na parte alta.",
+        "Se cair, retornar ao checkpoint e tentar o trecho final."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Torre",
+        "checkpoints",
+        "plataformas giratórias",
+        "sistema de respawn"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-31",
-      "nome": "Temporal no aeroporto",
-      "etapas": [
-        "Sair do hangar virtual durante chuva cenográfica.",
-        "Cruzar as plataformas acima do pátio.",
-        "Descer até um abrigo sinalizado.",
-        "Subir uma passarela que muda de altura.",
-        "Chegar ao edifício do controle pelo checkpoint final."
-      ],
-      "forcas": [
-        "FAB",
-        "CBM"
-      ],
-      "ambiente": "Aeroporto + chuva",
-      "dependencias": [
-        "Aeroporto",
-        "chuva virtual",
-        "passarelas móveis",
-        "checkpoints"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-32",
-      "nome": "Doca invertida",
-      "etapas": [
-        "Correr sobre uma ponte inclinada.",
-        "Saltar entre barcos presos a plataformas móveis.",
-        "Entrar num corredor de água e nadar por baixo do píer.",
-        "Subir uma escada até o guindaste.",
-        "Usar cabo virtual para alcançar o destino."
-      ],
-      "forcas": [
-        "FMB",
-        "PM",
-        "CBM"
-      ],
-      "ambiente": "Porto + mergulho",
-      "dependencias": [
-        "Ponte",
-        "barcos",
-        "canal submerso",
-        "escadas",
-        "cabo virtual"
-      ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-33",
-      "nome": "Escadaria da torre impossível",
-      "etapas": [
-        "Subir escadas móveis com interrupções.",
-        "Desviar de blocos que giram.",
-        "Atravessar quatro saltos em altura crescente.",
-        "Usar um elevador curto para trocar de lado.",
-        "Completar o último salto até o topo."
-      ],
+      "id": "ter-18",
+      "nome": "Circuito da Base Inteira",
+      "modalidade": "terrestre",
+      "ambiente": "Percurso longo terrestre",
       "forcas": [
         "FTB",
         "FAB",
@@ -1062,93 +685,448 @@
         "CBM",
         "PM"
       ],
-      "ambiente": "Torre + altura",
-      "dependencias": [
-        "Escadas móveis",
-        "blocos giratórios",
-        "elevador"
+      "etapas": [
+        "Partir da pista de corrida e cruzar o trecho de barreiras.",
+        "Atravessar um corredor de flexões e saltos do jogo.",
+        "Vencer a ponte de placas temporizadas.",
+        "Subir a torre de dois andares.",
+        "Descer pela rampa longa e cruzar a linha final."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Pista de corrida",
+        "barreiras",
+        "plataformas temporizadas",
+        "torre e rampa"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Circuito terrestre longo; não inclui natação ou pilotagem."
     },
     {
-      "id": "mix-34",
-      "nome": "Corredor de gravidade virtual",
-      "etapas": [
-        "Cruzar o primeiro corredor de plataformas.",
-        "Entrar numa área com baixa gravidade do jogo.",
-        "Executar três saltos longos entre ilhas flutuantes.",
-        "Sair da área de gravidade e pousar numa plataforma grande.",
-        "Descer por rampas até a linha de chegada."
-      ],
-      "forcas": [
-        "FAB",
-        "FTB",
-        "PM"
-      ],
-      "ambiente": "Gravidade + voo curto",
-      "dependencias": [
-        "Zona de gravidade customizada",
-        "ilhas flutuantes",
-        "plataformas e rampas"
-      ],
-      "nota": "Mecânica totalmente fictícia do Roblox, ainda a construir.",
-      "status": "Conceito para construir no mapa"
-    },
-    {
-      "id": "mix-35",
-      "nome": "Circuito das duas embarcações",
-      "etapas": [
-        "Atravessar plataformas do porto.",
-        "Embarcar como passageiro em lancha do jogo.",
-        "Pular para ilha de areia e completar parkour médio.",
-        "Entrar num segundo barco mais adiante.",
-        "Alcançar a doca de finalização."
-      ],
+      "id": "aqu-01",
+      "nome": "Corredor de Correnteza",
+      "modalidade": "aquatico",
+      "ambiente": "Natação em canal",
       "forcas": [
         "FMB",
         "CBM",
         "FTB"
       ],
-      "ambiente": "Barcos + parkour",
-      "dependencias": [
-        "Duas lanchas",
-        "ilhas",
-        "parkour médio",
-        "pontos de embarque"
+      "etapas": [
+        "Entrar no canal de natação virtual.",
+        "Nadar entre quatro marcadores laterais.",
+        "Evitar a correnteza simulada que empurra o avatar.",
+        "Alcançar a faixa de saída."
       ],
-      "nota": "",
-      "status": "Conceito para construir no mapa"
+      "dependencias": [
+        "Água nadável",
+        "forças de correnteza moderadas",
+        "marcadores"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     },
     {
-      "id": "mix-36",
-      "nome": "Aventura completa: terra, água e céu",
-      "etapas": [
-        "Completar o parkour fácil até a torre de largada.",
-        "Saltar na água e nadar até a ilha central.",
-        "Escalar o farol por plataformas de dificuldade média.",
-        "Acionar asa-delta virtual para planar até a pista.",
-        "Embarcar em aeronave autorizada e seguir pelos arcos de voo.",
-        "Pousar no último ponto e vencer um parkour difícil curto."
-      ],
+      "id": "aqu-02",
+      "nome": "Boias Afundantes",
+      "modalidade": "aquatico",
+      "ambiente": "Plataformas flutuantes",
       "forcas": [
-        "FTB",
-        "FAB",
         "FMB",
         "CBM",
-        "PM"
+        "FTB"
       ],
-      "ambiente": "Terra + água + voo",
+      "etapas": [
+        "Avançar sobre a primeira boia flutuante.",
+        "Saltar para a seguinte antes da anterior afundar.",
+        "Aguardar a boia final subir novamente.",
+        "Alcançar a plataforma de chegada."
+      ],
       "dependencias": [
-        "Parkour fácil/médio/difícil",
-        "água nadável",
-        "farol",
-        "asa-delta virtual",
-        "aeronave pilotada por habilitado",
-        "arcos de voo"
+        "Boias que descem e sobem",
+        "sensores de contato",
+        "checkpoints"
       ],
-      "nota": "A versão integral depende da criação de mecânicas e veículos no mapa.",
-      "status": "Conceito para construir no mapa"
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aqu-03",
+      "nome": "Argolas Submersas",
+      "modalidade": "aquatico",
+      "ambiente": "Mergulho virtual",
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "etapas": [
+        "Entrar no tanque de água do jogo.",
+        "Passar pela primeira argola abaixo da superfície.",
+        "Seguir a trilha de argolas iluminadas.",
+        "Voltar à superfície e alcançar a borda final."
+      ],
+      "dependencias": [
+        "Piscina/tanque",
+        "argolas iluminadas",
+        "nado e mergulho no jogo"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Exercício somente virtual; não envolve treinamento real de prender a respiração."
+    },
+    {
+      "id": "aqu-04",
+      "nome": "Labirinto das Eclusas",
+      "modalidade": "aquatico",
+      "ambiente": "Portões e embarcação",
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "etapas": [
+        "Pilotar uma lancha no canal fechado do jogo.",
+        "Aproximar-se da eclusa indicada no painel.",
+        "Aguardar o portão virtual abrir.",
+        "Cruzar o canal com curvas estreitas até a doca."
+      ],
+      "dependencias": [
+        "Lancha controlável",
+        "eclusas com animação",
+        "balizas de navegação"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aqu-05",
+      "nome": "Slalom de Bote",
+      "modalidade": "aquatico",
+      "ambiente": "Direção de bote",
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "etapas": [
+        "Sair do píer num bote virtual.",
+        "Contornar a primeira fileira de boias.",
+        "Fazer curvas alternadas no canal demarcado.",
+        "Atracar na área sinalizada."
+      ],
+      "dependencias": [
+        "Bote virtual",
+        "boias",
+        "zona de atracação"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aqu-06",
+      "nome": "Plataformas do Açude",
+      "modalidade": "aquatico",
+      "ambiente": "Travessia por flutuadores",
+      "forcas": [
+        "FMB",
+        "CBM",
+        "FTB"
+      ],
+      "etapas": [
+        "Saltar até uma plataforma que oscila na água.",
+        "Aguardar o flutuador lateral se aproximar.",
+        "Passar por três plataformas com ritmos diferentes.",
+        "Terminar na plataforma do outro lado."
+      ],
+      "dependencias": [
+        "Flutuadores animados",
+        "plataformas móveis",
+        "marcadores de chegada"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aqu-07",
+      "nome": "Busca de Sinalizadores",
+      "modalidade": "aquatico",
+      "ambiente": "Localização aquática no jogo",
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "etapas": [
+        "Entrar na área de natação do jogo.",
+        "Localizar o sinalizador virtual número um.",
+        "Seguir os marcadores para encontrar outros dois sinalizadores.",
+        "Voltar com a localização registrada à boia final."
+      ],
+      "dependencias": [
+        "Sinalizadores virtuais",
+        "marcadores aquáticos",
+        "checkpoints"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Objetos são fictícios; sem simulação de resgate de pessoas reais."
+    },
+    {
+      "id": "aqu-08",
+      "nome": "Canal das Portas",
+      "modalidade": "aquatico",
+      "ambiente": "Natação e tempo",
+      "forcas": [
+        "FMB",
+        "CBM",
+        "FTB"
+      ],
+      "etapas": [
+        "Entrar no canal do minijogo.",
+        "Nadar até uma passagem que abre a intervalos.",
+        "Aguardar o sinal luminoso antes de atravessar.",
+        "Passar pelo segundo portão e alcançar a saída."
+      ],
+      "dependencias": [
+        "Canal nadável",
+        "portões temporizados",
+        "luzes de indicação"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aqu-09",
+      "nome": "Regata das Três Curvas",
+      "modalidade": "aquatico",
+      "ambiente": "Percurso de barco",
+      "forcas": [
+        "FMB",
+        "CBM"
+      ],
+      "etapas": [
+        "Iniciar com embarcação virtual no ponto de largada.",
+        "Contornar a curva marcada pela boia verde.",
+        "Cruzar o corredor entre duas docas.",
+        "Completar a última curva e retornar ao píer de chegada."
+      ],
+      "dependencias": [
+        "Embarcação virtual",
+        "boias",
+        "píer",
+        "linha de chegada"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aer-01",
+      "nome": "Argolas do Céu",
+      "modalidade": "aereo",
+      "ambiente": "Voo em aeronave",
+      "forcas": [
+        "FAB",
+        "CBM",
+        "FMB"
+      ],
+      "etapas": [
+        "Decolar na pista virtual com aeronave autorizada.",
+        "Passar pelo primeiro arco indicado no céu.",
+        "Executar a curva até os arcos seguintes.",
+        "Retornar à pista de pouso do jogo."
+      ],
+      "dependencias": [
+        "Aeronave virtual",
+        "arcos de checkpoints",
+        "pista"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Pilotagem limitada a jogadores habilitados nas permissões da FAAAB."
+    },
+    {
+      "id": "aer-02",
+      "nome": "Helicóptero no Alvo",
+      "modalidade": "aereo",
+      "ambiente": "Pouso de precisão",
+      "forcas": [
+        "FAB",
+        "CBM"
+      ],
+      "etapas": [
+        "Decolar do heliponto de origem.",
+        "Alcançar o primeiro círculo aéreo.",
+        "Reduzir a velocidade e alinhar o helicóptero.",
+        "Pousar dentro da marca circular de destino."
+      ],
+      "dependencias": [
+        "Helicóptero com controles",
+        "círculos de referência",
+        "heliponto de destino"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aer-03",
+      "nome": "Slalom de Drone",
+      "modalidade": "aereo",
+      "ambiente": "Controle de drone virtual",
+      "forcas": [
+        "FAB",
+        "PM",
+        "CBM"
+      ],
+      "etapas": [
+        "Ativar um drone do minijogo.",
+        "Passar pelos três anéis verticais do percurso.",
+        "Desviar de uma parede elevada do cenário.",
+        "Pousar o drone na plataforma de recolhimento."
+      ],
+      "dependencias": [
+        "Drone virtual",
+        "câmera de acompanhamento",
+        "anéis e obstáculos"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aer-04",
+      "nome": "Planador das Correntes",
+      "modalidade": "aereo",
+      "ambiente": "Planagem arcade",
+      "forcas": [
+        "FAB",
+        "FMB"
+      ],
+      "etapas": [
+        "Ativar o planador no ponto aéreo de início.",
+        "Atravessar uma corrente ascendente simulada.",
+        "Deslizar entre dois arcos suspensos.",
+        "Chegar à plataforma de pouso de planadores."
+      ],
+      "dependencias": [
+        "Planador arcade",
+        "zonas de impulso ascendente",
+        "arcos",
+        "pouso"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Mecânica de planagem exclusivamente do jogo, ainda a desenvolver."
+    },
+    {
+      "id": "aer-05",
+      "nome": "Balizas da Neblina",
+      "modalidade": "aereo",
+      "ambiente": "Navegação aérea de jogo",
+      "forcas": [
+        "FAB",
+        "CBM",
+        "FMB"
+      ],
+      "etapas": [
+        "Decolar com aeronave virtual na estação aérea.",
+        "Seguir o primeiro farol luminoso entre nuvens cenográficas.",
+        "Localizar duas balizas com referências visuais.",
+        "Retornar ao corredor de chegada."
+      ],
+      "dependencias": [
+        "Aeronave",
+        "nuvens cenográficas",
+        "balizas de luz",
+        "pista"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aer-06",
+      "nome": "Voo Contrarrelógio",
+      "modalidade": "aereo",
+      "ambiente": "Pista aérea com arcos",
+      "forcas": [
+        "FAB",
+        "CBM"
+      ],
+      "etapas": [
+        "Iniciar o contador do minijogo de voo.",
+        "Decolar com aeronave habilitada.",
+        "Atravessar cinco anéis na ordem indicada.",
+        "Pousar no local sinalizado para encerrar o cronômetro."
+      ],
+      "dependencias": [
+        "Cronômetro visual",
+        "cinco anéis",
+        "pista e aeronave"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Sem tempo mínimo ou nota universal até a FAAAB definir."
+    },
+    {
+      "id": "aer-07",
+      "nome": "Transporte de Carga Suspensa",
+      "modalidade": "aereo",
+      "ambiente": "Minijogo de guincho virtual",
+      "forcas": [
+        "CBM",
+        "FAB"
+      ],
+      "etapas": [
+        "Controlar helicóptero habilitado do minijogo.",
+        "Aproximar o guincho do caixote virtual indicado.",
+        "Ativar o encaixe automático de carga.",
+        "Transportar o caixote por três pontos aéreos e soltá-lo no alvo."
+      ],
+      "dependencias": [
+        "Helicóptero virtual",
+        "guincho de jogo",
+        "caixa cenográfica",
+        "alvo de entrega"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": "Apenas mecânica simulada de Roblox; não é instrução de carga aérea real."
+    },
+    {
+      "id": "aer-08",
+      "nome": "Rota de Turbulência",
+      "modalidade": "aereo",
+      "ambiente": "Controle com rajadas virtuais",
+      "forcas": [
+        "FAB",
+        "CBM"
+      ],
+      "etapas": [
+        "Iniciar o voo virtual no portão de partida.",
+        "Atravessar a região de vento lateral simulada.",
+        "Manter-se dentro do corredor de marcadores do minijogo.",
+        "Pousar na pista de chegada."
+      ],
+      "dependencias": [
+        "Sistema de vento fictício",
+        "pista",
+        "indicadores de corredor"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
+    },
+    {
+      "id": "aer-09",
+      "nome": "Voo Noturno dos Faróis",
+      "modalidade": "aereo",
+      "ambiente": "Arcos luminosos no céu",
+      "forcas": [
+        "FAB",
+        "CBM",
+        "FMB"
+      ],
+      "etapas": [
+        "Decolar com iluminação noturna ativada no mapa.",
+        "Localizar a primeira torre luminosa do percurso.",
+        "Seguir a sequência de três referências iluminadas.",
+        "Pousar na área com luzes de aproximação do minijogo."
+      ],
+      "dependencias": [
+        "Ciclo noturno",
+        "faróis de posição",
+        "aeronave virtual",
+        "pista iluminada"
+      ],
+      "status": "Ideia de circuito para construir no Roblox Studio",
+      "nota": ""
     }
   ]
 }
