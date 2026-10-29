@@ -12,7 +12,7 @@ function detail(u){
  '<h3>Quem pode participar: requisitos propostos</h3><ul class="area-require">'+u.requisitos.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>'+
  '<h3>Funções dentro desta unidade</h3><div>'+u.funcoes.map(x=>'<span class="area-pill">'+esc(x)+'</span>').join("")+'</div>'+
  '<h3>Parkours para praticar</h3><p>'+esc(u.treinoPratico)+'</p><div class="area-rows">'+tests.map(e=>'<div class="area-row"><h4>'+esc(e.nome)+'</h4><p>'+esc(e.como)+'</p></div>').join("")+'</div>'+
- '<h3>Circuitos especiais sugeridos</h3><p>São propostas de circuitos de Roblox, não requisitos obrigatórios.</p><div class="area-rows">'+circuits.map(c=>'<a class="area-row" href="exercicios.html#'+force+'"><strong>'+esc(c.nome)+'</strong><p>'+esc(c.etapas.join(" → "))+'</p></a>').join("")+'</div>'+
+ '<h3>Circuitos especiais sugeridos</h3><p>São circuitos independentes do Roblox: cada um é terrestre, aquático ou aéreo. Não há mistura de modalidades nem obrigatoriedade de ingresso definida.</p><div class="area-rows">'+circuits.map(c=>'<a class="area-row" href="exercicios.html#'+force+'"><strong>'+esc(c.nome)+'</strong><p>'+esc(c.etapas.join(" → "))+'</p></a>').join("")+'</div>'+
  '<div class="area-links"><a href="exercicios.html#'+force+'">Todos os exercícios</a><a href="formacao.html#'+force+'">Trilha de formação</a><a href="#inicio">Voltar às unidades</a></div></article>';
 }
 function render(){
