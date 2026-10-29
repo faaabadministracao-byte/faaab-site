@@ -57,3 +57,19 @@ body.faaab-skin .faaab-nav-toggle:focus-visible{outline:2px solid #987b43;outlin
  body.faaab-root header.wrap.nav>span a{flex:1 1 auto;min-height:43px;display:inline-flex;align-items:center;justify-content:center}
  body.faaab-root .navlinks{align-items:stretch}
 }
+
+/* Correção de contraste: o tema global sobrescrevia textos claros de cabeçalhos. */
+body.faaab-skin .edu3-headwrap a.edu3-logo{color:#1b3626!important}
+body.faaab-skin .edu3-headwrap a.edu3-logo span{color:#566a5a!important}
+body.faaab-skin .edu3-headwrap .edu3-site-nav a{color:#244a33!important}
+body.faaab-skin .edu3-headwrap .edu3-site-nav a:hover{color:#14291f!important;text-decoration:underline}
+body.faaab-skin .career-mast h1,
+body.faaab-skin .legal-head h1{color:#fff8eb!important}
+body.faaab-skin .career-mast p,
+body.faaab-skin .legal-head p{color:#e7ecdf!important}
+body.faaab-skin .legal-head .legal-kicker,
+body.faaab-skin .career-mast .kicker{color:#e8ca8e!important}
+@media(max-width:900px){
+ body.faaab-skin .edu3-headwrap .edu3-site-nav.faaab-nav-ready .faaab-nav-links>a{color:#f8f4ea!important}
+ body.faaab-skin .edu3-headwrap .edu3-site-nav.faaab-nav-ready .faaab-nav-links>a:hover{color:#fff!important}
+}
