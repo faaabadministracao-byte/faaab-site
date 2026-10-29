@@ -2,69 +2,31 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Prepare-se para cursos da FAAAB com trilhas de estudo separadas por prova, explicações, exercícios e revisão para memória.">
-<meta name="theme-color" content="#25472f">
-<title>Preparação por prova | Estudos FAAAB</title>
-<link rel="stylesheet" href="estilo.css"><link rel="stylesheet" href="estudos-v2.css">
-<script defer src="estudos-v2.js"></script>
+<title>Estudos e formações | FAAAB</title>
+<meta name="description" content="Estudos reais dentro do portal FAAAB: provas documentadas, aulas explicadas passo a passo e cursos separados de exames.">
+<meta name="theme-color" content="#264632">
+<link rel="stylesheet" href="estilo.css"><link rel="stylesheet" href="estudos-v3.css">
+<script defer src="estudos-v3.js"></script>
 </head>
 <body>
-<nav class="edunav" aria-label="Navegação do portal"><div class="wrap">
-<a href="index.html">Início</a><a href="central.html">FAAAB Central</a><a href="patentes.html">Patentes</a><a href="estudos.html" aria-current="page">Estudos</a><a href="sistemas.html">Sistemas</a><a href="governo.html">Governo</a><a href="civil.html">Civil</a>
-</div></nav>
-<main class="eduwrap">
-<div class="eyebrow">Centro de preparação — FAAAB</div>
-<h1>Estude para a prova certa.</h1>
-<p class="eduintro">As disciplinas não são jogadas numa lista única. Escolha a prova ou o curso, estude somente seus módulos, resolva exercícios com correção e volte para revisões de memória.</p>
-<div class="edunote">Esta é uma plataforma de preparação interna para o projeto fictício FAAAB no Roblox. As trilhas piloto são materiais didáticos de demonstração, não editais oficiais. Quando a matéria da prova não foi definida, o site não inventa um programa.</div>
-<div class="eduflow" id="breadcrumb" aria-label="Etapas do estudo"><span class="active">1. Escolha a prova</span><span>2. Estude o conteúdo</span><span>3. Treine e revise</span></div>
-<p id="loader" class="edu-quiet">Carregando as trilhas...</p>
-<p id="storageNotice" class="edunote" hidden></p>
-
-<section id="directory" aria-labelledby="directoryTitle">
-<h2 id="directoryTitle">Para qual prova você quer estudar?</h2>
-<p class="eduintro">A mesma matéria pode aparecer em dois cursos com objetivos diferentes. O conteúdo, o simulado e o progresso ficam separados para cada prova.</p>
-<div class="edutoolbar">
-<label>Nome da prova ou curso
-<input type="search" id="find" placeholder="Ex.: ESA, C-NAV, EEAR, CTA" autocomplete="off"></label>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+<header class="edu3-head">
+<div class="edu3-headwrap">
+<a class="edu3-logo" href="index.html">FAAAB <span>ESTUDOS</span></a>
+<nav class="edu3-site-nav" aria-label="Portal"><a href="index.html">Portal</a><a href="central.html">Organizações</a><a href="patentes.html">Patentes</a></nav>
 </div>
-<div class="edu-actions" id="examFilters">
-<button class="edu-secondary" data-force="todos" aria-pressed="true" type="button">Todas</button>
-<button class="edu-secondary" data-force="FTB" aria-pressed="false" type="button">Exército</button>
-<button class="edu-secondary" data-force="FAB" aria-pressed="false" type="button">FAB</button>
-<button class="edu-secondary" data-force="FMB" aria-pressed="false" type="button">Marinha</button>
-</div>
-<label class="edu-quiet"><input type="checkbox" id="onlyReady"> Mostrar só provas com aulas disponíveis</label>
-<p class="edu-quiet" id="examCount" aria-live="polite"></p>
-<div class="edudirectory" id="examList" aria-live="polite"></div>
-</section>
-
-<section id="learning" class="edu-hidden" aria-labelledby="trackTitle">
-<div class="edu-target"><div class="edu-targethead">
-<div><span class="edu-eyebrow" id="trackForce"></span><h2 id="trackTitle"></h2><p id="trackIntro"></p></div>
-<button id="changeExam" class="edu-back" type="button">Escolher outra prova</button>
-</div></div>
-<p class="edu-quiet" id="examDisclaimer"></p>
-<div class="edu-summary" id="stats" aria-label="Progresso desta prova"></div>
-<div class="edu-actions">
-<button id="reviewAll" class="edu-primary" type="button">Revisões pendentes de hoje</button>
-<button id="simulation" class="edu-secondary" type="button">Simulado desta prova</button>
-</div>
-<section id="pendingPanel" class="edu-hidden" aria-labelledby="pendingTitle">
-<div class="edu-courseraw"><h3 id="pendingTitle">Programa dessa prova ainda não definido</h3>
-<p id="pendingReason">Não há assuntos confirmados.</p>
-<p class="edu-quiet">Por enquanto, o sistema não mistura aulas de outros cursos apenas porque têm a mesma matéria.</p></div>
-<div id="pendingCourse"></div>
-</section>
-<div class="edu-layout" id="lessonLayout">
-<aside class="edu-side" aria-label="Matérias desta prova">
-<h3>Matérias desta prova</h3>
-<p class="edu-quiet">Toque num módulo para estudar. As revisões são independentes entre provas.</p>
-<div id="lessonList"></div>
-</aside>
-<div class="edu-main" id="lessonMain" aria-live="polite" aria-atomic="false"></div>
-</div>
-</section>
+<nav class="edu3-menu" aria-label="Estudos">
+<a href="#inicio" data-route="inicio">Início</a>
+<a href="#provas" data-route="provas">Provas</a>
+<a href="#materias" data-route="materias">Matérias</a>
+<a href="#cursos" data-route="cursos">Cursos e treinamentos</a>
+</nav>
+</header>
+<main id="conteudo" class="edu3-wrap">
+<div id="edu3-error" class="edu3-warning" hidden role="alert"></div>
+<div id="edu3-loading" role="status">Abrindo os estudos…</div>
+<div id="edu3-content" aria-live="polite"></div>
 </main>
-<footer class="edu-footer">FAAAB — Simulação militar e educacional fictícia, sem vínculo com as instituições reais.</footer>
-</body></html>
+<footer class="edu3-footer">FAAAB — projeto fictício de roleplay no Roblox. Informações de cursos não representam editais oficiais das Forças Armadas brasileiras.</footer>
+</body>
+</html>
