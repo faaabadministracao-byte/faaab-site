@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras.",
+  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados.",
   "policia": [
     {
       "id": "PM-BASE",
@@ -32,14 +32,6 @@
         "Participar da triagem e formação inicial conforme normas futuras",
         "Aprovação só pode conceder acesso inicial após validação por chefia; não concede patente automaticamente"
       ],
-      "exercicios": [
-        "pol-01",
-        "pol-02",
-        "pol-03",
-        "pol-04",
-        "pol-05",
-        "pol-07"
-      ],
       "funcoes": [
         "Candidato",
         "Aluno",
@@ -48,7 +40,8 @@
         "Avaliador",
         "Coordenador"
       ],
-      "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real."
+      "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real.",
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "PM-BOPE",
@@ -81,14 +74,6 @@
         "Realizar seleção interna de unidade somente quando aprovada e publicada",
         "Receber autorização de ingresso do comando do batalhão"
       ],
-      "exercicios": [
-        "pol-02",
-        "pol-04",
-        "pol-05",
-        "pol-08",
-        "pol-09",
-        "pol-10"
-      ],
       "funcoes": [
         "Integrante",
         "Agente de apoio",
@@ -96,7 +81,8 @@
         "Chefe de equipe",
         "Comandante de unidade"
       ],
-      "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB."
+      "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB.",
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "PM-ROTAM",
@@ -128,14 +114,6 @@
         "Concluir atividades básicas e avaliação específica quando aprovada",
         "Comprovar designação para a unidade e autorização do responsável"
       ],
-      "exercicios": [
-        "pol-01",
-        "pol-02",
-        "pol-03",
-        "pol-05",
-        "pol-06",
-        "pol-07"
-      ],
       "funcoes": [
         "Integrante",
         "Patrulheiro",
@@ -143,7 +121,8 @@
         "Instrutor habilitado",
         "Coordenador"
       ],
-      "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real."
+      "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real.",
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "PM-BPChoque",
@@ -175,14 +154,6 @@
         "Concluir formação e atividades de comunicação e proteção do cenário",
         "Ingresso na unidade aprovado por chefia após seleção se criada"
       ],
-      "exercicios": [
-        "pol-03",
-        "pol-04",
-        "pol-05",
-        "pol-06",
-        "pol-08",
-        "pol-10"
-      ],
       "funcoes": [
         "Integrante",
         "Apoio em evento",
@@ -190,7 +161,8 @@
         "Responsável por equipe",
         "Comandante"
       ],
-      "aviso": "Não apresenta técnicas reais de contenção ou uso de força."
+      "aviso": "Não apresenta técnicas reais de contenção ou uso de força.",
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "PM-BPP",
@@ -222,13 +194,6 @@
         "Receber treinamento de cadastro, direitos e registro",
         "Cumprir autorização específica da administração do jogo"
       ],
-      "exercicios": [
-        "pol-01",
-        "pol-03",
-        "pol-04",
-        "pol-08",
-        "pol-10"
-      ],
       "funcoes": [
         "Integrante",
         "Agente de registro",
@@ -236,7 +201,8 @@
         "Instrutor",
         "Supervisor"
       ],
-      "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário."
+      "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário.",
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     }
   ],
   "bombeiros": [
@@ -270,20 +236,14 @@
         "Concluir formação básica e exercícios de busca simulada",
         "Ser designado ao grupamento pelo comando após avaliação prevista"
       ],
-      "exercicios": [
-        "bom-02",
-        "bom-03",
-        "bom-04",
-        "bom-06",
-        "bom-10"
-      ],
       "funcoes": [
         "Integrante",
         "Equipe de busca",
         "Comunicador",
         "Instrutor",
         "Chefe de equipe"
-      ]
+      ],
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "CBM-GSFMA",
@@ -315,20 +275,14 @@
         "Conhecer mapas, rotas e comunicação de risco",
         "Receber habilitação e designação específicas quando regulamentadas"
       ],
-      "exercicios": [
-        "bom-01",
-        "bom-02",
-        "bom-03",
-        "bom-07",
-        "bom-10"
-      ],
       "funcoes": [
         "Integrante",
         "Monitor de área",
         "Comunicador",
         "Instrutor",
         "Coordenador"
-      ]
+      ],
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "CBM-GOPP",
@@ -360,20 +314,14 @@
         "Concluir formação comum e qualificação virtual de riscos",
         "Designação restrita pelo comando; nenhum treinamento implica manipulação real"
       ],
-      "exercicios": [
-        "bom-01",
-        "bom-02",
-        "bom-03",
-        "bom-08",
-        "bom-10"
-      ],
       "funcoes": [
         "Integrante",
         "Observador",
         "Comunicador",
         "Instrutor",
         "Coordenador"
-      ]
+      ],
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "CBM-GOA",
@@ -405,20 +353,14 @@
         "Concluir formação básica e curso de função específico",
         "Acesso ao helicóptero ou avião exige permissão de veículo separada"
       ],
-      "exercicios": [
-        "bom-02",
-        "bom-04",
-        "bom-06",
-        "bom-09",
-        "bom-10"
-      ],
       "funcoes": [
         "Integrante",
         "Equipe de solo",
         "Tripulante virtual habilitado",
         "Instrutor",
         "Coordenador"
-      ]
+      ],
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     },
     {
       "id": "CBM-GOESP",
@@ -450,20 +392,14 @@
         "Concluir treinamento básico de resgate e decisão",
         "Ser habilitado e designado para o grupo quando regulamento aprovado"
       ],
-      "exercicios": [
-        "bom-02",
-        "bom-04",
-        "bom-05",
-        "bom-06",
-        "bom-10"
-      ],
       "funcoes": [
         "Integrante",
         "Apoio em resgate",
         "Instrutor",
         "Chefe de equipe",
         "Comandante"
-      ]
+      ],
+      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
     }
   ]
 }
