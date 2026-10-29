@@ -105,6 +105,20 @@
       "variantes": []
     },
     {
+      "id": "abdominais",
+      "nome": "Abdominais",
+      "situacao": "Repertório em planejamento",
+      "descricao": "Animações de abdominal virtual no Roblox. Quantidade e obrigação ainda não definidas.",
+      "variantes": []
+    },
+    {
+      "id": "prancha",
+      "nome": "Prancha",
+      "situacao": "Repertório em planejamento",
+      "descricao": "Animação virtual de prancha, com tempo configurável somente quando definido pelo treino.",
+      "variantes": []
+    },
+    {
       "id": "ordem-unida",
       "nome": "Ordem unida",
       "situacao": "Repertório geral, critérios por força",
@@ -141,7 +155,9 @@
           "pulos": "10 pulos na seleção de Recruta.",
           "corrida": "3 voltas na pista da seleção de Recruta.",
           "ordem-unida": "Comandos de volver na seleção de Recruta.",
-          "agachamento": "Uso geral em planejamento; quantidade não aprovada."
+          "agachamento": "Uso geral em planejamento; quantidade não aprovada.",
+          "abdominais": "Repertório de treino básico: sem número obrigatório definido.",
+          "prancha": "Animação opcional de treino básico: sem tempo mínimo definido."
         }
       }
     },
@@ -160,7 +176,9 @@
           "pulos": "Saltos em solo, sem representar pilotagem ou paraquedismo.",
           "corrida": "Pista terrestre da base, com distância e voltas ainda não definidas.",
           "ordem-unida": "Comandos de formação do grupo FAB, a definir.",
-          "agachamento": "Uso opcional em planejamento, sem obrigatoriedade definida."
+          "agachamento": "Uso opcional em planejamento, sem obrigatoriedade definida.",
+          "abdominais": "Repertório de treino básico: sem número obrigatório definido.",
+          "prancha": "Animação opcional de treino básico: sem tempo mínimo definido."
         }
       }
     },
@@ -179,7 +197,9 @@
           "pulos": "Saltos curtos e barreiras do mapa da base.",
           "corrida": "Corrida no pátio ou pista da base naval, sem distância universal definida.",
           "ordem-unida": "Formação e comandos adaptados à força naval, a definir.",
-          "agachamento": "Repertório opcional, não requisito aprovado."
+          "agachamento": "Repertório opcional, não requisito aprovado.",
+          "abdominais": "Repertório de treino básico: sem número obrigatório definido.",
+          "prancha": "Animação opcional de treino básico: sem tempo mínimo definido."
         }
       }
     },
@@ -198,7 +218,9 @@
           "pulos": "Saltos e barreiras simples da pista.",
           "corrida": "Circuito de corrida do centro de treinamento; distância pendente.",
           "ordem-unida": "Comandos e formações da organização, a definir.",
-          "agachamento": "Uso em planejamento, sem regra obrigatória."
+          "agachamento": "Uso em planejamento, sem regra obrigatória.",
+          "abdominais": "Repertório de treino básico: sem número obrigatório definido.",
+          "prancha": "Animação opcional de treino básico: sem tempo mínimo definido."
         }
       }
     },
@@ -217,7 +239,9 @@
           "pulos": "Saltos simples, em sequência ou sobre barreiras do cenário.",
           "corrida": "Pista de treinamento comum da PM, com distância a definir.",
           "ordem-unida": "Posições e comandos de formação aplicáveis ao grupo, a definir.",
-          "agachamento": "Uso em planejamento, sem obrigatoriedade definida."
+          "agachamento": "Uso em planejamento, sem obrigatoriedade definida.",
+          "abdominais": "Repertório de treino básico: sem número obrigatório definido.",
+          "prancha": "Animação opcional de treino básico: sem tempo mínimo definido."
         }
       }
     }
