@@ -1,6 +1,6 @@
 {
-  "versao": 1,
-  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados.",
+  "versao": 2,
+  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras. Treinos teóricos removidos do catálogo prático de exercícios; cada unidade poderá fixar circuitos e exigências quando os regulamentos forem aprovados. Os desafios especiais são rotas propostas de gameplay, sem funcionalidade garantida até que o mapa seja implementado.",
   "policia": [
     {
       "id": "PM-BASE",
@@ -41,7 +41,13 @@
         "Coordenador"
       ],
       "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real.",
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-04",
+        "mix-26",
+        "mix-27",
+        "mix-28"
+      ]
     },
     {
       "id": "PM-BOPE",
@@ -82,7 +88,13 @@
         "Comandante de unidade"
       ],
       "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB.",
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-05",
+        "mix-13",
+        "mix-19",
+        "mix-33"
+      ]
     },
     {
       "id": "PM-ROTAM",
@@ -122,7 +134,13 @@
         "Coordenador"
       ],
       "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real.",
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-16",
+        "mix-24",
+        "mix-27",
+        "mix-28"
+      ]
     },
     {
       "id": "PM-BPChoque",
@@ -162,7 +180,13 @@
         "Comandante"
       ],
       "aviso": "Não apresenta técnicas reais de contenção ou uso de força.",
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-04",
+        "mix-09",
+        "mix-26",
+        "mix-28"
+      ]
     },
     {
       "id": "PM-BPP",
@@ -202,7 +226,13 @@
         "Supervisor"
       ],
       "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário.",
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-13",
+        "mix-19",
+        "mix-26",
+        "mix-30"
+      ]
     }
   ],
   "bombeiros": [
@@ -243,7 +273,13 @@
         "Instrutor",
         "Chefe de equipe"
       ],
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-06",
+        "mix-08",
+        "mix-21",
+        "mix-22"
+      ]
     },
     {
       "id": "CBM-GSFMA",
@@ -282,7 +318,13 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-10",
+        "mix-15",
+        "mix-23",
+        "mix-25"
+      ]
     },
     {
       "id": "CBM-GOPP",
@@ -321,7 +363,13 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-14",
+        "mix-19",
+        "mix-26",
+        "mix-32"
+      ]
     },
     {
       "id": "CBM-GOA",
@@ -360,7 +408,13 @@
         "Instrutor",
         "Coordenador"
       ],
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-01",
+        "mix-05",
+        "mix-06",
+        "mix-29"
+      ]
     },
     {
       "id": "CBM-GOESP",
@@ -399,7 +453,13 @@
         "Chefe de equipe",
         "Comandante"
       ],
-      "treinoPratico": "As cinco modalidades de parkour estão disponíveis para treinar no projeto; sua exigência para ingresso na unidade e os demais testes ainda precisam de aprovação."
+      "treinoPratico": "Os cinco parkours principais podem ser combinados com os circuitos especiais sugeridos. Nenhum deles é obrigatório para esta unidade sem uma regra aprovada.",
+      "circuitosSugeridos": [
+        "mix-14",
+        "mix-21",
+        "mix-22",
+        "mix-36"
+      ]
     }
   ]
 }
