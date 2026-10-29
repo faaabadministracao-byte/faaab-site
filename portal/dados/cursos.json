@@ -3,7 +3,7 @@
     "id": "CUR-10-1",
     "forca": "FTB",
     "titulo": "Recruta -> Soldado",
-    "detalhes": "Componentes:\n- Expedição Militar\n- Seleção de Brigada\n- TC-1\n\nEsses elementos são do EB.\nNÃO copiar para FAB/MB/CBM.\n\nFarda própria:\nnão obrigatória.",
+    "detalhes": "Componentes:\n- Expedição Militar\n- Seleção de Brigada\n- TC-1\n- Formação de Soldado\n\nEsses elementos são do EB.\nNÃO copiar para FAB/MB/CBM.\n\nFarda própria:\nnão obrigatória.\nEsta é formação posterior à seleção de ingresso para Recruta; não equivale à prova de ingresso.",
     "sigla": "Recruta -> Soldado",
     "origem": "Manual mestre de cursos FAAAB",
     "estado": "Documentado",
