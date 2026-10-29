@@ -7,7 +7,7 @@ const shuffle=arr=>{let a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.fl
 const localDate=ts=>{const d=new Date(ts);return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")};
 const readableDate=ts=>new Date(ts).toLocaleDateString("pt-BR",{day:"2-digit",month:"short"});
 const durationDays=ts=>Math.max(0,Math.ceil((ts-Date.now())/DAY));
-let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false;
+let tracks=[],courses=[],current=null,lesson=null,screen="directory",filterForce="todos",onlyReady=false,view="theory",recallOpen=false,questions=[],cursor=0,results=[],answered=false,reviewQueue=[],reviewEarly=false,reviewReveal=false,reviewDraft="";
 let saved={selected:null,progress:{},simulados:{}};try{const x=JSON.parse(localStorage.getItem(STORAGE)||"null");if(x&&typeof x==="object"){saved={selected:x.selected||null,progress:x.progress||{},simulados:x.simulados||{}}}}catch(e){}
 const save=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(saved))}catch(e){$("storageNotice").textContent="Este navegador não conseguiu guardar o progresso. Verifique se o armazenamento está permitido.";$("storageNotice").hidden=false}};
 const selectPanel=(name)=>{screen=name;$("directory").classList.toggle("edu-hidden",name!=="directory");$("learning").classList.toggle("edu-hidden",name==="directory");$("breadcrumb").innerHTML=name==="directory"?'<span class="active">1. Escolha a prova</span><span>2. Estude o conteúdo</span><span>3. Treine e revise</span>':'<span>1. Prova escolhida</span><span class="active">2. Conteúdo exclusivo</span><span class="active">3. Exercícios e revisão</span>'};
@@ -93,8 +93,8 @@ function showTheory(){
 }
 function questionsFor(isSim){
  let t=track();
- if(!isSim){let l=selectedLesson();return shuffle(l.questoes.map(q=>({...q,from:l.id,lessonTitle:l.titulo})))}
- return shuffle(lessons(t).flatMap(l=>l.questoes.map(q=>({...q,from:l.id,lessonTitle:l.titulo})))).slice(0,Math.min(12,lessons(t).reduce((n,l)=>n+l.questoes.length,0)));
+ if(!isSim){let l=selectedLesson();return shuffle(l.questoes.map(q=>({...q,from:l.id,lessonTitle:l.titulo,optionOrder:shuffle([0,1,2,3])})))}
+ return shuffle(lessons(t).flatMap(l=>l.questoes.map(q=>({...q,from:l.id,lessonTitle:l.titulo,optionOrder:shuffle([0,1,2,3])})))).slice(0,Math.min(12,lessons(t).reduce((n,l)=>n+l.questoes.length,0)));
 }
 function startQuiz(sim){
  questions=questionsFor(sim);cursor=0;results=[];answered=false;view=sim?"sim":"quiz";renderTrack();
@@ -103,7 +103,7 @@ function score(){return results.filter(x=>x.correct).length}
 function showQuestion(){
  const q=questions[cursor];if(!q){showSummary();return}
  const sim=view==="sim",isAnswered=!!results[cursor];
- const options=shuffle([0,1,2,3]);
+ const options=q.optionOrder;
  const selection=isAnswered?results[cursor]:null;
  $("lessonMain").innerHTML='<span class="edu-step">'+(sim?"Simulado desta prova — sem gabarito durante a tentativa":"Prática da aula")+'</span>'+
  '<h2>'+(sim?"Simulado exclusivo: "+esc(track().nome):esc(selectedLesson().titulo))+'</h2>'+
@@ -141,7 +141,7 @@ function showSummary(){
 function startReview(includeEarly,onlyOne=null){
  let t=track(),reviewed=lessons(t).filter(l=>{let p=progressRead(current,l.id);return p?.quizAttempts&&(onlyOne===null||onlyOne===l.id)&&(includeEarly||p.nextReview<=Date.now())});
  if(!reviewed.length){view="review";reviewQueue=[];showReview();return}
- reviewQueue=reviewed;reviewEarly=includeEarly;reviewReveal=false;view="review";renderTrack();
+ reviewQueue=reviewed;reviewEarly=includeEarly;reviewReveal=false;reviewDraft="";view="review";renderTrack();
 }
 function showReview(){
  view="review";const l=reviewQueue[0];
@@ -155,7 +155,7 @@ function showReview(){
  '<p class="edu-quiet">Compare sinceramente sua resposta com o modelo. Esta autoavaliação não substitui prova supervisionada.</p>'+
  '<div class="edu-reviewbar"><button class="missed" data-rate="again">Não lembrei</button><button data-rate="hard">Lembrei com esforço</button><button data-rate="easy">Lembrei bem</button></div>':"")+'</div>'+
  '<p class="edu-quiet">'+(scheduled?"Revisão prevista para agora.":"Revisão antecipada: ela não acelera a contagem de dias de memória.")+' Faltam '+(reviewQueue.length-1)+' tópicos nesta fila.</p>';
- $("showRecallAnswer").addEventListener("click",()=>{reviewReveal=true;showReview()});
+ $("reviewInput").value=reviewDraft;$("reviewInput").addEventListener("input",e=>{reviewDraft=e.target.value});$("showRecallAnswer").addEventListener("click",()=>{reviewDraft=$("reviewInput").value;reviewReveal=true;showReview()});
  $("lessonMain").querySelectorAll("[data-rate]").forEach(b=>b.addEventListener("click",()=>gradeRecall(b.dataset.rate,l,scheduled)));
 }
 function gradeRecall(rate,l,scheduled){
@@ -163,7 +163,7 @@ function gradeRecall(rate,l,scheduled){
  p.reviewAttempts=(p.reviewAttempts||0)+1;p.lastRecall=Date.now();p.lastRating=rate;
  if(rate==="again"){p.stage=0;p.nextReview=Date.now()+DAY}
  else if(scheduled){p.stage=Math.min(5,(p.stage||0)+(rate==="easy"?1:0));const intervals=[1,3,7,14,30,45];const span=rate==="hard"?1:intervals[p.stage];p.nextReview=Date.now()+span*DAY;if(!p.successDays.includes(today))p.successDays.push(today)}
- save();reviewQueue.shift();reviewReveal=false;renderTrack();
+ save();reviewQueue.shift();reviewReveal=false;reviewDraft="";renderTrack();
 }
 function showSimulation(){if(!lessons(track()).length)return;startQuiz(true)}
 function boot(){
