@@ -1,0 +1,440 @@
+{
+  "versao": 3,
+  "data": "2026-10-29",
+  "titulo": "Preparação de provas e estudos na FAAAB",
+  "aviso": "Não confundir curso, treinamento, formação e prova. Apenas avaliações documentadas aparecem no menu Provas. Sem matriz de matérias aprovada, não inventar aulas ou questões.",
+  "avaliacoes": [
+    {
+      "id": "alistamento",
+      "nome": "Alistamento — entrevista escrita",
+      "tipo": "Avaliação de ingresso",
+      "origem": "Entrevista escrita do alistamento FAAAB",
+      "confirmacao": "Há perguntas de Matemática básica, Português e preferências. A sequência exata da entrevista depende do alistamento.",
+      "programa": "apoio",
+      "materias": [
+        "Matemática básica",
+        "Português"
+      ],
+      "observacao": "Aulas de apoio para as matérias explicitamente citadas; não são o questionário oficial nem garantem que todas essas questões aparecerão.",
+      "aulas": [
+        {
+          "id": "soma",
+          "materia": "Matemática básica",
+          "titulo": "Somar números sem se perder",
+          "objetivo": "Somar quantidades com unidades e dezenas.",
+          "etapas": [
+            {
+              "titulo": "1. O que significa somar?",
+              "texto": "Somar é juntar quantidades. Se uma equipe tem 12 pessoas e chegam mais 7, queremos saber quantas existem ao todo.",
+              "conta": "12 + 7 = 19.",
+              "lembrete": "A palavra 'ao todo' costuma indicar que vamos juntar valores."
+            },
+            {
+              "titulo": "2. Separe dezenas e unidades",
+              "texto": "Um número como 24 tem 2 dezenas (20) e 4 unidades. Podemos somar cada parte para não confundir.",
+              "conta": "24 + 13 = (20 + 10) + (4 + 3) = 30 + 7 = 37.",
+              "lembrete": "Primeiro some as dezenas; depois, as unidades."
+            },
+            {
+              "titulo": "3. Quando passa de dez",
+              "texto": "Na soma 28 + 15, some 8 + 5 = 13 unidades: 10 unidades formam mais uma dezena. Assim, 20 + 10 + 13 = 43.",
+              "conta": "28 + 15 = 43.",
+              "lembrete": "Confira subtraindo: 43 − 15 = 28."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "Uma equipe tem 18 participantes. Chegam mais 14. Quantos estão presentes?",
+              "alternativas": [
+                "22 participantes",
+                "32 participantes",
+                "34 participantes",
+                "42 participantes"
+              ],
+              "correta": 1,
+              "explicacao": "18 + 14 = (10 + 10) + (8 + 4) = 20 + 12 = 32.",
+              "dica": "Separe as dezenas e as unidades."
+            },
+            {
+              "pergunta": "No alistamento, 27 pessoas vieram de manhã e 16 à tarde. Qual é o total?",
+              "alternativas": [
+                "33 pessoas",
+                "41 pessoas",
+                "43 pessoas",
+                "53 pessoas"
+              ],
+              "correta": 2,
+              "explicacao": "27 + 16: some 20 + 10 = 30 e 7 + 6 = 13. Total 43.",
+              "dica": "7 + 6 ultrapassa dez unidades."
+            },
+            {
+              "pergunta": "Uma turma começa com 35 pessoas e recebe outras 8. O total fica:",
+              "alternativas": [
+                "43 pessoas",
+                "37 pessoas",
+                "44 pessoas",
+                "53 pessoas"
+              ],
+              "correta": 0,
+              "explicacao": "35 + 8 = 35 + 5 + 3 = 40 + 3 = 43.",
+              "dica": "Complete primeiro a dezena seguinte."
+            }
+          ]
+        },
+        {
+          "id": "subtracao",
+          "materia": "Matemática básica",
+          "titulo": "Subtrair e descobrir quanto falta",
+          "objetivo": "Usar subtração para retirar e comparar quantidades.",
+          "etapas": [
+            {
+              "titulo": "1. Subtrair é descobrir a diferença",
+              "texto": "Se existem 25 participantes e 9 saem, quantos ficam? Podemos retirar 9 de 25.",
+              "conta": "25 − 9 = 16.",
+              "lembrete": "Expressões como 'restaram' ou 'faltam' podem indicar subtração."
+            },
+            {
+              "titulo": "2. Retire em partes",
+              "texto": "Para calcular 43 − 18, retire primeiro 10 e depois 8. É mais fácil acompanhar a conta em duas etapas.",
+              "conta": "43 − 10 = 33; 33 − 8 = 25.",
+              "lembrete": "Você não precisa resolver tudo de cabeça de uma vez."
+            },
+            {
+              "titulo": "3. Compare duas quantidades",
+              "texto": "Se um grupo tem 32 pessoas e outro 19, a diferença é a quantidade que o maior tem a mais.",
+              "conta": "32 − 19 = 13.",
+              "lembrete": "Confira somando: 19 + 13 = 32."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "De 46 inscritos, 19 não compareceram. Quantos compareceram?",
+              "alternativas": [
+                "25 pessoas",
+                "27 pessoas",
+                "29 pessoas",
+                "37 pessoas"
+              ],
+              "correta": 1,
+              "explicacao": "46 − 19: 46 − 20 = 26, depois devolvemos 1, chegando a 27.",
+              "dica": "Tire 20 e devolva 1."
+            },
+            {
+              "pergunta": "Um grupo tem 38 integrantes e outro 24. A diferença é:",
+              "alternativas": [
+                "12 integrantes",
+                "13 integrantes",
+                "14 integrantes",
+                "16 integrantes"
+              ],
+              "correta": 2,
+              "explicacao": "38 − 24 = (30 − 20) + (8 − 4) = 10 + 4 = 14.",
+              "dica": "Subtraia dezenas e unidades."
+            },
+            {
+              "pergunta": "Uma turma precisa de 50 vagas e já ocupou 36. Quantas faltam?",
+              "alternativas": [
+                "14 vagas",
+                "16 vagas",
+                "24 vagas",
+                "26 vagas"
+              ],
+              "correta": 0,
+              "explicacao": "50 − 36 = 14. Conferência: 36 + 14 = 50.",
+              "dica": "Pense em quanto falta para chegar a 50."
+            }
+          ]
+        },
+        {
+          "id": "multiplicacao",
+          "materia": "Matemática básica",
+          "titulo": "Multiplicar sem decorar tudo",
+          "objetivo": "Usar grupos iguais para calcular quantidades.",
+          "etapas": [
+            {
+              "titulo": "1. Multiplicação é soma repetida",
+              "texto": "Se cada fileira tem 4 pessoas e existem 3 fileiras iguais, podemos somar 4 + 4 + 4 ou multiplicar 3 × 4.",
+              "conta": "3 × 4 = 12.",
+              "lembrete": "A multiplicação funciona quando os grupos possuem a mesma quantidade."
+            },
+            {
+              "titulo": "2. Divida o cálculo em partes",
+              "texto": "Para 6 × 7, pense que 6 grupos de 7 podem ser separados em 5 grupos e 1 grupo.",
+              "conta": "6 × 7 = (5 × 7) + 7 = 35 + 7 = 42.",
+              "lembrete": "Use contas que já conhece para construir outras."
+            },
+            {
+              "titulo": "3. Multiplicar por dez",
+              "texto": "Multiplicar um número inteiro por 10 equivale a formar dez grupos dele. Assim, 13 × 10 = 130.",
+              "conta": "13 × 10 = 130.",
+              "lembrete": "Não confunda multiplicação com adicionar 10: 13 + 10 = 23, bem diferente de 130."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "Há 7 filas com 6 pessoas em cada. Quantas pessoas ao todo?",
+              "alternativas": [
+                "36 pessoas",
+                "40 pessoas",
+                "42 pessoas",
+                "48 pessoas"
+              ],
+              "correta": 2,
+              "explicacao": "7 × 6 = (5 × 6) + (2 × 6) = 30 + 12 = 42.",
+              "dica": "Conte grupos iguais de seis."
+            },
+            {
+              "pergunta": "Cinco equipes têm 8 integrantes cada. Qual é o total?",
+              "alternativas": [
+                "35 integrantes",
+                "40 integrantes",
+                "45 integrantes",
+                "48 integrantes"
+              ],
+              "correta": 1,
+              "explicacao": "5 × 8 é o mesmo que 8 + 8 + 8 + 8 + 8 = 40.",
+              "dica": "Multiplique o tamanho da equipe pelo número de equipes."
+            },
+            {
+              "pergunta": "Um instrutor distribui 12 folhas para cada uma de 3 turmas. Quantas folhas?",
+              "alternativas": [
+                "36 folhas",
+                "32 folhas",
+                "24 folhas",
+                "42 folhas"
+              ],
+              "correta": 0,
+              "explicacao": "12 × 3 = (10 × 3) + (2 × 3) = 30 + 6 = 36.",
+              "dica": "Separe 12 em 10 e 2."
+            }
+          ]
+        },
+        {
+          "id": "divisao",
+          "materia": "Matemática básica",
+          "titulo": "Dividir em partes iguais",
+          "objetivo": "Descobrir quanto cada grupo recebe.",
+          "etapas": [
+            {
+              "titulo": "1. Divisão reparte igualmente",
+              "texto": "Se 24 pessoas formam 4 equipes iguais, precisamos saber quantas ficarão em cada uma.",
+              "conta": "24 ÷ 4 = 6.",
+              "lembrete": "Uma divisão de equipes iguais precisa resultar na mesma quantidade para cada uma."
+            },
+            {
+              "titulo": "2. Use a multiplicação para conferir",
+              "texto": "Se não lembra 36 ÷ 6, pergunte: '6 vezes qual número dá 36?' A resposta é 6.",
+              "conta": "36 ÷ 6 = 6 porque 6 × 6 = 36.",
+              "lembrete": "Dividir e multiplicar são operações relacionadas."
+            },
+            {
+              "titulo": "3. Pode sobrar uma parte",
+              "texto": "Com 26 participantes e equipes de 5, formamos 5 equipes completas e sobra 1 pessoa.",
+              "conta": "26 = (5 × 5) + 1.",
+              "lembrete": "Em problemas de equipes, observe se a pergunta quer grupos completos ou participantes restantes."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "Trinta estudantes foram divididos em 5 equipes iguais. Quantos por equipe?",
+              "alternativas": [
+                "5 estudantes",
+                "6 estudantes",
+                "7 estudantes",
+                "8 estudantes"
+              ],
+              "correta": 1,
+              "explicacao": "30 ÷ 5 = 6; confira: 6 × 5 = 30.",
+              "dica": "Que número multiplicado por 5 dá 30?"
+            },
+            {
+              "pergunta": "Quarenta e oito folhas serão distribuídas igualmente a 6 grupos. Quantas por grupo?",
+              "alternativas": [
+                "6 folhas",
+                "7 folhas",
+                "8 folhas",
+                "9 folhas"
+              ],
+              "correta": 2,
+              "explicacao": "48 ÷ 6 = 8 porque 6 × 8 = 48.",
+              "dica": "Conferir pela multiplicação ajuda."
+            },
+            {
+              "pergunta": "Com 23 pessoas, quantos grupos completos de 4 podem ser feitos?",
+              "alternativas": [
+                "5 grupos, sobrando 3 pessoas",
+                "4 grupos, sobrando 7 pessoas",
+                "6 grupos, faltando 1 pessoa",
+                "5 grupos, sobrando 2 pessoas"
+              ],
+              "correta": 0,
+              "explicacao": "4 × 5 = 20; de 23 pessoas sobram 3. Não há pessoas suficientes para 6 grupos completos.",
+              "dica": "Calcule o maior múltiplo de 4 que não passe de 23."
+            }
+          ]
+        },
+        {
+          "id": "interpretacao",
+          "materia": "Português",
+          "titulo": "Entender o que o texto diz",
+          "objetivo": "Distinguir informação escrita de conclusão inventada.",
+          "etapas": [
+            {
+              "titulo": "1. Leia e encontre as informações",
+              "texto": "Texto: 'A turma começou às 8 horas. Ana chegou às 7h50 e entrou na primeira atividade.' Pergunta: a que horas a turma começou? A resposta está no texto.",
+              "conta": "A turma começou às 8 horas.",
+              "lembrete": "Se a resposta está escrita, localize a frase antes de marcar."
+            },
+            {
+              "titulo": "2. Cuidado com palavras que mudam tudo",
+              "texto": "Texto: 'Alguns alunos finalizaram a atividade.' Isso NÃO significa que todos terminaram. A palavra 'alguns' limita a informação.",
+              "conta": "'Alguns' não significa 'todos'.",
+              "lembrete": "Preste atenção a 'sempre', 'nunca', 'alguns', 'todos' e 'somente'."
+            },
+            {
+              "titulo": "3. Conclua apenas o que o texto permite",
+              "texto": "Texto: 'Lucas levou um caderno porque iria anotar as instruções.' Podemos concluir que ele queria registrar informações. Não podemos concluir sua nota na prova.",
+              "conta": "Ele levou o caderno para fazer anotações.",
+              "lembrete": "Uma boa inferência usa pistas do texto, não adivinhações."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "Texto: 'Todos os candidatos chegaram antes das 9h. A avaliação começou às 9h15.' Qual frase é verdadeira?",
+              "alternativas": [
+                "Os candidatos chegaram após o início.",
+                "A avaliação começou às 9h.",
+                "Os candidatos chegaram antes de 9h.",
+                "A avaliação terminou às 9h15."
+              ],
+              "correta": 2,
+              "explicacao": "O texto afirma que todos chegaram antes das 9h; ele não diz quando terminou.",
+              "dica": "Localize a informação explícita."
+            },
+            {
+              "pergunta": "Texto: 'Parte da turma concluiu o exercício.' Isso permite afirmar que:",
+              "alternativas": [
+                "A turma inteira terminou.",
+                "Alguns participantes concluíram.",
+                "Ninguém começou o exercício.",
+                "Todos tiveram a mesma nota."
+              ],
+              "correta": 1,
+              "explicacao": "'Parte da turma' indica alguns participantes, não necessariamente todos.",
+              "dica": "Não troque 'parte' por 'todos'."
+            },
+            {
+              "pergunta": "Texto: 'Marina revisou as anotações para recordar as instruções.' Por que ela revisou?",
+              "alternativas": [
+                "Para lembrar as instruções.",
+                "Para alterar a hora da prova.",
+                "Para mudar de turma.",
+                "Para entregar as anotações."
+              ],
+              "correta": 0,
+              "explicacao": "A própria frase diz que Marina revisou para recordar.",
+              "dica": "Procure a expressão 'para' no texto."
+            }
+          ]
+        },
+        {
+          "id": "pontuacao",
+          "materia": "Português",
+          "titulo": "Pontuação e sentido",
+          "objetivo": "Reconhecer como sinais ajudam a entender uma frase.",
+          "etapas": [
+            {
+              "titulo": "1. Ponto final encerra uma ideia",
+              "texto": "Em 'A turma terminou o exercício.' o ponto final avisa que a informação acabou. Uma nova frase pode apresentar outra ação.",
+              "conta": "A turma terminou o exercício. Depois, houve uma revisão.",
+              "lembrete": "O ponto ajuda a separar ideias completas."
+            },
+            {
+              "titulo": "2. Interrogação marca pergunta",
+              "texto": "'A que horas começa a atividade?' é uma pergunta. O ponto de interrogação muda o modo como lemos a frase.",
+              "conta": "Você terminou? / Você terminou.",
+              "lembrete": "Observe se a frase pergunta ou afirma algo."
+            },
+            {
+              "titulo": "3. Vírgulas organizam uma lista",
+              "texto": "Em 'Trouxe caderno, lápis e borracha', a vírgula separa os elementos. Nem toda pausa de voz exige vírgula.",
+              "conta": "Trouxe caderno, lápis e borracha.",
+              "lembrete": "Não coloque vírgula entre sujeito e verbo: 'Os alunos chegaram'."
+            }
+          ],
+          "perguntas": [
+            {
+              "pergunta": "Qual frase faz uma pergunta?",
+              "alternativas": [
+                "A atividade começa agora.",
+                "A atividade começou ontem.",
+                "A atividade terminou cedo.",
+                "A atividade começa agora?"
+              ],
+              "correta": 3,
+              "explicacao": "O ponto de interrogação indica que a frase pergunta algo.",
+              "dica": "Procure o sinal que marca uma pergunta."
+            },
+            {
+              "pergunta": "Qual frase usa pontuação adequada?",
+              "alternativas": [
+                "A turma trouxe, caderno lápis e borracha.",
+                "A turma trouxe caderno, lápis e borracha.",
+                "A, turma trouxe caderno lápis e borracha.",
+                "A turma trouxe caderno lápis, e borracha."
+              ],
+              "correta": 1,
+              "explicacao": "A vírgula separa os itens de uma enumeração. Não separe o sujeito do verbo.",
+              "dica": "Os itens formam uma lista."
+            },
+            {
+              "pergunta": "Qual frase está escrita sem separar sujeito e verbo por vírgula?",
+              "alternativas": [
+                "Os alunos, começaram o treino.",
+                "A turma, terminou o exercício.",
+                "Os participantes chegaram cedo.",
+                "Os instrutores, avaliaram os alunos."
+              ],
+              "correta": 2,
+              "explicacao": "Em uma frase simples, não colocamos vírgula entre o sujeito e o verbo.",
+              "dica": "Quem faz a ação é o sujeito."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CUR-10-2",
+      "nome": "CTA — avaliação do curso",
+      "tipo": "Avaliação de habilitação",
+      "origem": "Capacitação vinculada ao CTA",
+      "confirmacao": "O curso e sua avaliação estão documentados, mas não há matriz aprovada das questões.",
+      "programa": "pendente",
+      "materias": [],
+      "aulas": [],
+      "observacao": "Não foram inventadas questões de armamento, notas ou requisitos. As instruções reais do curso ainda precisam ser cadastradas."
+    },
+    {
+      "id": "CUR-10-5",
+      "nome": "ESA — avaliações de formação",
+      "tipo": "Avaliação de escola",
+      "origem": "Formação da ESA na FAAAB",
+      "confirmacao": "A ESA possui formação e avaliação; as matérias de uma eventual prova teórica da FAAAB ainda não foram especificadas.",
+      "programa": "pendente",
+      "materias": [],
+      "aulas": [],
+      "observacao": "Regras de matrícula e uniformes não serão apresentadas como questões de prova."
+    },
+    {
+      "id": "CUR-10-16",
+      "nome": "CFOG — avaliações de formação",
+      "tipo": "Avaliação de carreira",
+      "origem": "Formação de oficiais-generais da FAAAB",
+      "confirmacao": "O CFOG possui formação com avaliações; os tópicos avaliados ainda não estão aprovados.",
+      "programa": "pendente",
+      "materias": [],
+      "aulas": [],
+      "observacao": "Patentes dos alunos e dos instrutores são dados administrativos, não conteúdo de prova."
+    }
+  ]
+}
