@@ -63,3 +63,13 @@ a.edu3-card:hover{border-color:#548362;box-shadow:0 5px 15px #12362010;transform
 .edu3-head{position:sticky;top:0;z-index:20;box-shadow:0 2px 9px #0e2b151f}
 .edu3-subnav .edu3-btn{flex:1 1 175px}
 @media(max-width:650px){.edu3-site-nav a{font-size:12px}.edu3-menu a{min-height:48px}.edu3-headwrap{gap:6px}}
+
+/* Regras de elegibilidade e programa de seleções reais do projeto. */
+.edu3-requirements{display:grid;gap:12px;margin:0}
+.edu3-requirements>div{display:grid;grid-template-columns:minmax(130px,190px) 1fr;gap:12px;align-items:start;padding:11px 0;border-bottom:1px solid #e5ede4}
+.edu3-requirements>div:last-child{border-bottom:0}
+.edu3-requirements dt{font-weight:800;color:#274b31}
+.edu3-requirements dd{margin:0;color:#3c5341;overflow-wrap:anywhere}
+.edu3-plain-list{padding-left:24px;margin:6px 0}
+.edu3-plain-list li{padding:6px 0;line-height:1.65}
+@media(max-width:650px){.edu3-requirements>div{grid-template-columns:1fr;gap:2px}.edu3-requirements dt{font-size:14px}}
