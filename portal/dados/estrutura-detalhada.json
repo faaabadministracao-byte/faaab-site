@@ -5955,17 +5955,9 @@
       "superior": null,
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Operações Policiais Especiais.",
       "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
+      "ingresso": "Integrar a Polícia Militar da FAAAB; seleção e patentes mínimas da unidade são definidas pelo seu comando quando publicadas, sem ingresso automático por possuir patente.",
       "patentes": [
-        "Soldado",
-        "Cabo",
-        "Sargento",
-        "Subtenente",
-        "Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
+        "Critérios de patente para cada unidade ainda não homologados. Consultar o quadro geral PM na página Patentes."
       ],
       "funcoes": [
         "Integrante",
@@ -5985,9 +5977,9 @@
         "Avaliação de equipe"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação básica PM",
+        "Habilitações específicas aprovadas para esta unidade",
+        "Autorização do comando"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -6009,17 +6001,9 @@
       "superior": null,
       "missao": "Atividades operacionais, de apoio e administração simuladas de Rondas Ostensivas Táticas Metropolitanas.",
       "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
+      "ingresso": "Integrar a Polícia Militar da FAAAB; seleção e patentes mínimas da unidade são definidas pelo seu comando quando publicadas, sem ingresso automático por possuir patente.",
       "patentes": [
-        "Soldado",
-        "Cabo",
-        "Sargento",
-        "Subtenente",
-        "Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
+        "Critérios de patente para cada unidade ainda não homologados. Consultar o quadro geral PM na página Patentes."
       ],
       "funcoes": [
         "Integrante",
@@ -6039,9 +6023,9 @@
         "Avaliação de equipe"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação básica PM",
+        "Habilitações específicas aprovadas para esta unidade",
+        "Autorização do comando"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -6063,17 +6047,9 @@
       "superior": null,
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Polícia de Choque.",
       "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
+      "ingresso": "Integrar a Polícia Militar da FAAAB; seleção e patentes mínimas da unidade são definidas pelo seu comando quando publicadas, sem ingresso automático por possuir patente.",
       "patentes": [
-        "Soldado",
-        "Cabo",
-        "Sargento",
-        "Subtenente",
-        "Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
+        "Critérios de patente para cada unidade ainda não homologados. Consultar o quadro geral PM na página Patentes."
       ],
       "funcoes": [
         "Integrante",
@@ -6093,9 +6069,9 @@
         "Avaliação de equipe"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação básica PM",
+        "Habilitações específicas aprovadas para esta unidade",
+        "Autorização do comando"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -6117,17 +6093,9 @@
       "superior": null,
       "missao": "Unidade fictícia da FAAAB; Polícia Penal não integra a Polícia Militar no Brasil real.",
       "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
+      "ingresso": "Integrar a Polícia Militar da FAAAB; seleção e patentes mínimas da unidade são definidas pelo seu comando quando publicadas, sem ingresso automático por possuir patente.",
       "patentes": [
-        "Soldado",
-        "Cabo",
-        "Sargento",
-        "Subtenente",
-        "Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
+        "Critérios de patente para cada unidade ainda não homologados. Consultar o quadro geral PM na página Patentes."
       ],
       "funcoes": [
         "Integrante",
@@ -6147,9 +6115,9 @@
         "Avaliação de equipe"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação básica PM",
+        "Habilitações específicas aprovadas para esta unidade",
+        "Autorização do comando"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
