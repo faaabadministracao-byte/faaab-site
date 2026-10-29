@@ -1,0 +1,1334 @@
+{
+  "atualizado": "2026-10-29",
+  "versao": 2,
+  "aviso": "Trilhas de estudo do projeto FAAAB. Não são editais nem provas oficiais das instituições brasileiras. Onde não há programa publicado, nada é presumido.",
+  "trilhas": [
+    {
+      "id": "CUR-10-1",
+      "forca": "FTB",
+      "nome": "Recruta -> Soldado",
+      "preparo": "Expedição Militar, Seleção de Brigada e TC-1",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "comando",
+          "materia": "Organização militar",
+          "titulo": "Cadeia de comando no alistamento",
+          "objetivo": "Identificar a quem pedir instruções e como conferir uma ordem.",
+          "teoria": [
+            "Na FAAAB, a patente representa a posição na carreira; a função indica a tarefa que o integrante exerce naquele momento. O chefe da instrução pode delegar a condução de uma turma a um instrutor habilitado, mas isso não muda a patente do instrutor.",
+            "Quando uma ordem não está clara, a atitude correta é confirmar objetivo, local e responsável antes de agir. Cumprir a cadeia de comando não significa obedecer pedidos de qualquer jogador: solicitações fora das permissões da função devem ser encaminhadas à chefia responsável.",
+            "Na fase inicial, aprender a reconhecer instrutores, monitores e responsáveis pelo treinamento evita confusão na triagem e nos exercícios."
+          ],
+          "exemplo": "Caso resolvido: um monitor pede acesso a um armário restrito, mas não possui habilitação para liberar equipamentos. O aluno deve procurar o instrutor autorizado; não é o monitor quem concede acesso.",
+          "lembrar": "Um Soldado pode instruir uma turma só por ter patente acima de Recruta?",
+          "resposta": "Não. Precisa também estar designado e habilitado como instrutor.",
+          "erros": "Não confunda patente, função temporária e permissão técnica.",
+          "questoes": [
+            {
+              "enunciado": "Durante o treinamento, o monitor pede para conceder uma promoção a outro aluno. Qual resposta segue as regras?",
+              "alternativas": [
+                "Registrar a promoção pedida.",
+                "Encaminhar ao responsável autorizado.",
+                "Permitir após o fim da aula.",
+                "Trocar a patente por certificado."
+              ],
+              "correta": 1,
+              "explicacao": "A função de monitor não inclui conceder promoções."
+            },
+            {
+              "enunciado": "Quem conduz a aula deve possuir principalmente:",
+              "alternativas": [
+                "Maior tempo de conta.",
+                "Inscrição na mesma turma.",
+                "O uniforme mais recente.",
+                "Designação e habilitação."
+              ],
+              "correta": 3,
+              "explicacao": "Atribuição de instrutor depende de designação e habilitação."
+            },
+            {
+              "enunciado": "Se o aluno recebe instruções contraditórias, o melhor primeiro passo é:",
+              "alternativas": [
+                "Confirmar com a chefia da instrução.",
+                "Seguir quem chegou ao servidor antes.",
+                "Esperar qualquer jogador decidir.",
+                "Ignorar a atividade inteira."
+              ],
+              "correta": 0,
+              "explicacao": "Confirmar a autoridade responsável evita ações incoerentes."
+            }
+          ]
+        },
+        {
+          "id": "ingresso",
+          "materia": "Formação inicial",
+          "titulo": "Expedição, seleção e TC-1",
+          "objetivo": "Conhecer a sequência documentada até Soldado.",
+          "teoria": [
+            "A formação de Recruta para Soldado no Exército FAAAB registra três componentes: Expedição Militar, Seleção de Brigada e TC-1. O manual não estabelece que esses componentes pertençam à FAB ou à Marinha.",
+            "Expedição e seleção têm finalidades diferentes: uma exercita procedimentos e integração, enquanto a outra identifica a unidade ou trajetória de interesse. A aprovação final depende dos critérios da administração, não apenas da presença.",
+            "Separadamente, Mobilizado de 2ª Classe e Mobilizado de 1ª Classe seguem rota própria. Não se deve inserir automaticamente Recruta entre as duas etapas."
+          ],
+          "exemplo": "Caso resolvido: quem concluiu Expedição Militar, mas não finalizou as demais etapas, não deve receber automaticamente a patente de Soldado.",
+          "lembrar": "Quais são os três componentes documentados da formação de Recruta para Soldado?",
+          "resposta": "Expedição Militar, Seleção de Brigada e TC-1.",
+          "erros": "Não copiar essas etapas do Exército para cursos das outras forças.",
+          "questoes": [
+            {
+              "enunciado": "Qual etapa consta da formação Recruta → Soldado da FAAAB?",
+              "alternativas": [
+                "Curso de Controle Aéreo.",
+                "Centro de Instrução Naval.",
+                "Seleção de Brigada.",
+                "Formação de Fuzileiros."
+              ],
+              "correta": 2,
+              "explicacao": "Seleção de Brigada é um dos três componentes documentados."
+            },
+            {
+              "enunciado": "Uma pessoa concluiu somente a Expedição Militar. Qual conclusão é adequada?",
+              "alternativas": [
+                "Já terminou a formação.",
+                "Ainda faltam etapas previstas.",
+                "Recebeu curso de instrutor.",
+                "Passa direto a Coronel."
+              ],
+              "correta": 1,
+              "explicacao": "Há também Seleção de Brigada e TC-1."
+            },
+            {
+              "enunciado": "A rota de Mobilizado de 2ª Classe é:",
+              "alternativas": [
+                "Obrigatoriamente via Recruta.",
+                "Igual à da Marinha.",
+                "Uma modalidade de escola FAB.",
+                "Uma progressão própria."
+              ],
+              "correta": 3,
+              "explicacao": "A rota de mobilização é diferente da formação do Recruta."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-10-2",
+      "forca": "FTB",
+      "nome": "CTA",
+      "preparo": "Habilitação para uso de equipamento no jogo",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "habilitacao",
+          "materia": "Segurança e autorização",
+          "titulo": "Habilitação não é patente",
+          "objetivo": "Distinguir autorização para equipamentos de promoções.",
+          "teoria": [
+            "O CTA está vinculado à etapa de Soldado no planejamento FAAAB. Sua finalidade documentada é ensinar uso e regras de armamento e liberar os acessos correspondentes. O nome completo da sigla ainda está a confirmar.",
+            "Uma habilitação autoriza um uso específico quando as condições são atendidas. Ela não equivale à promoção militar, à entrada em batalhão, nem à permissão de administrar scripts.",
+            "Antes de liberar qualquer equipamento no jogo, o sistema deve verificar o cadastro, a habilitação correspondente, a unidade e a situação da atividade; operadores não devem contornar essas verificações."
+          ],
+          "exemplo": "Caso resolvido: Soldado aprovado no CTA pode ganhar acesso ao equipamento previsto, mas permanece Soldado se não houver promoção formal.",
+          "lembrar": "O que a conclusão do CTA pode conceder, segundo o projeto?",
+          "resposta": "A habilitação e o acesso correspondente aos equipamentos previstos; não uma promoção automática.",
+          "erros": "Não tratar equipamento, patente e administrador como uma única permissão.",
+          "questoes": [
+            {
+              "enunciado": "Após concluir o CTA, o militar deve receber:",
+              "alternativas": [
+                "Patente de Sargento.",
+                "Comando do batalhão.",
+                "Acesso irrestrito ao servidor.",
+                "Habilitação autorizada."
+              ],
+              "correta": 3,
+              "explicacao": "O CTA concede competência e acesso correspondente, não promoção."
+            },
+            {
+              "enunciado": "Um jogador concluiu o curso e trocou de unidade. O sistema deve:",
+              "alternativas": [
+                "Conferir as autorizações na nova unidade.",
+                "Conceder toda permissão de imediato.",
+                "Desconsiderar todas as habilitações.",
+                "Aplicar a patente de instrutor."
+              ],
+              "correta": 0,
+              "explicacao": "As permissões precisam de verificação conforme a nova função."
+            },
+            {
+              "enunciado": "O nome completo da sigla CTA está:",
+              "alternativas": [
+                "Definido por lei nacional.",
+                "Confirmado no curso da FAB.",
+                "Pendente de confirmação.",
+                "Substituído pelo TC-1."
+              ],
+              "correta": 2,
+              "explicacao": "O próprio manual FAAAB registra a expansão de CTA como pendente."
+            }
+          ]
+        },
+        {
+          "id": "procedimentos",
+          "materia": "Segurança e autorização",
+          "titulo": "Checklist de armário e atividade",
+          "objetivo": "Praticar decisões antes do uso de equipamento simulado.",
+          "teoria": [
+            "Um checklist serve para verificar condições que podem ser esquecidas sob pressão. No armário de equipamentos, três verificações são úteis: identidade do usuário, habilitação atual e autorização para a atividade.",
+            "Se qualquer verificação falhar, o acesso é negado de forma explicada, sem apagar o curso concluído. A equipe responsável pode analisar se faltou cadastro, curso ou designação.",
+            "A aula trata dos controles do roleplay e não substitui instruções reais de segurança."
+          ],
+          "exemplo": "Caso resolvido: um militar habilitado tenta retirar equipamento reservado a outra unidade; a habilitação não anula a restrição da unidade.",
+          "lembrar": "Quais três verificações antecedem a liberação de equipamento no jogo?",
+          "resposta": "Identidade, habilitação e autorização para a atividade.",
+          "erros": "Não confundir negativa de acesso com perda de patente.",
+          "questoes": [
+            {
+              "enunciado": "O sistema encontra habilitação, mas não há autorização para a missão. Ele deve:",
+              "alternativas": [
+                "Aprovar por tempo de serviço.",
+                "Negar e informar a restrição.",
+                "Conceder permissão provisória.",
+                "Apagar o curso concluído."
+              ],
+              "correta": 1,
+              "explicacao": "A missão também requer autorização específica."
+            },
+            {
+              "enunciado": "O que pertence a um checklist de acesso?",
+              "alternativas": [
+                "Popularidade do jogador.",
+                "Pontuação em combate.",
+                "Cor do distintivo.",
+                "Identidade e habilitação."
+              ],
+              "correta": 3,
+              "explicacao": "A checagem usa requisitos reais do perfil."
+            },
+            {
+              "enunciado": "Um acesso negado por falta de unidade exige:",
+              "alternativas": [
+                "Revisar a designação e o cadastro.",
+                "Promover o soldado imediatamente.",
+                "Repetir qualquer curso de história.",
+                "Criar um novo grupo Roblox."
+              ],
+              "correta": 0,
+              "explicacao": "A ausência de vínculo com a unidade é uma questão de cadastro ou designação."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-10-3",
+      "forca": "FTB",
+      "nome": "Curso de Formação de Soldado Especializado",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-4",
+      "forca": "FTB",
+      "nome": "Curso de Formação de Soldado para Operações Terrestres",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-5",
+      "forca": "FTB",
+      "nome": "ESA",
+      "preparo": "Formação da ESA por etapas e papéis",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "matricula",
+          "materia": "Estrutura da ESA",
+          "titulo": "Quem é aluno e quem é instrutor",
+          "objetivo": "Aplicar os requisitos de participação documentados na ESA.",
+          "teoria": [
+            "No manual da ESA FAAAB, as etapas de alunos abrangem Cabo e 3º Sargento em continuidade de formação. O instrutor previsto é o 2º Tenente habilitado.",
+            "Essa divisão evita colocar um Coronel como aluno da mesma turma ou transformar o aluno em instrutor porque concluiu um módulo. A patente de origem deve permanecer registrada.",
+            "As siglas internas AO, AT, AF, IC e IF aparecem no manual, mas as expansões precisam ser confirmadas antes de o site afirmar o significado delas."
+          ],
+          "exemplo": "Caso resolvido: um Cabo entra na turma de formação, enquanto um 2º Tenente habilitado conduz as instruções. Ambos mantêm seus postos militares.",
+          "lembrar": "Quais são as duas situações de aluno documentadas para a ESA?",
+          "resposta": "Cabo e 3º Sargento em continuidade; instrutor é 2º Tenente habilitado.",
+          "erros": "Não inventar o significado das siglas AO, AT, AF, IC e IF.",
+          "questoes": [
+            {
+              "enunciado": "Quem aparece como instrutor habilitado na ESA FAAAB?",
+              "alternativas": [
+                "2º Tenente.",
+                "3º Sargento aluno.",
+                "Cabo matriculado.",
+                "Aluno do alistamento."
+              ],
+              "correta": 0,
+              "explicacao": "O papel previsto de instrutor é do 2º Tenente habilitado."
+            },
+            {
+              "enunciado": "Um Cabo conclui etapa da ESA. O resultado deve ser:",
+              "alternativas": [
+                "Permissão total no Roblox.",
+                "Matrícula em qualquer escola.",
+                "Registro da etapa concluída.",
+                "Patente imediata de General."
+              ],
+              "correta": 2,
+              "explicacao": "A etapa é registrada e a promoção exige processo próprio."
+            },
+            {
+              "enunciado": "Qual afirmação sobre AO, AT e AF está correta?",
+              "alternativas": [
+                "São patentes navais.",
+                "São notas de matemática.",
+                "Já têm expansão oficial pública.",
+                "A expansão ainda requer validação."
+              ],
+              "correta": 3,
+              "explicacao": "O catálogo apresenta as siglas, sem definição de seus nomes."
+            }
+          ]
+        },
+        {
+          "id": "avaliacao",
+          "materia": "Didática militar",
+          "titulo": "Como avaliar sem decorar alternativas",
+          "objetivo": "Aprender a observar evidências e explicar erros.",
+          "teoria": [
+            "Uma avaliação justa verifica se o aluno entendeu o processo, e não apenas se memorizou a alternativa mais comprida. Perguntas podem apresentar situações, decisões e justificativas de extensão semelhante.",
+            "Durante a aula, o instrutor apresenta o conceito, resolve um exemplo, solicita que o aluno explique com suas palavras e só depois utiliza exercícios. O avaliador registra o conteúdo, o resultado e a devolutiva.",
+            "Repetir a mesma questão logo após ver a resposta mede reconhecimento, não memória consolidada. Por isso a FAAAB registra revisões em dias diferentes."
+          ],
+          "exemplo": "Caso resolvido: dois alunos acertam a pergunta, mas um não consegue explicar o motivo. É preciso propor nova aplicação antes de considerar conhecimento consolidado.",
+          "lembrar": "Por que acertar a mesma pergunta duas vezes seguidas não comprova domínio?",
+          "resposta": "Porque pode ser memória imediata da alternativa, sem recuperação após intervalo.",
+          "erros": "Não premiar respostas apenas por serem mais longas ou terem detalhes óbvios.",
+          "questoes": [
+            {
+              "enunciado": "Qual avaliação revela melhor compreensão?",
+              "alternativas": [
+                "Copiar uma resposta exibida.",
+                "Responder e justificar uma situação.",
+                "Repetir as letras do gabarito.",
+                "Escolher a frase mais extensa."
+              ],
+              "correta": 1,
+              "explicacao": "A justificativa mostra o raciocínio aplicado ao conteúdo."
+            },
+            {
+              "enunciado": "Após um erro, o instrutor deve primeiro:",
+              "alternativas": [
+                "Ignorar o tópico incorreto.",
+                "Dar patente como incentivo.",
+                "Explicar o motivo e retomar o conceito.",
+                "Alterar o gabarito sem registro."
+              ],
+              "correta": 2,
+              "explicacao": "A correção explicativa ajuda a desfazer o mal-entendido."
+            },
+            {
+              "enunciado": "Uma revisão após um intervalo serve para:",
+              "alternativas": [
+                "Verificar recuperação posterior.",
+                "Confirmar a letra decorada.",
+                "Eliminar a próxima aula.",
+                "Converter curso em patente."
+              ],
+              "correta": 0,
+              "explicacao": "A recuperação espaçada verifica retenção além da memória imediata."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-10-6",
+      "forca": "FTB",
+      "nome": "CFSO",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-7",
+      "forca": "FTB",
+      "nome": "Curso de Formação de Sargentos da Brigada",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-8",
+      "forca": "FTB",
+      "nome": "TB — Treinamento na Brigada",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-9",
+      "forca": "FTB",
+      "nome": "CIG",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-10",
+      "forca": "FTB",
+      "nome": "1º Cen Ins Op G",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-11",
+      "forca": "FTB",
+      "nome": "EsPCEx",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-12",
+      "forca": "FTB",
+      "nome": "AMAN",
+      "preparo": "Etapas de formação de oficiais da AMAN",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "fases",
+          "materia": "Carreira de oficiais",
+          "titulo": "Fases de Cadete e Aspirante da AMAN",
+          "objetivo": "Entender a progressão de aluno descrita no manual.",
+          "teoria": [
+            "O planejamento da AMAN na FAAAB separa as fases 1 a 5 para Cadete e as fases 6 a 10 para Aspirante. O resultado final previsto é a patente de 2º Tenente, após cumprir a formação.",
+            "Os instrutores documentados são 1º Tenente habilitado e Capitão habilitado. Um 2º Tenente recém-formado não é instrutor padrão apenas por ter recebido a nova patente.",
+            "Fase, patente e função docente devem aparecer como campos diferentes no cadastro do estudante para impedir acesso indevido."
+          ],
+          "exemplo": "Caso resolvido: um Aspirante na fase 8 ainda é aluno; não se torna instrutor até que haja designação e habilitação apropriadas.",
+          "lembrar": "Quais fases são de Cadete e quais são de Aspirante na AMAN FAAAB?",
+          "resposta": "Cadete: 1 a 5; Aspirante: 6 a 10.",
+          "erros": "Não confundir números de fase com postos da carreira.",
+          "questoes": [
+            {
+              "enunciado": "Na estrutura documentada, a fase 7 corresponde a:",
+              "alternativas": [
+                "Cadete em fase final.",
+                "Coronel como aluno.",
+                "Aspirante em formação.",
+                "Instrutor recém-formado."
+              ],
+              "correta": 2,
+              "explicacao": "As fases 6 a 10 são previstas para Aspirante."
+            },
+            {
+              "enunciado": "Quem aparece como instrutor previsto na AMAN?",
+              "alternativas": [
+                "Recruta com medalha.",
+                "1º Tenente habilitado.",
+                "2º Tenente recém-formado.",
+                "Soldado matriculado."
+              ],
+              "correta": 1,
+              "explicacao": "A documentação prevê 1º Tenente e Capitão habilitados."
+            },
+            {
+              "enunciado": "Ao concluir a formação, o posto final previsto é:",
+              "alternativas": [
+                "Cabo.",
+                "Major.",
+                "Subtenente.",
+                "2º Tenente."
+              ],
+              "correta": 3,
+              "explicacao": "A etapa final descrita prevê o posto de 2º Tenente."
+            }
+          ]
+        },
+        {
+          "id": "lideranca",
+          "materia": "Prática de comando",
+          "titulo": "Planejar, delegar e conferir objetivos",
+          "objetivo": "Escolher ações que demonstram liderança responsável no roleplay.",
+          "teoria": [
+            "Uma ordem útil indica objetivo, responsáveis, prazo ou etapa e critério de conclusão. Delegar não significa abandonar o acompanhamento: o comandante verifica se os integrantes entenderam as tarefas.",
+            "Se surge um problema, primeiro é necessário identificar a condição que mudou. Em seguida, a chefia ajusta a tarefa e comunica a nova orientação, evitando ordens conflitantes.",
+            "No jogo, um relatório simples com resultado, dificuldade e próximos passos permite registrar a aprendizagem da equipe sem criar burocracia excessiva."
+          ],
+          "exemplo": "Caso resolvido: a equipe não consegue acessar a região da missão. Em vez de culpar todos, o comandante confirma o problema e define rota alternativa autorizada.",
+          "lembrar": "Quais elementos tornam uma ordem de treinamento verificável?",
+          "resposta": "Objetivo claro, responsáveis, etapa e critério de conclusão.",
+          "erros": "Evitar ordens vagas como 'façam tudo logo'.",
+          "questoes": [
+            {
+              "enunciado": "Uma equipe não compreendeu quem executa cada tarefa. A chefia deve:",
+              "alternativas": [
+                "Repassar responsabilidades claramente.",
+                "Encerrar a atividade sem explicação.",
+                "Aumentar cargos do organograma.",
+                "Trocar todos de patente."
+              ],
+              "correta": 0,
+              "explicacao": "Atribuições claras permitem executar e acompanhar as tarefas."
+            },
+            {
+              "enunciado": "A missão mudou de região. A primeira medida adequada é:",
+              "alternativas": [
+                "Continuar sem comunicar ninguém.",
+                "Remover as permissões da turma.",
+                "Conferir a condição e informar ajustes.",
+                "Criar outra escola automaticamente."
+              ],
+              "correta": 2,
+              "explicacao": "É necessário verificar o que mudou e comunicar novas orientações."
+            },
+            {
+              "enunciado": "O relatório mais útil deve informar:",
+              "alternativas": [
+                "Somente o nome do servidor.",
+                "Somente o número de jogadores.",
+                "A cor da farda usada.",
+                "Resultado, dificuldades e próximas ações."
+              ],
+              "correta": 3,
+              "explicacao": "Essas informações permitem acompanhar execução e aprendizagem."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-10-13",
+      "forca": "FTB",
+      "nome": "Aperfeiçoamento de Oficiais",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-14",
+      "forca": "FTB",
+      "nome": "Escola do Estado-Maior",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-15",
+      "forca": "FTB",
+      "nome": "Teste Limpeza de Oficiais",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-16",
+      "forca": "FTB",
+      "nome": "CFOG",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-10-17",
+      "forca": "FTB",
+      "nome": "ACopMil At Es",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-1",
+      "forca": "FAB",
+      "nome": "CIAAR / CFAer",
+      "preparo": "Formação inicial e linhas da FAB",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "linhas",
+          "materia": "Formação FAB",
+          "titulo": "As duas linhas após a formação inicial",
+          "objetivo": "Identificar as opções documentadas no CFAer FAAAB.",
+          "teoria": [
+            "O CIAAR é um centro de instrução da Aeronáutica; o CFAer aparece como proposta/adaptação específica da FAAAB dentro dele. Não se deve apresentar CIAAR como um único curso básico universal.",
+            "O aluno registrado nessa proposta é o Recruta da FAB. A conclusão direciona a escolha entre Infantaria da Aeronáutica e Operações Aéreas/Aviação.",
+            "Essa escolha não concede automaticamente habilitação de pilotagem: para operar aeronaves ainda podem existir requisitos de curso e função."
+          ],
+          "exemplo": "Caso resolvido: uma pessoa escolhe Operações Aéreas; sua carreira passa a considerar essa linha, mas não libera um avião antes do treinamento correspondente.",
+          "lembrar": "Quais duas linhas de atuação constam após o CFAer FAAAB?",
+          "resposta": "Infantaria da Aeronáutica e Operações Aéreas/Aviação.",
+          "erros": "Não transferir a Expedição Militar do Exército à FAB.",
+          "questoes": [
+            {
+              "enunciado": "O CIAAR no planejamento representa:",
+              "alternativas": [
+                "Um único curso genérico.",
+                "Um batalhão de tanques.",
+                "Um posto de Sargento.",
+                "Um centro de instrução."
+              ],
+              "correta": 3,
+              "explicacao": "CIAAR é um centro, e CFAer é a adaptação proposta pela FAAAB."
+            },
+            {
+              "enunciado": "Uma das linhas oferecidas na conclusão é:",
+              "alternativas": [
+                "Batalhão de Infantaria de Caatinga.",
+                "Operações Aéreas/Aviação.",
+                "Comando de navios de superfície.",
+                "Governo estadual da FAAAB."
+              ],
+              "correta": 1,
+              "explicacao": "A formação direciona à linha de operações aéreas ou aviação."
+            },
+            {
+              "enunciado": "A escolha da linha de Aviação permite:",
+              "alternativas": [
+                "Pilotar sem treinamento adicional.",
+                "Assumir o comando da FAB.",
+                "Seguir para qualificações específicas.",
+                "Ganhar permissão de administrador."
+              ],
+              "correta": 2,
+              "explicacao": "A escolha de linha não substitui habilitações de pilotagem."
+            }
+          ]
+        },
+        {
+          "id": "separacao",
+          "materia": "Estrutura FAB",
+          "titulo": "Infantaria, aviação e funções de apoio",
+          "objetivo": "Entender por que uma mesma força tem atividades distintas.",
+          "teoria": [
+            "Uma força aérea opera com atividades diferentes: proteção de instalações, aviação e apoio operacional. Em um roleplay, isso significa separar a função de sentinela, de piloto e de controlador de pista.",
+            "A patente pode ser a mesma em várias unidades, mas as permissões precisam depender da função e da qualificação. Um Soldado com função na guarda de base não vira piloto por trocar a farda.",
+            "Os cursos são organizados pela função real que o jogador desempenhará, evitando turmas que misturem provas com temas sem relação."
+          ],
+          "exemplo": "Caso resolvido: um integrante da Infantaria da Aeronáutica que deseja trabalhar no transporte aéreo solicita ingresso e formação específicos, em vez de usar equipamento automaticamente.",
+          "lembrar": "Por que dois militares da FAB da mesma patente podem ter permissões diferentes?",
+          "resposta": "Porque exercem funções distintas e possuem habilitações diferentes.",
+          "erros": "Uniforme não substitui o registro de matrícula ou de curso.",
+          "questoes": [
+            {
+              "enunciado": "Um integrante da proteção da base solicita pilotar. O sistema deve:",
+              "alternativas": [
+                "Exigir a habilitação apropriada.",
+                "Autorizar por usar farda FAB.",
+                "Autorizar pelo tempo de conta.",
+                "Transferir sua patente ao Exército."
+              ],
+              "correta": 0,
+              "explicacao": "Pilotagem depende de autorização e qualificação específicas."
+            },
+            {
+              "enunciado": "Qual separação evita confusão entre áreas da FAB?",
+              "alternativas": [
+                "Juntar todos em uma escola.",
+                "Usar a mesma prova para tudo.",
+                "Retirar a função do cadastro.",
+                "Diferenciar função e habilitação."
+              ],
+              "correta": 3,
+              "explicacao": "A separação permite regras compatíveis com cada atividade."
+            },
+            {
+              "enunciado": "A trilha de estudos de um controlador deve priorizar:",
+              "alternativas": [
+                "Conteúdos sem vínculo com o cargo.",
+                "Assuntos do seu próprio curso.",
+                "Todas as provas militares reunidas.",
+                "Somente patentes da Marinha."
+              ],
+              "correta": 1,
+              "explicacao": "O currículo deve seguir a formação selecionada."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-11-2",
+      "forca": "FAB",
+      "nome": "CESD",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-3",
+      "forca": "FAB",
+      "nome": "CFC — Curso de Formação de Cabos",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-4",
+      "forca": "FAB",
+      "nome": "EEAR / CFS",
+      "preparo": "EEAR/CFS e etapas da carreira",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "eearegras",
+          "materia": "EEAR — FAAAB",
+          "titulo": "Aluno, instrutor e formatura na EEAR",
+          "objetivo": "Reconhecer quem participa de cada etapa no projeto.",
+          "teoria": [
+            "Na EEAR/CFS documentada para a FAAAB, o aluno é Cabo, a formatura prevê o posto de 3º Sargento e o instrutor é um Capitão habilitado.",
+            "Os postos superiores não são colocados indiscriminadamente como alunos. O posto de formatura representa o resultado final previsto após aprovação do curso e cumprimento das condições.",
+            "Monitor, avaliador e instrutor são atribuições distintas que não devem aparecer como patentes."
+          ],
+          "exemplo": "Caso resolvido: um Cabo concluindo um módulo permanece aluno até cumprir os requisitos de formatura; o Capitão instrutor não muda de patente por ensinar.",
+          "lembrar": "Qual posto é previsto na formatura da EEAR/CFS FAAAB?",
+          "resposta": "3º Sargento, após o processo de formação.",
+          "erros": "Instrutor habilitado não é qualquer oficial que entrou no servidor.",
+          "questoes": [
+            {
+              "enunciado": "Qual patente está prevista para o aluno na EEAR?",
+              "alternativas": [
+                "Cabo.",
+                "Cadete Naval.",
+                "General de Brigada.",
+                "Almirante de Esquadra."
+              ],
+              "correta": 0,
+              "explicacao": "O manual indica Cabo como aluno da EEAR/CFS."
+            },
+            {
+              "enunciado": "O instrutor previsto é:",
+              "alternativas": [
+                "Cabo em formação.",
+                "Soldado recém-alistado.",
+                "Capitão habilitado.",
+                "Aspirante sem designação."
+              ],
+              "correta": 2,
+              "explicacao": "O instrutor na matriz é o Capitão habilitado."
+            },
+            {
+              "enunciado": "Qual é o posto de formatura descrito?",
+              "alternativas": [
+                "1º Tenente.",
+                "Coronel.",
+                "Suboficial.",
+                "3º Sargento."
+              ],
+              "correta": 3,
+              "explicacao": "A formatura prevista indica 3º Sargento."
+            }
+          ]
+        },
+        {
+          "id": "revisao",
+          "materia": "EEAR — FAAAB",
+          "titulo": "Erros e etapas de formação técnica",
+          "objetivo": "Aplicar regras de avaliação sem conceder promoções indevidas.",
+          "teoria": [
+            "Uma formação técnica deve registrar cada componente concluído e sua avaliação. Se o aluno erra uma etapa, o melhor encaminhamento é explicar a regra aplicável e oferecer atividade diferente sobre o mesmo princípio.",
+            "Uma nota isolada não significa que o curso inteiro foi concluído. A escola precisa controlar matrícula, etapas, instrutores e formatura em campos distintos.",
+            "Para lembrar os conceitos, o sistema oferece novas perguntas em dias posteriores; reconhecer a resposta recém-vista não é considerado domínio."
+          ],
+          "exemplo": "Caso resolvido: um aluno obtém nota alta em uma atividade, mas ainda possui outra pendente. O cadastro mostra conclusão parcial, sem liberar a formatura.",
+          "lembrar": "Por que uma atividade aprovada não significa curso concluído?",
+          "resposta": "Porque há várias etapas e requisitos, cada qual com avaliação registrada.",
+          "erros": "Não entregar o gabarito antes de o aluno tentar resolver.",
+          "questoes": [
+            {
+              "enunciado": "O aluno conclui uma das etapas, mas falta outra. A situação correta é:",
+              "alternativas": [
+                "Formatura automática.",
+                "Etapa concluída, curso pendente.",
+                "Curso cancelado sem revisão.",
+                "Instrutor promovido junto ao aluno."
+              ],
+              "correta": 1,
+              "explicacao": "Cada atividade tem progresso próprio e o curso depende de todas as exigências."
+            },
+            {
+              "enunciado": "Um erro conceitual deve gerar:",
+              "alternativas": [
+                "Punição sem justificativa.",
+                "Mudança de curso obrigatória.",
+                "Aumento de patente do aluno.",
+                "Explicação e nova prática."
+              ],
+              "correta": 3,
+              "explicacao": "Feedback e oportunidade de recuperação ajudam o aprendizado."
+            },
+            {
+              "enunciado": "A revisão em outro dia investiga:",
+              "alternativas": [
+                "Retenção além da sessão atual.",
+                "Capacidade de copiar alternativas.",
+                "Velocidade de clicar em botões.",
+                "A preferência pelo uniforme."
+              ],
+              "correta": 0,
+              "explicacao": "Recuperar depois de um intervalo testa memória mais duradoura."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-11-5",
+      "forca": "FAB",
+      "nome": "CAS",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-6",
+      "forca": "FAB",
+      "nome": "Curso de Formação de Alunos Superiores",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-7",
+      "forca": "FAB",
+      "nome": "EPCAR",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-8",
+      "forca": "FAB",
+      "nome": "AFA",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-9",
+      "forca": "FAB",
+      "nome": "ECEMAR / CCEM",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-10",
+      "forca": "FAB",
+      "nome": "CPEA",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-11",
+      "forca": "FAB",
+      "nome": "C-PIL",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-12",
+      "forca": "FAB",
+      "nome": "Curso de Controle Aéreo",
+      "preparo": "Qualificação para controle aéreo simulado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "controle",
+          "materia": "Controle Aéreo — simulação",
+          "titulo": "Torre, pista e autorização de movimentação",
+          "objetivo": "Identificar conflito de operações no cenário aéreo fictício.",
+          "teoria": [
+            "Em uma simulação aérea, controlar uma pista significa acompanhar quais aeronaves estão autorizadas a utilizá-la e em qual etapa. Uma pista ocupada não deve receber outra ordem incompatível.",
+            "Uma comunicação clara identifica aeronave, local, ação e confirmação. A pessoa que recebe a instrução deve confirmar que entendeu antes de executá-la.",
+            "O curso de controle aéreo consta da FAAAB, mas seu programa detalhado e suas patentes ainda não foram aprovados. Esta aula é material demonstrativo de treinamento dentro do jogo, não instrução aeronáutica real."
+          ],
+          "exemplo": "Caso resolvido: uma aeronave permanece na pista e outra solicita a mesma área. O controlador verifica a ocupação e não autoriza movimentos conflitantes.",
+          "lembrar": "Qual informação impede duas aeronaves de usar a pista ao mesmo tempo no simulador?",
+          "resposta": "O estado de ocupação da pista e as autorizações registradas.",
+          "erros": "Não confundir atividade de simulação com certificação aeronáutica real.",
+          "questoes": [
+            {
+              "enunciado": "Há uma aeronave ocupando a pista. A segunda solicita entrada. O controlador deve:",
+              "alternativas": [
+                "Autorizar as duas para agilizar.",
+                "Ignorar a primeira aeronave.",
+                "Verificar a ocupação antes de autorizar.",
+                "Encerrar todos os voos por padrão."
+              ],
+              "correta": 2,
+              "explicacao": "A autorização depende de a pista estar disponível."
+            },
+            {
+              "enunciado": "Uma instrução de torre precisa informar:",
+              "alternativas": [
+                "Aeronave, local e ação esperada.",
+                "A patente de todos os passageiros.",
+                "A quantidade de medalhas do piloto.",
+                "A marca do computador usado."
+              ],
+              "correta": 0,
+              "explicacao": "Comunicação operacional precisa ser identificável e verificável."
+            },
+            {
+              "enunciado": "O programa específico da prova real de controle aéreo está:",
+              "alternativas": [
+                "Integralmente confirmado.",
+                "Copiado da formação naval.",
+                "Definido no manual de alistamento.",
+                "Pendente de definição na FAAAB."
+              ],
+              "correta": 3,
+              "explicacao": "Os requisitos da trilha de controle aéreo permanecem não confirmados."
+            }
+          ]
+        },
+        {
+          "id": "comunicacao",
+          "materia": "Controle Aéreo — simulação",
+          "titulo": "Mensagem e confirmação de instruções",
+          "objetivo": "Aprender um ciclo seguro de comunicação do roleplay.",
+          "teoria": [
+            "A comunicação de uma atividade técnica tem pelo menos três momentos: envio, confirmação e execução. A confirmação não serve apenas para repetir: indica que a tarefa foi compreendida.",
+            "Uma mensagem ambígua, como 'pode ir', não informa quem pode se mover ou para onde. Trocar por uma mensagem identificada reduz conflito de interpretações.",
+            "Se houver perda de comunicação, a atividade simulada deve seguir a regra de segurança do próprio cenário e impedir ações incompatíveis até recuperar o estado correto."
+          ],
+          "exemplo": "Caso resolvido: dois veículos se aproximam da mesma zona. Sem confirmação, o sistema não deve presumir autorização para os dois.",
+          "lembrar": "O que deve acontecer entre a instrução enviada e sua execução?",
+          "resposta": "Confirmação de recebimento e entendimento da instrução.",
+          "erros": "Não aceitar autorização vaga que não identifique destinatário.",
+          "questoes": [
+            {
+              "enunciado": "A mensagem 'pode seguir' sem destinatário é inadequada porque:",
+              "alternativas": [
+                "É longa demais.",
+                "Não identifica quem recebeu a ordem.",
+                "Depende do uniforme.",
+                "Não contém data de formatura."
+              ],
+              "correta": 1,
+              "explicacao": "Sem destinatário, outras pessoas podem interpretar a ordem erroneamente."
+            },
+            {
+              "enunciado": "Se uma instrução técnica não foi confirmada, é correto:",
+              "alternativas": [
+                "Considerá-la cumprida.",
+                "Duplicar a autorização.",
+                "Mudar a patente do receptor.",
+                "Solicitar confirmação antes de executar."
+              ],
+              "correta": 3,
+              "explicacao": "A confirmação compõe o ciclo de comunicação."
+            },
+            {
+              "enunciado": "Uma comunicação completa de movimentação identifica:",
+              "alternativas": [
+                "Somente o nome da escola.",
+                "Somente a patente do controlador.",
+                "Destinatário, local e ação.",
+                "O ano da fundação da FAAAB."
+              ],
+              "correta": 2,
+              "explicacao": "Esses três elementos descrevem o comando operacional."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-11-13",
+      "forca": "FAB",
+      "nome": "Curso de Resgate Aéreo",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Requisitos parcialmente definidos",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-14",
+      "forca": "FAB",
+      "nome": "Curso de Operações de Solo",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-11-15",
+      "forca": "FAB",
+      "nome": "Curso de Instrutor FAB",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Documentado",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-MB-01",
+      "forca": "FMB",
+      "nome": "C-NAV — Curso de Navegação",
+      "preparo": "Navegação e cartas náuticas do jogo",
+      "origem": "Documentado no projeto",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "carta",
+          "materia": "Navegação — FAAAB",
+          "titulo": "Escala em cartas de navegação",
+          "objetivo": "Converter distâncias representadas em distâncias reais.",
+          "teoria": [
+            "Uma carta de navegação usa uma escala para relacionar uma distância desenhada à distância real. Na escala 1:100.000, cada 1 cm representa 100.000 cm no espaço real, equivalentes a 1 km.",
+            "Para converter, multiplique o comprimento desenhado pelo denominador da escala e depois converta a unidade. A divisão por 100.000 converte centímetros em quilômetros.",
+            "No jogo, a escala deve ser tratada como propriedade da carta específica, e não como valor padrão de todas as regiões da Marinha."
+          ],
+          "exemplo": "Caso resolvido: na escala 1:200.000, 3,5 cm correspondem a 7 km, porque cada 1 cm vale 2 km.",
+          "lembrar": "Na escala 1:100.000, quantos quilômetros são representados por 1 cm?",
+          "resposta": "1 quilômetro.",
+          "erros": "Não confundir 100.000 centímetros com 100.000 metros.",
+          "questoes": [
+            {
+              "enunciado": "Numa carta 1:100.000, 4,5 cm representam:",
+              "alternativas": [
+                "45 km.",
+                "450 m.",
+                "4,5 km.",
+                "9 km."
+              ],
+              "correta": 2,
+              "explicacao": "Cada centímetro vale um quilômetro; 4,5 cm são 4,5 km."
+            },
+            {
+              "enunciado": "Em escala 1:200.000, 6 cm correspondem a:",
+              "alternativas": [
+                "12 km.",
+                "6 km.",
+                "1,2 km.",
+                "120 km."
+              ],
+              "correta": 0,
+              "explicacao": "Cada centímetro representa 2 km; seis representam 12 km."
+            },
+            {
+              "enunciado": "Se a escala muda de 1:100.000 para 1:200.000, a mesma distância no desenho passa a corresponder a:",
+              "alternativas": [
+                "Metade da distância real.",
+                "A mesma distância real.",
+                "Um quarto da distância real.",
+                "O dobro da distância real."
+              ],
+              "correta": 3,
+              "explicacao": "O denominador dobrou; a distância real correspondente também dobra."
+            }
+          ]
+        },
+        {
+          "id": "rumos",
+          "materia": "Navegação — FAAAB",
+          "titulo": "Orientação e rumos cardeais",
+          "objetivo": "Relacionar deslocamento com direção no mapa.",
+          "teoria": [
+            "Nos mapas convencionais orientados com o norte para cima, o leste fica à direita, oeste à esquerda e sul embaixo. Um rumo pode ser descrito por graus: norte 0°, leste 90°, sul 180° e oeste 270°.",
+            "Deslocar-se para o leste e depois voltar pelo caminho contrário corresponde a voltar para oeste. Para interpretar um trajeto, acompanhe orientação, distância e ponto inicial.",
+            "O rumo não informa sozinho a duração da viagem; isso depende também da velocidade média e das condições do percurso."
+          ],
+          "exemplo": "Caso resolvido: a embarcação navega 2 km para leste; retornar pelo mesmo trajeto exige 2 km para oeste.",
+          "lembrar": "Quais são os rumos cardeais em graus no sistema padrão?",
+          "resposta": "Norte 0°, leste 90°, sul 180°, oeste 270°.",
+          "erros": "Não pensar que rumo de 270° corresponde ao sul.",
+          "questoes": [
+            {
+              "enunciado": "Em uma carta com norte para cima, o oeste fica:",
+              "alternativas": [
+                "À direita.",
+                "Na diagonal superior.",
+                "Na parte inferior.",
+                "À esquerda."
+              ],
+              "correta": 3,
+              "explicacao": "Oeste fica à esquerda na orientação convencional."
+            },
+            {
+              "enunciado": "Qual direção corresponde a rumo de 180°?",
+              "alternativas": [
+                "Oeste.",
+                "Sul.",
+                "Norte.",
+                "Leste."
+              ],
+              "correta": 1,
+              "explicacao": "180° representa sul no sistema padrão."
+            },
+            {
+              "enunciado": "Uma embarcação segue 3 km para norte e retorna pela mesma rota. O retorno é:",
+              "alternativas": [
+                "3 km para sul.",
+                "3 km para leste.",
+                "6 km para norte.",
+                "6 km para oeste."
+              ],
+              "correta": 0,
+              "explicacao": "O sentido inverso de norte é sul, com a mesma distância."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-MB-02",
+      "forca": "FMB",
+      "nome": "CIAMPA — Formação de Fuzileiros Navais",
+      "preparo": "Formação inicial de Fuzileiros Navais",
+      "origem": "Documentado no projeto",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "piloto",
+      "unidades": [
+        {
+          "id": "fasesFN",
+          "materia": "Formação FN",
+          "titulo": "Roteiro de instrução de Fuzileiro Naval",
+          "objetivo": "Diferenciar etapas de ensino e avaliação de campo.",
+          "teoria": [
+            "O CIAMPA na Marinha inspira o centro de formação inicial de Fuzileiros Navais dentro da FAAAB. O catálogo do projeto prevê ingresso, disciplina, navegação terrestre, marcha e treinamento de segurança.",
+            "Uma aula pode incluir explicação, demonstração, execução supervisionada e avaliação de aprendizado. A aprovação deve usar os critérios da unidade, e não apenas contagem de tempo no servidor.",
+            "Professor, monitor e avaliador são funções; nenhuma delas é um novo posto militar do Corpo de Fuzileiros Navais."
+          ],
+          "exemplo": "Caso resolvido: um cursante termina a marcha, mas ainda não realizou navegação terrestre. O painel deve indicar etapas pendentes, sem informar formatura completa.",
+          "lembrar": "Quais são duas etapas de ensino previstas para o CIAMPA na FAAAB?",
+          "resposta": "Navegação terrestre e marcha, além de ingresso, disciplina e segurança.",
+          "erros": "Não confundir o centro de instrução dos Fuzileiros Navais com o Exército.",
+          "questoes": [
+            {
+              "enunciado": "Qual atividade faz parte do roteiro da FAAAB para CIAMPA?",
+              "alternativas": [
+                "Curso de comando de submarinos.",
+                "Navegação terrestre e marcha.",
+                "Defesa aérea por caça.",
+                "Formação da Polícia Militar."
+              ],
+              "correta": 1,
+              "explicacao": "As etapas de marcha e navegação terrestre constam do roteiro."
+            },
+            {
+              "enunciado": "Um aluno conclui apenas a marcha. O registro correto é:",
+              "alternativas": [
+                "Patente de oficial concedida.",
+                "Fim automático de toda formação.",
+                "Avaliação sem necessidade de instrutor.",
+                "Etapa de marcha concluída."
+              ],
+              "correta": 3,
+              "explicacao": "Conclusão de uma etapa não indica conclusão do curso inteiro."
+            },
+            {
+              "enunciado": "Na formação naval, a função 'monitor' representa:",
+              "alternativas": [
+                "Papel de apoio à instrução.",
+                "Patente superior a Almirante.",
+                "Cargo equivalente a Presidente.",
+                "Graduação obrigatória do soldado."
+              ],
+              "correta": 0,
+              "explicacao": "Monitor é uma função pedagógica, não patente militar."
+            }
+          ]
+        },
+        {
+          "id": "orientacaoFN",
+          "materia": "Formação FN",
+          "titulo": "Orientação em terreno e relatório",
+          "objetivo": "Aprender a planejar um trajeto no exercício de campo.",
+          "teoria": [
+            "Orientação em terreno começa pela identificação do ponto de partida, destino e referências ao longo do trajeto. A equipe deve conferir se todos compreenderam as etapas antes de iniciar.",
+            "Em um exercício do jogo, obstáculos inesperados podem exigir adaptação. A liderança precisa registrar a mudança e comunicar à equipe, sem assumir que o plano original ainda funciona.",
+            "A avaliação pode exigir um pequeno relatório: percurso planejado, decisão diante de um obstáculo e justificativa. O objetivo é avaliar compreensão, não decorar instruções."
+          ],
+          "exemplo": "Caso resolvido: a passagem originalmente prevista fica indisponível. O aluno identifica a alteração, escolhe rota autorizada e justifica a decisão.",
+          "lembrar": "O que deve aparecer em um relatório breve de navegação terrestre?",
+          "resposta": "Ponto de partida, objetivo, percurso, alterações e justificativa.",
+          "erros": "Um trajeto não pode depender de adivinhar referências não informadas.",
+          "questoes": [
+            {
+              "enunciado": "Antes do exercício, a equipe precisa identificar:",
+              "alternativas": [
+                "Somente o horário do servidor.",
+                "A cor da farda dos líderes.",
+                "Partida, destino e referências.",
+                "A patente dos jogadores ausentes."
+              ],
+              "correta": 2,
+              "explicacao": "São os elementos essenciais para interpretar o trajeto."
+            },
+            {
+              "enunciado": "O caminho fica bloqueado. Qual ação demonstra boa decisão?",
+              "alternativas": [
+                "Verificar alternativa autorizada e comunicar.",
+                "Continuar sem observar o terreno.",
+                "Pedir promoção para concluir a etapa.",
+                "Eliminar a avaliação do curso."
+              ],
+              "correta": 0,
+              "explicacao": "O plano deve ser adaptado com comunicação e responsabilidade."
+            },
+            {
+              "enunciado": "Qual relatório permite avaliar o raciocínio do aluno?",
+              "alternativas": [
+                "Apenas o nome da equipe.",
+                "Somente a duração da sessão.",
+                "Lista de acessórios usados.",
+                "Percurso, mudança e justificativa."
+              ],
+              "correta": 3,
+              "explicacao": "A justificativa permite avaliar a decisão."
+            }
+          ]
+        }
+      ],
+      "observacao": "Aulas demonstrativas alinhadas à finalidade documentada do curso. A matriz oficial da prova da FAAAB ainda exige validação."
+    },
+    {
+      "id": "CUR-MB-03",
+      "forca": "FMB",
+      "nome": "EAM — Formação de Aprendizes-Marinheiros",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Estrutura em planejamento",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-MB-04",
+      "forca": "FMB",
+      "nome": "CIAA — Especialização de Praças",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Estrutura em planejamento",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-MB-05",
+      "forca": "FMB",
+      "nome": "CIAW — Formação e adaptação de Oficiais",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Estrutura em planejamento",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    },
+    {
+      "id": "CUR-MB-06",
+      "forca": "FMB",
+      "nome": "Escola Naval — Formação de Oficiais",
+      "preparo": "Programa específico ainda não publicado",
+      "origem": "Estrutura em planejamento",
+      "carater": "Proposta de preparação da FAAAB — não é edital ou prova oficial",
+      "status": "programa-pendente",
+      "unidades": [],
+      "observacao": "Sem disciplinas confirmadas para esta prova/curso. Não exibimos aulas genéricas que podem estar fora do conteúdo exigido."
+    }
+  ]
+}
