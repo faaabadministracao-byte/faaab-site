@@ -318,5 +318,65 @@
     "origem": "Manual mestre de cursos FAAAB",
     "estado": "Documentado",
     "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-01",
+    "forca": "FMB",
+    "titulo": "C-NAV — Curso de Navegação",
+    "detalhes": "Curso de navegação da FAAAB. Matrícula conforme nível da carreira naval. Estudo: orientação, cartas náuticas, sinais e manobra simulada. Funções didáticas: aluno, monitor, instrutor de navegação, avaliador, coordenador. Certificação registrada separadamente da patente.",
+    "sigla": "C-NAV",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Documentado no projeto",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-02",
+    "forca": "FMB",
+    "titulo": "CIAMPA — Formação de Fuzileiros Navais",
+    "detalhes": "Centro de Instrução Almirante Milcíades Portela Alves. Referência da formação inicial do CFN. Trilha FAAAB: ingresso, disciplina, navegação terrestre, marcha, instrução de segurança e avaliação prática. Funções: aluno FN, monitor, instrutor, avaliador e diretor.",
+    "sigla": "CIAMPA",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Documentado no projeto",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-03",
+    "forca": "FMB",
+    "titulo": "EAM — Formação de Aprendizes-Marinheiros",
+    "detalhes": "Trilha proposta para formação inicial de marinheiros no roleplay: rotina de bordo, segurança, regras náuticas, trabalho de tripulação e avaliação. Duração e requisitos ainda não definidos. Funções: aluno, monitor, instrutor e coordenador.",
+    "sigla": "EAM",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Estrutura em planejamento",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-04",
+    "forca": "FMB",
+    "titulo": "CIAA — Especialização de Praças",
+    "detalhes": "Formação profissional e especialização de praças da Marinha, com aulas, avaliação por habilitação e certificados por especialidade. Matriz de módulos, pré-requisitos e uniformes ainda pendentes.",
+    "sigla": "CIAA",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Estrutura em planejamento",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-05",
+    "forca": "FMB",
+    "titulo": "CIAW — Formação e adaptação de Oficiais",
+    "detalhes": "Referência ao Centro de Instrução Almirante Wandenkolk. Para a FAAAB: organização de turmas, liderança, procedimentos de bordo e avaliação de oficiais. Critérios de inscrição ainda a confirmar.",
+    "sigla": "CIAW",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Estrutura em planejamento",
+    "tipo": "curso"
+  },
+  {
+    "id": "CUR-MB-06",
+    "forca": "FMB",
+    "titulo": "Escola Naval — Formação de Oficiais",
+    "detalhes": "Trilha de cadetes e futuros oficiais da Marinha na FAAAB. Conteúdos de navegação, comando, liderança, segurança e comunicação. Não fixa promoções ou tempo mínimo sem deliberação.",
+    "sigla": "Escola Naval",
+    "origem": "Organização naval FAAAB; referências de centros da Marinha do Brasil",
+    "estado": "Estrutura em planejamento",
+    "tipo": "curso"
   }
 ]
