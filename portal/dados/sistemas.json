@@ -298,6 +298,42 @@
       "implementacao": "Referências reais separadas de grupos efetivamente aprovados.",
       "criterio": "Página de cada unidade usa um identificador único",
       "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-34",
+      "categoria": "Identidade",
+      "nome": "Cadastro e carreira da Polícia Militar",
+      "resumo": "Ingresso, patente, unidade e funções da PM separados das carreiras de Exército, Marinha, FAB e CBM.",
+      "implementacao": "Registrar vínculo do usuário Roblox com a PM, cargo Aprendiz ou patente atribuída por autoridade, histórico de progressão e permissões de unidade. Os cargos Comandante-Geral e Subcomandante-Geral dependem de designação específica; não tratar como promoção por exercício.",
+      "criterio": "O perfil PM mostra a hierarquia correta; nenhuma promoção ocorre sem autorização validada no servidor Roblox.",
+      "estado": "Planejado; não implementado."
+    },
+    {
+      "id": "SIS-35",
+      "categoria": "Operações",
+      "nome": "Ocorrências e comunicação da PM",
+      "resumo": "Chamados de ocorrências fictícias, atribuição de equipe, rádio e registro de turnos da Polícia Militar.",
+      "implementacao": "Interface de chamada, localização no mapa, responsável pela equipe, registro do desfecho e canal de comunicação. Conteúdo restrito ao roleplay; não usar dados pessoais reais.",
+      "criterio": "As chamadas aparecem apenas às equipes autorizadas, com histórico verificável e sem permissões indevidas.",
+      "estado": "Planejado; não implementado."
+    },
+    {
+      "id": "SIS-36",
+      "categoria": "Segurança",
+      "nome": "Seleção e acesso a unidades da PM",
+      "resumo": "Autorizações independentes para BOPE, ROTAM, BPChoque e BPP fictício, sem promover automaticamente.",
+      "implementacao": "Verificar vínculo PM, critérios publicados da unidade, aprovação da chefia e autorização de equipamentos. A Polícia Penal real é carreira distinta: BPP é uma adaptação fictícia do projeto.",
+      "criterio": "A PM sem designação não consegue ingressar em unidade restrita nem usar seus equipamentos; todas as concessões ficam registradas.",
+      "estado": "Planejado; critérios específicos ainda a aprovar."
+    },
+    {
+      "id": "SIS-37",
+      "categoria": "Operações",
+      "nome": "Garagem e viaturas da Polícia Militar",
+      "resumo": "Controle de garagem, disponibilidade e permissão de condução de viaturas da PM no Roblox.",
+      "implementacao": "Cada veículo exige habilitação de jogador, função, unidade quando necessário e autorização do servidor Roblox. Ser Soldado ou graduado não concede todos os veículos automaticamente.",
+      "criterio": "Somente os membros autorizados podem retirar e dirigir viaturas; o sistema registra o veículo e seu responsável.",
+      "estado": "Planejado; não implementado."
     }
   ]
 }
