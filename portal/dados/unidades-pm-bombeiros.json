@@ -1,0 +1,469 @@
+{
+  "versao": 1,
+  "nota": "Os nomes das unidades existentes foram recuperados do catálogo FAAAB. Todas as equipes internas, qualificações e requisitos novos são propostas para aprovação, não estruturas oficiais das instituições brasileiras.",
+  "policia": [
+    {
+      "id": "PM-BASE",
+      "sigla": "CFPM",
+      "nome": "Centro de Formação Policial Militar da FAAAB",
+      "status": "Proposta nova — não aprovada",
+      "tipo": "centro",
+      "missao": "Preparar jogadores para atendimento à comunidade, direitos, comunicação, registro e responsabilidade no roleplay.",
+      "equipes": [
+        [
+          "Coordenação de Ensino",
+          "Manter calendário e planejamento"
+        ],
+        [
+          "Instrutores",
+          "Ensinar rotinas e avaliar aprendizagem"
+        ],
+        [
+          "Monitores",
+          "Apoiar turmas sem dar patentes"
+        ],
+        [
+          "Avaliação",
+          "Corrigir cenários e registrar desempenho"
+        ]
+      ],
+      "requisitos": [
+        "Candidato a integrante da Polícia Militar da FAAAB",
+        "Participar da triagem e formação inicial conforme normas futuras",
+        "Aprovação só pode conceder acesso inicial após validação por chefia; não concede patente automaticamente"
+      ],
+      "exercicios": [
+        "pol-01",
+        "pol-02",
+        "pol-03",
+        "pol-04",
+        "pol-05",
+        "pol-07"
+      ],
+      "funcoes": [
+        "Candidato",
+        "Aluno",
+        "Monitor designado",
+        "Instrutor habilitado",
+        "Avaliador",
+        "Coordenador"
+      ],
+      "aviso": "Centro criado como proposta para o portal. Não se trata do CFAP real."
+    },
+    {
+      "id": "PM-BOPE",
+      "sigla": "BOPE",
+      "nome": "Batalhão de Operações Policiais Especiais",
+      "status": "Unidade catalogada; departamentos propostos",
+      "tipo": "batalhao",
+      "missao": "Equipes de atendimento a ocorrências especiais fictícias, apoio à comunidade e coordenação de situações complexas, sem técnicas reais de intervenção.",
+      "equipes": [
+        [
+          "Comando",
+          "Coordenação de escalas, disciplina e prioridades"
+        ],
+        [
+          "Seção de Instrução",
+          "Preparar cenários de tomada de decisão e de comunicação"
+        ],
+        [
+          "Equipe de Apoio e Resgate",
+          "Comunicar necessidades de socorro e colaborar com equipes habilitadas"
+        ],
+        [
+          "Equipe de Atendimento Especial",
+          "Atender chamados do cenário e documentar decisões"
+        ]
+      ],
+      "requisitos": [
+        "Integrar previamente a Polícia Militar FAAAB",
+        "Possuir patente e habilitações compatíveis, verificadas no jogo",
+        "Realizar seleção interna de unidade somente quando aprovada e publicada",
+        "Receber autorização de ingresso do comando do batalhão"
+      ],
+      "exercicios": [
+        "pol-02",
+        "pol-04",
+        "pol-05",
+        "pol-08",
+        "pol-09",
+        "pol-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Agente de apoio",
+        "Instrutor designado",
+        "Chefe de equipe",
+        "Comandante de unidade"
+      ],
+      "aviso": "Apenas a unidade está catalogada. Departamentos e seleção são propostas da FAAAB."
+    },
+    {
+      "id": "PM-ROTAM",
+      "sigla": "ROTAM",
+      "nome": "Rondas Ostensivas Táticas Metropolitanas",
+      "status": "Unidade catalogada; departamentos propostos",
+      "tipo": "unidade",
+      "missao": "Rondas e resposta a chamados fictícios com foco em atendimento, direção segura, comunicação e prestação de contas.",
+      "equipes": [
+        [
+          "Coordenação de Rondas",
+          "Organizar locais, equipe e turnos"
+        ],
+        [
+          "Equipe de Atendimento",
+          "Atender pedidos de ajuda e registrar fatos"
+        ],
+        [
+          "Equipe de Comunicação",
+          "Encaminhar mensagens e atualizar equipe"
+        ],
+        [
+          "Instrução",
+          "Realizar exercícios de mediação e localização"
+        ]
+      ],
+      "requisitos": [
+        "Ser integrante da Polícia Militar FAAAB",
+        "Concluir atividades básicas e avaliação específica quando aprovada",
+        "Comprovar designação para a unidade e autorização do responsável"
+      ],
+      "exercicios": [
+        "pol-01",
+        "pol-02",
+        "pol-03",
+        "pol-05",
+        "pol-06",
+        "pol-07"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Patrulheiro",
+        "Responsável por comunicação",
+        "Instrutor habilitado",
+        "Coordenador"
+      ],
+      "aviso": "Funções e divisões são sugestões para o jogo, não estrutura oficial da ROTAM real."
+    },
+    {
+      "id": "PM-BPChoque",
+      "sigla": "BPChoque",
+      "nome": "Batalhão de Polícia de Choque",
+      "status": "Unidade catalogada; departamentos propostos",
+      "tipo": "batalhao",
+      "missao": "Organização de eventos e gerenciamento de áreas de risco no roleplay, com prioridade à prevenção, mediação e proteção de personagens.",
+      "equipes": [
+        [
+          "Planejamento de Evento",
+          "Coordenar horários, circulação e sinalização"
+        ],
+        [
+          "Mediação e Comunicação",
+          "Informar e dialogar com cidadãos fictícios"
+        ],
+        [
+          "Proteção e Apoio",
+          "Orientar rotas de saída e isolar locais do jogo"
+        ],
+        [
+          "Formação",
+          "Treinar regras, direitos e registro"
+        ]
+      ],
+      "requisitos": [
+        "Pertencer à Polícia Militar da FAAAB",
+        "Concluir formação e atividades de comunicação e proteção do cenário",
+        "Ingresso na unidade aprovado por chefia após seleção se criada"
+      ],
+      "exercicios": [
+        "pol-03",
+        "pol-04",
+        "pol-05",
+        "pol-06",
+        "pol-08",
+        "pol-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Apoio em evento",
+        "Instrutor",
+        "Responsável por equipe",
+        "Comandante"
+      ],
+      "aviso": "Não apresenta técnicas reais de contenção ou uso de força."
+    },
+    {
+      "id": "PM-BPP",
+      "sigla": "BPP",
+      "nome": "Batalhão de Polícia Penal — adaptação fictícia",
+      "status": "Unidade fictícia já catalogada; funções propostas",
+      "tipo": "unidade-ficticia",
+      "missao": "Administração fictícia de instalações e controle de acesso no jogo. Não representa a organização da Polícia Penal brasileira real.",
+      "equipes": [
+        [
+          "Controle de Acessos",
+          "Conferir identidades e autorizações dentro do jogo"
+        ],
+        [
+          "Atendimento Institucional",
+          "Receber solicitações e orientar direitos"
+        ],
+        [
+          "Registro e Auditoria",
+          "Documentar movimentações e ocorrências"
+        ],
+        [
+          "Formação",
+          "Ensinar procedimentos de registro e respeito"
+        ]
+      ],
+      "requisitos": [
+        "Integrar a instituição fictícia correspondente da FAAAB",
+        "Receber treinamento de cadastro, direitos e registro",
+        "Cumprir autorização específica da administração do jogo"
+      ],
+      "exercicios": [
+        "pol-01",
+        "pol-03",
+        "pol-04",
+        "pol-08",
+        "pol-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Agente de registro",
+        "Atendimento",
+        "Instrutor",
+        "Supervisor"
+      ],
+      "aviso": "Na vida real, Polícia Penal e Polícia Militar são carreiras separadas; esta unidade é uma adaptação fictícia do usuário."
+    }
+  ],
+  "bombeiros": [
+    {
+      "id": "CBM-GBS",
+      "sigla": "GBS",
+      "nome": "Grupamento de Busca e Salvamento",
+      "status": "Unidade catalogada; equipes propostas",
+      "tipo": "grupamento",
+      "missao": "Busca simulada de personagens desaparecidos e resgate civil com comunicação e coordenação responsável.",
+      "equipes": [
+        [
+          "Coordenação de Busca",
+          "Organizar áreas e referências"
+        ],
+        [
+          "Comunicação de Localização",
+          "Enviar pontos de encontro à equipe"
+        ],
+        [
+          "Atendimento e Apoio",
+          "Receber personagem e solicitar socorro habilitado"
+        ],
+        [
+          "Instrução",
+          "Avaliar leitura de mapas e registro"
+        ]
+      ],
+      "requisitos": [
+        "Integrar o CBM FAAAB",
+        "Concluir formação básica e exercícios de busca simulada",
+        "Ser designado ao grupamento pelo comando após avaliação prevista"
+      ],
+      "exercicios": [
+        "bom-02",
+        "bom-03",
+        "bom-04",
+        "bom-06",
+        "bom-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Equipe de busca",
+        "Comunicador",
+        "Instrutor",
+        "Chefe de equipe"
+      ]
+    },
+    {
+      "id": "CBM-GSFMA",
+      "sigla": "GSFMA",
+      "nome": "Grupamento de Socorro Florestal e Meio Ambiente",
+      "status": "Unidade catalogada; equipes propostas",
+      "tipo": "grupamento",
+      "missao": "Prevenção de riscos florestais simulados, orientação e proteção do ambiente virtual.",
+      "equipes": [
+        [
+          "Vigilância de Área",
+          "Identificar condições fictícias de risco"
+        ],
+        [
+          "Comunicação Comunitária",
+          "Informar rotas e solicitar apoio"
+        ],
+        [
+          "Apoio Ambiental",
+          "Acompanhar tarefas de prevenção do cenário"
+        ],
+        [
+          "Instrução",
+          "Treinar leitura e relato dos mapas"
+        ]
+      ],
+      "requisitos": [
+        "Integrar o CBM FAAAB",
+        "Conhecer mapas, rotas e comunicação de risco",
+        "Receber habilitação e designação específicas quando regulamentadas"
+      ],
+      "exercicios": [
+        "bom-01",
+        "bom-02",
+        "bom-03",
+        "bom-07",
+        "bom-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Monitor de área",
+        "Comunicador",
+        "Instrutor",
+        "Coordenador"
+      ]
+    },
+    {
+      "id": "CBM-GOPP",
+      "sigla": "GOPP",
+      "nome": "Grupamento de Operações com Produtos Perigosos",
+      "status": "Unidade catalogada; equipes propostas",
+      "tipo": "grupamento",
+      "missao": "Reconhecer sinais de risco em cenários fictícios, isolar a área e solicitar equipes habilitadas; sem manipulação de substâncias.",
+      "equipes": [
+        [
+          "Identificação Virtual",
+          "Reconhecer placas e alertas de perigo no jogo"
+        ],
+        [
+          "Isolamento e Aviso",
+          "Proteger personagens e sinalizar perímetro fictício"
+        ],
+        [
+          "Comunicação",
+          "Acionar resposta especializada"
+        ],
+        [
+          "Registro",
+          "Documentar cenário e ações"
+        ]
+      ],
+      "requisitos": [
+        "Integrar o CBM FAAAB",
+        "Concluir formação comum e qualificação virtual de riscos",
+        "Designação restrita pelo comando; nenhum treinamento implica manipulação real"
+      ],
+      "exercicios": [
+        "bom-01",
+        "bom-02",
+        "bom-03",
+        "bom-08",
+        "bom-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Observador",
+        "Comunicador",
+        "Instrutor",
+        "Coordenador"
+      ]
+    },
+    {
+      "id": "CBM-GOA",
+      "sigla": "GOA",
+      "nome": "Grupamento de Operações Aéreas",
+      "status": "Unidade catalogada; equipes propostas",
+      "tipo": "grupamento",
+      "missao": "Apoio aéreo simulado a ocorrências civis com coordenação de mapa e personagens habilitados para operar veículos do jogo.",
+      "equipes": [
+        [
+          "Coordenação Aérea",
+          "Organizar solicitação e destino"
+        ],
+        [
+          "Equipe de Solo",
+          "Compartilhar informações de acesso e localização"
+        ],
+        [
+          "Tripulação Virtual",
+          "Cumprir funções de simulação habilitadas"
+        ],
+        [
+          "Instrução",
+          "Treinar comunicação e registro"
+        ]
+      ],
+      "requisitos": [
+        "Integrar o CBM FAAAB",
+        "Concluir formação básica e curso de função específico",
+        "Acesso ao helicóptero ou avião exige permissão de veículo separada"
+      ],
+      "exercicios": [
+        "bom-02",
+        "bom-04",
+        "bom-06",
+        "bom-09",
+        "bom-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Equipe de solo",
+        "Tripulante virtual habilitado",
+        "Instrutor",
+        "Coordenador"
+      ]
+    },
+    {
+      "id": "CBM-GOESP",
+      "sigla": "GOESP",
+      "nome": "Grupo de Operações Especiais",
+      "status": "Unidade catalogada; equipes propostas",
+      "tipo": "grupamento",
+      "missao": "Apoio simulado a missões de resgate complexas, com protocolos de proteção e equipe especializada.",
+      "equipes": [
+        [
+          "Planejamento",
+          "Definir prioridades e recursos virtuais"
+        ],
+        [
+          "Busca e Apoio",
+          "Localizar personagens no cenário"
+        ],
+        [
+          "Comunicação",
+          "Relatar situação e solicitar equipes apropriadas"
+        ],
+        [
+          "Ensino",
+          "Conduzir avaliação de cenários"
+        ]
+      ],
+      "requisitos": [
+        "Integrar o CBM FAAAB",
+        "Concluir treinamento básico de resgate e decisão",
+        "Ser habilitado e designado para o grupo quando regulamento aprovado"
+      ],
+      "exercicios": [
+        "bom-02",
+        "bom-04",
+        "bom-05",
+        "bom-06",
+        "bom-10"
+      ],
+      "funcoes": [
+        "Integrante",
+        "Apoio em resgate",
+        "Instrutor",
+        "Chefe de equipe",
+        "Comandante"
+      ]
+    }
+  ]
+}
