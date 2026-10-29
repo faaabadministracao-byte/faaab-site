@@ -1,0 +1,34 @@
+/* Página inicial FAAAB — diretório editorial, não vitrine de cards. */
+body.faaab-home .hero{background:#e4e5dc!important;background-image:none!important}
+body.faaab-home .hero .container{padding:65px 0 60px;grid-template-columns:1.35fr .65fr}
+body.faaab-home .hero .eyebrow{border-left:3px solid #987b43;padding-left:12px;letter-spacing:.13em}
+body.faaab-home .hero h1{font-size:clamp(3.6rem,7.6vw,6.7rem);max-width:760px;line-height:.99;letter-spacing:-.055em;color:#142a1f}
+body.faaab-home .hero .lead{max-width:600px;font-size:17px;line-height:1.7}
+body.faaab-home .hero-panel{background:transparent!important;border:0!important;border-top:3px solid #203d2d!important;padding:16px 0 0}
+body.faaab-home .hero-panel h3{font:700 21px Georgia,serif}
+body.faaab-home .hero-panel dl>div{border-color:#bfc6bb}
+body.faaab-home #instituicoes .cards{display:block;border-top:3px solid #213d2f}
+body.faaab-home #instituicoes .card{display:grid;grid-template-columns:100px minmax(0,1fr) minmax(140px,.27fr);gap:8px 20px;min-height:118px;align-items:center;border:0!important;border-bottom:1px solid #b9c3b8!important;border-radius:0!important;background:transparent!important;padding:24px 12px}
+body.faaab-home #instituicoes .card:hover{background:#eae8dc!important}
+body.faaab-home #instituicoes .card .num{grid-column:1;grid-row:1/3;margin:0;color:#8a713e;font:700 19px Georgia,serif;align-self:center}
+body.faaab-home #instituicoes .card h3{grid-column:2;grid-row:1;margin:0;font:700 clamp(20px,2.4vw,28px) Georgia,serif}
+body.faaab-home #instituicoes .card p{grid-column:2;grid-row:2;font-size:14px;margin:0;max-width:640px}
+body.faaab-home #instituicoes .card .short{grid-column:3;font-size:11px;letter-spacing:.05em;color:#1e4932;margin:0;display:inline-block;font-weight:800;align-self:center;text-align:right}
+body.faaab-home #instituicoes .card a.short{border-bottom:1px solid #987b43;padding-bottom:5px;text-decoration:none}
+body.faaab-home #instituicoes .card a.short:hover{color:#846a34}
+body.faaab-home .section{padding:64px 0}
+body.faaab-home .section h2{font-size:clamp(29px,4.2vw,46px)}
+body.faaab-home .card,.faaab-home .hero-panel{box-shadow:none!important}
+body.faaab-home .catalog-toolbar{background:#f9f7ee;border:1px solid #c2c8ba}
+body.faaab-home .unit{background:#fbfaf6;border-radius:0!important}
+body.faaab-home .unit:hover{background:#e9e9dd}
+body.faaab-home .btn{border-radius:0!important;box-shadow:none!important}
+@media(max-width:870px){
+ body.faaab-home .hero .container{grid-template-columns:1fr;gap:22px;padding:44px 0}
+ body.faaab-home .hero-panel{padding:10px 0}
+ body.faaab-home #instituicoes .card{grid-template-columns:56px 1fr;gap:7px 13px}
+ body.faaab-home #instituicoes .card .num{grid-column:1;grid-row:1/3;font-size:15px}
+ body.faaab-home #instituicoes .card h3{grid-column:2;grid-row:1}
+ body.faaab-home #instituicoes .card p{grid-column:2;grid-row:2}
+ body.faaab-home #instituicoes .card .short{grid-column:2;text-align:left;padding:4px 0}
+}
