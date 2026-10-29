@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id);
 const root=$("edu3-content"),err=$("edu3-error"),loading=$("edu3-loading");
 const key="faaab-estudos-v3",oneDay=86400000;
-let exams=[],courses=[],route="",session={lesson:"",stage:0,mode:"explain",index:0,answers:[],choices:[],peek:false},filter="todos",search="";
+let exams=[],courses=[],selections={provas:[],tipos:[],forcas:[],processosDocumentados:[],verificacoesDocumentadas:[]},route="",session={lesson:"",stage:0,mode:"explain",index:0,answers:[],choices:[],peek:false},filter="todos",search="";
 let historyData={};try{historyData=JSON.parse(localStorage.getItem(key)||"{}");if(!historyData||typeof historyData!=="object")historyData={}}catch(e){historyData={}}
 const save=()=>{try{localStorage.setItem(key,JSON.stringify(historyData))}catch(e){/* Reading and exercises remain available when storage is blocked. */}};
 const escape=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -20,27 +20,58 @@ function actions(left,leftText,right,rightText){return '<nav class="edu3-subnav"
 function renderHome(){
 root.innerHTML=heading("Centro de aprendizagem","O que você quer fazer?","Escolha uma atividade. Provas, matérias e cursos são coisas diferentes; aqui não fica tudo misturado.")+
 '<div class="edu3-cards">'+
-card("provas","Estudar para uma prova","Veja apenas as avaliações que já estão documentadas no projeto.","AVALIAÇÕES")+
+card("provas","Provas e seleções","Veja seleções públicas, reservadas e internas sem misturar com cursos.","SELEÇÕES")+
 card("materias","Aprender uma matéria","Leia a explicação, veja como resolver e faça exercícios para praticar.","AULAS")+
 card("cursos","Consultar cursos e treinamentos","Veja quais formações existem, sem transformar todas elas em prova.","FORMAÇÕES")+'</div>'+
 '<section class="edu3-box"><h2>Como funciona</h2><p>Primeiro você escolhe o que precisa. Se houver uma matéria definida, a aula ensina em pequenas etapas. Se uma prova ainda não tiver conteúdo cadastrado, não mostramos questões aleatórias.</p></section>';
 }
 function renderExams(){
-root.innerHTML=crumb([["Início","inicio"],["Provas"]])+heading("Provas e avaliações","Provas cadastradas","Uma formação pode ter aulas e atividades sem ter uma prova escrita. Por isso, a lista abaixo só mostra avaliações documentadas; não são 38 provas.")+
-'<div class="edu3-list">'+exams.map(e=>card("prova="+encodeURIComponent(e.id),e.nome,e.tipo+" · "+(e.programa==="apoio"?"Há aulas preparatórias": "Conteúdo da prova não cadastrado"),e.programa==="apoio"?"APOIO DISPONÍVEL":"PROGRAMA PENDENTE")).join("")+'</div>'+
-'<div class="edu3-info">Não encontrar uma avaliação aqui não significa que ela não exista: significa que seu formato ou conteúdo ainda não foi registrado com segurança no portal.</div>'+
-actions("inicio","Voltar ao início","cursos","Ver todos os cursos");
+const published=(selections.provas||[]).filter(p=>p.publicada===true),types=selections.tipos||[],forces=selections.forcas||[];
+root.innerHTML=crumb([["Início","inicio"],["Provas e seleções"]])+
+ heading("Seleção militar e civil","Provas de ingresso e de carreira","A prova é uma seleção, feita para tentar entrar numa formação, conseguir uma habilitação ou concorrer à progressão. A formação, quando houver, acontece depois da aprovação.")+
+ '<div class="edu3-info"><strong>Regras:</strong> a prova pode ser pública, reservada ou interna. Cada prova tem seus próprios requisitos de patente, força, batalhão, centro ou grupo. Não existe prova automaticamente só porque existe um curso.</div>'+
+ '<section class="edu3-section"><h2>Quem pode se inscrever?</h2><div class="edu3-cards">'+types.map(t=>'<article class="edu3-card"><span class="edu3-tag">'+escape(t.nome)+'</span><p>'+escape(t.descricao)+'</p></article>').join("")+'</div></section>'+
+ '<section class="edu3-section"><h2>Provas disponíveis no projeto</h2>'+
+ (published.length?'<div class="edu3-list">'+published.map(p=>card("selecao="+encodeURIComponent(p.id),p.titulo,explainEligibility(p),typeLabel(p.modalidade),p.forca)).join("")+'</div>':
+ '<div class="edu3-box"><h3>Nenhuma prova de ingresso publicada ainda</h3><p>As escolas e as unidades existem no catálogo, mas a prova só aparecerá aqui quando seu regulamento, público autorizado e resultado forem realmente definidos. Não inventamos provas da AMAN, EsPCEx, ESA, batalhões ou centros.</p></div>')+'</section>'+
+ '<section class="edu3-section"><h2>Áreas com provas específicas</h2><div class="edu3-list">'+forces.map(f=>'<article class="edu3-card"><span class="edu3-tag">'+escape(f.nome)+'</span><h3>'+escape(f.nome)+'</h3><p>Uma seleção interna desta área poderá exigir '+escape((f.exemplosDeVinculo||[]).join(", "))+'.</p><small>'+published.filter(p=>p.forca===f.id).length+' provas publicadas</small></article>').join("")+'</div></section>'+
+ '<section class="edu3-section"><h2>Processos e verificações já mencionados no projeto</h2>'+
+ '<p class="edu3-muted">Estes registros NÃO são apresentados como provas de admissão independentes. São processos ou verificações com finalidades próprias.</p>'+
+ '<div class="edu3-list">'+(selections.processosDocumentados||[]).map(p=>card("processo="+encodeURIComponent(p.id),p.nome,p.descricao,"PROCESSO DE INGRESSO")).join("")+
+ (selections.verificacoesDocumentadas||[]).map(v=>card("verificacao="+encodeURIComponent(v.id),v.nome,v.publico,"VERIFICAÇÃO INTERNA")).join("")+'</div></section>'+
+ actions("inicio","Voltar ao início","cursos","Ver cursos e treinamentos");
+}
+function typeLabel(t){return ({publica:"Pública",reservada:"Reservada",interna:"Interna"})[t]||"Inscrição específica"}
+function explainEligibility(p){
+ const a=p.prerequisitos||{};
+ return [p.objetivo?"Finalidade: "+p.objetivo:null,a.patentesPermitidas?.length?"Patentes: "+a.patentesPermitidas.join(", "):null,a.unidadesPermitidas?.length?"Unidades: "+a.unidadesPermitidas.join(", "):null,a.centrosPermitidos?.length?"Centros: "+a.centrosPermitidos.join(", "):null,a.gruposPermitidos?.length?"Grupos: "+a.gruposPermitidos.join(", "):null].filter(Boolean).join(" · ")||"Consultar requisitos publicados";
+}
+function renderSelection(p){
+ root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[p.titulo]])+
+ heading(typeLabel(p.modalidade)+" · "+p.forca,p.titulo,explainEligibility(p))+
+ '<div class="edu3-box"><h2>Quem pode participar?</h2><p>'+escape(explainEligibility(p))+'</p><h3>O que a aprovação permite</h3><p>'+escape(p.resultado?.acao||"O resultado ainda não foi definido")+'</p>'+
+ '<div class="edu3-info">Esta página descreve regras. Não concede patente, matrícula ou acesso ao jogo. A inscrição e a validação precisam ser autorizadas no servidor Roblox.</div></div>'+
+ actions("provas","Voltar às provas","cursos","Ver formações");
+}
+function renderProcess(p){
+ const lesson=exams.find(e=>e.id===p.materialDeApoio);
+ root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[p.nome]])+
+ heading("Ingresso · "+p.forca,p.nome,p.descricao)+
+ '<section class="edu3-box"><h2>Como está registrado?</h2><p>'+escape(p.situacao)+'</p>'+
+ '<p>O alistamento pode ter instrução e triagem sem que toda essa sequência seja uma prova pública escrita. Ser aprovado para iniciar uma formação não significa terminar a formação ou receber uma patente por uma nota de treino.</p></section>'+
+ (lesson?'<section class="edu3-section"><h2>Aprender antes do alistamento</h2><p class="edu3-muted">Estas são aulas de apoio, não um edital nem uma prova oficial.</p>'+examLessonCards(lesson)+'</section>':"")+
+ actions("provas","Voltar a seleções","materias","Ver aulas");
+}
+function renderVerification(v){
+ root.innerHTML=crumb([["Início","inicio"],["Provas e seleções","provas"],[v.nome]])+
+ heading("Verificação específica · "+v.forca,v.nome,v.publico)+
+ '<div class="edu3-box"><h2>Para que serve?</h2><p>'+escape(v.efeito)+'</p><p><strong>Quem é avaliado:</strong> '+escape(v.restricaoPatente)+'</p><p><strong>Conteúdo:</strong> '+escape(v.programa)+'</p><p><strong>Inscrição:</strong> '+escape(v.inscricao)+'</p></div>'+
+ '<div class="edu3-info">Este teste não está sendo divulgado como concurso de admissão ou promoção.</div>'+
+ actions("provas","Voltar a seleções","cursos","Ver cursos");
 }
 function examLessonCards(e){
 return e.materias.map(m=>'<section class="edu3-section"><h2>'+escape(m)+'</h2><div class="edu3-list">'+
  e.aulas.filter(l=>l.materia===m).map(l=>card("aula="+encodeURIComponent(e.id)+"/"+encodeURIComponent(l.id),l.titulo,l.objetivo,"AULA")).join("")+'</div></section>').join("");
-}
-function renderExam(e){
-root.innerHTML=crumb([["Início","inicio"],["Provas","provas"],[e.nome]])+
-heading(e.tipo,e.nome,e.confirmacao)+
-(e.programa==="apoio"?'<div class="edu3-info">'+escape(e.observacao)+'</div>'+examLessonCards(e):
-'<section class="edu3-box"><h2>O que estudar para esta avaliação?</h2><p>O programa de matérias e assuntos ainda não foi definido no projeto. Por enquanto, não há aulas ou questões para esta avaliação.</p><p>'+escape(e.observacao)+'</p></section>')+
-actions("provas","Voltar à lista de provas","cursos","Consultar formações");
 }
 function renderSubjects(){
 let e=exams.find(e=>e.programa==="apoio"&&e.aulas.length);
@@ -101,12 +132,12 @@ root.innerHTML=crumb([["Início","inicio"],["Cursos e treinamentos"]])+heading("
 actions("inicio","Voltar ao início","provas","Ver provas");
 }
 function renderCourse(c){
-const x=exams.find(x=>x.id===c.id);
+const x=(selections.provas||[]).find(x=>x.publicada===true&&x.cursoDestino===c.id);
 root.innerHTML=crumb([["Início","inicio"],["Cursos e treinamentos","cursos"],[c.titulo]])+
 heading(humanForce(c.forca),c.titulo,summaries[c.id]||"Informações do curso FAAAB.")+
 '<div class="edu3-box"><h2>Sobre esta formação</h2><p>'+escape(summaries[c.id]||"Formação em organização no projeto.")+'</p>'+
 '<p><strong>Situação do planejamento:</strong> '+escape(c.estado)+'</p>'+
-'<p><strong>Avaliação:</strong> '+(x?'Há uma avaliação documentada. Seu programa pode ainda estar pendente.':'Não há uma prova teórica específica cadastrada para esta formação. Isso não significa que o curso não tenha atividades ou avaliações práticas.')+'</p></div>'+
+'<p><strong>Avaliação:</strong> '+(x?'Há uma prova de seleção específica publicada para esta formação.':'Não há seleção de entrada publicada para esta formação. Isso não impede atividades ou avaliações internas durante o curso.')+'</p></div>'+
 (x?'<div class="edu3-actions"><a href="#prova='+encodeURIComponent(c.id)+'" class="edu3-btn">Ver avaliação vinculada</a></div>':"")+
 actions("cursos","Voltar aos cursos","provas","Ver provas");
 }
@@ -213,14 +244,17 @@ function render(){
  const raw=(location.hash||"#inicio").slice(1);
  let v;try{v=decodeURIComponent(raw)}catch(e){v="inicio"}
  const oldRoute=route;route=v;
- const section=v==="inicio"?"inicio":v==="materias"?"materias":v==="provas"||v.startsWith("prova=")?"provas":v==="cursos"||v.startsWith("curso=")?"cursos":v.startsWith("aula=")?"materias":"inicio";
+ const section=v==="inicio"?"inicio":v==="materias"||v.startsWith("aula=")?"materias":v==="provas"||v.startsWith("prova=")||v.startsWith("selecao=")||v.startsWith("processo=")||v.startsWith("verificacao=")?"provas":v==="cursos"||v.startsWith("curso=")?"cursos":"inicio";
  updateActive(section);
  try{
  if(v==="inicio"||v==="")renderHome();
  else if(v==="provas")renderExams();
  else if(v==="materias")renderSubjects();
  else if(v==="cursos")renderCourses();
- else if(v.startsWith("prova=")){let e=getExam(v.slice(6));e?renderExam(e):renderExams()}
+ else if(v.startsWith("selecao=")){let p=(selections.provas||[]).find(p=>p.publicada===true&&p.id===v.slice(8));p?renderSelection(p):renderExams()}
+ else if(v.startsWith("processo=")){let p=(selections.processosDocumentados||[]).find(p=>p.id===v.slice(9));p?renderProcess(p):renderExams()}
+ else if(v.startsWith("verificacao=")){let p=(selections.verificacoesDocumentadas||[]).find(p=>p.id===v.slice(12));p?renderVerification(p):renderExams()}
+ else if(v.startsWith("prova=")){let id=v.slice(6),p=(selections.provas||[]).find(p=>p.publicada===true&&p.id===id),processo=(selections.processosDocumentados||[]).find(p=>p.id===id);p?renderSelection(p):processo?renderProcess(processo):renderExams()}
  else if(v.startsWith("curso=")){let c=getCourse(v.slice(6));c?renderCourse(c):renderCourses()}
  else if(v.startsWith("aula=")){let p=v.slice(5).split("/"),e=getExam(p[0]),l=getLesson(e,p[1]);e&&l?renderLesson(e,l):renderSubjects()}
  else renderHome();
@@ -242,9 +276,10 @@ const result=$("edu3-course-list");if(result)result.innerHTML=coursesBlock();
 window.addEventListener("hashchange",render);
 Promise.all([
  fetch("dados/roteiros-v3.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("roteiros não disponíveis");return r.json()}),
- fetch("dados/cursos.json").then(r=>{if(!r.ok)throw Error("cursos não disponíveis");return r.json()})
-]).then(([data,list])=>{
-exams=data.avaliacoes;courses=list;
+ fetch("dados/cursos.json").then(r=>{if(!r.ok)throw Error("cursos não disponíveis");return r.json()}),
+ fetch("dados/selecoes.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("seleções não disponíveis");return r.json()})
+]).then(([data,list,sel])=>{
+exams=data.avaliacoes;courses=list;selections=sel;
 loading.hidden=true;render();
 }).catch(e=>{
  loading.hidden=true;err.hidden=false;err.textContent="Não foi possível carregar os estudos. Verifique sua conexão e recarregue a página. Detalhes: "+String(e.message||e);
