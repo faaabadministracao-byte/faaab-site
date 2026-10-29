@@ -1,81 +1,127 @@
 {
-  "versao": 4,
+  "versao": 5,
   "data": "2026-10-29",
-  "nota": "Catálogo FAAAB de exercícios PRÁTICOS no Roblox. Cinco parkours básicos já definidos; 36 conceitos NOVOS e separados por tipo terrestre, aquático ou aéreo, sem misturar modalidades. Exigências de ingresso são definidas somente pelo regulamento de cada prova ou curso. Circuitos novos precisam de construção e scripts no Roblox Studio. Complemento da lista histórica de atividades físicas, volvers, corridas e estande virtual do Exército; não transforma repertório em prova ou curso obrigatório.",
-  "comuns": [
+  "filosofia": "Um exercício geral é uma habilidade básica e repetível por todas as forças. O tipo é único; a aplicação, a dificuldade e a quantidade podem variar. Especializações de veículo, equipamento ou unidade são separadas e nunca concedidas só pela patente ou pela força.",
+  "avisos": [
+    "Os cinco níveis de parkour são variações de um mesmo exercício: parkour.",
+    "Flexões, polichinelos, pulos e corrida integram o repertório básico geral.",
+    "Critérios de provas, tempos e repetições pertencem ao regulamento de cada atividade, não ao catálogo geral.",
+    "As adaptações por força, exceto os números já registrados no ingresso de Recruta do Exército, são propostas de uso do mapa.",
+    "Pilotagem de tanque, avião, helicóptero e embarcação requer qualificação e autorização específicas.",
+    "Este portal apenas descreve atividades do Roblox; não registra desempenho nem concede patentes."
+  ],
+  "gerais": [
     {
-      "id": "pk-facil",
-      "nome": "Parkour fácil",
-      "tipo": "Parkour",
-      "grupo": "Parkours",
-      "status": "Confirmado",
-      "formato": "Obstáculos Roblox",
-      "como": "Um percurso curto com saltos simples, plataformas largas e tempo para entender os controles.",
-      "avaliacao": "Chegar ao final do circuito do mapa; não existe tempo de corte geral definido.",
-      "modelos": [
-        "Plataformas largas",
-        "Rampas e escadas",
-        "Barreiras baixas"
+      "id": "parkour",
+      "nome": "Parkour",
+      "situacao": "Níveis definidos",
+      "descricao": "O jogador percorre obstáculos no mapa. É um único tipo de exercício, com dificuldade e extensão variáveis.",
+      "variantes": [
+        {
+          "id": "pk-facil",
+          "nome": "Parkour fácil",
+          "descricao": "Um percurso curto com saltos simples, plataformas largas e tempo para entender os controles.",
+          "obstaculosExemplo": [
+            "Plataformas largas",
+            "Rampas e escadas",
+            "Barreiras baixas"
+          ]
+        },
+        {
+          "id": "pk-medio",
+          "nome": "Parkour médio",
+          "descricao": "Saltos que exigem mais precisão, mudanças de direção e plataformas alternadas.",
+          "obstaculosExemplo": [
+            "Plataformas alternadas",
+            "Zigue-zague",
+            "Plataformas estreitas"
+          ]
+        },
+        {
+          "id": "pk-dificil",
+          "nome": "Parkour difícil",
+          "descricao": "Trecho mais técnico, com apoios pequenos, saltos precisos e obstáculos combinados.",
+          "obstaculosExemplo": [
+            "Apoios pequenos",
+            "Plataformas temporárias",
+            "Mudança de direção"
+          ]
+        },
+        {
+          "id": "pk-grande",
+          "nome": "Parkour grande",
+          "descricao": "Circuito extenso, com muitos obstáculos e pontos de verificação, sem necessariamente exigir saltos difíceis.",
+          "obstaculosExemplo": [
+            "Circuito longo",
+            "Travessia da base",
+            "Torre longa"
+          ]
+        },
+        {
+          "id": "pk-grande-dificil",
+          "nome": "Parkour grande difícil",
+          "descricao": "Percurso extenso que também usa obstáculos difíceis e combina precisão com continuidade.",
+          "obstaculosExemplo": [
+            "Torre extensa",
+            "Obstáculos combinados",
+            "Circuito final"
+          ]
+        }
       ]
     },
     {
-      "id": "pk-medio",
-      "nome": "Parkour médio",
-      "tipo": "Parkour",
-      "grupo": "Parkours",
-      "status": "Confirmado",
-      "formato": "Obstáculos Roblox",
-      "como": "Saltos que exigem mais precisão, mudanças de direção e plataformas alternadas.",
-      "avaliacao": "Completar o circuito indicado no treinamento.",
-      "modelos": [
-        "Plataformas alternadas",
-        "Zigue-zague",
-        "Plataformas estreitas"
-      ]
+      "id": "flexoes",
+      "nome": "Flexões",
+      "situacao": "Tipo geral confirmado",
+      "descricao": "O avatar realiza animações de flexão. Quantidades dependem da atividade específica, nunca da força automaticamente.",
+      "variantes": []
     },
     {
-      "id": "pk-dificil",
-      "nome": "Parkour difícil",
-      "tipo": "Parkour",
-      "grupo": "Parkours",
-      "status": "Confirmado",
-      "formato": "Obstáculos Roblox",
-      "como": "Trecho mais técnico, com apoios pequenos, saltos precisos e obstáculos combinados.",
-      "avaliacao": "Completar a sequência prevista; sem tempo de corte universal.",
-      "modelos": [
-        "Apoios pequenos",
-        "Plataformas temporárias",
-        "Mudança de direção"
-      ]
+      "id": "polichinelos",
+      "nome": "Polichinelos",
+      "situacao": "Tipo geral confirmado",
+      "descricao": "O avatar executa a animação de polichinelos conforme comandos do instrutor.",
+      "variantes": []
     },
     {
-      "id": "pk-grande",
-      "nome": "Parkour grande",
-      "tipo": "Parkour",
-      "grupo": "Parkours",
-      "status": "Confirmado",
-      "formato": "Circuito longo Roblox",
-      "como": "Circuito extenso, com muitos obstáculos e pontos de verificação, sem necessariamente exigir saltos difíceis.",
-      "avaliacao": "Concluir o trajeto inteiro, respeitando checkpoints definidos no mapa.",
-      "modelos": [
-        "Circuito longo",
-        "Travessia da base",
-        "Torre longa"
-      ]
+      "id": "pulos",
+      "nome": "Pulos",
+      "situacao": "Tipo geral confirmado",
+      "descricao": "Saltos simples ou em sequência, conforme o circuito e os controles do Roblox.",
+      "variantes": []
     },
     {
-      "id": "pk-grande-dificil",
-      "nome": "Parkour grande difícil",
-      "tipo": "Parkour",
-      "grupo": "Parkours",
-      "status": "Confirmado",
-      "formato": "Circuito longo e difícil Roblox",
-      "como": "Percurso extenso que também usa obstáculos difíceis e combina precisão com continuidade.",
-      "avaliacao": "Chegar ao final do circuito longo e difícil quando essa atividade tiver sido atribuída.",
-      "modelos": [
-        "Torre extensa",
-        "Obstáculos combinados",
-        "Circuito final"
+      "id": "corrida",
+      "nome": "Corrida",
+      "situacao": "Tipo geral confirmado",
+      "descricao": "Deslocamento em pistas e voltas no mapa, com distâncias e número de voltas específicos de cada atividade.",
+      "variantes": []
+    },
+    {
+      "id": "agachamento",
+      "nome": "Agachamentos",
+      "situacao": "Repertório em planejamento",
+      "descricao": "Animação de agachamento virtual; não há repetições gerais aprovadas.",
+      "variantes": []
+    },
+    {
+      "id": "ordem-unida",
+      "nome": "Ordem unida",
+      "situacao": "Repertório geral, critérios por força",
+      "descricao": "Sentido, descansar, volver, marcha e formações de avatar; comandos e aplicação são definidos pela força.",
+      "variantes": [
+        {
+          "id": "ou-volver",
+          "nome": "Comandos de volver"
+        },
+        {
+          "id": "ou-marcha",
+          "nome": "Marcha"
+        },
+        {
+          "id": "ou-posicoes",
+          "nome": "Sentido e descansar"
+        }
       ]
     }
   ],
@@ -85,1188 +131,164 @@
       "nome": "Exército",
       "home": "central.html?forca=FTB",
       "status": "Parkours confirmados; outras atividades conforme seleção",
-      "requisitos": "O Exército já tem regras próprias para a seleção de Recruta e formação posterior. As cinco opções de parkour não significam que todas sejam cobradas na mesma prova.",
-      "ingresso": "No Exército, usar o número de repetições do alistamento somente na prova que o definiu.",
-      "foco": [
-        "parkours virtuais",
-        "corrida",
-        "flexões e polichinelos",
-        "ordem unida"
-      ],
-      "exercicios": [
-        {
-          "id": "fis-flexoes",
-          "nome": "Flexões",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Registrado no ingresso do Exército",
-          "formato": "Animação/comando Roblox",
-          "como": "Executar a flexão do jogo conforme o instrutor.",
-          "avaliacao": "A seleção de ingresso para Recruta tem 5 flexões. Outros cursos não herdam esse número."
-        },
-        {
-          "id": "fis-polichinelos",
-          "nome": "Polichinelos",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Registrado no ingresso do Exército",
-          "formato": "Animação/comando Roblox",
-          "como": "Executar os polichinelos no jogo conforme o comando.",
-          "avaliacao": "A seleção para Recruta tem 5 polichinelos; a triagem inicial é diferente."
-        },
-        {
-          "id": "fis-pulos",
-          "nome": "Pulos",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Registrado no ingresso do Exército",
-          "formato": "Comando Roblox",
-          "como": "Executar saltos no jogo seguindo o responsável pelo treinamento.",
-          "avaliacao": "A seleção para Recruta do Exército prevê 10 pulos."
-        },
-        {
-          "id": "fis-corrida",
-          "nome": "Corrida",
-          "tipo": "Deslocamento",
-          "grupo": "Outros exercícios práticos",
-          "status": "Registrado no ingresso do Exército",
-          "formato": "Circuito Roblox",
-          "como": "Percorrer a pista marcada no jogo.",
-          "avaliacao": "A seleção para Recruta prevê 3 voltas; a distância de cada volta depende do mapa."
-        },
-        {
-          "id": "fis-volver",
-          "nome": "Comandos de volver",
-          "tipo": "Ordem unida",
-          "grupo": "Outros exercícios práticos",
-          "status": "Registrado no ingresso do Exército",
-          "formato": "Comando Roblox",
-          "como": "Responder aos comandos de virar e alinhar a direção no jogo.",
-          "avaliacao": "A seleção para Recruta inclui comandos de volver, sem pontuação detalhada confirmada."
-        },
-        {
-          "id": "fis-marcha",
-          "nome": "Marcha",
-          "tipo": "Ordem unida",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório — aplicação não confirmada",
-          "formato": "Percurso Roblox",
-          "como": "Realizar deslocamento em grupo no mapa quando incluído pelo instrutor.",
-          "avaliacao": "Sem exigência universal de aprovação ou percurso definido."
-        },
-        {
-          "id": "fis-agachamentos",
-          "nome": "Agachamento virtual",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Ativar animação R6 de agachamento com retorno à posição inicial.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-abdominal",
-          "nome": "Abdominal simulado",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Executar a animação de abdominal do avatar no espaço de exercício.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-prancha",
-          "nome": "Prancha simulada",
-          "tipo": "Preparo físico virtual",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Manter a animação de prancha do avatar durante o período determinado pela atividade.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-corrida-obstaculos",
-          "nome": "Corrida com obstáculos",
-          "tipo": "Corrida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Percorrer a pista correndo, pulando obstáculos e seguindo as setas do chão.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-revezamento",
-          "nome": "Corrida de revezamento",
-          "tipo": "Corrida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Completar um trecho e liberar a passagem para outro integrante da equipe.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-corrida-checkpoint",
-          "nome": "Corrida de checkpoints",
-          "tipo": "Corrida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Alcançar as bandeiras intermediárias na ordem marcada no mapa.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-pulo-direcao",
-          "nome": "Pulos com mudança de direção",
-          "tipo": "Saltos Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Realizar saltos no avatar, alternando as direções indicadas pelas setas.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-pulo-sequencia",
-          "nome": "Pulos em sequência",
-          "tipo": "Saltos Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Avançar por obstáculos usando saltos sucessivos no mesmo percurso.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-passo-marcado",
-          "nome": "Marcar passo",
-          "tipo": "Ordem unida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Executar a animação de marcar passo quando o instrutor der o comando.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-formacao-coluna",
-          "nome": "Formação em coluna",
-          "tipo": "Ordem unida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Organizar os avatares em coluna e seguir o deslocamento indicado.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-sentido-descansar",
-          "nome": "Sentido e descansar",
-          "tipo": "Ordem unida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Alternar entre as posições virtuais segundo as ordens do instrutor.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-frente-volver",
-          "nome": "Frente, volver",
-          "tipo": "Ordem unida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Girar o avatar até a frente apontada pelo instrutor.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-reset-volver",
-          "nome": "Voltar / reset, volver",
-          "tipo": "Ordem unida Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Retornar à orientação inicial no circuito após o comando.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
-        },
-        {
-          "id": "fis-stand-virtual",
-          "nome": "Estande virtual de alvos",
-          "tipo": "Minijogo Roblox",
-          "grupo": "Outros exercícios práticos",
-          "status": "Repertório do Exército FAAAB; não confirmado como exigência obrigatória geral",
-          "formato": "Atividade de avatar no Roblox",
-          "como": "Acertar os alvos cenográficos do estande respeitando os comandos do minijogo.",
-          "avaliacao": "Critérios de aprovação, quantidades e obrigatoriedade dependem de regulamento específico da FAAAB."
+      "adaptacao": {
+        "texto": "Na base do Exército, os mesmos exercícios gerais podem aparecer em alistamento, instruções e formações. As quantidades abaixo valem SOMENTE para a seleção de ingresso para Recruta.",
+        "ambiente": "Pista do quartel, campo de treinamento, plataformas e pátio de ordem unida.",
+        "aplicacoes": {
+          "parkour": "A seleção de ingresso para Recruta exige três parkours diferentes, sem tipos exatos definidos.",
+          "flexoes": "5 flexões na seleção de Recruta.",
+          "polichinelos": "5 polichinelos na seleção de Recruta.",
+          "pulos": "10 pulos na seleção de Recruta.",
+          "corrida": "3 voltas na pista da seleção de Recruta.",
+          "ordem-unida": "Comandos de volver na seleção de Recruta.",
+          "agachamento": "Uso geral em planejamento; quantidade não aprovada."
         }
-      ]
+      }
     },
     {
       "id": "FAB",
       "nome": "Aeronáutica",
       "home": "central.html?forca=FAB",
       "status": "Parkours disponíveis; exigências específicas pendentes",
-      "requisitos": "Não há quantidades de flexões, corridas ou nível de parkour aprovadas para a seleção ou os cursos da FAB da FAAAB.",
-      "ingresso": "A seleção e os exercícios obrigatórios da FAB precisam ser confirmados separadamente dos do Exército.",
-      "foco": [
-        "circuitos práticos",
-        "formação própria",
-        "simulação de base aérea"
-      ],
-      "exercicios": []
+      "adaptacao": {
+        "texto": "A formação básica de um integrante da FAB pode utilizar parkour, corrida, flexões e polichinelos como exercícios do avatar. Pilotar avião NÃO é atividade geral para Soldado ou graduado.",
+        "ambiente": "Pista de instrução, pátio e obstáculos terrestres de base aérea.",
+        "aplicacoes": {
+          "parkour": "Obstáculos e graus de dificuldade ajustados ao treino básico da FAB, ainda a homologar.",
+          "flexoes": "Mesmo tipo de movimento do Exército, mas contagem e critérios da FAB não definidos.",
+          "polichinelos": "Mesmo tipo de movimento, com série e quantidade próprias ainda não definidas.",
+          "pulos": "Saltos em solo, sem representar pilotagem ou paraquedismo.",
+          "corrida": "Pista terrestre da base, com distância e voltas ainda não definidas.",
+          "ordem-unida": "Comandos de formação do grupo FAB, a definir.",
+          "agachamento": "Uso opcional em planejamento, sem obrigatoriedade definida."
+        }
+      }
     },
     {
       "id": "FMB",
       "nome": "Marinha e Fuzileiros Navais",
       "home": "central.html?forca=FMB",
       "status": "Parkours disponíveis; exigências específicas pendentes",
-      "requisitos": "Os cinco circuitos são modelos do projeto. A quantidade exigida nos cursos de Marinha e Fuzileiros Navais ainda não foi aprovada.",
-      "ingresso": "Não copiar automaticamente a prova de Recruta do Exército.",
-      "foco": [
-        "parkours virtuais",
-        "formação naval",
-        "treinamentos específicos futuros"
-      ],
-      "exercicios": []
+      "adaptacao": {
+        "texto": "Um integrante comum da Marinha também pode ter parkour, corrida, flexões e polichinelos. Treinamento de comando de navio ou lancha pertence à especialização, não à categoria geral.",
+        "ambiente": "Pátio da organização naval e circuitos de obstáculos em terra ou cenários secos de convés.",
+        "aplicacoes": {
+          "parkour": "Parkours básicos podem ser ambientados em instalações navais, sem exigir condução de embarcação.",
+          "flexoes": "Flexões com séries próprias da formação naval, ainda não definidas.",
+          "polichinelos": "Polichinelos com séries próprias, ainda não definidas.",
+          "pulos": "Saltos curtos e barreiras do mapa da base.",
+          "corrida": "Corrida no pátio ou pista da base naval, sem distância universal definida.",
+          "ordem-unida": "Formação e comandos adaptados à força naval, a definir.",
+          "agachamento": "Repertório opcional, não requisito aprovado."
+        }
+      }
     },
     {
       "id": "CBM",
       "nome": "Corpo de Bombeiros",
       "home": "bombeiros.html",
       "status": "Parkours disponíveis; exigências específicas pendentes",
-      "requisitos": "O Corpo de Bombeiros da FAAAB ainda não possui tabela aprovada de níveis de parkour, provas físicas e repetições por patente.",
-      "ingresso": "Não copiar automaticamente testes da seleção do Exército nem inventar tempos e número de repetições.",
-      "foco": [
-        "parkours virtuais",
-        "treinamento prático no mapa",
-        "formação de bombeiros a definir"
-      ],
-      "exercicios": []
+      "adaptacao": {
+        "texto": "No Corpo de Bombeiros, os exercícios básicos também são parkour, corrida, flexões e polichinelos. Pilotagem aérea e operação de recursos especiais são qualificações de grupamento.",
+        "ambiente": "Centro de treinamento dos Bombeiros, pista de obstáculos e torre de parkour do Roblox.",
+        "aplicacoes": {
+          "parkour": "Obstáculos de baixa, média e alta dificuldade conforme o treino que for definido.",
+          "flexoes": "Mesmo movimento geral; repetições do CBM ainda não definidas.",
+          "polichinelos": "Mesmo movimento geral; repetições do CBM ainda não definidas.",
+          "pulos": "Saltos e barreiras simples da pista.",
+          "corrida": "Circuito de corrida do centro de treinamento; distância pendente.",
+          "ordem-unida": "Comandos e formações da organização, a definir.",
+          "agachamento": "Uso em planejamento, sem regra obrigatória."
+        }
+      }
     },
     {
       "id": "PM",
       "nome": "Polícia Militar",
       "home": "policia.html",
       "status": "Parkours disponíveis; exigências específicas pendentes",
-      "requisitos": "A Polícia Militar da FAAAB ainda precisa definir quais circuitos são exigidos para ingresso ou unidades e quais patentes podem participar.",
-      "ingresso": "As provas internas e os exercícios de batalhão serão definidos separadamente.",
-      "foco": [
-        "parkours virtuais",
-        "treinamento prático no mapa",
-        "formação policial a definir"
-      ],
-      "exercicios": []
+      "adaptacao": {
+        "texto": "Na Polícia Militar, exercícios de base também são parkour, flexões, polichinelos e corrida. Atividades de unidade especializada não são concedidas automaticamente a todos os policiais.",
+        "ambiente": "Pátio do batalhão, quadra de instrução, cones e pistas de obstáculos terrestres.",
+        "aplicacoes": {
+          "parkour": "Cinco níveis de parkour disponíveis como formatos de mapa; níveis exigidos ainda não aprovados.",
+          "flexoes": "Movimento básico; repetições para ingresso ou patente ainda não definidas.",
+          "polichinelos": "Movimento básico; séries e repetições ainda não definidas.",
+          "pulos": "Saltos simples, em sequência ou sobre barreiras do cenário.",
+          "corrida": "Pista de treinamento comum da PM, com distância a definir.",
+          "ordem-unida": "Posições e comandos de formação aplicáveis ao grupo, a definir.",
+          "agachamento": "Uso em planejamento, sem obrigatoriedade definida."
+        }
+      }
     }
   ],
-  "criterios": [
-    "Cada circuito especial é apenas terrestre, ou aquático, ou aéreo. Nunca combinar modalidades no mesmo circuito.",
-    "Flexões, polichinelos, saltos, corridas, volvers e marcha são exercícios práticos separados de aulas teóricas.",
-    "Os níveis de parkour fácil, médio, difícil, grande e grande difícil continuam cadastrados.",
-    "Não criar checkboxes, Ja pratiquei, metas pessoais nem contadores de progresso.",
-    "Não converter circuitos propostos em provas obrigatórias; as regras de cada força e patente dependem de aprovação.",
-    "Cada exercício deve especificar obstáculos e mecânicas reais do Roblox ou indicar o script que ainda falta."
-  ],
-  "repertorioPendente": [
-    "Parkour de velocidade",
-    "Parkour cooperativo",
-    "Parkour de precisão",
-    "Parkour noturno",
-    "Parkour de escadas",
-    "Marchas e volvers adicionais"
-  ],
-  "observacaoRepertorio": "Repertório histórico de planejamento com 124 atividades. Itens confirmados e exemplos de planejamento não são a mesma coisa.",
-  "circuitosEspeciais": [
+  "especializados": [
     {
-      "id": "ter-01",
-      "nome": "Ponte Fantasma",
-      "modalidade": "terrestre",
-      "ambiente": "Obby de plataformas que desaparecem",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
+      "id": "blindados",
+      "nome": "Condução de tanque ou blindado",
+      "forca": "FTB",
+      "unidades": [
+        "FTB-BIB",
+        "FTB-BCC",
+        "FTB-CIBld"
       ],
-      "etapas": [
-        "O avatar entra numa ponte de blocos suspensos.",
-        "A primeira placa apaga quando o jogador pisa nela.",
-        "O próximo bloco aparece por alguns segundos.",
-        "O jogador segue a sequência luminosa até o último checkpoint."
-      ],
-      "dependencias": [
-        "Placas com colisão temporizada",
-        "luzes indicadoras",
-        "checkpoints"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
+      "habilitacao": "Treinamento específico de blindados e autorização de veículo no jogo.",
+      "patentes": "Não definidas pela FAAAB para este exercício.",
+      "disponibilidade": "Somente unidade e função habilitadas; não é treino geral de Soldado."
     },
     {
-      "id": "ter-02",
-      "nome": "Muralha de Alturas",
-      "modalidade": "terrestre",
-      "ambiente": "Escalada e saltos",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
+      "id": "aviao",
+      "nome": "Pilotagem de avião",
+      "forca": "FAB",
+      "unidades": [
+        "FAB-1--GDA",
+        "FAB-ETA"
       ],
-      "etapas": [
-        "Subir uma parede baixa por um degrau.",
-        "Alcançar o segundo muro saltando sobre caixotes.",
-        "Escalar a escada lateral do terceiro muro.",
-        "Passar sobre a última barreira e descer pela rampa."
-      ],
-      "dependencias": [
-        "Muros de alturas progressivas",
-        "caixas",
-        "escada e rampas"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
+      "habilitacao": "Formação de piloto ou habilitação aplicável, vínculo à função e permissão para aeronave no jogo.",
+      "patentes": "Não definidas para ingresso automático.",
+      "disponibilidade": "Não pertence aos exercícios gerais de Soldado ou graduado da FAB."
     },
     {
-      "id": "ter-03",
-      "nome": "Pista de Flexões e Saltos",
-      "modalidade": "terrestre",
-      "ambiente": "Exercício e obstáculo Roblox",
-      "forcas": [
-        "FTB",
-        "PM",
-        "CBM",
-        "FAB"
+      "id": "helicoptero-fab",
+      "nome": "Pilotagem de helicóptero",
+      "forca": "FAB",
+      "unidades": [
+        "FAB-EAV"
       ],
-      "etapas": [
-        "Acionar o ponto de flexões no chão e executar a animação solicitada.",
-        "Saltar três barreiras em sequência.",
-        "Percorrer uma escada curta de agilidade.",
-        "Voltar à linha de partida e tocar o botão final."
-      ],
-      "dependencias": [
-        "Animação R6 de flexão",
-        "barreiras",
-        "pontos de interação"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "A quantidade de flexões varia conforme a prova ou treino; este circuito não cria nota ou requisito universal."
+      "habilitacao": "Qualificação de pilotagem, função compatível e permissão de aeronave no jogo.",
+      "patentes": "A definir conforme a função e o curso.",
+      "disponibilidade": "Só para membros habilitados à função."
     },
     {
-      "id": "ter-04",
-      "nome": "Túnel Rastejante",
-      "modalidade": "terrestre",
-      "ambiente": "Rastejar e agachar",
-      "forcas": [
-        "FTB",
-        "PM",
-        "CBM"
-      ],
-      "etapas": [
-        "Abaixar o avatar usando a animação de agachar.",
-        "Passar por três corredores de teto baixo.",
-        "Rastejar pela galeria com pisos elevados.",
-        "Sair, levantar e correr ao checkpoint."
-      ],
-      "dependencias": [
-        "Animação R6 de agachar e rastejar",
-        "túneis",
-        "sensor de postura"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Depende de animações e hitbox de agachar ou rastejar."
+      "id": "navegacao",
+      "nome": "Condução de embarcação naval",
+      "forca": "FMB",
+      "unidades": [],
+      "habilitacao": "Formação ou curso da função naval e autorização para o barco ou navio virtual.",
+      "patentes": "A definir conforme a organização.",
+      "disponibilidade": "Não é exercício geral de qualquer marinheiro ou fuzileiro."
     },
     {
-      "id": "ter-05",
-      "nome": "Trilhos Vivos",
-      "modalidade": "terrestre",
-      "ambiente": "Traves móveis",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
+      "id": "aeronave-cbm",
+      "nome": "Operação de aeronave dos Bombeiros",
+      "forca": "CBM",
+      "unidades": [
+        "CBM-GOA"
       ],
-      "etapas": [
-        "Avançar até duas traves que correm lateralmente.",
-        "Saltar na primeira trave quando ela se aproxima.",
-        "Passar para a segunda sem cair.",
-        "Cruzar a plataforma fixa até a bandeira."
-      ],
-      "dependencias": [
-        "Duas plataformas em trilhos",
-        "sensores de queda",
-        "bandeira de chegada"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
+      "habilitacao": "Vínculo à área aérea, treinamento específico e permissão de aeronave no jogo.",
+      "patentes": "A definir.",
+      "disponibilidade": "Restrito a quem atua na função, não a todos do CBM."
     },
     {
-      "id": "ter-06",
-      "nome": "Relógio das Portas",
-      "modalidade": "terrestre",
-      "ambiente": "Portas com contagem regressiva",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Apertar o botão que inicia a rodada.",
-        "Correr até a primeira porta antes de fechar.",
-        "Saltar sobre um bloco para alcançar o segundo botão.",
-        "Passar pela última porta e alcançar o piso final."
-      ],
-      "dependencias": [
-        "Portas temporizadas",
-        "botões",
-        "contagem visual",
-        "piso de chegada"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-07",
-      "nome": "Esteira Contra o Jogador",
-      "modalidade": "terrestre",
-      "ambiente": "Esteiras e deslocamento",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Entrar na esteira que empurra o avatar para trás.",
-        "Desviar de blocos que chegam em direção contrária.",
-        "Usar uma esteira lateral para mudar de trilha.",
-        "Chegar ao círculo de saída sem encostar nos obstáculos."
-      ],
-      "dependencias": [
-        "Esteiras com velocidade controlada",
-        "obstáculos móveis",
-        "marcadores"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-08",
-      "nome": "Torres Gêmeas",
-      "modalidade": "terrestre",
-      "ambiente": "Subida e travessia",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Subir a primeira torre por plataformas diagonais.",
-        "Alcançar a ponte suspensa entre as duas torres.",
-        "Atravessar os apoios que mudam de posição.",
-        "Descer a segunda torre pulando em plataformas sucessivas."
-      ],
-      "dependencias": [
-        "Duas torres",
-        "ponte móvel",
-        "plataformas de descida"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-09",
-      "nome": "Labirinto de Piso Falso",
-      "modalidade": "terrestre",
-      "ambiente": "Escolha de caminho",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Entrar na sala com três corredores idênticos.",
-        "Testar o primeiro piso marcado com luzes.",
-        "Encontrar o caminho sem placas falsas.",
-        "Acionar o interruptor que libera a saída."
-      ],
-      "dependencias": [
-        "Pisos falsos",
-        "indicação visual de resposta",
-        "interruptor e portão"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-10",
-      "nome": "Pêndulos do Depósito",
-      "modalidade": "terrestre",
-      "ambiente": "Tempo de salto",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Entrar no corredor de pêndulos giratórios.",
-        "Aguardar a primeira abertura para avançar.",
-        "Passar por três pêndulos com ritmos diferentes.",
-        "Chegar à plataforma elevada sem tocar os objetos."
-      ],
-      "dependencias": [
-        "Pêndulos com colisão",
-        "cronômetros opcionais",
-        "checkpoint"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-11",
-      "nome": "Zigue-Zague de Barreiras",
-      "modalidade": "terrestre",
-      "ambiente": "Corrida curta e mudanças de direção",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Correr entre barreiras alternadas.",
-        "Fazer curvas fechadas nas marcações do chão.",
-        "Pular as duas barreiras finais.",
-        "Encerrar o percurso no sensor de chegada."
-      ],
-      "dependencias": [
-        "Barreiras",
-        "marcações de piso",
-        "sensor final"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-12",
-      "nome": "Escadaria em Movimento",
-      "modalidade": "terrestre",
-      "ambiente": "Escadas mecânicas",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Subir três degraus móveis que mudam de altura.",
-        "Esperar uma plataforma alinhar com a escada maior.",
-        "Alcançar a passarela superior.",
-        "Descer pela sequência de degraus móveis até o checkpoint."
-      ],
-      "dependencias": [
-        "Degraus animados",
-        "plataforma de alinhamento",
-        "passarela"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-13",
-      "nome": "Corrida dos Botões",
-      "modalidade": "terrestre",
-      "ambiente": "Obby com interruptores",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Pular até o primeiro botão no alto de uma caixa.",
-        "Ativar a ponte que aparece à frente.",
-        "Correr e pressionar o segundo botão antes da ponte sumir.",
-        "Atravessar o último corredor até a saída."
-      ],
-      "dependencias": [
-        "Botões de pressão",
-        "ponte temporizada",
-        "sinalização"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-14",
-      "nome": "Plataformas de Cor",
-      "modalidade": "terrestre",
-      "ambiente": "Memória visual e salto",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Observar a sequência de três cores exibida numa tela.",
-        "Saltar nas plataformas da mesma ordem.",
-        "Aguardar a próxima sequência, com quatro cores.",
-        "Completar o último trecho até a bandeira."
-      ],
-      "dependencias": [
-        "Painel com sequência",
-        "plataformas coloridas",
-        "checagem de ordem"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "A sequência muda a cada rodada; não depende de adivinhar."
-    },
-    {
-      "id": "ter-15",
-      "nome": "Fenda do Elevador",
-      "modalidade": "terrestre",
-      "ambiente": "Elevador vertical",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Entrar no elevador aberto do galpão.",
-        "Saltar para uma plataforma lateral durante a parada.",
-        "Acionar um segundo elevador de altura diferente.",
-        "Sair na cobertura e completar dois saltos finais."
-      ],
-      "dependencias": [
-        "Elevadores com paradas",
-        "plataformas laterais",
-        "marcadores"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-16",
-      "nome": "Revezamento da Bandeira",
-      "modalidade": "terrestre",
-      "ambiente": "Obby cooperativo",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "O primeiro integrante completa um circuito fácil até o botão.",
-        "O botão abre uma porta para o segundo integrante.",
-        "O segundo percorre a ponte móvel.",
-        "O terceiro leva a bandeira virtual até a área de chegada."
-      ],
-      "dependencias": [
-        "Sistema de equipes",
-        "botões",
-        "porta remota",
-        "bandeira virtual"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-17",
-      "nome": "Queda no Checkpoint",
-      "modalidade": "terrestre",
-      "ambiente": "Obstáculos e respawn",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Subir a torre com dois trechos de parkour médio.",
-        "Ativar o checkpoint intermediário.",
-        "Passar por plataformas que giram na parte alta.",
-        "Se cair, retornar ao checkpoint e tentar o trecho final."
-      ],
-      "dependencias": [
-        "Torre",
-        "checkpoints",
-        "plataformas giratórias",
-        "sistema de respawn"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "ter-18",
-      "nome": "Circuito da Base Inteira",
-      "modalidade": "terrestre",
-      "ambiente": "Percurso longo terrestre",
-      "forcas": [
-        "FTB",
-        "FAB",
-        "FMB",
-        "CBM",
-        "PM"
-      ],
-      "etapas": [
-        "Partir da pista de corrida e cruzar o trecho de barreiras.",
-        "Atravessar um corredor de flexões e saltos do jogo.",
-        "Vencer a ponte de placas temporizadas.",
-        "Subir a torre de dois andares.",
-        "Descer pela rampa longa e cruzar a linha final."
-      ],
-      "dependencias": [
-        "Pista de corrida",
-        "barreiras",
-        "plataformas temporizadas",
-        "torre e rampa"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Circuito terrestre longo; não inclui natação ou pilotagem."
-    },
-    {
-      "id": "aqu-01",
-      "nome": "Corredor de Correnteza",
-      "modalidade": "aquatico",
-      "ambiente": "Natação em canal",
-      "forcas": [
-        "FMB",
-        "CBM",
-        "FTB"
-      ],
-      "etapas": [
-        "Entrar no canal de natação virtual.",
-        "Nadar entre quatro marcadores laterais.",
-        "Evitar a correnteza simulada que empurra o avatar.",
-        "Alcançar a faixa de saída."
-      ],
-      "dependencias": [
-        "Água nadável",
-        "forças de correnteza moderadas",
-        "marcadores"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-02",
-      "nome": "Boias Afundantes",
-      "modalidade": "aquatico",
-      "ambiente": "Plataformas flutuantes",
-      "forcas": [
-        "FMB",
-        "CBM",
-        "FTB"
-      ],
-      "etapas": [
-        "Avançar sobre a primeira boia flutuante.",
-        "Saltar para a seguinte antes da anterior afundar.",
-        "Aguardar a boia final subir novamente.",
-        "Alcançar a plataforma de chegada."
-      ],
-      "dependencias": [
-        "Boias que descem e sobem",
-        "sensores de contato",
-        "checkpoints"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-03",
-      "nome": "Argolas Submersas",
-      "modalidade": "aquatico",
-      "ambiente": "Mergulho virtual",
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "etapas": [
-        "Entrar no tanque de água do jogo.",
-        "Passar pela primeira argola abaixo da superfície.",
-        "Seguir a trilha de argolas iluminadas.",
-        "Voltar à superfície e alcançar a borda final."
-      ],
-      "dependencias": [
-        "Piscina/tanque",
-        "argolas iluminadas",
-        "nado e mergulho no jogo"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Exercício somente virtual; não envolve treinamento real de prender a respiração."
-    },
-    {
-      "id": "aqu-04",
-      "nome": "Labirinto das Eclusas",
-      "modalidade": "aquatico",
-      "ambiente": "Portões e embarcação",
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "etapas": [
-        "Pilotar uma lancha no canal fechado do jogo.",
-        "Aproximar-se da eclusa indicada no painel.",
-        "Aguardar o portão virtual abrir.",
-        "Cruzar o canal com curvas estreitas até a doca."
-      ],
-      "dependencias": [
-        "Lancha controlável",
-        "eclusas com animação",
-        "balizas de navegação"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-05",
-      "nome": "Slalom de Bote",
-      "modalidade": "aquatico",
-      "ambiente": "Direção de bote",
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "etapas": [
-        "Sair do píer num bote virtual.",
-        "Contornar a primeira fileira de boias.",
-        "Fazer curvas alternadas no canal demarcado.",
-        "Atracar na área sinalizada."
-      ],
-      "dependencias": [
-        "Bote virtual",
-        "boias",
-        "zona de atracação"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-06",
-      "nome": "Plataformas do Açude",
-      "modalidade": "aquatico",
-      "ambiente": "Travessia por flutuadores",
-      "forcas": [
-        "FMB",
-        "CBM",
-        "FTB"
-      ],
-      "etapas": [
-        "Saltar até uma plataforma que oscila na água.",
-        "Aguardar o flutuador lateral se aproximar.",
-        "Passar por três plataformas com ritmos diferentes.",
-        "Terminar na plataforma do outro lado."
-      ],
-      "dependencias": [
-        "Flutuadores animados",
-        "plataformas móveis",
-        "marcadores de chegada"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-07",
-      "nome": "Busca de Sinalizadores",
-      "modalidade": "aquatico",
-      "ambiente": "Localização aquática no jogo",
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "etapas": [
-        "Entrar na área de natação do jogo.",
-        "Localizar o sinalizador virtual número um.",
-        "Seguir os marcadores para encontrar outros dois sinalizadores.",
-        "Voltar com a localização registrada à boia final."
-      ],
-      "dependencias": [
-        "Sinalizadores virtuais",
-        "marcadores aquáticos",
-        "checkpoints"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Objetos são fictícios; sem simulação de resgate de pessoas reais."
-    },
-    {
-      "id": "aqu-08",
-      "nome": "Canal das Portas",
-      "modalidade": "aquatico",
-      "ambiente": "Natação e tempo",
-      "forcas": [
-        "FMB",
-        "CBM",
-        "FTB"
-      ],
-      "etapas": [
-        "Entrar no canal do minijogo.",
-        "Nadar até uma passagem que abre a intervalos.",
-        "Aguardar o sinal luminoso antes de atravessar.",
-        "Passar pelo segundo portão e alcançar a saída."
-      ],
-      "dependencias": [
-        "Canal nadável",
-        "portões temporizados",
-        "luzes de indicação"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aqu-09",
-      "nome": "Regata das Três Curvas",
-      "modalidade": "aquatico",
-      "ambiente": "Percurso de barco",
-      "forcas": [
-        "FMB",
-        "CBM"
-      ],
-      "etapas": [
-        "Iniciar com embarcação virtual no ponto de largada.",
-        "Contornar a curva marcada pela boia verde.",
-        "Cruzar o corredor entre duas docas.",
-        "Completar a última curva e retornar ao píer de chegada."
-      ],
-      "dependencias": [
-        "Embarcação virtual",
-        "boias",
-        "píer",
-        "linha de chegada"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aer-01",
-      "nome": "Argolas do Céu",
-      "modalidade": "aereo",
-      "ambiente": "Voo em aeronave",
-      "forcas": [
-        "FAB",
-        "CBM",
-        "FMB"
-      ],
-      "etapas": [
-        "Decolar na pista virtual com aeronave autorizada.",
-        "Passar pelo primeiro arco indicado no céu.",
-        "Executar a curva até os arcos seguintes.",
-        "Retornar à pista de pouso do jogo."
-      ],
-      "dependencias": [
-        "Aeronave virtual",
-        "arcos de checkpoints",
-        "pista"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Pilotagem limitada a jogadores habilitados nas permissões da FAAAB."
-    },
-    {
-      "id": "aer-02",
-      "nome": "Helicóptero no Alvo",
-      "modalidade": "aereo",
-      "ambiente": "Pouso de precisão",
-      "forcas": [
-        "FAB",
-        "CBM"
-      ],
-      "etapas": [
-        "Decolar do heliponto de origem.",
-        "Alcançar o primeiro círculo aéreo.",
-        "Reduzir a velocidade e alinhar o helicóptero.",
-        "Pousar dentro da marca circular de destino."
-      ],
-      "dependencias": [
-        "Helicóptero com controles",
-        "círculos de referência",
-        "heliponto de destino"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aer-03",
-      "nome": "Slalom de Drone",
-      "modalidade": "aereo",
-      "ambiente": "Controle de drone virtual",
-      "forcas": [
-        "FAB",
-        "PM",
-        "CBM"
-      ],
-      "etapas": [
-        "Ativar um drone do minijogo.",
-        "Passar pelos três anéis verticais do percurso.",
-        "Desviar de uma parede elevada do cenário.",
-        "Pousar o drone na plataforma de recolhimento."
-      ],
-      "dependencias": [
-        "Drone virtual",
-        "câmera de acompanhamento",
-        "anéis e obstáculos"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aer-04",
-      "nome": "Planador das Correntes",
-      "modalidade": "aereo",
-      "ambiente": "Planagem arcade",
-      "forcas": [
-        "FAB",
-        "FMB"
-      ],
-      "etapas": [
-        "Ativar o planador no ponto aéreo de início.",
-        "Atravessar uma corrente ascendente simulada.",
-        "Deslizar entre dois arcos suspensos.",
-        "Chegar à plataforma de pouso de planadores."
-      ],
-      "dependencias": [
-        "Planador arcade",
-        "zonas de impulso ascendente",
-        "arcos",
-        "pouso"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Mecânica de planagem exclusivamente do jogo, ainda a desenvolver."
-    },
-    {
-      "id": "aer-05",
-      "nome": "Balizas da Neblina",
-      "modalidade": "aereo",
-      "ambiente": "Navegação aérea de jogo",
-      "forcas": [
-        "FAB",
-        "CBM",
-        "FMB"
-      ],
-      "etapas": [
-        "Decolar com aeronave virtual na estação aérea.",
-        "Seguir o primeiro farol luminoso entre nuvens cenográficas.",
-        "Localizar duas balizas com referências visuais.",
-        "Retornar ao corredor de chegada."
-      ],
-      "dependencias": [
-        "Aeronave",
-        "nuvens cenográficas",
-        "balizas de luz",
-        "pista"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aer-06",
-      "nome": "Voo Contrarrelógio",
-      "modalidade": "aereo",
-      "ambiente": "Pista aérea com arcos",
-      "forcas": [
-        "FAB",
-        "CBM"
-      ],
-      "etapas": [
-        "Iniciar o contador do minijogo de voo.",
-        "Decolar com aeronave habilitada.",
-        "Atravessar cinco anéis na ordem indicada.",
-        "Pousar no local sinalizado para encerrar o cronômetro."
-      ],
-      "dependencias": [
-        "Cronômetro visual",
-        "cinco anéis",
-        "pista e aeronave"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Sem tempo mínimo ou nota universal até a FAAAB definir."
-    },
-    {
-      "id": "aer-07",
-      "nome": "Transporte de Carga Suspensa",
-      "modalidade": "aereo",
-      "ambiente": "Minijogo de guincho virtual",
-      "forcas": [
-        "CBM",
-        "FAB"
-      ],
-      "etapas": [
-        "Controlar helicóptero habilitado do minijogo.",
-        "Aproximar o guincho do caixote virtual indicado.",
-        "Ativar o encaixe automático de carga.",
-        "Transportar o caixote por três pontos aéreos e soltá-lo no alvo."
-      ],
-      "dependencias": [
-        "Helicóptero virtual",
-        "guincho de jogo",
-        "caixa cenográfica",
-        "alvo de entrega"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": "Apenas mecânica simulada de Roblox; não é instrução de carga aérea real."
-    },
-    {
-      "id": "aer-08",
-      "nome": "Rota de Turbulência",
-      "modalidade": "aereo",
-      "ambiente": "Controle com rajadas virtuais",
-      "forcas": [
-        "FAB",
-        "CBM"
-      ],
-      "etapas": [
-        "Iniciar o voo virtual no portão de partida.",
-        "Atravessar a região de vento lateral simulada.",
-        "Manter-se dentro do corredor de marcadores do minijogo.",
-        "Pousar na pista de chegada."
-      ],
-      "dependencias": [
-        "Sistema de vento fictício",
-        "pista",
-        "indicadores de corredor"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
-    },
-    {
-      "id": "aer-09",
-      "nome": "Voo Noturno dos Faróis",
-      "modalidade": "aereo",
-      "ambiente": "Arcos luminosos no céu",
-      "forcas": [
-        "FAB",
-        "CBM",
-        "FMB"
-      ],
-      "etapas": [
-        "Decolar com iluminação noturna ativada no mapa.",
-        "Localizar a primeira torre luminosa do percurso.",
-        "Seguir a sequência de três referências iluminadas.",
-        "Pousar na área com luzes de aproximação do minijogo."
-      ],
-      "dependencias": [
-        "Ciclo noturno",
-        "faróis de posição",
-        "aeronave virtual",
-        "pista iluminada"
-      ],
-      "status": "Ideia de circuito para construir no Roblox Studio",
-      "nota": ""
+      "id": "viatura-pm",
+      "nome": "Condução de viatura policial",
+      "forca": "PM",
+      "unidades": [],
+      "habilitacao": "Autorização de condução e função compatível na PM do jogo.",
+      "patentes": "A definir.",
+      "disponibilidade": "Uso condicionado a permissão; não é exigência geral automática."
     }
-  ]
+  ],
+  "arquivoAnterior": "As 36 ideias antigas de circuitos individuais (18 terrestres, 9 aquáticos, 9 aéreos) foram retiradas da página de exercícios gerais. Não eram tipos gerais de exercício, e misturavam treinamento básico com habilitação especializada.",
+  "status": "Relação geral para o Roblox; os requisitos especializados e critérios não registrados permanecem pendentes de aprovação."
 }
