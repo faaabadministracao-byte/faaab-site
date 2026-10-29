@@ -1,0 +1,303 @@
+{
+  "atualizado": "2026-10-29",
+  "aviso": "Este catálogo documenta requisitos. Não confirma que os scripts já estejam instalados ou funcionando no Roblox.",
+  "sistemas": [
+    {
+      "id": "SIS-01",
+      "categoria": "Identidade",
+      "nome": "Identidade digital do militar",
+      "resumo": "Personagem vinculado ao usuário Roblox, exibe nome, força, patente, unidade e qualificações.",
+      "implementacao": "Cadastro verificado, histórico de troca de força e consentimento para foto; sem transformar documento fictício em identidade real.",
+      "criterio": "IDs Roblox válidos, cargo compatível com a força, histórico auditável",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-02",
+      "categoria": "Identidade",
+      "nome": "Overhead contextual",
+      "resumo": "Nome, patente, divisão e ícones administrativos no avatar sem poluir a tela.",
+      "implementacao": "Ocultar ícones sem direito, prevenir títulos duplicados e limitar distância de leitura.",
+      "criterio": "As duas informações principais legíveis; ícones não sobrepostos",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-03",
+      "categoria": "Identidade",
+      "nome": "Leitor de cadastro e roleta",
+      "resumo": "Triagem e seleção de candidatos nos postos de ingresso.",
+      "implementacao": "Painel de triagem conectado à situação da conta, sem decisão aleatória irreversível.",
+      "criterio": "Candidato aprovado ou reprovado com motivo e log",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-04",
+      "categoria": "Identidade",
+      "nome": "Sincronização de carreiras",
+      "resumo": "Relaciona patente na força com função em unidade, habilitação e histórico.",
+      "implementacao": "Não usar cargo funcional como patente; permissões administrativas fora do fluxo militar.",
+      "criterio": "Mudar de divisão não promove nem remove automaticamente a patente",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-05",
+      "categoria": "Identidade",
+      "nome": "Pedido de ingresso em batalhão",
+      "resumo": "Soldado solicita vaga em uma unidade e acompanha processo de seleção.",
+      "implementacao": "Para EB, Soldado pode se candidatar; não exigir Soldado de 1ª Classe como cargo interno.",
+      "criterio": "Solicitação, análise, treinamento e aprovação registrados",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-06",
+      "categoria": "Identidade",
+      "nome": "Promoção e quadro de carreira",
+      "resumo": "Pedidos de promoção e avaliações sujeitos a requisitos da patente.",
+      "implementacao": "Cursos e medalhas não concedem promoção automática; comando aprova conforme as regras.",
+      "criterio": "Promoção registrada com responsável e justificativa",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-07",
+      "categoria": "Identidade",
+      "nome": "Condecorações e medalhas",
+      "resumo": "Insígnias de serviço por tempo, participação e missões autorizadas.",
+      "implementacao": "Marcos planejados de 1, 3, 6, 12 e 15 unidades de tempo definidas no regulamento.",
+      "criterio": "Medalha não duplica e histórico permanece após mudança de unidade",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-08",
+      "categoria": "Identidade",
+      "nome": "Uniformes e armário",
+      "resumo": "Armário físico com roupas por força, divisão, curso e missão.",
+      "implementacao": "Boina 3D, patches e uniformes ajustados a R6; vedar uso sem qualificação.",
+      "criterio": "Uniforme correto para cargo, sem atravessamento e sem duplicar itens",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-09",
+      "categoria": "Formação",
+      "nome": "Sistema de aulas e provas",
+      "resumo": "Aula real por conteúdo, exemplos, treino guiado, avaliação e feedback.",
+      "implementacao": "Exercícios desafiadores, alternativas plausíveis e correção explicada após resposta.",
+      "criterio": "Aluno consegue estudar antes de tentar prova; resultado auditável",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-10",
+      "categoria": "Formação",
+      "nome": "Matrícula em escolas e academias",
+      "resumo": "Turmas, lista de alunos, instrutores e cadeiras curriculares.",
+      "implementacao": "Separar monitor, instrutor, avaliador, diretor e cargos militares; matrícula não concede patente.",
+      "criterio": "Matrícula vinculada a instituição e etapa do curso",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-11",
+      "categoria": "Formação",
+      "nome": "Instrutor e avaliador habilitados",
+      "resumo": "Autorizações específicas para dar aula, corrigir prova e validar estágio.",
+      "implementacao": "Instrutor somente com habilitação e designação; monitor não emite diploma sozinho.",
+      "criterio": "Responsável por avaliação identificado",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-12",
+      "categoria": "Formação",
+      "nome": "Prova prática de obstáculos",
+      "resumo": "Parkours temáticos com etapas e avaliação de técnica e execução.",
+      "implementacao": "Mínimo planejado de sete circuitos; evitar fases triviais repetidas.",
+      "criterio": "Tentativa, checkpoints e desempenho individual registrados",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-13",
+      "categoria": "Formação",
+      "nome": "Certificados e qualificações",
+      "resumo": "Credenciais de curso individualizadas no perfil do militar.",
+      "implementacao": "Certificado permite equipamento ou posição quando previsto; não promove sozinho.",
+      "criterio": "Registro de curso, turma, nota e assinatura do avaliador",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-14",
+      "categoria": "Formação",
+      "nome": "Estágios interunidades",
+      "resumo": "Etapas de formação com equipes e centros distintos.",
+      "implementacao": "Trilhas por centro, sem replicar conteúdo idêntico em todas as forças.",
+      "criterio": "Histórico do estágio e validação por instrutor",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-15",
+      "categoria": "Formação",
+      "nome": "Centro de Instrução Militar (CIM)",
+      "resumo": "Salas, instruções, triagem e exames para progressão inicial.",
+      "implementacao": "Entrada orientada por etapa de formação; avaliações com feedback.",
+      "criterio": "Aluno não sai de prova sem correção e próximos passos",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-16",
+      "categoria": "Operações",
+      "nome": "Gerador de missões",
+      "resumo": "Cria operações de patrulha, resgate, escolta, busca, transporte e logística.",
+      "implementacao": "Dificuldade variável, objetivos por força, mapa e equipe; sem missão sem conclusão.",
+      "criterio": "Objetivos, participação e resultados registrados",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-17",
+      "categoria": "Operações",
+      "nome": "Comando de esquadrão e pelotão",
+      "resumo": "Briefing, distribuição de equipes, comunicação e ordens em campo.",
+      "implementacao": "Funções separadas da patente; chefes designados pela organização.",
+      "criterio": "Só líder habilitado atribui funções de missão",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-18",
+      "categoria": "Operações",
+      "nome": "Sistema de veículos militares",
+      "resumo": "Garagem, disponibilidade, manutenção e autorização de emprego.",
+      "implementacao": "Veículos terrestres, blindados, navios, aeronaves e helicópteros por habilitação.",
+      "criterio": "Pessoa sem curso não consegue pilotar veículo restrito",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-19",
+      "categoria": "Operações",
+      "nome": "Operações navais e anfíbias",
+      "resumo": "Desembarque, transporte de equipe, resgate no mar e patrulhamento de rios.",
+      "implementacao": "Separação entre Marinha, CFN e seus comandos; viaturas anfíbias com papel próprio.",
+      "criterio": "Tripulação e missão persistem ao trocar de área",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-20",
+      "categoria": "Operações",
+      "nome": "Aviação e torre de controle",
+      "resumo": "Planos de voo, pista, decolagem, aterrissagem, comunicação e radar.",
+      "implementacao": "Pilotagem separada por curso; controle de tráfego em cenário fictício.",
+      "criterio": "Duas aeronaves não recebem a mesma pista em horários incompatíveis",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-21",
+      "categoria": "Operações",
+      "nome": "Evacuação e atendimento pré-hospitalar",
+      "resumo": "Triagem de vítimas fictícias, remoção e coordenação com bombeiros e B Sau.",
+      "implementacao": "Sem gore; atendimento simulado voltado à aprendizagem e jogo.",
+      "criterio": "Evacuação registrada e concluída na unidade correta",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-22",
+      "categoria": "Operações",
+      "nome": "Logística e depósitos",
+      "resumo": "Pedidos de suprimentos, estoque por unidade, carregamento e destino.",
+      "implementacao": "Sem crafting de armas; armamento gerido por armaria, regras e permissões.",
+      "criterio": "Saldo e requisição sincronizados após reentrada",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-23",
+      "categoria": "Mundo",
+      "nome": "Mapas por bioma",
+      "resumo": "Ilha central conectada a áreas de Amazônia, Caatinga/Cerrado, montanha e litoral.",
+      "implementacao": "Transições planejadas com características de terreno e treinamento por local.",
+      "criterio": "Cada bioma acessível e com objetivo próprio",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-24",
+      "categoria": "Mundo",
+      "nome": "Sistema climático dinâmico",
+      "resumo": "Vento físico, chuva, tempestades, raios e visibilidade variável.",
+      "implementacao": "Física calibrada para evitar queda de FPS; servidor sincroniza clima.",
+      "criterio": "Objetos, áudio e efeitos exibem estado climático coerente",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-25",
+      "categoria": "Mundo",
+      "nome": "Iluminação e horário",
+      "resumo": "Dia/noite com luzes de quartel, lanternas e eventos.",
+      "implementacao": "Evitar escuridão que impeça orientação sem equipamento.",
+      "criterio": "Horário consistente para jogadores no mesmo servidor",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-26",
+      "categoria": "Mundo",
+      "nome": "Dormitório, quartel e rotina",
+      "resumo": "Camas, alojamentos, registros de ocupação e horários de instrução.",
+      "implementacao": "Quartel não deve bloquear jogo de novos inscritos sem justificativa.",
+      "criterio": "Registro de alojamento e comandos básicos",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-27",
+      "categoria": "Mundo",
+      "nome": "Portaria e alistamento",
+      "resumo": "Jardim, portaria, triagem, filas e circulação para ingresso.",
+      "implementacao": "Fluxo sequencial claro para o jogador e acessibilidade mobile.",
+      "criterio": "Novo jogador consegue chegar à triagem sem orientação externa",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-28",
+      "categoria": "Mundo",
+      "nome": "Rede de servidores de 30–50 jogadores",
+      "resumo": "Distribuição de players por instância com continuidade de perfil.",
+      "implementacao": "Meta de longo prazo de milhares na rede, não jogadores no mesmo servidor.",
+      "criterio": "Troca de servidor sem perda de patente ou histórico",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-29",
+      "categoria": "Segurança",
+      "nome": "Permissões por escopo",
+      "resumo": "Comandos de Governo, força, unidade e equipe técnica são distintos.",
+      "implementacao": "Presidente fictício não ganha permissões de dono; não presumir Roblox Admin.",
+      "criterio": "Testes negam ações não autorizadas",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-30",
+      "categoria": "Segurança",
+      "nome": "Registro de ações e auditoria",
+      "resumo": "Log de promoções, punições, certificados, equipamentos e acessos sensíveis.",
+      "implementacao": "Responsável, data, motivo, antes/depois para mudanças importantes.",
+      "criterio": "Auditoria reproduz o histórico após reinício",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-31",
+      "categoria": "Segurança",
+      "nome": "Denúncia, recurso e moderação",
+      "resumo": "Sistema de denúncias com revisão, evidência e possibilidade de recurso.",
+      "implementacao": "Proteção de contas, evitar exposição de dados pessoais e punições automáticas irreversíveis.",
+      "criterio": "Pessoa denunciada pode recorrer de punição",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-32",
+      "categoria": "Segurança",
+      "nome": "Desempenho e mobile",
+      "resumo": "UI adaptativa, scripts eficientes e menus de baixo consumo.",
+      "implementacao": "Compatibilidade com celular e desktop, R6 e dispositivos modestos.",
+      "criterio": "Ações principais completas sem mouse e sem texto cortado",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    },
+    {
+      "id": "SIS-33",
+      "categoria": "Segurança",
+      "nome": "Grupos, símbolos e divisões",
+      "resumo": "Catálogo central versionado e não duplicado entre páginas.",
+      "implementacao": "Referências reais separadas de grupos efetivamente aprovados.",
+      "criterio": "Página de cada unidade usa um identificador único",
+      "estado": "Especificado no planejamento; não verificado no Roblox Studio"
+    }
+  ]
+}
