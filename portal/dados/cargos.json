@@ -1168,5 +1168,15 @@
     "titular": null,
     "anteriores": [],
     "nota": "Titular não definido no histórico recuperado"
+  },
+  {
+    "id": "PM-APR",
+    "forca": "PM",
+    "sigla": "APR",
+    "nome": "Aprendiz",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Etapa inicial definida na progressão PM; critérios de ingresso a confirmar."
   }
 ]
