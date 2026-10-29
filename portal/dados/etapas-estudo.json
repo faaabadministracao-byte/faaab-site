@@ -1,0 +1,782 @@
+{
+  "versao": 1,
+  "descricaoInterna": "Organização pedagógica por etapas, aplicação e recuperação com a mesma prova. Sem coletar dados clínicos ou pessoais.",
+  "apoios": {
+    "CUR-10-1": {
+      "comando": {
+        "passos": [
+          "Imagine um treino com três pessoas: aluno, monitor e instrutor.",
+          "A patente indica a posição na carreira militar. A função indica o trabalho de cada pessoa.",
+          "Um monitor ajuda o instrutor, mas não pode promover um aluno.",
+          "Se uma ordem estiver confusa, pergunte ao responsável pelo treino antes de agir."
+        ],
+        "palavras": [
+          [
+            "Patente",
+            "Posição do militar na carreira."
+          ],
+          [
+            "Função",
+            "Trabalho que a pessoa realiza naquele momento."
+          ],
+          [
+            "Habilitação",
+            "Permissão obtida após cumprir requisitos."
+          ]
+        ],
+        "pista": "Pense primeiro: a pessoa tem autorização para fazer isso, ou apenas está ajudando?",
+        "reforco": [
+          "Um monitor ajuda a organizar uma turma, mas tenta mudar a patente de alguém. O que fazer?",
+          [
+            "Aceitar porque ele organiza a turma.",
+            "Pedir que um aluno valide a mudança.",
+            "Encaminhar a quem pode autorizar.",
+            "Esperar a próxima aula para aprovar."
+          ],
+          2,
+          "Organizar uma turma não dá permissão para mudar patentes."
+        ],
+        "desafio": [
+          "Um Capitão visita uma turma, mas não foi designado para ensinar. Ele pode assumir a aula automaticamente?",
+          [
+            "Sim, a patente basta para isso.",
+            "Não, é necessária a função de instrutor.",
+            "Sim, desde que use a farda correta.",
+            "Não, apenas alunos podem ensinar."
+          ],
+          1,
+          "Ter patente não substitui designação e habilitação para a função."
+        ]
+      },
+      "ingresso": {
+        "passos": [
+          "Para chegar a Soldado, o Recruta segue uma formação.",
+          "Na FAAAB, ela reúne Expedição Militar, Seleção de Brigada e TC-1.",
+          "Concluir uma etapa não significa concluir as três.",
+          "Quem está na rota de Mobilizado segue uma sequência própria. Não é a mesma formação do Recruta."
+        ],
+        "palavras": [
+          [
+            "Etapa",
+            "Uma parte do percurso de formação."
+          ],
+          [
+            "TC-1",
+            "Nome de uma etapa da FAAAB, sem expansão confirmada aqui."
+          ]
+        ],
+        "pista": "Confira quantas etapas foram concluídas antes de decidir se o curso terminou.",
+        "reforco": [
+          "Um Recruta terminou a Expedição e a Seleção, mas não o TC-1. Qual é sua situação?",
+          [
+            "Ainda falta uma etapa prevista.",
+            "Já pode concluir sem verificação.",
+            "Precisa repetir todas as etapas.",
+            "Só falta receber o uniforme."
+          ],
+          0,
+          "TC-1 ainda faz parte da formação registrada."
+        ],
+        "desafio": [
+          "Dois participantes terminam suas tarefas: um Recruta completa Expedição, Seleção e TC-1; outro conclui a primeira etapa de Mobilizado. Qual interpretação está correta?",
+          [
+            "Ambos completaram a mesma formação.",
+            "O Mobilizado vira Recruta automaticamente.",
+            "Só o Recruta concluiu uma das rotas.",
+            "Ambos recebem a mesma patente ao entrar."
+          ],
+          2,
+          "As rotas têm requisitos diferentes; concluir uma etapa de mobilização não equivale à rota completa do Recruta."
+        ]
+      }
+    },
+    "CUR-10-2": {
+      "habilitacao": {
+        "passos": [
+          "Um curso pode ensinar como usar um equipamento dentro do jogo.",
+          "Depois da aprovação, a pessoa pode receber acesso ao que o curso permite.",
+          "Esse acesso não muda sua patente.",
+          "Mesmo com curso concluído, algumas atividades exigem autorização da unidade."
+        ],
+        "palavras": [
+          [
+            "CTA",
+            "Sigla de um curso da FAAAB cujo nome completo ainda não foi definido."
+          ],
+          [
+            "Acesso",
+            "Autorização para usar um recurso."
+          ]
+        ],
+        "pista": "Separe três coisas: curso concluído, patente e acesso à missão.",
+        "reforco": [
+          "Um Soldado termina o CTA, mas não recebeu promoção. O que muda?",
+          [
+            "Sua patente muda para Cabo.",
+            "Pode obter o acesso permitido pelo curso.",
+            "Passa a chefiar todos os armários.",
+            "Sua conta ganha ferramentas administrativas."
+          ],
+          1,
+          "CTA pode habilitar acesso; promoção exige processo próprio."
+        ],
+        "desafio": [
+          "Uma pessoa habilitada entra numa unidade onde o equipamento está restrito. O sistema deve:",
+          [
+            "Liberar o uso por ter feito o curso.",
+            "Apagar a habilitação da conta.",
+            "Conferir também a autorização local.",
+            "Substituir o cadastro pela patente."
+          ],
+          2,
+          "A autorização da atividade ou unidade é checada além do curso."
+        ]
+      },
+      "procedimentos": {
+        "passos": [
+          "Antes de liberar um equipamento, o jogo precisa fazer verificações.",
+          "Primeiro: quem está pedindo o acesso?",
+          "Segundo: essa pessoa concluiu a formação exigida?",
+          "Terceiro: essa atividade permite o equipamento? Se faltar algo, o sistema deve explicar o motivo."
+        ],
+        "palavras": [
+          [
+            "Checklist",
+            "Lista curta do que precisa ser verificado."
+          ],
+          [
+            "Cadastro",
+            "Dados que identificam o integrante no jogo."
+          ]
+        ],
+        "pista": "Imagine três perguntas: quem é, o que aprendeu e onde pode usar.",
+        "reforco": [
+          "O cadastro está certo e há curso concluído, mas falta autorização para o evento. Qual decisão é adequada?",
+          [
+            "Liberar o equipamento normalmente.",
+            "Liberar por tempo limitado sem registro.",
+            "Mudar a função da pessoa por conta própria.",
+            "Bloquear o acesso e informar o motivo."
+          ],
+          3,
+          "A autorização da atividade é uma condição adicional."
+        ],
+        "desafio": [
+          "Um jogador não consegue retirar um item após mudar de divisão. Qual verificação ajuda mais?",
+          [
+            "Conferir vínculo com a divisão e permissão.",
+            "Pedir que use um uniforme de outra força.",
+            "Apagar a nota dos cursos anteriores.",
+            "Tentar entrar em vários servidores."
+          ],
+          0,
+          "A mudança de divisão pode alterar quais equipamentos estão autorizados."
+        ]
+      }
+    },
+    "CUR-10-5": {
+      "matricula": {
+        "passos": [
+          "Na escola, nem toda pessoa faz a mesma tarefa.",
+          "Na ESA da FAAAB, Cabo e 3º Sargento são alunos em etapas específicas.",
+          "O instrutor indicado é o 2º Tenente habilitado.",
+          "Aluno, monitor e instrutor são funções. Não são patentes novas."
+        ],
+        "palavras": [
+          [
+            "ESA",
+            "Escola de Sargentos das Armas."
+          ],
+          [
+            "Instrutor",
+            "Pessoa designada e preparada para ensinar."
+          ],
+          [
+            "Matrícula",
+            "Registro da pessoa no curso."
+          ]
+        ],
+        "pista": "Pergunte: essa pessoa está aprendendo ou foi autorizada a ensinar?",
+        "reforco": [
+          "Na ESA, um Cabo foi matriculado e um 2º Tenente habilitado conduz a aula. Quem é o aluno?",
+          [
+            "O Cabo matriculado.",
+            "O 2º Tenente instrutor.",
+            "Ambos pela patente.",
+            "Nenhum, pois não há monitor."
+          ],
+          0,
+          "Cabo é uma das etapas de aluno previstas na ESA."
+        ],
+        "desafio": [
+          "Um 3º Sargento conclui uma fase, mas ainda falta outra. O que o painel deve mostrar?",
+          [
+            "Formatura liberada sem verificação.",
+            "Mudança imediata para oficial.",
+            "Registro da fase e pendência da próxima.",
+            "Cancelamento da matrícula."
+          ],
+          2,
+          "É preciso acompanhar as etapas da formação separadamente."
+        ]
+      },
+      "avaliacao": {
+        "passos": [
+          "Uma boa prova verifica se a pessoa entendeu o que estudou.",
+          "Antes da questão, mostre a explicação e um exemplo.",
+          "Depois da resposta, explique por que ela está certa ou errada.",
+          "Mais tarde, faça outra pergunta sobre a mesma ideia. Isso ajuda a lembrar, em vez de decorar letras."
+        ],
+        "palavras": [
+          [
+            "Revisão",
+            "Voltar a uma ideia para verificar o que ainda lembra."
+          ],
+          [
+            "Critério",
+            "Regra usada para avaliar uma resposta."
+          ]
+        ],
+        "pista": "Avaliar compreensão é diferente de conferir se alguém reconheceu uma letra.",
+        "reforco": [
+          "Um estudante acerta porque lembra que a resposta era a letra C, mas não explica o motivo. Isso mostra:",
+          [
+            "Domínio comprovado do assunto.",
+            "Apenas reconhecimento da alternativa.",
+            "Conclusão de toda a escola.",
+            "Capacidade de ensinar a matéria."
+          ],
+          1,
+          "A letra decorada não comprova a compreensão."
+        ],
+        "desafio": [
+          "Qual atividade avalia melhor a compreensão após alguns dias?",
+          [
+            "Mostrar a mesma resposta para copiar.",
+            "Pedir só que repita as letras.",
+            "Conferir o tempo de leitura da aula.",
+            "Apresentar um caso novo e pedir explicação."
+          ],
+          3,
+          "A aplicação em situação diferente e após intervalo verifica recuperação do conhecimento."
+        ]
+      }
+    },
+    "CUR-10-12": {
+      "fases": {
+        "passos": [
+          "A AMAN da FAAAB divide a formação de oficiais em fases.",
+          "Cadete estuda nas fases 1 a 5.",
+          "Aspirante estuda nas fases 6 a 10.",
+          "Ao concluir todas as etapas previstas, o resultado indicado é 2º Tenente. Ensinar exige habilitação própria."
+        ],
+        "palavras": [
+          [
+            "Cadete",
+            "Aluno de uma etapa da formação de oficiais."
+          ],
+          [
+            "Aspirante",
+            "Etapa seguinte da formação no projeto."
+          ]
+        ],
+        "pista": "Localize a fase: 1 a 5 ou 6 a 10?",
+        "reforco": [
+          "Uma pessoa está na fase 4 da AMAN. Como seu registro de aluno deve aparecer?",
+          [
+            "Aspirante em fase intermediária.",
+            "Cadete na formação.",
+            "Capitão em estágio final.",
+            "2º Tenente instrutor."
+          ],
+          1,
+          "As fases 1 a 5 são as de Cadete."
+        ],
+        "desafio": [
+          "Na AMAN, um Aspirante completa a fase 9. O que ainda deve ocorrer antes de concluir a formação?",
+          [
+            "Receber automaticamente posto final.",
+            "Tornar-se instrutor da próxima turma.",
+            "Concluir a etapa 10 e os requisitos.",
+            "Voltar à primeira fase sem avaliação."
+          ],
+          2,
+          "A formação do Aspirante vai até a fase 10."
+        ]
+      },
+      "lideranca": {
+        "passos": [
+          "Uma instrução clara responde: o que vamos fazer?",
+          "Também precisa dizer quem faz cada tarefa.",
+          "Se o plano não funcionar, o responsável verifica o problema e comunica a mudança.",
+          "No final, a equipe registra o resultado e o que pode melhorar."
+        ],
+        "palavras": [
+          [
+            "Delegar",
+            "Distribuir tarefas entre pessoas."
+          ],
+          [
+            "Relatório",
+            "Resumo do que aconteceu e do que foi aprendido."
+          ]
+        ],
+        "pista": "Uma ordem útil precisa ter objetivo e responsáveis claros.",
+        "reforco": [
+          "Uma equipe recebeu a tarefa, mas ninguém sabe quem faz cada parte. A melhor ação é:",
+          [
+            "Repetir a ordem sem mudanças.",
+            "Aguardar que alguém escolha sozinho.",
+            "Trocar a patente dos integrantes.",
+            "Explicar quem fará cada tarefa."
+          ],
+          3,
+          "Delegar é distribuir responsabilidades claramente."
+        ],
+        "desafio": [
+          "Após uma mudança de rota no exercício, qual relatório ajuda a próxima equipe?",
+          [
+            "Anotar a mudança, o motivo e o resultado.",
+            "Registrar apenas o nome de quem comandou.",
+            "Informar só o horário de início.",
+            "Listar uniformes de quem participou."
+          ],
+          0,
+          "O motivo da decisão e seus resultados ajudam a aprender e melhorar."
+        ]
+      }
+    },
+    "CUR-11-1": {
+      "linhas": {
+        "passos": [
+          "Na FAAAB, o CIAAR é um centro e não um único curso.",
+          "A proposta CFAer pertence à formação inicial da FAB no projeto.",
+          "Depois dessa formação, o estudante pode seguir a linha de Infantaria da Aeronáutica ou de Operações Aéreas.",
+          "Escolher uma linha não significa poder pilotar. Isso exige uma formação própria."
+        ],
+        "palavras": [
+          [
+            "CIAAR",
+            "Centro de Instrução e Adaptação da Aeronáutica."
+          ],
+          [
+            "Linha",
+            "Área de atuação escolhida na formação."
+          ]
+        ],
+        "pista": "Um centro organiza cursos; uma linha indica a área em que o aluno vai atuar.",
+        "reforco": [
+          "Uma pessoa escolhe a linha de Operações Aéreas na FAAAB. O que acontece em seguida?",
+          [
+            "Pode pilotar toda aeronave da FAB.",
+            "Recebe autorização de comandante.",
+            "Segue os cursos da nova área.",
+            "Entra na linha de Infantaria obrigatoriamente."
+          ],
+          2,
+          "Escolher uma linha não é o mesmo que concluir os cursos necessários."
+        ],
+        "desafio": [
+          "Qual relação entre CIAAR e CFAer está de acordo com a organização da FAAAB?",
+          [
+            "CIAAR é o centro; CFAer é proposta interna.",
+            "Ambos são batalhões de infantaria.",
+            "CFAer é uma patente acima de Soldado.",
+            "CIAAR substitui toda a aviação militar."
+          ],
+          0,
+          "CIAAR designa o centro, e CFAer a formação proposta no projeto."
+        ]
+      },
+      "separacao": {
+        "passos": [
+          "Na FAB, diferentes equipes realizam trabalhos distintos.",
+          "Quem protege uma base não precisa ter a mesma formação de quem pilota.",
+          "Quem controla uma pista precisa de conhecimentos ligados à própria tarefa.",
+          "A patente pode ser igual, mas as permissões dependem da função e do curso."
+        ],
+        "palavras": [
+          [
+            "Qualificação",
+            "Conhecimento ou treinamento exigido para uma tarefa."
+          ],
+          [
+            "Proteção de base",
+            "Atividade de segurança das instalações."
+          ]
+        ],
+        "pista": "Observe o trabalho que a pessoa fará, não apenas sua patente.",
+        "reforco": [
+          "Duas pessoas da mesma patente atuam, uma na guarda e outra na aviação. Por que podem ter acessos diferentes?",
+          [
+            "Porque usam roupas diferentes.",
+            "Porque têm funções e cursos diferentes.",
+            "Porque entraram em servidores distintos.",
+            "Porque um cargo é sempre superior ao outro."
+          ],
+          1,
+          "As funções e qualificações definem os acessos."
+        ],
+        "desafio": [
+          "Uma pessoa foi transferida da guarda de base para a aviação. O que é necessário antes de operar uma aeronave?",
+          [
+            "Apenas entrar no grupo da FAB.",
+            "Usar a farda do novo setor.",
+            "Pedir ao monitor da turma.",
+            "Concluir habilitação e receber autorização."
+          ],
+          3,
+          "Trocar de área não concede automaticamente acesso à pilotagem."
+        ]
+      }
+    },
+    "CUR-11-4": {
+      "eearegras": {
+        "passos": [
+          "Na EEAR/CFS da FAAAB, a turma de alunos é formada por Cabos.",
+          "Um Capitão habilitado está previsto como instrutor.",
+          "A formação pode levar à graduação de 3º Sargento.",
+          "Receber uma nota em uma atividade não encerra toda a formação."
+        ],
+        "palavras": [
+          [
+            "CFS",
+            "Curso de Formação de Sargentos."
+          ],
+          [
+            "Formatura",
+            "Conclusão formal das etapas previstas."
+          ],
+          [
+            "Graduação",
+            "Posição na carreira das praças militares."
+          ]
+        ],
+        "pista": "Separe o posto do aluno, do instrutor e o resultado previsto da formatura.",
+        "reforco": [
+          "Na EEAR FAAAB, quem pode aparecer como aluno na etapa documentada?",
+          [
+            "Capitão instrutor.",
+            "3º Sargento já formado.",
+            "Cabo matriculado.",
+            "Coronel da escola."
+          ],
+          2,
+          "Cabo é a etapa de aluno indicada para EEAR/CFS."
+        ],
+        "desafio": [
+          "Um Cabo conclui todas as disciplinas, mas falta validar o resultado final. A escola deve:",
+          [
+            "Registrar conclusão parcial até validação.",
+            "Promover automaticamente à força.",
+            "Apagar as avaliações concluídas.",
+            "Considerar finalizado sem conferir."
+          ],
+          0,
+          "A validação formal faz parte da conclusão."
+        ]
+      },
+      "revisao": {
+        "passos": [
+          "Uma escola tem várias aulas e atividades.",
+          "Cada atividade concluída deve ficar registrada.",
+          "Se o aluno errar, ele recebe explicação e outra oportunidade de praticar.",
+          "Uma revisão em outro dia ajuda a descobrir o que permaneceu na memória."
+        ],
+        "palavras": [
+          [
+            "Etapa",
+            "Parte específica da formação."
+          ],
+          [
+            "Feedback",
+            "Informação que explica como melhorar."
+          ]
+        ],
+        "pista": "Pense na diferença entre terminar uma tarefa e terminar o curso inteiro.",
+        "reforco": [
+          "Um aluno acertou uma prova, mas precisa terminar outra atividade. Qual estado usar?",
+          [
+            "Curso totalmente concluído.",
+            "Atividade aprovada; curso pendente.",
+            "Curso cancelado sem explicação.",
+            "Formatura liberada por presença."
+          ],
+          1,
+          "Uma atividade não representa todas as exigências do curso."
+        ],
+        "desafio": [
+          "Após um erro, qual sequência é melhor para aprender?",
+          [
+            "Repetir a letra correta e encerrar.",
+            "Ignorar a dúvida e avançar.",
+            "Dar mais pontos pela participação.",
+            "Explicar, praticar e revisar depois."
+          ],
+          3,
+          "Explicação, nova prática e recuperação posterior fortalecem a aprendizagem."
+        ]
+      }
+    },
+    "CUR-11-12": {
+      "controle": {
+        "passos": [
+          "No jogo, uma pista pode estar ocupada ou livre.",
+          "Antes de permitir outra movimentação, é preciso conferir essa situação.",
+          "Uma mensagem clara informa a aeronave, o local e a ação.",
+          "Este é um exercício de simulação. As regras e autorizações da prova real da FAAAB ainda não foram definidas."
+        ],
+        "palavras": [
+          [
+            "Pista",
+            "Área utilizada na movimentação de aeronaves."
+          ],
+          [
+            "Autorização",
+            "Permissão para executar uma ação."
+          ]
+        ],
+        "pista": "Verifique sempre o estado da pista antes de dar uma nova autorização.",
+        "reforco": [
+          "Uma aeronave está parada na pista. Outra pede para entrar. O que fazer primeiro?",
+          [
+            "Autorizar porque a primeira não se move.",
+            "Verificar a disponibilidade da pista.",
+            "Pedir que ambas usem a pista.",
+            "Autorizar a segunda e avisar depois."
+          ],
+          1,
+          "Uma nova autorização deve respeitar a ocupação da pista."
+        ],
+        "desafio": [
+          "Duas aeronaves receberam instruções que usam a mesma pista ao mesmo tempo. A melhor correção no simulador é:",
+          [
+            "Manter as instruções como estão.",
+            "Dar prioridade à que falou primeiro.",
+            "Aumentar o tempo de cada mensagem.",
+            "Corrigir o conflito antes de executar."
+          ],
+          3,
+          "Evitar comandos incompatíveis é o objetivo do controle no jogo."
+        ]
+      },
+      "comunicacao": {
+        "passos": [
+          "Uma instrução precisa dizer quem deve agir.",
+          "Depois, informa onde e o que a pessoa deve fazer.",
+          "Quem recebe confirma que entendeu.",
+          "Sem confirmação, o jogo não deve presumir que a ação foi autorizada."
+        ],
+        "palavras": [
+          [
+            "Destinatário",
+            "Pessoa ou equipe que receberá a mensagem."
+          ],
+          [
+            "Confirmação",
+            "Resposta que mostra que a mensagem foi recebida."
+          ]
+        ],
+        "pista": "Pergunte: quem recebe, para onde vai e o que vai fazer?",
+        "reforco": [
+          "A torre diz apenas 'pode seguir'. Qual informação importante faltou?",
+          [
+            "O nome da escola de formação.",
+            "O uniforme do piloto.",
+            "Quem deve seguir.",
+            "A nota da prova anterior."
+          ],
+          2,
+          "A mensagem precisa identificar o destinatário."
+        ],
+        "desafio": [
+          "O controle enviou instrução clara, mas não recebeu resposta. Qual atitude evita confusão?",
+          [
+            "Pedir confirmação antes da execução.",
+            "Considerar que todos entenderam.",
+            "Repetir para todas as aeronaves.",
+            "Encerrar a atividade sem registrar."
+          ],
+          0,
+          "A confirmação ajuda a evitar ações não compreendidas."
+        ]
+      }
+    },
+    "CUR-MB-01": {
+      "carta": {
+        "passos": [
+          "Uma carta é um mapa que ajuda a representar distâncias.",
+          "Na escala 1:100.000, 1 cm no papel representa 1 km no mundo real.",
+          "Na escala 1:200.000, 1 cm representa 2 km.",
+          "Multiplique os centímetros desenhados pela distância real de cada centímetro."
+        ],
+        "palavras": [
+          [
+            "Escala",
+            "Relação entre distância no mapa e distância real."
+          ],
+          [
+            "Centímetro (cm)",
+            "Unidade de comprimento pequena."
+          ],
+          [
+            "Quilômetro (km)",
+            "Unidade de distância; 1 km vale 1.000 metros."
+          ]
+        ],
+        "pista": "Descubra primeiro quanto vale 1 cm. Só depois multiplique.",
+        "reforco": [
+          "Em uma carta 1:100.000, a rota ocupa 2 cm. A distância real é:",
+          [
+            "200 metros.",
+            "20 quilômetros.",
+            "2 quilômetros.",
+            "200 quilômetros."
+          ],
+          2,
+          "Nessa escala, 1 cm vale 1 km; 2 cm valem 2 km."
+        ],
+        "desafio": [
+          "Uma rota ocupa 2,5 cm em uma carta 1:200.000. Qual é a distância real?",
+          [
+            "2,5 quilômetros.",
+            "5 quilômetros.",
+            "25 quilômetros.",
+            "50 quilômetros."
+          ],
+          1,
+          "Cada centímetro representa 2 km; 2,5 vezes 2 é igual a 5 km."
+        ]
+      },
+      "rumos": {
+        "passos": [
+          "Num mapa com o norte em cima, o sul fica embaixo.",
+          "Leste fica à direita e oeste à esquerda.",
+          "Também podemos representar rumos em graus: norte 0°, leste 90°, sul 180°, oeste 270°.",
+          "Para voltar pelo mesmo caminho, seguimos a direção contrária."
+        ],
+        "palavras": [
+          [
+            "Rumo",
+            "Direção seguida durante o trajeto."
+          ],
+          [
+            "Graus (°)",
+            "Uma forma de indicar direção ou ângulo."
+          ]
+        ],
+        "pista": "Imagine uma rosa dos ventos: cima norte, direita leste, baixo sul, esquerda oeste.",
+        "reforco": [
+          "Uma equipe caminha para oeste e volta pelo mesmo caminho. O retorno é para:",
+          [
+            "Norte.",
+            "Sul.",
+            "Oeste.",
+            "Leste."
+          ],
+          3,
+          "Leste é a direção oposta a oeste."
+        ],
+        "desafio": [
+          "Um barco segue a 90° e volta pelo mesmo trajeto. O rumo de retorno é:",
+          [
+            "270°.",
+            "180°.",
+            "90°.",
+            "0°."
+          ],
+          0,
+          "Oeste 270° é o sentido contrário de leste 90°."
+        ]
+      }
+    },
+    "CUR-MB-02": {
+      "fasesFN": {
+        "passos": [
+          "O CIAMPA serve de referência para a formação inicial dos Fuzileiros Navais na FAAAB.",
+          "A formação pode ter ingresso, disciplina, navegação terrestre e marcha.",
+          "Cada atividade concluída precisa ficar registrada.",
+          "Uma etapa finalizada não significa que todas as outras estejam prontas."
+        ],
+        "palavras": [
+          [
+            "CIAMPA",
+            "Centro de Instrução Almirante Milcíades Portela Alves."
+          ],
+          [
+            "Fuzileiro Naval",
+            "Militar pertencente ao Corpo de Fuzileiros Navais."
+          ],
+          [
+            "Marcha",
+            "Deslocamento a pé em trajeto de treinamento."
+          ]
+        ],
+        "pista": "Uma formação tem etapas. Veja quais ainda faltam.",
+        "reforco": [
+          "Uma pessoa concluiu navegação terrestre, mas ainda falta a marcha. Qual é o estado correto?",
+          [
+            "Etapa concluída; curso em andamento.",
+            "Curso concluído automaticamente.",
+            "Formatura aprovada pelo monitor.",
+            "Cadastro cancelado por falta."
+          ],
+          0,
+          "A navegação foi concluída; a marcha ainda precisa ser feita."
+        ],
+        "desafio": [
+          "Quem corrige uma avaliação prática do curso deve ser:",
+          [
+            "Qualquer pessoa que terminou antes.",
+            "O integrante mais antigo do servidor.",
+            "A pessoa habilitada para avaliar.",
+            "Todo aluno com a mesma farda."
+          ],
+          2,
+          "Avaliação prática exige responsável habilitado."
+        ]
+      },
+      "orientacaoFN": {
+        "passos": [
+          "Antes de sair, identifique onde você está e onde quer chegar.",
+          "Observe referências no caminho, como pontos de encontro e marcas do mapa.",
+          "Se um caminho fechar, confira uma alternativa autorizada e avise a equipe.",
+          "Depois, explique qual caminho usou e por que fez essa escolha."
+        ],
+        "palavras": [
+          [
+            "Referência",
+            "Ponto usado para reconhecer sua posição."
+          ],
+          [
+            "Trajeto",
+            "Caminho que liga o início ao destino."
+          ]
+        ],
+        "pista": "Pense em quatro partes: início, destino, obstáculos e justificativa.",
+        "reforco": [
+          "Antes do percurso, a equipe não sabe onde começa. O que precisa definir?",
+          [
+            "O uniforme da próxima turma.",
+            "O ponto de partida.",
+            "O horário da formatura.",
+            "O nome do comandante-geral."
+          ],
+          1,
+          "O trajeto só pode ser planejado com um ponto de partida."
+        ],
+        "desafio": [
+          "A rota mudou devido a uma passagem bloqueada. Um bom relatório deve:",
+          [
+            "Informar apenas quem chegou primeiro.",
+            "Descrever só a distância inicial.",
+            "Registrar apenas a ordem de saída.",
+            "Explicar a mudança e o motivo."
+          ],
+          3,
+          "Registrar o motivo da adaptação permite avaliar o raciocínio."
+        ]
+      }
+    }
+  }
+}
