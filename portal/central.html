@@ -50,7 +50,7 @@ function drawDetail(x){
  '<p>'+escape(x.missao)+'</p>'+
  (proposals?'<div class="note-strong">Esta unidade é referência real de pesquisa. Sua entrada como organização operacional da FAAAB ainda não foi confirmada.</div>':'')+
  '<div class="detailgrid">'+
- '<div class="detail-section wide"><h3>Ingresso e exigências</h3><p>'+escape(x.ingresso)+'</p></div>'+
+ '<div class="detail-section wide"><h3>Ingresso e exigências</h3><p>'+escape(x.ingresso)+'</p>'+(x.forca==='PM'?'<p><a href="policia.html#'+encodeURIComponent(x.id)+'">Unidade da PM</a> · <a href="patentes.html#PM">Patentes da PM</a></p>':x.forca==='CBM'?'<p><a href="bombeiros.html#'+encodeURIComponent(x.id)+'">Unidade dos Bombeiros</a></p>':'')+'</div>'+
  '<div class="detail-section"><h3>Funções e cargos internos</h3>'+bullet(roles)+'</div>'+
  '<div class="detail-section"><h3>Patentes da carreira que podem atuar</h3><p>Faixa possível de patentes, não cargos adicionais exclusivos da unidade.</p>'+bullet(rank)+'</div>'+
  '<div class="detail-section"><h3>Treinamento e atividades</h3>'+bullet(x.atividades||[])+'</div>'+
