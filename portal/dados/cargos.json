@@ -20,6 +20,16 @@
     "nota": "Titular não definido no histórico recuperado"
   },
   {
+    "id": "GOV-DEP-FED",
+    "forca": "GOV",
+    "sigla": "DEP-FED",
+    "nome": "Deputado Federal",
+    "altoEscalao": false,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Cargo eleitoral nacional do universo FAAAB; quantidade de vagas, votação, mandato e atribuições detalhadas ainda não definidos."
+  },
+  {
     "id": "GOV-M-DEF",
     "forca": "GOV",
     "sigla": "M-DEF",
@@ -950,6 +960,16 @@
     "nota": "Titular não definido no histórico recuperado"
   },
   {
+    "id": "FMB-COMOD",
+    "forca": "FMB",
+    "sigla": "COMOD",
+    "nome": "Comodoro",
+    "altoEscalao": true,
+    "titular": null,
+    "anteriores": [],
+    "nota": "Patente própria da FAAAB, aprovada no projeto; titular a definir."
+  },
+  {
     "id": "FMB-C-ALM",
     "forca": "FMB",
     "sigla": "C-ALM",
@@ -974,26 +994,6 @@
     "forca": "FMB",
     "sigla": "ALM-ESQ",
     "nome": "Almirante de Esquadra",
-    "altoEscalao": true,
-    "titular": null,
-    "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
-  },
-  {
-    "id": "FMB-CMD-MB",
-    "forca": "FMB",
-    "sigla": "CMD-MB",
-    "nome": "Comandante da Marinha",
-    "altoEscalao": true,
-    "titular": null,
-    "anteriores": [],
-    "nota": "Titular não definido no histórico recuperado"
-  },
-  {
-    "id": "FMB-ALM",
-    "forca": "FMB",
-    "sigla": "ALM",
-    "nome": "Almirante",
     "altoEscalao": true,
     "titular": null,
     "anteriores": [],
