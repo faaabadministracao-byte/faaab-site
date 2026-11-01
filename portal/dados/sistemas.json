@@ -186,7 +186,7 @@
       "id": "SIS-21",
       "categoria": "Operações",
       "nome": "Evacuação e atendimento pré-hospitalar",
-      "resumo": "Triagem de vítimas fictícias, remoção e coordenação com bombeiros e B Sau.",
+      "resumo": "Triagem de vítimas fictícias, remoção e coordenação com equipes de atendimento autorizadas e bombeiros.",
       "implementacao": "Sem gore; atendimento simulado voltado à aprendizagem e jogo.",
       "criterio": "Evacuação registrada e concluída na unidade correta",
       "estado": "Especificado no planejamento; não verificado no Roblox Studio"
