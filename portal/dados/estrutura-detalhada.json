@@ -1,6 +1,6 @@
 {
   "versao": "2026-10-29",
-  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação.",
+  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais.",
   "regrasGerais": {
     "ingressoEB": "Soldado pode entrar em batalhões; Soldado de 1ª Classe não é patente interna de batalhão.",
     "promocao": "A conclusão de um curso não promove automaticamente.",
@@ -3203,18 +3203,18 @@
       "urlReferencia": null
     },
     {
-      "id": "FAB-BINFAE-Guarda",
-      "sigla": "BINFAE-Guarda",
-      "nome": "1º Batalhão de Infantaria da Aeronáutica - Guarda (designação da FAAAB)",
+      "id": "FAB-GSD",
+      "sigla": "GSD",
+      "nome": "Grupo de Segurança e Defesa",
       "forca": "FAB",
-      "tipo": "unidade",
-      "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
+      "tipo": "grupo",
+      "secao": "FAB - GRUPOS OPERACIONAIS",
+      "status": "Catalogada (estrutura FAAAB em desenvolvimento)",
+      "origem": "Reestruturação da FAAAB: substituição das BINFA",
       "superior": null,
-      "missao": "Proteção de instalações aéreas, sentinelas, ronda e procedimentos de acesso.",
+      "missao": "Segurança das bases aéreas e controle de acesso, com rondas e instruções conduzidas por militares no jogo.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
+      "ingresso": "Ingresso e designações realizados por responsáveis humanos; o bot verifica elegibilidade e registra, mas não aprova seleções.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3232,48 +3232,47 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Comandante do GSD",
         "Subcomandante",
-        "Comandante"
+        "Chefe de Segurança",
+        "Chefe de Operações",
+        "Instrutor de Segurança",
+        "Comandante da Guarda",
+        "Sentinela",
+        "Integrante"
       ],
       "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
+        "Escala de sentinelas",
+        "Controle de acessos",
+        "Rondas organizadas por chefia",
+        "Treinamentos de segurança e relatórios humanos"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação específica quando publicada e aplicada por instrutores",
+        "Permissões de equipamento conforme função e autorização"
       ],
       "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Patentes são obtidas pela carreira da FAB e não pela simples entrada no grupo.",
+        "Instrutores conduzem e corrigem formação; o bot só registra.",
+        "Comandantes planejam e justificam ordens; o bot não comanda missões.",
+        "A conclusão de curso não promove automaticamente."
       ],
-      "referencia": "Verificar correspondência exata caso a caso",
+      "referencia": "Modelo FAAAB inspirado em denominações públicas da FAB; verificar adequação das atribuições.",
       "urlReferencia": "https://www.fab.mil.br/"
     },
     {
-      "id": "FAB-BINFAE-Choque",
-      "sigla": "BINFAE-Choque",
-      "nome": "2º Batalhão de Infantaria da Aeronáutica - Choque (designação da FAAAB)",
+      "id": "FAB-GDAAE",
+      "sigla": "GDAAE",
+      "nome": "Grupo de Defesa Antiaérea",
       "forca": "FAB",
-      "tipo": "unidade",
-      "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
+      "tipo": "grupo",
+      "secao": "FAB - GRUPOS OPERACIONAIS",
+      "status": "Catalogada (estrutura FAAAB em desenvolvimento)",
+      "origem": "Reestruturação da FAAAB: substituição das BINFA",
       "superior": null,
-      "missao": "Defesa da base aérea e operações de controle de área dentro do jogo.",
+      "missao": "Proteção simulada do espaço aéreo e dos locais estratégicos com sistemas terrestres antiaéreos fictícios do mapa.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
+      "ingresso": "Ingresso e designações realizados por responsáveis humanos; o bot verifica elegibilidade e registra, mas não aprova seleções.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3291,33 +3290,90 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
+        "Comandante do Grupo",
         "Subcomandante",
-        "Comandante"
+        "Chefe de Operações",
+        "Chefe de Guarnição",
+        "Instrutor Antiaéreo",
+        "Operador Habilitado",
+        "Avaliador",
+        "Integrante"
       ],
       "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
+        "Escalas de guarnição",
+        "Instrução de defesa antiaérea simulada",
+        "Exercícios supervisionados",
+        "Relatórios de avaliação"
       ],
       "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Formação específica quando publicada e aplicada por instrutores",
+        "Permissões de equipamento conforme função e autorização"
       ],
       "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Patentes são obtidas pela carreira da FAB e não pela simples entrada no grupo.",
+        "Instrutores conduzem e corrigem formação; o bot só registra.",
+        "Comandantes planejam e justificam ordens; o bot não comanda missões.",
+        "A conclusão de curso não promove automaticamente."
       ],
-      "referencia": "Verificar correspondência exata caso a caso",
+      "referencia": "Modelo FAAAB inspirado em denominações públicas da FAB; verificar adequação das atribuições.",
+      "urlReferencia": "https://www.fab.mil.br/"
+    },
+    {
+      "id": "FAB-1-GCC",
+      "sigla": "1º GCC",
+      "nome": "Primeiro Grupo de Comunicações e Controle",
+      "forca": "FAB",
+      "tipo": "grupo",
+      "secao": "FAB - GRUPOS OPERACIONAIS",
+      "status": "Catalogada (estrutura FAAAB em desenvolvimento)",
+      "origem": "Reestruturação da FAAAB: substituição das BINFA",
+      "superior": null,
+      "missao": "Coordenação de comunicações operacionais, controle de dados de voo e simulação de radar e comunicações aeronáuticas.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso e designações realizados por responsáveis humanos; o bot verifica elegibilidade e registra, mas não aprova seleções.",
+      "patentes": [
+        "Soldado de 2ª Classe",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Suboficial",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante do Grupo",
+        "Subcomandante",
+        "Chefe de Controle",
+        "Chefe de Comunicações",
+        "Instrutor de Sistemas",
+        "Operador de Controle",
+        "Técnico de Comunicações",
+        "Integrante"
+      ],
+      "atividades": [
+        "Escalas de comunicações",
+        "Simulações de controle",
+        "Monitoramento dos sistemas do jogo",
+        "Relatórios de serviço"
+      ],
+      "qualificacoes": [
+        "Formação específica quando publicada e aplicada por instrutores",
+        "Permissões de equipamento conforme função e autorização"
+      ],
+      "regras": [
+        "Patentes são obtidas pela carreira da FAB e não pela simples entrada no grupo.",
+        "Instrutores conduzem e corrigem formação; o bot só registra.",
+        "Comandantes planejam e justificam ordens; o bot não comanda missões.",
+        "A conclusão de curso não promove automaticamente."
+      ],
+      "referencia": "Modelo FAAAB inspirado em denominações públicas da FAB; verificar adequação das atribuições.",
       "urlReferencia": "https://www.fab.mil.br/"
     },
     {
