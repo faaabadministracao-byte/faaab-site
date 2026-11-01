@@ -1,6 +1,6 @@
 {
   "versao": 5,
-  "data": "2026-10-29",
+  "data": "2026-11-01",
   "filosofia": "Um exercício geral é uma habilidade básica e repetível por todas as forças. O tipo é único; a aplicação, a dificuldade e a quantidade podem variar. Especializações de veículo, equipamento ou unidade são separadas e nunca concedidas só pela patente ou pela força.",
   "avisos": [
     "Os cinco níveis de parkour são variações de um mesmo exercício: parkour.",
@@ -253,8 +253,9 @@
       "forca": "FTB",
       "unidades": [
         "FTB-BIB",
-        "FTB-BCC",
-        "FTB-CIBld"
+        "FTB-RCC",
+        "FTB-CIBld",
+        "FTB-CIBB"
       ],
       "habilitacao": "Treinamento específico de blindados e autorização de veículo no jogo.",
       "patentes": "Não definidas pela FAAAB para este exercício.",
@@ -277,9 +278,9 @@
       "nome": "Pilotagem de helicóptero",
       "forca": "FAB",
       "unidades": [
-        "FAB-EAV"
+        "FAB-GAV"
       ],
-      "habilitacao": "Qualificação de pilotagem, função compatível e permissão de aeronave no jogo.",
+      "habilitacao": "Formação e designação no GAV da FAB; pilotos de helicóptero devem ser especificamente habilitados.",
       "patentes": "A definir conforme a função e o curso.",
       "disponibilidade": "Só para membros habilitados à função."
     },
@@ -311,6 +312,17 @@
       "habilitacao": "Autorização de condução e função compatível na PM do jogo.",
       "patentes": "A definir.",
       "disponibilidade": "Uso condicionado a permissão; não é exigência geral automática."
+    },
+    {
+      "id": "helicoptero-pm",
+      "nome": "Piloto de helicóptero da Polícia Militar",
+      "forca": "PM",
+      "unidades": [
+        "PM-GRPAe"
+      ],
+      "habilitacao": "Habilitação de pilotagem e autorização do GRPAe para missões simuladas de apoio aéreo.",
+      "patentes": "Não definida para ingresso automático.",
+      "disponibilidade": "Somente tripulação designada e autorizada."
     }
   ],
   "arquivoAnterior": "As 36 ideias antigas de circuitos individuais (18 terrestres, 9 aquáticos, 9 aéreos) foram retiradas da página de exercícios gerais. Não eram tipos gerais de exercício, e misturavam treinamento básico com habilitação especializada.",
