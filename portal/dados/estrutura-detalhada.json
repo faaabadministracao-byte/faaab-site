@@ -1,11 +1,12 @@
 {
-  "versao": "2026-10-29",
-  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais.",
+  "versao": "2026-11-01",
+  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais. Revisão 2026-11-01: removidos B Prec, B Sau e BIL Mth; criados RCC, B Com, brigadas paraquedista/especiais, Cia Prec Pqdt, CIBB, GAV, CINDACTA, APM e GRPAe. Cia Prec Pqdt pertence à Bda Inf Pqdt; ECDA é subordinado ao GDAAE; COMANF pertence ao Tonelero.",
   "regrasGerais": {
     "ingressoEB": "Soldado pode entrar em batalhões; Soldado de 1ª Classe não é patente interna de batalhão.",
     "promocao": "A conclusão de um curso não promove automaticamente.",
     "centro": "Exército, FAB, Marinha (com CFN dentro) compõem FAAAB Central; Governo e Civil são áreas separadas.",
-    "limite": "Listas de cargos representam faixas possíveis, não a ocupação simultânea de todos os postos."
+    "limite": "Listas de cargos representam faixas possíveis, não a ocupação simultânea de todos os postos.",
+    "formacaoEspecializada": "Concluir a instrução habilita à candidatura ou ao equipamento especificado, não concede promoção automática nem dispensa seleção e autorização do responsável."
   },
   "unidades": [
     {
@@ -141,7 +142,7 @@
       "superior": null,
       "missao": "Patrulhamento e sobrevivência em terreno de Caatinga; rotas e exercícios ambientais.",
       "subdivisoes": [
-        "PELOPES",
+        "PELOP",
         "DCS"
       ],
       "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
@@ -163,7 +164,7 @@
       ],
       "funcoes": [
         "Integrante do BI Caat",
-        "Integrante do PELOPES",
+        "Integrante do PELOP",
         "Integrante do DCS",
         "Chefe de Pelotão",
         "Instrutor de Caatinga",
@@ -199,10 +200,9 @@
       "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
+      "superior": "Bda Inf Pqdt",
       "missao": "Instrução paraquedista, salto simulado, controle da zona de pouso e integração com precursores.",
       "subdivisoes": [
-        "Precs",
         "CFP"
       ],
       "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
@@ -224,7 +224,7 @@
       ],
       "funcoes": [
         "Paraquedista da Unidade",
-        "Integrante de Precursores",
+        "Integrante paraquedista",
         "Chefe do CFP",
         "Instrutor de Salto Simulado",
         "Chefe de Companhia",
@@ -249,65 +249,6 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-B-Prec",
-      "sigla": "B Prec",
-      "nome": "Batalhão de Precursores (adaptação da FAAAB)",
-      "forca": "FTB",
-      "tipo": "unidade",
-      "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Reconhecimento de área de lançamento, sinalização e orientação das forças aerotransportadas.",
-      "subdivisoes": [],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Adaptação fictícia FAAAB",
       "urlReferencia": null
     },
     {
@@ -372,16 +313,16 @@
       "urlReferencia": null
     },
     {
-      "id": "FTB-BCC",
-      "sigla": "BCC",
-      "nome": "Batalhão de Carros de Combate",
+      "id": "FTB-RCC",
+      "sigla": "RCC",
+      "nome": "Regimento de Carros de Combate",
       "forca": "FTB",
       "tipo": "unidade",
       "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Emprego simulado de carros de combate e coordenação com infantaria e logística.",
+      "missao": "Emprego e instrução simulada de carros de combate e integração com infantaria blindada.",
       "subdivisoes": [],
       "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
       "patentes": [
@@ -606,69 +547,6 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-B-Sau",
-      "sigla": "B Sau",
-      "nome": "Batalhão de Saúde",
-      "forca": "FTB",
-      "tipo": "unidade",
-      "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Atendimento pré-hospitalar simulado, triagem, evacuação e apoio a missões de saúde.",
-      "subdivisoes": [
-        "DRT",
-        "GRE",
-        "PAPH"
-      ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Socorrista Militar",
-        "Integrante do DRT",
-        "Integrante do GRE",
-        "Integrante do PAPH",
-        "Supervisor de Triagem",
-        "Chefe Médico de Missão",
-        "Subcomandante",
-        "Comandante"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Unidades militares de saúde dão suporte ao atendimento e à evacuação de tropas.",
       "urlReferencia": null
     },
     {
@@ -977,65 +855,6 @@
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
       "missao": "Operações e deslocamento em selva com instrução de sobrevivência.",
-      "subdivisoes": [],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
-        "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-BIL-Mth",
-      "sigla": "BIL Mth",
-      "nome": "Batalhão de Infantaria Leve de Montanha",
-      "forca": "FTB",
-      "tipo": "unidade",
-      "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Infantaria leve adaptada a missões em montanha.",
       "subdivisoes": [],
       "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
       "patentes": [
@@ -1445,7 +1264,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação em montanha: trilhas, obstáculos, segurança e orientação.",
+      "missao": "Instrução de montanha e avaliações para habilitação no BIM.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -1483,7 +1302,8 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Curso de montanha e habilitação para BIM"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -1561,7 +1381,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Formação de motorista, operador e comandante de viatura blindada.",
+      "missao": "Formação de motoristas e atiradores de blindados e tanques da FAAAB, com habilitação específica para RCC e BIB.",
       "subdivisoes": [],
       "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
       "patentes": [
@@ -2587,16 +2407,16 @@
       "urlReferencia": null
     },
     {
-      "id": "FTB-PELOPES",
-      "sigla": "PELOPES",
-      "nome": "Pelotão de Operações Especiais na Caatinga",
+      "id": "FTB-PELOP",
+      "sigla": "PELOP",
+      "nome": "Pelotão de Operações na Caatinga",
       "forca": "FTB",
       "tipo": "subdivisao",
       "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": "BI Caat",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Pelotão de Operações Especiais na Caatinga.",
+      "missao": "Pelotão de Operações na Caatinga do BI Caat, com qualificação e seleção internas.",
       "subdivisoes": [],
       "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
       "patentes": [
@@ -2616,7 +2436,7 @@
         "Coronel"
       ],
       "funcoes": [
-        "Integrante do PELOPES",
+        "Integrante do PELOP",
         "Instrutor Habilitado",
         "Chefe de Equipe",
         "Chefe da Divisão",
@@ -2707,8 +2527,8 @@
       "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": "BIP",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Precursores Paraquedistas.",
+      "superior": "Cia Prec Pqdt",
+      "missao": "Equipe de Precursores integrada à Companhia de Precursores da Brigada Paraquedista, com qualificação específica.",
       "subdivisoes": [],
       "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
       "patentes": [
@@ -2841,174 +2661,6 @@
       ],
       "funcoes": [
         "Integrante do PRGM",
-        "Instrutor Habilitado",
-        "Chefe de Equipe",
-        "Chefe da Divisão",
-        "Subcomandante da Unidade-Mãe"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-DRT",
-      "sigla": "DRT",
-      "nome": "Destacamento de Resgate Tático Militar",
-      "forca": "FTB",
-      "tipo": "subdivisao",
-      "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": "B Sau",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Destacamento de Resgate Tático Militar.",
-      "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Integrante do DRT",
-        "Instrutor Habilitado",
-        "Chefe de Equipe",
-        "Chefe da Divisão",
-        "Subcomandante da Unidade-Mãe"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-GRE",
-      "sigla": "GRE",
-      "nome": "Grupo de Resgate e Evacuação Militar",
-      "forca": "FTB",
-      "tipo": "subdivisao",
-      "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": "B Sau",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Grupo de Resgate e Evacuação Militar.",
-      "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Integrante do GRE",
-        "Instrutor Habilitado",
-        "Chefe de Equipe",
-        "Chefe da Divisão",
-        "Subcomandante da Unidade-Mãe"
-      ],
-      "atividades": [
-        "Briefing de missão",
-        "Treinamento com instrutor",
-        "Operação simulada",
-        "Relatório de atividade",
-        "Avaliação de equipe"
-      ],
-      "qualificacoes": [
-        "Treinamento inicial",
-        "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-PAPH",
-      "sigla": "PAPH",
-      "nome": "Pelotão de Atendimento Pré-Hospitalar Militar",
-      "forca": "FTB",
-      "tipo": "subdivisao",
-      "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": "B Sau",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Pelotão de Atendimento Pré-Hospitalar Militar.",
-      "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Integrante do PAPH",
         "Instrutor Habilitado",
         "Chefe de Equipe",
         "Chefe da Divisão",
@@ -3270,8 +2922,10 @@
       "status": "Catalogada (estrutura FAAAB em desenvolvimento)",
       "origem": "Reestruturação da FAAAB: substituição das BINFA",
       "superior": null,
-      "missao": "Proteção simulada do espaço aéreo e dos locais estratégicos com sistemas terrestres antiaéreos fictícios do mapa.",
-      "subdivisoes": [],
+      "missao": "Grupo responsável pela defesa antiaérea simulada da FAB, com o ECDA como equipe operacional subordinada.",
+      "subdivisoes": [
+        "ECDA"
+      ],
       "ingresso": "Ingresso e designações realizados por responsáveis humanos; o bot verifica elegibilidade e registra, mas não aprova seleções.",
       "patentes": [
         "Soldado de 2ª Classe",
@@ -3433,16 +3087,16 @@
       "urlReferencia": "https://www.fab.mil.br/"
     },
     {
-      "id": "FAB-EAV",
-      "sigla": "EAV",
-      "nome": "Esquadrão de Asas Rotativas (nome/sigla de uso interno da FAAAB; não há sigla oficial genérica equivalente)",
+      "id": "FAB-GAV",
+      "sigla": "GAV",
+      "nome": "Grupo de Aviação (helicópteros e apoio aéreo da FAAAB)",
       "forca": "FAB",
-      "tipo": "unidade",
-      "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
+      "tipo": "grupo",
+      "secao": "FAB - GRUPOS OPERACIONAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Missões de helicóptero, transporte tático e apoio a resgates.",
+      "missao": "Emprego simulado de aeronaves e helicópteros, transporte e apoio aéreo, por tripulações habilitadas.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
       "patentes": [
@@ -3462,11 +3116,14 @@
         "Coronel"
       ],
       "funcoes": [
+        "Comandante do Grupo",
+        "Subcomandante",
+        "Chefe de Operações",
         "Piloto de Helicóptero Habilitado",
-        "Tripulante",
-        "Chefe de Missão",
+        "Piloto de Avião Habilitado",
         "Instrutor de Voo",
-        "Comandante do Esquadrão"
+        "Tripulante",
+        "Integrante"
       ],
       "atividades": [
         "Briefing de missão",
@@ -3547,14 +3204,14 @@
     {
       "id": "FAB-ECDA",
       "sigla": "ECDA",
-      "nome": "Esquadrão de Controle e Defesa Antiaérea (denominação fictícia da FAAAB)",
+      "nome": "Esquadrão de Controle e Defesa Antiaérea (subordinado ao GDAAE na FAAAB)",
       "forca": "FAB",
-      "tipo": "unidade",
+      "tipo": "subdivisao",
       "secao": "FAB - UNIDADES OPERACIONAIS DA FAAAB",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Controle de pistas, radares e defesa antiaérea simulada.",
+      "superior": "GDAAE",
+      "missao": "Equipe subordinada ao GDAAE no roleplay, operando radares e sistemas antiaéreos simulados.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
       "patentes": [
@@ -3613,7 +3270,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Busca e salvamento, resgate e assistência em eventos de desastre no jogo.",
+      "missao": "Busca e salvamento e resgate em operações simuladas, distinta das atribuições de combate do PARACOM.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
       "patentes": [
@@ -3672,7 +3329,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Curso e unidade fictícios para tarefas especiais da FAB; não representar como unidade oficial.",
+      "missao": "Unidade fictícia de operações especiais de combate da FAB, com seleção e curso CCFA separados do EAS/PARA-SAR.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
       "patentes": [
@@ -3711,7 +3368,8 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "CCFA — formação necessária para ingresso no PARACOM"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -4003,16 +3661,16 @@
       "urlReferencia": "https://www.fab.mil.br/"
     },
     {
-      "id": "FAB-CIAER",
-      "sigla": "CIAER",
-      "nome": "Centro de Inteligência da Aeronáutica",
+      "id": "FAB-CINDACTA",
+      "sigla": "CINDACTA",
+      "nome": "Centro Integrado de Defesa Aérea e Controle de Tráfego Aéreo",
       "forca": "FAB",
       "tipo": "centro",
-      "secao": "FAB - INTELIGÊNCIA",
+      "secao": "FAB - CENTROS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Análise de informações e proteção informacional da FAB no contexto do jogo.",
+      "missao": "Radares simulados, coordenação de tráfego aéreo, procedimentos de autorização de decolagens e pousos no jogo.",
       "subdivisoes": [],
       "ingresso": "Ingresso por designação e análise de requisitos. Não pressupõe matrícula como aluno.",
       "patentes": [
@@ -4032,12 +3690,14 @@
         "Coronel"
       ],
       "funcoes": [
-        "Analista de Inteligência",
-        "Assistente",
-        "Supervisor de Informações",
-        "Chefe de Análise",
-        "Subdiretor",
-        "Diretor do CIAER"
+        "Comandante do Centro",
+        "Subcomandante",
+        "Chefe de Controle de Tráfego",
+        "Coordenador de Radares",
+        "Controlador Habilitado",
+        "Operador de Radar",
+        "Instrutor",
+        "Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4047,8 +3707,8 @@
         "Certificação após aprovação"
       ],
       "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Formação para operação de radar e controle de tráfego no jogo",
+        "Autorização específica para operar torre de controle"
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
@@ -4123,7 +3783,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": null,
-      "missao": "Segurança portuária e de instalações navais no roleplay.",
+      "missao": "Segurança de instalações e áreas portuárias e fiscalização naval no contexto do jogo.",
       "subdivisoes": [],
       "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
       "patentes": [
@@ -4452,7 +4112,7 @@
     {
       "id": "CFN-BOE-FN",
       "sigla": "BOE FN",
-      "nome": "Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB)",
+      "nome": "Batalhão de Operações Especiais de Fuzileiros Navais — Tonelero",
       "forca": "CFN",
       "tipo": "unidade",
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
@@ -4460,7 +4120,9 @@
       "origem": "Catálogo aprovado FAAAB",
       "superior": "CFN",
       "missao": "Atividades operacionais, de apoio e administração simuladas de Batalhão de Operações Especiais de Fuzileiros Navais - Tonelero (nome adaptado à FAAAB).",
-      "subdivisoes": [],
+      "subdivisoes": [
+        "COMANF"
+      ],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
       "patentes": [
         "Soldado Fuzileiro Naval",
@@ -4510,14 +4172,14 @@
     {
       "id": "CFN-COMANF",
       "sigla": "COMANF",
-      "nome": "Comandos Anfíbios",
+      "nome": "Comandos Anfíbios — subdivisão do Batalhão Tonelero",
       "forca": "CFN",
-      "tipo": "unidade",
+      "tipo": "subdivisao",
       "secao": "MARINHA - CORPO DE FUZILEIROS NAVAIS",
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
-      "superior": "CFN",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Comandos Anfíbios.",
+      "superior": "BOE FN",
+      "missao": "Equipe especial vinculada ao Batalhão Tonelero, com curso de habilitação e funções internas.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
       "patentes": [
@@ -4536,14 +4198,11 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Integrante",
-        "Chefe de Equipe",
-        "Líder de Pelotão",
-        "Chefe de Instrução",
+        "Chefe dos Comandos Anfíbios",
+        "Subchefe",
         "Instrutor Habilitado",
-        "Chefe de Operações",
-        "Subcomandante",
-        "Comandante"
+        "Comando Anfíbio",
+        "Candidato"
       ],
       "atividades": [
         "Briefing de missão",
@@ -4865,7 +4524,7 @@
       "status": "Catalogada",
       "origem": "Catálogo aprovado FAAAB",
       "superior": "CFN",
-      "missao": "Atividades operacionais, de apoio e administração simuladas de Companhia de Polícia de Fuzileiros Navais.",
+      "missao": "Polícia interna e escolta institucional dos Fuzileiros Navais no roleplay.",
       "subdivisoes": [],
       "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
       "patentes": [
@@ -5832,6 +5491,283 @@
       "urlReferencia": null
     },
     {
+      "id": "FTB-B-Com",
+      "sigla": "B Com",
+      "nome": "Batalhão de Comunicações",
+      "forca": "FTB",
+      "tipo": "unidade",
+      "secao": "EXÉRCITO - BATALHÕES, REGIMENTO E UNIDADES PREVISTAS",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Comunicações militares simuladas, redes de campanha e apoio às organizações do Exército.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante",
+        "Subcomandante",
+        "Chefe de Comunicações",
+        "Chefe de Seção",
+        "Instrutor",
+        "Operador de Comunicações",
+        "Técnico",
+        "Integrante"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-Bda-Inf-Pqdt",
+      "sigla": "Bda Inf Pqdt",
+      "nome": "Brigada de Infantaria Paraquedista",
+      "forca": "FTB",
+      "tipo": "brigada",
+      "secao": "EXÉRCITO - BRIGADAS",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Coordenação de unidades paraquedistas, operações aeroterrestres e companhia de precursores.",
+      "subdivisoes": [
+        "Cia Prec Pqdt"
+      ],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante de Brigada",
+        "Subcomandante",
+        "Chefe de Operações",
+        "Coordenador de Salto",
+        "Chefe de Instrução",
+        "Integrante"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-Bda-OpEsp",
+      "sigla": "Bda Op Esp",
+      "nome": "Brigada de Operações Especiais",
+      "forca": "FTB",
+      "tipo": "brigada",
+      "secao": "EXÉRCITO - BRIGADAS",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Coordenação das unidades e operações especiais da FAAAB, preservadas as chefias próprias de batalhões.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante de Brigada",
+        "Subcomandante",
+        "Chefe de Operações",
+        "Chefe de Instrução",
+        "Oficial de Planejamento",
+        "Integrante"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-Cia-Prec-Pqdt",
+      "sigla": "Cia Prec Pqdt",
+      "nome": "Companhia de Precursores Paraquedistas",
+      "forca": "FTB",
+      "tipo": "subdivisao",
+      "secao": "EXÉRCITO - SUBUNIDADES E DIVISÕES INTERNAS DO PROJETO",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": "Bda Inf Pqdt",
+      "missao": "Companhia especializada em atividades aeroterrestres simuladas subordinada à Brigada de Infantaria Paraquedista.",
+      "subdivisoes": [
+        "Precs"
+      ],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante da Companhia",
+        "Subcomandante",
+        "Chefe de Equipe",
+        "Instrutor Paraquedista",
+        "Precursor Habilitado",
+        "Integrante"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-CIBB",
+      "sigla": "CIBB",
+      "nome": "Centro de Instrução de Blindados e Batedores",
+      "forca": "FTB",
+      "tipo": "centro",
+      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Instrução específica de batedores blindados, reconhecimento com viaturas e acompanhamento de equipes no mapa.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Comandante do Centro",
+        "Subcomandante",
+        "Coordenador de Curso",
+        "Instrutor de Batedores",
+        "Instrutor de Blindados",
+        "Avaliador",
+        "Aluno"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
       "id": "PM-BOPE",
       "sigla": "BOPE",
       "nome": "Batalhão de Operações Policiais Especiais",
@@ -6072,6 +6008,86 @@
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.fab.mil.br/"
+    },
+    {
+      "id": "PM-APM",
+      "sigla": "APM",
+      "nome": "Academia de Polícia Militar",
+      "forca": "PM",
+      "tipo": "academia",
+      "secao": "POLÍCIA MILITAR - FORMAÇÃO",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Formação e capacitação policial na FAAAB, com treinamento e avaliações realizadas por instrutores.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [],
+      "funcoes": [
+        "Comandante da Academia",
+        "Subcomandante",
+        "Coordenador de Ensino",
+        "Instrutor",
+        "Avaliador",
+        "Monitor",
+        "Aluno"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
+    },
+    {
+      "id": "PM-GRPAe",
+      "sigla": "GRPAe",
+      "nome": "Grupamento de Radiopatrulha Aérea",
+      "forca": "PM",
+      "tipo": "grupo",
+      "secao": "POLÍCIA MILITAR - UNIDADES ESPECIALIZADAS",
+      "status": "Catalogada",
+      "origem": "Reestruturação 2026-11-01 da FAAAB",
+      "superior": null,
+      "missao": "Apoio aéreo policial simulado com helicópteros, observação e operações autorizadas pela PM.",
+      "subdivisoes": [],
+      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "patentes": [],
+      "funcoes": [
+        "Comandante do Grupamento",
+        "Subcomandante",
+        "Chefe de Operações Aéreas",
+        "Piloto Habilitado",
+        "Tripulante",
+        "Instrutor",
+        "Integrante"
+      ],
+      "atividades": [
+        "Treinamento com instrutor",
+        "Atividade simulada autorizada",
+        "Relatório de desempenho",
+        "Avaliação humana"
+      ],
+      "qualificacoes": [
+        "Formação ou habilitação específica conforme a unidade"
+      ],
+      "regras": [
+        "Patente e função são camadas separadas.",
+        "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
+        "Acesso a recursos exige vínculo e autorização."
+      ],
+      "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
+      "urlReferencia": null
     }
   ],
   "referenciasPropostas": [
