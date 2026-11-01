@@ -24,7 +24,7 @@
         "DAD",
         "DRE"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Forças Especiais; seleção requer CIOpEsp concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -60,12 +60,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Forças Especiais; seleção requer CIOpEsp concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Aprovação no curso não substitui a seleção e as avaliações do BFE."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -84,7 +86,7 @@
       "subdivisoes": [
         "PC"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Polícia do Exército com curso CIOU concluído como pré-requisito de seleção.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -120,12 +122,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Polícia do Exército com curso CIOU concluído como pré-requisito de seleção."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "O BPE conduz a seleção interna e confirma o ingresso."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -145,7 +149,7 @@
         "PELOP",
         "DCS"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria de Caatinga; seleção requer CIOpC concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -181,12 +185,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria de Caatinga; seleção requer CIOpC concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "PELOP é pelotão interno da Caatinga, não unidade urbana."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -205,7 +211,7 @@
       "subdivisoes": [
         "CFP"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria Paraquedista; ingresso exige formação CI Pqdt GPB e seleção.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -241,12 +247,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria Paraquedista; ingresso exige formação CI Pqdt GPB e seleção."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "A Companhia de Precursores pertence à Bda Inf Pqdt, não ao BIP."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -266,7 +274,7 @@
         "CFB",
         "Tanques"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria Blindado; funções de tanque exigem CIBld e autorização.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -302,12 +310,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria Blindado; funções de tanque exigem CIBld e autorização."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Especialidades de batedores podem exigir CIBB quando a função for usada."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -324,7 +334,7 @@
       "superior": null,
       "missao": "Emprego e instrução simulada de carros de combate e integração com infantaria blindada.",
       "subdivisoes": [],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Regimento de Carros de Combate; funções de tanque exigem curso CIBld e autorização da unidade.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -361,12 +371,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Regimento de Carros de Combate; funções de tanque exigem curso CIBld e autorização da unidade."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Carreira e habilitação de motorista/atirador são independentes."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -385,7 +397,7 @@
       "subdivisoes": [
         "DCOE"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Ações de Comandos; seleção requer CIOpEsp concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -420,12 +432,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Ações de Comandos; seleção requer CIOpEsp concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Aprovação no curso não substitui a seleção e as avaliações do BAC."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -504,7 +518,7 @@
         "CFM",
         "PRGM"
       ],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria de Montanha; seleção requer CIOpMth concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -539,12 +553,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria de Montanha; seleção requer CIOpMth concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "A formação de montanhismo permite brevê conforme regras do jogo."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -620,7 +636,7 @@
       "superior": null,
       "missao": "Navegação, deslocamento e atividades simuladas no Pantanal.",
       "subdivisoes": [],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria do Pantanal; seleção requer CIOPan concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -657,12 +673,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria do Pantanal; seleção requer CIOPan concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "A formação deve ser registrada antes do pedido de ingresso."
       ],
       "referencia": "Adaptação fictícia FAAAB",
       "urlReferencia": null
@@ -856,7 +874,7 @@
       "superior": null,
       "missao": "Operações e deslocamento em selva com instrução de sobrevivência.",
       "subdivisoes": [],
-      "ingresso": "Soldado pode solicitar ingresso. A seleção considera vagas e treinamento da unidade; Soldado de 1ª Classe NÃO é requisito nem posto interno.",
+      "ingresso": "Batalhão de Infantaria de Selva; seleção requer CIGS concluído.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -893,12 +911,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão de Infantaria de Selva; seleção requer CIGS concluído."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Habilitação de uniforme de selva é distinta da patente."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": null
@@ -977,7 +997,7 @@
         "SC",
         "DGC"
       ],
-      "ingresso": "Somente integrantes habilitados e designados. Centro de inteligência não é uma escola em que todos entram como aluno.",
+      "ingresso": "Formação específica para equipes de análise e suporte à moderação da FAAAB.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1012,12 +1032,14 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Formação específica para equipes de análise e suporte à moderação da FAAAB."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Atuar como staff ou moderador exige designação separada; cursar CIE não concede cargos ou acesso automaticamente."
       ],
       "referencia": "Órgão de inteligência militar do Exército, voltado à análise, assessoramento e contrainteligência.",
       "urlReferencia": null
@@ -1034,239 +1056,7 @@
       "superior": null,
       "missao": "Forma equipes em deslocamento, segurança e operações simuladas em áreas urbanas.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
-      ],
-      "atividades": [
-        "Aula prática e teórica",
-        "Registro de presença",
-        "Avaliação de conhecimentos",
-        "Exercício supervisionado",
-        "Certificação após aprovação"
-      ],
-      "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Centro especializado em instrução para operações em ambiente urbano.",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-CIGS",
-      "sigla": "CIGS",
-      "nome": "Centro de Instrução de Guerra na Selva",
-      "forca": "FTB",
-      "tipo": "centro",
-      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Formação em deslocamento, navegação e sobrevivência na selva.",
-      "subdivisoes": [
-        "POS"
-      ],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Aluno de Guerra na Selva",
-        "Monitor de Treinamento",
-        "Instrutor de Selva",
-        "Líder do POS",
-        "Chefe de Instrução",
-        "Diretor do Centro"
-      ],
-      "atividades": [
-        "Aula prática e teórica",
-        "Registro de presença",
-        "Avaliação de conhecimentos",
-        "Exercício supervisionado",
-        "Certificação após aprovação"
-      ],
-      "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Centro de formação e especialização em guerra na selva.",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-CIOpC",
-      "sigla": "CIOpC",
-      "nome": "Centro de Instrução e Operações na Caatinga",
-      "forca": "FTB",
-      "tipo": "centro",
-      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Instrução em Caatinga, orientação e proteção ambiental em missões simuladas.",
-      "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
-      ],
-      "atividades": [
-        "Aula prática e teórica",
-        "Registro de presença",
-        "Avaliação de conhecimentos",
-        "Exercício supervisionado",
-        "Certificação após aprovação"
-      ],
-      "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Centro de instrução voltado ao ambiente de caatinga.",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-CIOpEsp",
-      "sigla": "CIOpEsp",
-      "nome": "Centro de Instrução de Operações Especiais",
-      "forca": "FTB",
-      "tipo": "centro",
-      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Cursos e exercícios de operações especiais com avaliação registrada.",
-      "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
-      "patentes": [
-        "Soldado",
-        "Cabo",
-        "3º Sargento",
-        "2º Sargento",
-        "1º Sargento",
-        "Subtenente",
-        "Cadete",
-        "Aspirante a Oficial",
-        "2º Tenente",
-        "1º Tenente",
-        "Capitão",
-        "Major",
-        "Tenente-Coronel",
-        "Coronel"
-      ],
-      "funcoes": [
-        "Aluno / Cursante",
-        "Monitor",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Chefe de Instrução",
-        "Subdiretor",
-        "Diretor / Comandante da Escola"
-      ],
-      "atividades": [
-        "Aula prática e teórica",
-        "Registro de presença",
-        "Avaliação de conhecimentos",
-        "Exercício supervisionado",
-        "Certificação após aprovação"
-      ],
-      "qualificacoes": [
-        "Formação específica",
-        "Habilitação de instrutor (quando designado)"
-      ],
-      "regras": [
-        "Patente e função da unidade não são a mesma coisa.",
-        "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
-      ],
-      "referencia": "Centro de formação voltado às operações especiais militares.",
-      "urlReferencia": null
-    },
-    {
-      "id": "FTB-CIOpMth",
-      "sigla": "CIOpMth",
-      "nome": "Centro de Instrução de Operações em Montanha",
-      "forca": "FTB",
-      "tipo": "centro",
-      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
-      "status": "Catalogada",
-      "origem": "Catálogo aprovado FAAAB",
-      "superior": null,
-      "missao": "Instrução de montanha e avaliações para habilitação no BIM.",
-      "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Formação em operações urbanas exigida pela FAAAB para seleção no BPE.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1303,12 +1093,254 @@
       "qualificacoes": [
         "Formação específica",
         "Habilitação de instrutor (quando designado)",
-        "Curso de montanha e habilitação para BIM"
+        "Formação em operações urbanas exigida pela FAAAB para seleção no BPE."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "O curso habilita a participar da seleção no BPE; não concede ingresso nem patente. Outras unidades urbanas só após cadastro específico."
+      ],
+      "referencia": "Centro especializado em instrução para operações em ambiente urbano.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-CIGS",
+      "sigla": "CIGS",
+      "nome": "Centro de Instrução de Guerra na Selva",
+      "forca": "FTB",
+      "tipo": "centro",
+      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
+      "status": "Catalogada",
+      "origem": "Catálogo aprovado FAAAB",
+      "superior": null,
+      "missao": "Formação em deslocamento, navegação e sobrevivência na selva.",
+      "subdivisoes": [
+        "POS"
+      ],
+      "ingresso": "Qualificação de Guerra na Selva para solicitar ingresso no BIS e usar o uniforme de selva autorizado.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Aluno de Guerra na Selva",
+        "Monitor de Treinamento",
+        "Instrutor de Selva",
+        "Líder do POS",
+        "Chefe de Instrução",
+        "Diretor do Centro"
+      ],
+      "atividades": [
+        "Aula prática e teórica",
+        "Registro de presença",
+        "Avaliação de conhecimentos",
+        "Exercício supervisionado",
+        "Certificação após aprovação"
+      ],
+      "qualificacoes": [
+        "Formação específica",
+        "Habilitação de instrutor (quando designado)",
+        "Qualificação de Guerra na Selva para solicitar ingresso no BIS e usar o uniforme de selva autorizado."
+      ],
+      "regras": [
+        "Patente e função da unidade não são a mesma coisa.",
+        "Curso concluído não promove automaticamente.",
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Uniforme e ingresso exigem registro de conclusão e autorização da unidade; manter POS separado."
+      ],
+      "referencia": "Centro de formação e especialização em guerra na selva.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-CIOpC",
+      "sigla": "CIOpC",
+      "nome": "Centro de Instrução e Operações na Caatinga",
+      "forca": "FTB",
+      "tipo": "centro",
+      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
+      "status": "Catalogada",
+      "origem": "Catálogo aprovado FAAAB",
+      "superior": null,
+      "missao": "Instrução em Caatinga, orientação e proteção ambiental em missões simuladas.",
+      "subdivisoes": [],
+      "ingresso": "Qualificação de Caatinga para solicitar ingresso no BI Caat e utilizar uniforme de Caatinga.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Aluno / Cursante",
+        "Monitor",
+        "Instrutor Habilitado",
+        "Avaliador",
+        "Coordenador de Curso",
+        "Chefe de Instrução",
+        "Subdiretor",
+        "Diretor / Comandante da Escola"
+      ],
+      "atividades": [
+        "Aula prática e teórica",
+        "Registro de presença",
+        "Avaliação de conhecimentos",
+        "Exercício supervisionado",
+        "Certificação após aprovação"
+      ],
+      "qualificacoes": [
+        "Formação específica",
+        "Habilitação de instrutor (quando designado)",
+        "Qualificação de Caatinga para solicitar ingresso no BI Caat e utilizar uniforme de Caatinga."
+      ],
+      "regras": [
+        "Patente e função da unidade não são a mesma coisa.",
+        "Curso concluído não promove automaticamente.",
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Habilitação para uniforme e seleção validada por instrutor; não ocorre ingresso automático."
+      ],
+      "referencia": "Centro de instrução voltado ao ambiente de caatinga.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-CIOpEsp",
+      "sigla": "CIOpEsp",
+      "nome": "Centro de Instrução de Operações Especiais",
+      "forca": "FTB",
+      "tipo": "centro",
+      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
+      "status": "Catalogada",
+      "origem": "Catálogo aprovado FAAAB",
+      "superior": null,
+      "missao": "Cursos e exercícios de operações especiais com avaliação registrada.",
+      "subdivisoes": [],
+      "ingresso": "Formação especializada exigida para disputar seleção de BFE e BAC.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Aluno / Cursante",
+        "Monitor",
+        "Instrutor Habilitado",
+        "Avaliador",
+        "Coordenador de Curso",
+        "Chefe de Instrução",
+        "Subdiretor",
+        "Diretor / Comandante da Escola"
+      ],
+      "atividades": [
+        "Aula prática e teórica",
+        "Registro de presença",
+        "Avaliação de conhecimentos",
+        "Exercício supervisionado",
+        "Certificação após aprovação"
+      ],
+      "qualificacoes": [
+        "Formação específica",
+        "Habilitação de instrutor (quando designado)",
+        "Formação especializada exigida para disputar seleção de BFE e BAC."
+      ],
+      "regras": [
+        "Patente e função da unidade não são a mesma coisa.",
+        "Curso concluído não promove automaticamente.",
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Curso de alta dificuldade da FAAAB; exigência não substitui seleção interna, instrução e avaliação humana."
+      ],
+      "referencia": "Centro de formação voltado às operações especiais militares.",
+      "urlReferencia": null
+    },
+    {
+      "id": "FTB-CIOpMth",
+      "sigla": "CIOpMth",
+      "nome": "Centro de Instrução de Operações em Montanha",
+      "forca": "FTB",
+      "tipo": "centro",
+      "secao": "EXÉRCITO - CENTROS DE INSTRUÇÃO ESPECIALIZADOS E INTELIGÊNCIA",
+      "status": "Catalogada",
+      "origem": "Catálogo aprovado FAAAB",
+      "superior": null,
+      "missao": "Instrução de montanha e avaliações para habilitação no BIM.",
+      "subdivisoes": [],
+      "ingresso": "Formação em montanha; após aprovação pode obter brevê de montanhista e concorrer ao BIM.",
+      "patentes": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoes": [
+        "Aluno / Cursante",
+        "Monitor",
+        "Instrutor Habilitado",
+        "Avaliador",
+        "Coordenador de Curso",
+        "Chefe de Instrução",
+        "Subdiretor",
+        "Diretor / Comandante da Escola"
+      ],
+      "atividades": [
+        "Aula prática e teórica",
+        "Registro de presença",
+        "Avaliação de conhecimentos",
+        "Exercício supervisionado",
+        "Certificação após aprovação"
+      ],
+      "qualificacoes": [
+        "Formação específica",
+        "Habilitação de instrutor (quando designado)",
+        "Curso de montanha e habilitação para BIM",
+        "Formação em montanha; após aprovação pode obter brevê de montanhista e concorrer ao BIM."
+      ],
+      "regras": [
+        "Patente e função da unidade não são a mesma coisa.",
+        "Curso concluído não promove automaticamente.",
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "A unidade de destino é BIM. BIL Mth foi retirado do projeto."
       ],
       "referencia": "Centro voltado à instrução militar em terreno montanhoso.",
       "urlReferencia": null
@@ -1325,7 +1357,7 @@
       "superior": null,
       "missao": "Navegação e sobrevivência simuladas no Pantanal.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Formação em ambiente de Pantanal para participar da seleção no BI Pan.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1361,12 +1393,14 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Formação em ambiente de Pantanal para participar da seleção no BI Pan."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Aprovação é habilitação, não promoção ou entrada direta."
       ],
       "referencia": "Centro voltado ao preparo para operações na região do Pantanal.",
       "urlReferencia": null
@@ -1383,7 +1417,7 @@
       "superior": null,
       "missao": "Formação de motoristas e atiradores de blindados e tanques da FAAAB, com habilitação específica para RCC e BIB.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Cursos de motorista e atirador de tanques para funções habilitadas no RCC e no BIB.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1419,12 +1453,14 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Cursos de motorista e atirador de tanques para funções habilitadas no RCC e no BIB."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Motorista e atirador são habilitações diferentes; funcionamento de veículos depende de autorização da unidade."
       ],
       "referencia": "Centro de instrução para emprego de veículos e operações blindadas.",
       "urlReferencia": null
@@ -1441,7 +1477,7 @@
       "superior": null,
       "missao": "Treinamento paraquedista com salto simulado, equipamentos e segurança.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Formação paraquedista com testes simulados de salto de torre e aeronave.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -1477,12 +1513,14 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Formação paraquedista com testes simulados de salto de torre e aeronave."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Conclusão autoriza brevê, boina e equipamento paraquedista conforme regras do jogo e habilita a solicitar ingresso no BIP e Companhia de Precursores; não entra automaticamente."
       ],
       "referencia": "Centro de formação especializada em paraquedismo militar.",
       "urlReferencia": null
@@ -2926,7 +2964,7 @@
       "subdivisoes": [
         "ECDA"
       ],
-      "ingresso": "Ingresso e designações realizados por responsáveis humanos; o bot verifica elegibilidade e registra, mas não aprova seleções.",
+      "ingresso": "Grupo de Defesa Antiaérea da FAB, tendo ECDA como equipe operacional subordinada.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -2961,13 +2999,15 @@
       ],
       "qualificacoes": [
         "Formação específica quando publicada e aplicada por instrutores",
-        "Permissões de equipamento conforme função e autorização"
+        "Permissões de equipamento conforme função e autorização",
+        "Grupo de Defesa Antiaérea da FAB, tendo ECDA como equipe operacional subordinada."
       ],
       "regras": [
         "Patentes são obtidas pela carreira da FAB e não pela simples entrada no grupo.",
         "Instrutores conduzem e corrigem formação; o bot só registra.",
         "Comandantes planejam e justificam ordens; o bot não comanda missões.",
-        "A conclusão de curso não promove automaticamente."
+        "A conclusão de curso não promove automaticamente.",
+        "Operadores de radar e antiaérea recebem qualificação e designação; ingresso não é automático."
       ],
       "referencia": "Modelo FAAAB inspirado em denominações públicas da FAB; verificar adequação das atribuições.",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3098,7 +3138,7 @@
       "superior": null,
       "missao": "Emprego simulado de aeronaves e helicópteros, transporte e apoio aéreo, por tripulações habilitadas.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
+      "ingresso": "Grupo de Aviação da FAB para tripulações e operações aéreas simuladas.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3135,12 +3175,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Grupo de Aviação da FAB para tripulações e operações aéreas simuladas."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Pilotagem de avião ou helicóptero exige formação específica e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3213,7 +3255,7 @@
       "superior": "GDAAE",
       "missao": "Equipe subordinada ao GDAAE no roleplay, operando radares e sistemas antiaéreos simulados.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
+      "ingresso": "Esquadrão operacional subordinado ao GDAAE para radares e antiaérea do jogo.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3250,12 +3292,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Esquadrão operacional subordinado ao GDAAE para radares e antiaérea do jogo."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Não deve ser apresentado como grupo autônomo."
       ],
       "referencia": "Adaptação fictícia FAAAB",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3331,7 +3375,7 @@
       "superior": null,
       "missao": "Unidade fictícia de operações especiais de combate da FAB, com seleção e curso CCFA separados do EAS/PARA-SAR.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme patente da FAB; batalhões não criam uma patente interna chamada Soldado de 1ª Classe.",
+      "ingresso": "Unidade fictícia de combate especializada da FAB; exige conclusão do CCFA e seleção interna.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3369,12 +3413,14 @@
         "Treinamento inicial",
         "Aptidão no posto designado",
         "Cursos específicos conforme missão",
-        "CCFA — formação necessária para ingresso no PARACOM"
+        "CCFA — formação necessária para ingresso no PARACOM",
+        "Unidade fictícia de combate especializada da FAB; exige conclusão do CCFA e seleção interna."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Distinta do PARA-SAR, voltado ao salvamento; CCFA não promove ninguém automaticamente."
       ],
       "referencia": "Não existe equivalência institucional direta confirmada com essa sigla.",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3391,7 +3437,7 @@
       "superior": null,
       "missao": "Formação e adaptação de militares da Aeronáutica, conforme cursos previstos no catálogo FAAAB.",
       "subdivisoes": [],
-      "ingresso": "Matrícula ou designação mediante requisitos próprios da formação. Instrutores e diretores são funções, não novas patentes.",
+      "ingresso": "Formação e adaptação militar da FAB, conforme a finalidade do CIAAR no projeto.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3425,12 +3471,14 @@
       ],
       "qualificacoes": [
         "Formação específica",
-        "Habilitação de instrutor (quando designado)"
+        "Habilitação de instrutor (quando designado)",
+        "Formação e adaptação militar da FAB, conforme a finalidade do CIAAR no projeto."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Não confundir com CIAvEx, que é centro da Aviação do Exército."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3672,7 +3720,7 @@
       "superior": null,
       "missao": "Radares simulados, coordenação de tráfego aéreo, procedimentos de autorização de decolagens e pousos no jogo.",
       "subdivisoes": [],
-      "ingresso": "Ingresso por designação e análise de requisitos. Não pressupõe matrícula como aluno.",
+      "ingresso": "Centro de controle aéreo do jogo, com torre, autorizações de pouso/decolagem e radares simulados.",
       "patentes": [
         "Soldado de 2ª Classe",
         "Cabo",
@@ -3708,12 +3756,14 @@
       ],
       "qualificacoes": [
         "Formação para operação de radar e controle de tráfego no jogo",
-        "Autorização específica para operar torre de controle"
+        "Autorização específica para operar torre de controle",
+        "Centro de controle aéreo do jogo, com torre, autorizações de pouso/decolagem e radares simulados."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Operar o controle exige habilitação e designação; é uma adaptação de gameplay dos CINDACTA reais."
       ],
       "referencia": "Centro de inteligência da Aeronáutica.",
       "urlReferencia": "https://www.fab.mil.br/"
@@ -3785,7 +3835,7 @@
       "superior": null,
       "missao": "Segurança de instalações e áreas portuárias e fiscalização naval no contexto do jogo.",
       "subdivisoes": [],
-      "ingresso": "Inscrição pela carreira da respectiva força; acesso operacional e funções exigem habilitações próprias.",
+      "ingresso": "Segurança e patrulhamento de instalações portuárias e pessoal naval.",
       "patentes": [
         "Marinheiro",
         "Cabo",
@@ -3821,12 +3871,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Segurança e patrulhamento de instalações portuárias e pessoal naval."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Diferente da CIAPOL, que atua com Fuzileiros."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
@@ -4123,7 +4175,7 @@
       "subdivisoes": [
         "COMANF"
       ],
-      "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
+      "ingresso": "Batalhão Tonelero: unidade principal de operações especiais do CFN.",
       "patentes": [
         "Soldado Fuzileiro Naval",
         "Cabo",
@@ -4159,12 +4211,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Batalhão Tonelero: unidade principal de operações especiais do CFN."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "COMANF funciona como especialização e equipe interna do batalhão."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
@@ -4181,7 +4235,7 @@
       "superior": "BOE FN",
       "missao": "Equipe especial vinculada ao Batalhão Tonelero, com curso de habilitação e funções internas.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
+      "ingresso": "Comandos Anfíbios: subdivisão de elite dentro do Batalhão Tonelero.",
       "patentes": [
         "Soldado Fuzileiro Naval",
         "Cabo",
@@ -4214,12 +4268,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Comandos Anfíbios: subdivisão de elite dentro do Batalhão Tonelero."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Acesso apenas após formação, seleção e designação específica."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
@@ -4526,7 +4582,7 @@
       "superior": "CFN",
       "missao": "Polícia interna e escolta institucional dos Fuzileiros Navais no roleplay.",
       "subdivisoes": [],
-      "ingresso": "Ingresso conforme a carreira dos Fuzileiros Navais da FAAAB; a qualificação operacional é separada da patente.",
+      "ingresso": "Companhia de Polícia dos Fuzileiros Navais, com foco em escoltas e policiamento interno dos fuzileiros no jogo.",
       "patentes": [
         "Soldado Fuzileiro Naval",
         "Cabo",
@@ -4562,12 +4618,14 @@
       "qualificacoes": [
         "Treinamento inicial",
         "Aptidão no posto designado",
-        "Cursos específicos conforme missão"
+        "Cursos específicos conforme missão",
+        "Companhia de Polícia dos Fuzileiros Navais, com foco em escoltas e policiamento interno dos fuzileiros no jogo."
       ],
       "regras": [
         "Patente e função da unidade não são a mesma coisa.",
         "Curso concluído não promove automaticamente.",
-        "Acesso a equipamentos depende de habilitação e autorização."
+        "Acesso a equipamentos depende de habilitação e autorização.",
+        "Diferente da Polícia Naval de segurança portuária."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
       "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
@@ -5670,7 +5728,7 @@
       "subdivisoes": [
         "Precs"
       ],
-      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "ingresso": "Companhia de Precursores Paraquedistas subordinada à Bda Inf Pqdt.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -5702,12 +5760,14 @@
         "Avaliação humana"
       ],
       "qualificacoes": [
-        "Formação ou habilitação específica conforme a unidade"
+        "Formação ou habilitação específica conforme a unidade",
+        "Companhia de Precursores Paraquedistas subordinada à Bda Inf Pqdt."
       ],
       "regras": [
         "Patente e função são camadas separadas.",
         "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
-        "Acesso a recursos exige vínculo e autorização."
+        "Acesso a recursos exige vínculo e autorização.",
+        "Seleção específica exige qualificação paraquedista; o bot registra, mas não seleciona."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
       "urlReferencia": null
@@ -5724,7 +5784,7 @@
       "superior": null,
       "missao": "Instrução específica de batedores blindados, reconhecimento com viaturas e acompanhamento de equipes no mapa.",
       "subdivisoes": [],
-      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "ingresso": "Instrução de batedores e reconhecimento com viaturas blindadas.",
       "patentes": [
         "Soldado",
         "Cabo",
@@ -5757,12 +5817,14 @@
         "Avaliação humana"
       ],
       "qualificacoes": [
-        "Formação ou habilitação específica conforme a unidade"
+        "Formação ou habilitação específica conforme a unidade",
+        "Instrução de batedores e reconhecimento com viaturas blindadas."
       ],
       "regras": [
         "Patente e função são camadas separadas.",
         "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
-        "Acesso a recursos exige vínculo e autorização."
+        "Acesso a recursos exige vínculo e autorização.",
+        "Curso e atuação distintos da formação de motorista/atirador do CIBld."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
       "urlReferencia": null
@@ -6021,7 +6083,7 @@
       "superior": null,
       "missao": "Formação e capacitação policial na FAAAB, com treinamento e avaliações realizadas por instrutores.",
       "subdivisoes": [],
-      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "ingresso": "Formação de policiais militares na academia do jogo.",
       "patentes": [],
       "funcoes": [
         "Comandante da Academia",
@@ -6039,12 +6101,14 @@
         "Avaliação humana"
       ],
       "qualificacoes": [
-        "Formação ou habilitação específica conforme a unidade"
+        "Formação ou habilitação específica conforme a unidade",
+        "Formação de policiais militares na academia do jogo."
       ],
       "regras": [
         "Patente e função são camadas separadas.",
         "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
-        "Acesso a recursos exige vínculo e autorização."
+        "Acesso a recursos exige vínculo e autorização.",
+        "Cursos, provas e promoções dependem de avaliação e aprovação humanas."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
       "urlReferencia": null
@@ -6061,7 +6125,7 @@
       "superior": null,
       "missao": "Apoio aéreo policial simulado com helicópteros, observação e operações autorizadas pela PM.",
       "subdivisoes": [],
-      "ingresso": "Ingresso, seleção e designação dependem de instrução e validação humana, sem automatizar avaliações.",
+      "ingresso": "Grupo aéreo da PM com helicópteros e apoio visual a unidades policiais.",
       "patentes": [],
       "funcoes": [
         "Comandante do Grupamento",
@@ -6079,12 +6143,14 @@
         "Avaliação humana"
       ],
       "qualificacoes": [
-        "Formação ou habilitação específica conforme a unidade"
+        "Formação ou habilitação específica conforme a unidade",
+        "Grupo aéreo da PM com helicópteros e apoio visual a unidades policiais."
       ],
       "regras": [
         "Patente e função são camadas separadas.",
         "O bot registra, mas não substitui instruções, avaliações ou decisões humanas.",
-        "Acesso a recursos exige vínculo e autorização."
+        "Acesso a recursos exige vínculo e autorização.",
+        "Pilotagem exige habilitação e autorização; não se confunde com o GOA dos Bombeiros."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
       "urlReferencia": null
