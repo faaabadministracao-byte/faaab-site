@@ -1,5 +1,11 @@
 [
   {
+    "data": "2026-11-01",
+    "titulo": "Reestruturação das unidades do Exército, FAB, Fuzileiros e PM",
+    "descricao": "Retirados B Prec, B Sau, BIL Mth; BCC convertido em RCC; adicionados B Com, Bda Inf Pqdt, Bda Op Esp, Cia Prec Pqdt, CIBB. PELOP substitui PELOPES; precursores transferidos para brigada. FAB: GAV substitui EAV, CINDACTA substitui CIAER, ECDA subordinado ao GDAAE. CFN: COMANF interno ao Tonelero. PM: APM e GRPAe. Requisitos de curso registrados sem aprovação automática.",
+    "tipo": "catalogo"
+  },
+  {
     "data": "2026-10-27",
     "titulo": "Reorganização da central institucional",
     "descricao": "Projeto de portal com catálogo por força, formação, cargos e registro de mudanças. A disponibilidade do sistema depende da publicação.",
