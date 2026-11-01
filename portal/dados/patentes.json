@@ -108,24 +108,6 @@
     "regraDePromocao": "O tempo mínimo sozinho não promove: comprovação de cursos/estágios exigidos, avaliação e autorização do comando continuam necessárias."
   },
   {
-    "id": "FTB-TFE",
-    "forca": "FTB",
-    "sigla": "TFE",
-    "cargo": "Taifeiro Especial",
-    "diasMinimos": "Sem prazo automático: progressão por formação, avaliação, vaga ou nomeação conforme a etapa.",
-    "requisitos": "Requisitos e critérios de concessão específicos a confirmar pela administração FAAAB; não é promoção automática.",
-    "competencias": "Funções de apoio, serviços e logística; não é etapa obrigatória entre Cabo e 3º Sargento.",
-    "formacao": "A definir pela instituição",
-    "proximaEtapa": "Carreira própria conforme regulamentação",
-    "fonte": "Estrutura de carreira FAAAB, atualização 2026-10-29",
-    "observacao": "Função ou graduação da carreira geral. Não criar posto interno fictício em batalhão. Permanência mínima nesta patente é proposta de balanceamento do jogo; não confundir com a duração dos cursos.",
-    "tempoMinimoNaPatenteDias": null,
-    "tempoPropostaFonte": "Proposta de balanceamento para Roblox — não representa tempo legal militar brasileiro",
-    "formacaoStatus": "Registros históricos do catálogo FAAAB; verificar quais etapas são exigidas antes da promoção",
-    "duracaoCursos": "Não estabelecida. Agendar com instrutor e turma; se houver estágio obrigatório, exige conclusão, sem prazo inventado.",
-    "regraDePromocao": "O tempo mínimo sozinho não promove: comprovação de cursos/estágios exigidos, avaliação e autorização do comando continuam necessárias."
-  },
-  {
     "id": "FTB-T-SGT",
     "forca": "FTB",
     "sigla": "T-SGT",
