@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {
+      "id": "922723164",
+      "expectedOwnerId": "SUBSTITUA_ID_NUMERICO",
+      "allowedAdminUserIds": [
+        "SUBSTITUA_ID_NUMERICO"
+      ],
+      "protectedRoleIds": [],
+      "protectDangerousPermissions": true,
+      "maxActionsPerScan": 10
+    }
+  ]
+}
