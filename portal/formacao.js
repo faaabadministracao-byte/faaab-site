@@ -1,7 +1,7 @@
 (()=>{"use strict";const $=id=>document.getElementById(id),out=$("formation-out");const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const line=s=>esc(s).replace(/\n/g,"<br>");
 let tracks,courses=[],cat=[],units,selected="FTB";
 const flow={
-FTB:["Seleção de ingresso autorizada","Recruta e orientação","CDP: TC-1, Expedição Militar, Seleção de Brigada e Formação de Soldado","Carreira, batalhões e cursos próprios"],
+FTB:["Centro de Alistamento e Seleção: exames e registro civil","Aprovado: dados encaminhados ao Exército para análise por Sargento ou superior","Aceite e entrada na força: Alistado, mas à espera","Escolha e aprovação em brigada com alistamento ativo: torna-se Recruta","Expedição (Cabo+) e Treinamento Central (oficial)","Formação de Soldados anunciada na brigada; promoção segundo avaliação e registro"],
 FAB:["Ingresso na FAB (critérios a homologar)","Formação militar inicial e segurança de base","Escolha da linha funcional e matrícula","Habilitações específicas de aviação, controle, defesa ou apoio"],
 FMB:["Ingresso naval (critérios a homologar)","Formação e disciplina de bordo","Escolha de escola, Corpo ou especialidade","Habilitação em navegação, tripulação ou Fuzileiros Navais"],
 CBM:["Ingresso no CBM (proposta de requisitos)","Formação básica e atendimento ao público","Atividades de prevenção e comunicação","Qualificação e designação em grupamento"],
