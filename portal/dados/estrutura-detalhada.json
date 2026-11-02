@@ -1,6 +1,6 @@
 {
   "versao": "2026-11-01",
-  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais. Revisão 2026-11-01: removidos B Prec, B Sau e BIL Mth; criados RCC, B Com, brigadas paraquedista/especiais, Cia Prec Pqdt, CIBB, GAV, CINDACTA, APM e GRPAe. Cia Prec Pqdt pertence à Bda Inf Pqdt; ECDA é subordinado ao GDAAE; COMANF pertence ao Tonelero.",
+  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais. Revisão 2026-11-01: removidos B Prec, B Sau e BIL Mth; criados RCC, B Com, brigadas paraquedista/especiais, Cia Prec Pqdt, CIBB, GAV, CINDACTA, APM e GRPAe. Cia Prec Pqdt pertence à Bda Inf Pqdt; ECDA é subordinado ao GDAAE; COMANF pertence ao Tonelero. Revisão CDS 2026-11-02: estrutura de desenvolvimento substitui DEV/DEC por único centro CDS no projeto, com DD interna, seis divisões de referência histórica e funções técnicas próprias do Roblox.",
   "regrasGerais": {
     "ingressoEB": "Soldado pode entrar em batalhões; Soldado de 1ª Classe não é patente interna de batalhão.",
     "promocao": "A conclusão de um curso não promove automaticamente.",
@@ -6154,6 +6154,88 @@
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
       "urlReferencia": null
+    },
+    {
+      "id": "ADM-CDS",
+      "sigla": "CDS",
+      "nome": "Centro de Desenvolvimento de Sistemas — FAAAB",
+      "forca": "ADM",
+      "tipo": "administracao",
+      "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
+      "status": "Estrutura de desenvolvimento aprovada no planejamento; implantação pendente",
+      "origem": "Modelo FAAAB inspirado no regimento CDS EB80-RI-78.001 (2017) sem afirmar organograma atual",
+      "superior": "FAAAB",
+      "missao": "Coordenar e desenvolver a experiência FAAAB, o EB Security, sistemas, mapas, modelos 3D, animações e testes para todas as instituições em um único grupo Roblox.",
+      "subdivisoes": [
+        "DD (direção superior interna)",
+        "DA",
+        "DPCC",
+        "DDS",
+        "DMS",
+        "DC2",
+        "DSI"
+      ],
+      "ingresso": "Por seleção e avaliação humana. Integrante pode pertencer a uma ou mais divisões conforme designação; chefia não é automática.",
+      "patentes": [],
+      "funcoes": [
+        "Chefe da Diretoria de Desenvolvimento",
+        "Vice-Chefe da Diretoria de Desenvolvimento",
+        "Conselho de Diretores-Chefes de Desenvolvimento",
+        "[CH-CDS] Chefe do CDS",
+        "[SCH-CDS] Subchefe do CDS",
+        "[CG-CDS] Coordenador-Geral de Projetos",
+        "[C-CDS] Coordenador de Projeto",
+        "[S-CDS] Supervisor Técnico",
+        "[CH-SEC] Chefe de Seção",
+        "[CH-DA] Chefe da Divisão de Apoio",
+        "[CH-DPCC] Chefe de Planejamento e Controle",
+        "[CH-DDS] Chefe de Desenvolvimento de Sistemas",
+        "[CH-DMS] Chefe de Manutenção de Sistemas",
+        "[CH-DC2] Chefe de Comando e Controle",
+        "[CH-DSI] Chefe de Segurança da Informação",
+        "[CH-TA] Chefe de Testes e Análises",
+        "[VCH-TA] Vice-Chefe de Testes e Análises",
+        "[AN-D] Analista de Desenvolvimento",
+        "[AN-S] Analista de Sessões de Servidores",
+        "[AN-I] Analista de Ideias e Sugestões",
+        "[INT-CDS] Integrante do CDS"
+      ],
+      "atividades": [
+        "Programação Luau, interfaces, backend e integrações do bot",
+        "Construção de mapas, quartéis e instalações",
+        "Modelagem 3D e animação",
+        "Manutenção, otimização e correção de bugs",
+        "Testes, homologação e revisão de novas versões",
+        "Análise de sugestões e sessões do jogo",
+        "Segurança e governança de permissões técnicas"
+      ],
+      "qualificacoes": [
+        "Especialista de Desenvolvimento II",
+        "Especialista de Desenvolvimento I",
+        "Desenvolvedor Sênior",
+        "Desenvolvedor",
+        "Desenvolvedor Iniciante",
+        "Agente Técnico",
+        "Programação Luau",
+        "Construção de Mapas",
+        "Modelagem 3D",
+        "Animações",
+        "Interfaces",
+        "Sistemas e Integrações",
+        "Otimização",
+        "Qualidade e Testes"
+      ],
+      "regras": [
+        "Uma organização principal CDS, não três grupos Roblox para DD/CDS/DEC.",
+        "Cargo de divisão é diferente da função de chefia da divisão.",
+        "Patentes militares e especialidades técnicas são classificações independentes.",
+        "Investidor e apoiador não recebem acesso a código ou projetos privados apenas por contribuição.",
+        "Chefia e carreira técnica não recebem permissão Administrador do Discord automaticamente.",
+        "Aprovação de publicação exige responsáveis humanos.",
+        "Estrutura inspirada no CDS de 2017, adaptada à realidade de Roblox, não apresentada como hierarquia oficial vigente do Exército."
+      ],
+      "referencia": "Regimento Interno CDS EB80-RI-78.001, publicação de 2017, referência organizacional histórica; adaptação FAAAB.",
+      "urlReferencia": "https://ptdocz.com/doc/1981153/separata-ao-boletim-do-ex%C3%A9rcito---sgex"
     }
   ],
   "referenciasPropostas": [
