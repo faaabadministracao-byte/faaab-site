@@ -6812,9 +6812,9 @@
       "forca": "ADM",
       "tipo": "administracao",
       "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
-      "status": "Estrutura de desenvolvimento aprovada no planejamento; implantação pendente",
-      "origem": "Modelo FAAAB inspirado no regimento CDS EB80-RI-78.001 (2017) sem afirmar organograma atual",
-      "superior": "FAAAB",
+      "status": "Planejada na FAAAB; grupo Roblox DPT informado pelo responsável",
+      "origem": "Organização própria da FAAAB; DPT não reproduz o CDS do Exército.",
+      "superior": "DD",
       "missao": "Desenvolvimento conjunto de sistemas, mapas, modelos, animações, interfaces e infraestrutura para todas as instituições da FAAAB, subordinado à DD.",
       "subdivisoes": [
         "Administração da DPT",
@@ -6860,12 +6860,6 @@
         "Segurança e governança de permissões técnicas"
       ],
       "qualificacoes": [
-        "Especialista de Desenvolvimento II",
-        "Especialista de Desenvolvimento I",
-        "Desenvolvedor Sênior",
-        "Desenvolvedor",
-        "Desenvolvedor Iniciante",
-        "Agente Técnico",
         "Programação Luau",
         "Construção de Mapas",
         "Modelagem 3D",
@@ -6886,8 +6880,8 @@
         "Cargos pagos são simbólicos; não dão poder administrativo nem acesso a código privado.",
         "Alterações de proprietário ou permissões críticas exigem validação humana."
       ],
-      "referencia": "Regimento Interno CDS EB80-RI-78.001, publicação de 2017, referência organizacional histórica; adaptação FAAAB.",
-      "urlReferencia": "https://ptdocz.com/doc/1981153/separata-ao-boletim-do-ex%C3%A9rcito---sgex",
+      "referencia": "Projeto original da FAAAB. Não é unidade militar oficial.",
+      "urlReferencia": null,
       "direcaoSuperior": [
         "Chefe da Diretoria de Desenvolvimento",
         "Vice-Chefe da Diretoria de Desenvolvimento",
