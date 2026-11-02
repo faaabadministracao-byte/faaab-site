@@ -285,16 +285,16 @@
     "grupoSeparado": null
   },
   {
-    "id": "ADM-CDS",
-    "sigla": "CDS",
-    "nome": "Centro de Desenvolvimento de Sistemas — FAAAB",
+    "id": "ADM-DPT",
+    "sigla": "DPT",
+    "nome": "Departamento de Projetos e Tecnologia",
     "forca": "ADM",
     "tipo": "administracao",
     "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
     "logo": null,
     "vidaReal": "Referência de organização: CDS do Exército Brasileiro, órgão subordinado ao DCT. O modelo de chefia, subchefia, divisões e seções tem base em regimento publicado em 2017.",
-    "noJogo": "Um único grupo de desenvolvimento para todas as forças da FAAAB, com Diretoria de Desenvolvimento (DD) como direção superior interna, CDS como centro técnico e divisões para projetos, programação Luau, construção de mapas, modelagem, animação, manutenção, testes e segurança.",
-    "requisitos": "Cargos e chefias definidos por responsáveis humanos; especialidade e carreira técnica não concedem direção ou administração automaticamente.",
+    "noJogo": "Desenvolvimento conjunto das forças da FAAAB. Diretoria de Desenvolvimento (DD) como autoridade superior, carreiras de Engenharia e Testes por candidatura.",
+    "requisitos": "Cargos gratuitos e três categorias de apoio pago não concedem privilégios de desenvolvimento nem liderança.",
     "aprovado": true,
     "referencia": "Adaptação de projeto, não cópia da atual estrutura militar real.",
     "grupoSeparado": true
