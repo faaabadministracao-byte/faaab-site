@@ -1,0 +1,24 @@
+name: Validar defesa ativa FAAAB
+on:
+  push:
+    paths:
+      - 'seguranca/defesa-ativa.mjs'
+      - 'seguranca/defesa-ativa.test.mjs'
+      - '.github/workflows/validar-defesa-ativa.yml'
+  pull_request:
+    paths:
+      - 'seguranca/defesa-ativa.mjs'
+      - 'seguranca/defesa-ativa.test.mjs'
+      - '.github/workflows/validar-defesa-ativa.yml'
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Testes unitarios - nenhum acesso a producao
+        run: node --test seguranca/defesa-ativa.test.mjs

@@ -1,6 +1,6 @@
 {
   "versao": "2026-11-01",
-  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais. Revisão 2026-11-01: removidos B Prec, B Sau e BIL Mth; criados RCC, B Com, brigadas paraquedista/especiais, Cia Prec Pqdt, CIBB, GAV, CINDACTA, APM e GRPAe. Cia Prec Pqdt pertence à Bda Inf Pqdt; ECDA é subordinado ao GDAAE; COMANF pertence ao Tonelero. Revisão CDS 2026-11-02: estrutura de desenvolvimento substitui DEV/DEC por único centro CDS no projeto, com DD interna, seis divisões de referência histórica e funções técnicas próprias do Roblox.",
+  "nota": "Patentes militares, funções da unidade e qualificações são camadas diferentes. Propostas não são aprovação. FAB: as antigas BINFA da FAAAB foram substituídas por modelos de grupos; não interpretar essa mudança como extinção das unidades reais. Revisão 2026-11-01: removidos B Prec, B Sau e BIL Mth; criados RCC, B Com, brigadas paraquedista/especiais, Cia Prec Pqdt, CIBB, GAV, CINDACTA, APM e GRPAe. Cia Prec Pqdt pertence à Bda Inf Pqdt; ECDA é subordinado ao GDAAE; COMANF pertence ao Tonelero. Revisão DPT 2026-11-02: o CDS foi substituído pela DPT, subordinada à DD; engenharia e testes são carreiras por candidatura.",
   "regrasGerais": {
     "ingressoEB": "Soldado pode entrar em batalhões; Soldado de 1ª Classe não é patente interna de batalhão.",
     "promocao": "A conclusão de um curso não promove automaticamente.",
@@ -70,7 +70,33 @@
         "Aprovação no curso não substitui a seleção e as avaliações do BFE."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante do BFE",
+        "Operador do DAD",
+        "Integrante do DRE",
+        "Instrutor de Seleção",
+        "Chefe de Operações",
+        "Subcomandante do BFE",
+        "Comandante do BFE"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BPE",
@@ -132,7 +158,33 @@
         "O BPE conduz a seleção interna e confirma o ingresso."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Policial do Exército",
+        "Integrante do Pelotão de Choque (PC)",
+        "Chefe do PC",
+        "Instrutor de Segurança",
+        "Chefe de Operações",
+        "Subcomandante do BPE",
+        "Comandante do BPE"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BI-Caat",
@@ -195,7 +247,33 @@
         "PELOP é pelotão interno da Caatinga, não unidade urbana."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante do BI Caat",
+        "Integrante do PELOP",
+        "Integrante do DCS",
+        "Chefe de Pelotão",
+        "Instrutor de Caatinga",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BIP",
@@ -257,7 +335,33 @@
         "A Companhia de Precursores pertence à Bda Inf Pqdt, não ao BIP."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Paraquedista da Unidade",
+        "Integrante paraquedista",
+        "Chefe do CFP",
+        "Instrutor de Salto Simulado",
+        "Chefe de Companhia",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BIB",
@@ -320,7 +424,33 @@
         "Especialidades de batedores podem exigir CIBB quando a função for usada."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Tripulante de Blindado",
+        "Motorista Habilitado",
+        "Operador de Tanque",
+        "Instrutor do CFB",
+        "Chefe de Pelotão Blindado",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-RCC",
@@ -442,7 +572,32 @@
         "Aprovação no curso não substitui a seleção e as avaliações do BAC."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Operador do BAC",
+        "Integrante do DCOE",
+        "Chefe do DCOE",
+        "Instrutor de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-B-Log",
@@ -501,7 +656,34 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BIM",
@@ -563,7 +745,32 @@
         "A formação de montanhismo permite brevê conforme regras do jogo."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante de Montanha",
+        "Integrante do PRGM",
+        "Instrutor do CFM",
+        "Chefe de Pelotão",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-B-Op-Psi",
@@ -622,7 +829,34 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BI-Pan",
@@ -683,7 +917,34 @@
         "A formação deve ser registrada antes do pedido de ingresso."
       ],
       "referencia": "Adaptação fictícia FAAAB",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-17--B-Fron",
@@ -742,7 +1003,34 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-1--RCG",
@@ -860,7 +1148,34 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-BIS",
@@ -921,7 +1236,34 @@
         "Habilitação de uniforme de selva é distinta da patente."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Integrante",
+        "Chefe de Equipe",
+        "Líder de Pelotão",
+        "Chefe de Instrução",
+        "Instrutor Habilitado",
+        "Chefe de Operações",
+        "Subcomandante",
+        "Comandante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-GAC",
@@ -1555,14 +1897,14 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno Cabo",
-        "Aluno 3º Sargento",
+        "Comandante da ESA",
+        "Subcomandante da ESA",
+        "Chefe da Divisão de Ensino",
+        "Comandante do Corpo de Alunos",
+        "Chefe de Curso",
+        "Instrutor Militar",
         "Monitor de Turma",
-        "Instrutor 2º Tenente Habilitado",
-        "Avaliador de Formação",
-        "Coordenador de Curso",
-        "Subdiretor da ESA",
-        "Diretor da ESA"
+        "Aluno em Formação"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1582,7 +1924,28 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Aluno Cabo",
+        "Aluno 3º Sargento",
+        "Monitor de Turma",
+        "Instrutor 2º Tenente Habilitado",
+        "Avaliador de Formação",
+        "Coordenador de Curso",
+        "Subdiretor da ESA",
+        "Diretor da ESA"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da ESA",
+        "Subcomandante da ESA",
+        "Chefe da Divisão de Ensino",
+        "Comandante do Corpo de Alunos",
+        "Chefe de Curso",
+        "Instrutor Militar",
+        "Monitor de Turma",
+        "Aluno em Formação"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-EsPCEx",
@@ -1614,13 +1977,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Cursante da EsPCEx",
-        "Monitor de Companhia de Alunos",
-        "Instrutor Habilitado",
-        "Avaliador",
-        "Coordenador de Formação",
-        "Subcomandante da Escola",
-        "Comandante da Escola"
+        "Comandante da EsPCEx",
+        "Subcomandante da EsPCEx",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
+        "Instrutor",
+        "Monitor de Companhia",
+        "Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1639,7 +2002,26 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Cursante da EsPCEx",
+        "Monitor de Companhia de Alunos",
+        "Instrutor Habilitado",
+        "Avaliador",
+        "Coordenador de Formação",
+        "Subcomandante da Escola",
+        "Comandante da Escola"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EsPCEx",
+        "Subcomandante da EsPCEx",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
+        "Instrutor",
+        "Monitor de Companhia",
+        "Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-AMAN",
@@ -1671,14 +2053,14 @@
         "Coronel"
       ],
       "funcoes": [
-        "Cadete",
-        "Monitor de Turma",
-        "Instrutor Militar",
-        "Avaliador de Curso",
-        "Chefe de Curso",
-        "Coordenador Acadêmico",
+        "Comandante da AMAN",
         "Subcomandante da AMAN",
-        "Comandante da AMAN"
+        "Comandante do Corpo de Cadetes",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor Militar",
+        "Monitor de Cadetes",
+        "Cadete"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1697,7 +2079,28 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Cadete",
+        "Monitor de Turma",
+        "Instrutor Militar",
+        "Avaliador de Curso",
+        "Chefe de Curso",
+        "Coordenador Acadêmico",
+        "Subcomandante da AMAN",
+        "Comandante da AMAN"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da AMAN",
+        "Subcomandante da AMAN",
+        "Comandante do Corpo de Cadetes",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor Militar",
+        "Monitor de Cadetes",
+        "Cadete"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-EsAO",
@@ -1729,12 +2132,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Oficial Aluno",
-        "Monitor Acadêmico",
-        "Instrutor de Aperfeiçoamento",
-        "Avaliador",
+        "Comandante da EsAO",
+        "Subcomandante da EsAO",
+        "Chefe da Divisão de Ensino",
         "Chefe de Curso",
-        "Diretor"
+        "Instrutor de Aperfeiçoamento",
+        "Oficial-Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1753,7 +2156,24 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Oficial Aluno",
+        "Monitor Acadêmico",
+        "Instrutor de Aperfeiçoamento",
+        "Avaliador",
+        "Chefe de Curso",
+        "Diretor"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EsAO",
+        "Subcomandante da EsAO",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor de Aperfeiçoamento",
+        "Oficial-Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-ECEME",
@@ -1785,11 +2205,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Oficial Aluno",
+        "Comandante da ECEME",
+        "Subcomandante da ECEME",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
         "Instrutor de Estado-Maior",
-        "Avaliador",
-        "Coordenador de Simulação",
-        "Diretor da Escola"
+        "Oficial-Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1808,7 +2229,23 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Oficial Aluno",
+        "Instrutor de Estado-Maior",
+        "Avaliador",
+        "Coordenador de Simulação",
+        "Diretor da Escola"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da ECEME",
+        "Subcomandante da ECEME",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor de Estado-Maior",
+        "Oficial-Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-EsSLog",
@@ -1840,12 +2277,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno de Logística",
-        "Monitor",
+        "Comandante da EsSLog",
+        "Subcomandante da EsSLog",
+        "Chefe de Divisão de Ensino",
+        "Chefe de Curso",
         "Instrutor de Logística",
-        "Avaliador",
-        "Coordenador de Curso",
-        "Diretor"
+        "Monitor",
+        "Aluno em Formação"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1864,7 +2302,25 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Aluno de Logística",
+        "Monitor",
+        "Instrutor de Logística",
+        "Avaliador",
+        "Coordenador de Curso",
+        "Diretor"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EsSLog",
+        "Subcomandante da EsSLog",
+        "Chefe de Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor de Logística",
+        "Monitor",
+        "Aluno em Formação"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-ESFCEx",
@@ -1896,12 +2352,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno",
-        "Monitor",
+        "Comandante da ESFCEx",
+        "Subcomandante da ESFCEx",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
         "Instrutor de Saúde",
-        "Avaliador",
-        "Coordenador de Formação",
-        "Diretor"
+        "Monitor",
+        "Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -1920,7 +2377,25 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Aluno",
+        "Monitor",
+        "Instrutor de Saúde",
+        "Avaliador",
+        "Coordenador de Formação",
+        "Diretor"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da ESFCEx",
+        "Subcomandante da ESFCEx",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor de Saúde",
+        "Monitor",
+        "Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FTB-Bda-Inf-Sl",
@@ -3513,13 +3988,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno Especialista",
-        "Monitor de Turma",
+        "Comandante da EEAR",
+        "Subcomandante da EEAR",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
         "Instrutor de Especialidade",
-        "Avaliador Técnico",
-        "Coordenador de Curso",
-        "Subdiretor",
-        "Diretor da EEAR"
+        "Monitor de Turma",
+        "Aluno Especialista"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3538,7 +4013,26 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.fab.mil.br/"
+      "urlReferencia": "https://www.fab.mil.br/",
+      "funcoesAntigas": [
+        "Aluno Especialista",
+        "Monitor de Turma",
+        "Instrutor de Especialidade",
+        "Avaliador Técnico",
+        "Coordenador de Curso",
+        "Subdiretor",
+        "Diretor da EEAR"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EEAR",
+        "Subcomandante da EEAR",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
+        "Instrutor de Especialidade",
+        "Monitor de Turma",
+        "Aluno Especialista"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FAB-EPCAR",
@@ -3570,12 +4064,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Aluno da EPCAR",
-        "Monitor de Turma",
-        "Instrutor",
-        "Avaliador",
-        "Chefe de Formação",
-        "Diretor da EPCAR"
+        "Comandante da EPCAR",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
+        "Instrutor Acadêmico",
+        "Monitor",
+        "Aluno da EPCAR"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3594,7 +4088,24 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.fab.mil.br/"
+      "urlReferencia": "https://www.fab.mil.br/",
+      "funcoesAntigas": [
+        "Aluno da EPCAR",
+        "Monitor de Turma",
+        "Instrutor",
+        "Avaliador",
+        "Chefe de Formação",
+        "Diretor da EPCAR"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EPCAR",
+        "Comandante do Corpo de Alunos",
+        "Chefe da Divisão de Ensino",
+        "Instrutor Acadêmico",
+        "Monitor",
+        "Aluno da EPCAR"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FAB-AFA",
@@ -3626,13 +4137,13 @@
         "Coronel"
       ],
       "funcoes": [
-        "Cadete da FAB",
-        "Monitor",
-        "Instrutor de Voo Habilitado",
+        "Comandante da AFA",
+        "Comandante do Corpo de Cadetes da Aeronáutica",
+        "Chefe da Divisão de Ensino",
+        "Chefe da Divisão de Operações Aéreas",
+        "Instrutor de Voo",
         "Instrutor Acadêmico",
-        "Avaliador de Voo",
-        "Coordenador de Curso",
-        "Comandante da AFA"
+        "Cadete"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3651,7 +4162,26 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.fab.mil.br/"
+      "urlReferencia": "https://www.fab.mil.br/",
+      "funcoesAntigas": [
+        "Cadete da FAB",
+        "Monitor",
+        "Instrutor de Voo Habilitado",
+        "Instrutor Acadêmico",
+        "Avaliador de Voo",
+        "Coordenador de Curso",
+        "Comandante da AFA"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da AFA",
+        "Comandante do Corpo de Cadetes da Aeronáutica",
+        "Chefe da Divisão de Ensino",
+        "Chefe da Divisão de Operações Aéreas",
+        "Instrutor de Voo",
+        "Instrutor Acadêmico",
+        "Cadete"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FAB-ECEMAR",
@@ -3683,11 +4213,12 @@
         "Coronel"
       ],
       "funcoes": [
-        "Oficial Aluno",
+        "Comandante da ECEMAR",
+        "Subcomandante da ECEMAR",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
         "Instrutor de Estado-Maior",
-        "Avaliador",
-        "Coordenador",
-        "Comandante da Escola"
+        "Oficial-Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -3706,7 +4237,23 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.fab.mil.br/"
+      "urlReferencia": "https://www.fab.mil.br/",
+      "funcoesAntigas": [
+        "Oficial Aluno",
+        "Instrutor de Estado-Maior",
+        "Avaliador",
+        "Coordenador",
+        "Comandante da Escola"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da ECEMAR",
+        "Subcomandante da ECEMAR",
+        "Chefe da Divisão de Ensino",
+        "Chefe de Curso",
+        "Instrutor de Estado-Maior",
+        "Oficial-Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FAB-CINDACTA",
@@ -4824,12 +5371,13 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aprendiz-Marinheiro",
-        "Monitor de Turma",
-        "Instrutor Naval",
-        "Avaliador",
+        "Comandante da EAM",
+        "Imediato da EAM",
+        "Chefe de Ensino",
         "Chefe de Curso",
-        "Diretor da Escola"
+        "Instrutor Naval",
+        "Monitor",
+        "Aprendiz-Marinheiro"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4848,7 +5396,25 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
+      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional",
+      "funcoesAntigas": [
+        "Aprendiz-Marinheiro",
+        "Monitor de Turma",
+        "Instrutor Naval",
+        "Avaliador",
+        "Chefe de Curso",
+        "Diretor da Escola"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da EAM",
+        "Imediato da EAM",
+        "Chefe de Ensino",
+        "Chefe de Curso",
+        "Instrutor Naval",
+        "Monitor",
+        "Aprendiz-Marinheiro"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FMB-CN",
@@ -4879,12 +5445,13 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aluno do Colégio Naval",
+        "Comandante do Colégio Naval",
+        "Imediato do Colégio Naval",
+        "Comandante do Corpo de Alunos",
+        "Chefe do Departamento de Ensino",
+        "Instrutor Naval",
         "Monitor",
-        "Instrutor Acadêmico",
-        "Avaliador",
-        "Chefe de Formação",
-        "Comandante do Colégio"
+        "Aluno"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4903,7 +5470,25 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
+      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional",
+      "funcoesAntigas": [
+        "Aluno do Colégio Naval",
+        "Monitor",
+        "Instrutor Acadêmico",
+        "Avaliador",
+        "Chefe de Formação",
+        "Comandante do Colégio"
+      ],
+      "cargosInstitucionais": [
+        "Comandante do Colégio Naval",
+        "Imediato do Colégio Naval",
+        "Comandante do Corpo de Alunos",
+        "Chefe do Departamento de Ensino",
+        "Instrutor Naval",
+        "Monitor",
+        "Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "FMB-EN",
@@ -4934,12 +5519,13 @@
         "Capitão de Mar e Guerra"
       ],
       "funcoes": [
-        "Aspirante da Escola Naval",
-        "Monitor",
+        "Comandante da Escola Naval",
+        "Imediato da Escola Naval",
+        "Superintendente de Ensino",
+        "Comandante do Corpo de Aspirantes",
+        "Chefe de Departamento",
         "Instrutor Naval",
-        "Avaliador",
-        "Coordenador de Navegação",
-        "Comandante da Escola Naval"
+        "Aspirante"
       ],
       "atividades": [
         "Aula prática e teórica",
@@ -4958,7 +5544,25 @@
         "Acesso a equipamentos depende de habilitação e autorização."
       ],
       "referencia": "Verificar correspondência exata caso a caso",
-      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional"
+      "urlReferencia": "https://www.marinha.mil.br/estrutura-organizacional",
+      "funcoesAntigas": [
+        "Aspirante da Escola Naval",
+        "Monitor",
+        "Instrutor Naval",
+        "Avaliador",
+        "Coordenador de Navegação",
+        "Comandante da Escola Naval"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da Escola Naval",
+        "Imediato da Escola Naval",
+        "Superintendente de Ensino",
+        "Comandante do Corpo de Aspirantes",
+        "Chefe de Departamento",
+        "Instrutor Naval",
+        "Aspirante"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "CBM-GBS",
@@ -5602,7 +6206,34 @@
         "Acesso a recursos exige vínculo e autorização."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "cargosMilitares": [
+        "Soldado",
+        "Cabo",
+        "3º Sargento",
+        "2º Sargento",
+        "1º Sargento",
+        "Subtenente",
+        "Cadete",
+        "Aspirante a Oficial",
+        "2º Tenente",
+        "1º Tenente",
+        "Capitão",
+        "Major",
+        "Tenente-Coronel",
+        "Coronel"
+      ],
+      "funcoesOperacionais": [
+        "Comandante",
+        "Subcomandante",
+        "Chefe de Comunicações",
+        "Chefe de Seção",
+        "Instrutor",
+        "Operador de Comunicações",
+        "Técnico",
+        "Integrante"
+      ],
+      "cargosNota": "A hierarquia militar interna deste batalhão vai de Soldado a Coronel. Funções de chefia, instrutoria e especializações são designações operacionais separadas; não substituem as patentes."
     },
     {
       "id": "FTB-Bda-Inf-Pqdt",
@@ -6087,10 +6718,10 @@
       "patentes": [],
       "funcoes": [
         "Comandante da Academia",
-        "Subcomandante",
-        "Coordenador de Ensino",
+        "Subcomandante da Academia",
+        "Chefe da Divisão de Ensino",
+        "Coordenador de Formação",
         "Instrutor",
-        "Avaliador",
         "Monitor",
         "Aluno"
       ],
@@ -6111,7 +6742,26 @@
         "Cursos, provas e promoções dependem de avaliação e aprovação humanas."
       ],
       "referencia": "Modelo organizacional FAAAB; não é reprodução literal da estrutura real.",
-      "urlReferencia": null
+      "urlReferencia": null,
+      "funcoesAntigas": [
+        "Comandante da Academia",
+        "Subcomandante",
+        "Coordenador de Ensino",
+        "Instrutor",
+        "Avaliador",
+        "Monitor",
+        "Aluno"
+      ],
+      "cargosInstitucionais": [
+        "Comandante da Academia",
+        "Subcomandante da Academia",
+        "Chefe da Divisão de Ensino",
+        "Coordenador de Formação",
+        "Instrutor",
+        "Monitor",
+        "Aluno"
+      ],
+      "cargosNota": "Estrutura de ensino adaptada à FAAAB, inspirada em funções institucionais reais. Cargos de comando, docência e alunos não são uma sequência de patentes militares."
     },
     {
       "id": "PM-GRPAe",
@@ -6156,49 +6806,49 @@
       "urlReferencia": null
     },
     {
-      "id": "ADM-CDS",
-      "sigla": "CDS",
-      "nome": "Centro de Desenvolvimento de Sistemas — FAAAB",
+      "id": "ADM-DPT",
+      "sigla": "DPT",
+      "nome": "Departamento de Projetos e Tecnologia",
       "forca": "ADM",
       "tipo": "administracao",
       "secao": "ADMINISTRAÇÃO CENTRAL E INSTITUIÇÕES",
-      "status": "Estrutura de desenvolvimento aprovada no planejamento; implantação pendente",
-      "origem": "Modelo FAAAB inspirado no regimento CDS EB80-RI-78.001 (2017) sem afirmar organograma atual",
-      "superior": "FAAAB",
-      "missao": "Coordenar e desenvolver a experiência FAAAB, o EB Security, sistemas, mapas, modelos 3D, animações e testes para todas as instituições em um único grupo Roblox.",
+      "status": "Planejada na FAAAB; grupo Roblox DPT informado pelo responsável",
+      "origem": "Organização própria da FAAAB; DPT não reproduz o CDS do Exército.",
+      "superior": "DD",
+      "missao": "Desenvolvimento conjunto de sistemas, mapas, modelos, animações, interfaces e infraestrutura para todas as instituições da FAAAB, subordinado à DD.",
       "subdivisoes": [
-        "DD (direção superior interna)",
-        "DA",
-        "DPCC",
-        "DDS",
-        "DMS",
-        "DC2",
-        "DSI"
+        "Administração da DPT",
+        "Engenharia",
+        "Testes e Análises",
+        "Projetos e Planejamento",
+        "Programação e Sistemas",
+        "Modelagem e Animação",
+        "Mapas e Construção",
+        "Qualidade e Sustentação"
       ],
-      "ingresso": "Por seleção e avaliação humana. Integrante pode pertencer a uma ou mais divisões conforme designação; chefia não é automática.",
+      "ingresso": "Engenharia e Testes por candidatura e avaliação; dois cargos gratuitos por participação; três categorias de apoio pago sem autoridade administrativa.",
       "patentes": [],
       "funcoes": [
-        "Chefe da Diretoria de Desenvolvimento",
-        "Vice-Chefe da Diretoria de Desenvolvimento",
-        "Conselho de Diretores-Chefes de Desenvolvimento",
-        "[CH-CDS] Chefe do CDS",
-        "[SCH-CDS] Subchefe do CDS",
-        "[CG-CDS] Coordenador-Geral de Projetos",
-        "[C-CDS] Coordenador de Projeto",
-        "[S-CDS] Supervisor Técnico",
-        "[CH-SEC] Chefe de Seção",
-        "[CH-DA] Chefe da Divisão de Apoio",
-        "[CH-DPCC] Chefe de Planejamento e Controle",
-        "[CH-DDS] Chefe de Desenvolvimento de Sistemas",
-        "[CH-DMS] Chefe de Manutenção de Sistemas",
-        "[CH-DC2] Chefe de Comando e Controle",
-        "[CH-DSI] Chefe de Segurança da Informação",
-        "[CH-TA] Chefe de Testes e Análises",
-        "[VCH-TA] Vice-Chefe de Testes e Análises",
-        "[AN-D] Analista de Desenvolvimento",
-        "[AN-S] Analista de Sessões de Servidores",
-        "[AN-I] Analista de Ideias e Sugestões",
-        "[INT-CDS] Integrante do CDS"
+        "Diretor da DPT",
+        "Vice-Diretor da DPT",
+        "Coordenador-Geral",
+        "Coordenador",
+        "Supervisor",
+        "Chefe de Seção",
+        "Engenheiro Especial II",
+        "Engenheiro Especial I",
+        "Engenheiro Sênior",
+        "Engenheiro",
+        "Engenheiro Iniciante",
+        "Chefe de Testes e Análises",
+        "Vice-Chefe de Testes e Análises",
+        "Equipe Avançada e Excepcional de Testes e Análises",
+        "Equipe de Testes e Análise",
+        "[MEM] Membro da DPT",
+        "[COL] Colaborador da DPT",
+        "[APO] Apoiador da DPT",
+        "[PAT] Patrocinador da DPT",
+        "[INV] Investidor da DPT"
       ],
       "atividades": [
         "Programação Luau, interfaces, backend e integrações do bot",
@@ -6210,12 +6860,6 @@
         "Segurança e governança de permissões técnicas"
       ],
       "qualificacoes": [
-        "Especialista de Desenvolvimento II",
-        "Especialista de Desenvolvimento I",
-        "Desenvolvedor Sênior",
-        "Desenvolvedor",
-        "Desenvolvedor Iniciante",
-        "Agente Técnico",
         "Programação Luau",
         "Construção de Mapas",
         "Modelagem 3D",
@@ -6226,16 +6870,56 @@
         "Qualidade e Testes"
       ],
       "regras": [
-        "Uma organização principal CDS, não três grupos Roblox para DD/CDS/DEC.",
         "Cargo de divisão é diferente da função de chefia da divisão.",
         "Patentes militares e especialidades técnicas são classificações independentes.",
         "Investidor e apoiador não recebem acesso a código ou projetos privados apenas por contribuição.",
         "Chefia e carreira técnica não recebem permissão Administrador do Discord automaticamente.",
         "Aprovação de publicação exige responsáveis humanos.",
-        "Estrutura inspirada no CDS de 2017, adaptada à realidade de Roblox, não apresentada como hierarquia oficial vigente do Exército."
+        "A DD é autoridade superior distinta da equipe operacional DPT.",
+        "Engenharia e equipe de testes ingressam somente por candidatura.",
+        "Cargos pagos são simbólicos; não dão poder administrativo nem acesso a código privado.",
+        "Alterações de proprietário ou permissões críticas exigem validação humana."
       ],
-      "referencia": "Regimento Interno CDS EB80-RI-78.001, publicação de 2017, referência organizacional histórica; adaptação FAAAB.",
-      "urlReferencia": "https://ptdocz.com/doc/1981153/separata-ao-boletim-do-ex%C3%A9rcito---sgex"
+      "referencia": "Projeto original da FAAAB. Não é unidade militar oficial.",
+      "urlReferencia": null,
+      "direcaoSuperior": [
+        "Chefe da Diretoria de Desenvolvimento",
+        "Vice-Chefe da Diretoria de Desenvolvimento",
+        "Conselho de Diretores-Chefes"
+      ],
+      "cargosDPT": {
+        "administracao": [
+          "Diretor da DPT",
+          "Vice-Diretor da DPT",
+          "Coordenador-Geral",
+          "Coordenador",
+          "Supervisor",
+          "Chefe de Seção"
+        ],
+        "engenharia": [
+          "Engenheiro Especial II",
+          "Engenheiro Especial I",
+          "Engenheiro Sênior",
+          "Engenheiro",
+          "Engenheiro Iniciante"
+        ],
+        "testes": [
+          "Chefe de Testes e Análises",
+          "Vice-Chefe de Testes e Análises",
+          "Equipe Avançada e Excepcional de Testes e Análises",
+          "Equipe de Testes e Análise"
+        ],
+        "gratuitos": [
+          "[MEM] Membro da DPT",
+          "[COL] Colaborador da DPT"
+        ],
+        "pagos": [
+          "[APO] Apoiador da DPT",
+          "[PAT] Patrocinador da DPT",
+          "[INV] Investidor da DPT"
+        ]
+      },
+      "grupoRoblox": "https://www.roblox.com/pt/communities/922723164/FAAAB-DPT-Projetos-e-Tecnologia#!/about"
     }
   ],
   "referenciasPropostas": [
